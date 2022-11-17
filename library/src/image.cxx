@@ -10,6 +10,7 @@
 #include <vtksys/SystemTools.hxx>
 
 #include <cassert>
+#include <math.h>
 #include <vector>
 
 namespace f3d
@@ -221,6 +222,28 @@ void image::save(const std::string& path) const
   {
     throw write_exception("Cannot write " + path);
   }
+}
+
+//----------------------------------------------------------------------------
+std::vector<size_t> image::luminanceHistogram() const
+{
+  const auto depth = this->getChannelCount();
+  const auto data = this->Internals->Buffer;
+  const auto data_len = data.size();
+
+  /* use alpha as mask and convert according to "ITU-R BT.601" */
+  const uint bin_count = 256;
+  std::vector<size_t> bins(bin_count, 0);
+  for (uint i = 0; i < data_len; i += depth)
+  {
+    if (depth == 3 || data[i + 3] > 0)
+    {
+      const double l = data[i] * .299 + data[i + 1] * .587 + data[i + 2] * .114;
+      ++bins[(int)std::round(l)];
+    }
+  }
+
+  return bins;
 }
 
 //----------------------------------------------------------------------------

@@ -19,7 +19,74 @@
 #include <vtkVersion.h>
 #include <vtksys/SystemTools.hxx>
 
+#include <functional>
 #include <map>
+
+const double invphi = (std::sqrt(5) - 1) / 2;    // 1 / phi
+const double invphi_sq = (3 - std::sqrt(5)) / 2; // 1 / phi^2
+/** Golden-section search.
+ *  Given a function f with a single local minimum in the interval [a,b],
+ *  returns a subset interval [c,d] that contains the minimum with d-c <= tol.
+ */
+std::pair<double, double> gss(
+  const std::function<double(double)>& f, double a, double b, float tol = 1e-5, int max_steps = 0)
+{
+  if (b < a)
+  {
+    double tmp = b;
+    b = a;
+    a = tmp;
+  }
+
+  double h = b - a;
+  if (h <= tol)
+  {
+    return std::make_pair(a, b);
+  }
+
+  /* Required steps to achieve tolerance */
+  int n = (int)(std::ceil(std::log(tol / h) / std::log(invphi)));
+  if (max_steps > 0 && n > max_steps)
+  {
+    n = max_steps;
+  }
+
+  double c = a + invphi_sq * h;
+  double d = a + invphi * h;
+  double yc = f(c);
+  double yd = f(d);
+
+  for (int _k = 0; _k < n - 1; ++_k)
+  {
+    if (yc < yd)
+    {
+      b = d;
+      d = c;
+      yd = yc;
+      h = invphi * h;
+      c = a + invphi_sq * h;
+      yc = f(c);
+    }
+    else
+    {
+      a = c;
+      c = d;
+      yc = yd;
+      h = invphi * h;
+      d = a + invphi * h;
+      yd = f(d);
+    }
+  }
+
+  if (yc < yd)
+  {
+    return std::make_pair(a, d);
+  }
+  else
+  {
+    return std::make_pair(c, b);
+  }
+}
 
 namespace f3d::detail
 {
@@ -70,6 +137,22 @@ public:
 
     if (self->KeyPressUserCallBack(keyCode, keySym))
     {
+      return;
+    }
+
+    std::stringstream ss;
+    if (rwi->GetControlKey())
+      ss << "ctrl+";
+    if (rwi->GetAltKey())
+      ss << "alt+";
+    if (rwi->GetShiftKey())
+      ss << "shift+";
+    ss << keySym;
+    const std::string keyCombo = ss.str();
+
+    if (self->KeyBindings.count(keyCombo))
+    {
+      self->KeyBindings[keyCombo](self);
       return;
     }
 
@@ -273,7 +356,10 @@ public:
   std::function<bool(std::vector<std::string>)> DropFilesUserCallBack = [](std::vector<std::string>)
   { return false; };
 
-  void StartInteractor() { this->VTKInteractor->Start(); }
+  void StartInteractor()
+  {
+    this->VTKInteractor->Start();
+  }
 
   void StopInteractor()
   {
@@ -292,6 +378,63 @@ public:
   int WindowSize[2] = { -1, -1 };
   int WindowPos[2] = { 0, 0 };
   std::map<unsigned long, std::pair<int, std::function<void()> > > TimerCallBacks;
+
+  typedef interactor_impl::internals Self;
+  std::map<std::string, std::function<void(Self*)> > KeyBindings{
+    { "L",
+      [](Self* self)
+      {
+        const double lightIntensity = self->Options.getAsDouble("render.light.intensity");
+        self->Options.set("render.light.intensity", lightIntensity * 1.05);
+        self->Window.render();
+      } },
+    { "shift+L",
+      [](Self* self)
+      {
+        const double lightIntensity = self->Options.getAsDouble("render.light.intensity");
+        self->Options.set("render.light.intensity", lightIntensity * 0.95);
+        self->Window.render();
+      } },
+    { "ctrl+L",
+      [](Self* self)
+      {
+        const double low_percentile = .25;
+        const double high_percentile = .75;
+        const double min_intensity = .5;
+        const double max_intensity = 15;
+        const auto f = [&](double intensity) -> double
+        {
+          self->Options.set("render.light.intensity", intensity);
+          auto histogram = self->Window.renderToImage(true).luminanceHistogram();
+          const uint bin_count = histogram.size();
+
+          /* transform histogram to cumulative sums */
+          for (uint i = 1; i < bin_count; ++i)
+          {
+            histogram[i] += histogram[i - 1];
+          }
+
+          /* find indices for target percentiles */
+          const double low_val = low_percentile * histogram[bin_count - 1];
+          const double high_val = high_percentile * histogram[bin_count - 1];
+
+          uint low_i = 0;
+          while (low_i < bin_count && histogram[low_i] < low_val)
+            ++low_i;
+
+          uint high_i = low_i;
+          while (high_i < bin_count && histogram[high_i] < high_val)
+            ++high_i;
+
+          /* metric is largest distance to histogram edges */
+          /* ...plus a fraction of intensity to break ties */
+          return std::max(low_i, bin_count - 1 - high_i) + intensity * 0.001;
+        };
+        const auto interval = gss(f, min_intensity, max_intensity, 0.25);
+        self->Options.set("render.light.intensity", interval.first);
+        self->Window.render();
+      } },
+  };
 };
 
 //----------------------------------------------------------------------------

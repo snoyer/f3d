@@ -13,6 +13,7 @@
 #include "export.h"
 
 #include <string>
+#include <vector>
 
 namespace f3d
 {
@@ -91,6 +92,8 @@ public:
    * Throw an image::write_exception if image cannot be writen.
    */
   void save(const std::string& path) const;
+
+  std::vector<size_t> luminanceHistogram() const;
 
   //@{
   /**
