@@ -173,6 +173,7 @@ void vtkF3DRenderer::SetupRenderPasses()
     vtkNew<vtkToneMappingPass> toneP;
     toneP->SetToneMappingType(vtkToneMappingPass::GenericFilmic);
     toneP->SetGenericFilmicDefaultPresets();
+    toneP->SetExposure(this->Exposure);
     toneP->SetDelegatePass(renderingPass);
     renderingPass = toneP;
   }
@@ -538,6 +539,12 @@ void vtkF3DRenderer::SetLightIntensity(const double intensityFactor)
 
     light->SetIntensity(originalIntensity * intensityFactor);
   }
+}
+
+//----------------------------------------------------------------------------
+void vtkF3DRenderer::SetExposure(const double exposure)
+{
+  this->Exposure = exposure;
 }
 
 //----------------------------------------------------------------------------
