@@ -271,6 +271,8 @@ void window_impl::UpdateDynamicOptions()
     this->Internals->Options.getAsBool("render.effect.fxaa"));
   this->Internals->Renderer->SetUseToneMappingPass(
     this->Internals->Options.getAsBool("render.effect.tone-mapping"));
+  this->Internals->Renderer->SetExposure(
+    this->Internals->Options.getAsDouble("render.effect.tone-mapping.exposure"));
   this->Internals->Renderer->SetUseDepthPeelingPass(
     this->Internals->Options.getAsBool("render.effect.depth-peeling"));
 

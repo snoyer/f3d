@@ -126,6 +126,7 @@ options::options()
   this->Internals->init("render.effect.fxaa", false);
   this->Internals->init("render.effect.ssao", false);
   this->Internals->init("render.effect.tone-mapping", false);
+  this->Internals->init("render.effect.tone-mapping.exposure", 1.);
 
   this->Internals->init("render.background.color", std::vector<double>{ 0.2, 0.2, 0.2 });
   this->Internals->init(

@@ -51,6 +51,7 @@ public:
   void SetHDRIFile(const std::string& hdriFile);
   void SetBackground(const double* backgroundColor) override;
   void SetLightIntensity(const double intensity);
+  void SetExposure(const double exposure);
   //@}
 
   //@{
@@ -178,6 +179,7 @@ protected:
   bool HasHDRI = false;
   std::string HDRIFile;
   std::string FontFile;
+  double Exposure = 1;
 
   std::map<vtkLight*, double> OriginalLightIntensities;
 
