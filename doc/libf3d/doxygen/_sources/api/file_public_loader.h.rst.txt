@@ -1,0 +1,64 @@
+
+.. _file_public_loader.h:
+
+File loader.h
+=============
+
+|exhale_lsh| :ref:`Parent directory <dir_public>` (``public``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``public/loader.h``)
+--------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_public_loader.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``export.h``
+
+- ``string``
+
+- ``vector``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_public_interactor.h`
+
+- :ref:`file_public_engine.h`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_f3d`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classf3d_1_1loader`
+

@@ -1,0 +1,60 @@
+
+.. _program_listing_file_public_loader.h:
+
+Program Listing for File loader.h
+=================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_public_loader.h>` (``public/loader.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef f3d_loader_h
+   #define f3d_loader_h
+   
+   #include "export.h"
+   
+   #include <string>
+   #include <vector>
+   
+   namespace f3d
+   {
+   class F3D_EXPORT loader
+   {
+   public:
+     enum class LoadFileEnum
+     {
+       LOAD_FIRST,
+       LOAD_PREVIOUS,
+       LOAD_CURRENT,
+       LOAD_NEXT,
+       LOAD_LAST
+     };
+   
+     virtual loader& addFiles(const std::vector<std::string>& files, bool recursive = false) = 0;
+   
+     virtual loader& addFile(const std::string& path, bool recursive = false) = 0;
+   
+     virtual const std::vector<std::string>& getFiles() const = 0;
+   
+     virtual loader& setCurrentFileIndex(int index) = 0;
+   
+     virtual int getCurrentFileIndex() const = 0;
+   
+     virtual bool loadFile(LoadFileEnum load = LoadFileEnum::LOAD_CURRENT) = 0;
+   
+     virtual void getFileInfo(
+       LoadFileEnum load, int& nextFileIndex, std::string& filePath, std::string& fileInfo) const = 0;
+   
+   protected:
+     loader() = default;
+     virtual ~loader() = default;
+     loader(const loader& opt) = delete;
+     loader(loader&& opt) = delete;
+     loader& operator=(const loader& opt) = delete;
+     loader& operator=(loader&& opt) = delete;
+   };
+   }
+   
+   #endif

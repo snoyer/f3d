@@ -1,0 +1,545 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Class reader &#8212; libf3d 1.3.1 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class window" href="classf3d_1_1window.html" />
+    <link rel="prev" title="Class plugin" href="classf3d_1_1plugin.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">libf3d 1.3.1 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="library_root.html">
+   Library API
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="namespace_f3d.html">
+     Namespace f3d
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="structf3d_1_1engine_1_1libInformation.html">
+     Struct engine::libInformation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="structf3d_1_1engine_1_1no__interactor__exception.html">
+     Struct engine::no_interactor_exception
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="structf3d_1_1engine_1_1no__window__exception.html">
+     Struct engine::no_window_exception
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="structf3d_1_1engine_1_1plugin__exception.html">
+     Struct engine::plugin_exception
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="structf3d_1_1engine_1_1readerInformation.html">
+     Struct engine::readerInformation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="structf3d_1_1image_1_1read__exception.html">
+     Struct image::read_exception
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="structf3d_1_1image_1_1write__exception.html">
+     Struct image::write_exception
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="structf3d_1_1options_1_1incompatible__exception.html">
+     Struct options::incompatible_exception
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="structf3d_1_1options_1_1inexistent__exception.html">
+     Struct options::inexistent_exception
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="structf3d_1_1point3__t.html">
+     Struct point3_t
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="structf3d_1_1vector3__t.html">
+     Struct vector3_t
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classf3d_1_1camera.html">
+     Class camera
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classf3d_1_1engine.html">
+     Class engine
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="class_structf3d_1_1exception.html">
+     Class exception
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classf3d_1_1image.html">
+     Class image
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classf3d_1_1interactor.html">
+     Class interactor
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classf3d_1_1loader.html">
+     Class loader
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classf3d_1_1log.html">
+     Class log
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classf3d_1_1options.html">
+     Class options
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classf3d_1_1plugin.html">
+     Class plugin
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Class reader
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classf3d_1_1window.html">
+     Class window
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="typedef_types_8h_1a62f3e15e4e18455b52854622b27c02ed.html">
+     Typedef f3d::angle_deg_t
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/api/classf3d_1_1reader.rst.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-documentation">
+   Class Documentation
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Class reader</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-documentation">
+   Class Documentation
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="class-reader">
+<span id="exhale-class-classf3d-1-1reader"></span><h1>Class reader<a class="headerlink" href="#class-reader" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_public_reader.h.html#file-public-reader-h"><span class="std std-ref">File reader.h</span></a></p></li>
+</ul>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this heading">#</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d6readerE">
+<span id="_CPPv3N3f3d6readerE"></span><span id="_CPPv2N3f3d6readerE"></span><span id="f3d::reader"></span><span class="target" id="classf3d_1_1reader"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reader</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6readerE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>The basis reader class. </p>
+<p><code class="docutils literal notranslate"><span class="pre">reader</span></code> is the basic class for every file format readers. It must provide information about its name and descriptions, the managed file formats, and must be able to produce either a VTK reader or a VTK importer. Every reader must be registered to the <code class="docutils literal notranslate"><span class="pre">factory</span></code> singleton. This is automatically done when the plugin is loaded by CMake when declaring every reader with the f3d_declare_reader() macro.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This file is used internally by the plugin SDK, it is not intended to be included directly by libf3d users. </p>
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d6reader6readerEv">
+<span id="_CPPv3N3f3d6reader6readerEv"></span><span id="_CPPv2N3f3d6reader6readerEv"></span><span id="f3d::reader::reader"></span><span class="target" id="classf3d_1_1reader_1a5af74cc9268a1b34e1f8a3125315949f"></span><span class="sig-name descname"><span class="n"><span class="pre">reader</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N3f3d6reader6readerEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d6readerD0Ev">
+<span id="_CPPv3N3f3d6readerD0Ev"></span><span id="_CPPv2N3f3d6readerD0Ev"></span><span id="f3d::reader::~reader"></span><span class="target" id="classf3d_1_1reader_1abb03f3b7812d9c2f4a4356a13a04dd92"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~reader</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N3f3d6readerD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3f3d6reader7getNameEv">
+<span id="_CPPv3NK3f3d6reader7getNameEv"></span><span id="_CPPv2NK3f3d6reader7getNameEv"></span><span id="f3d::reader::getNameC"></span><span class="target" id="classf3d_1_1reader_1aea5bc2a5528ab395f8e14da3aca0af69"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getName</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3f3d6reader7getNameEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Get the name of this reader </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3f3d6reader19getShortDescriptionEv">
+<span id="_CPPv3NK3f3d6reader19getShortDescriptionEv"></span><span id="_CPPv2NK3f3d6reader19getShortDescriptionEv"></span><span id="f3d::reader::getShortDescriptionC"></span><span class="target" id="classf3d_1_1reader_1a30ce0deb5d006af8f57c41b3b3828642"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getShortDescription</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3f3d6reader19getShortDescriptionEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Get the short description of this reader </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3f3d6reader18getLongDescriptionEv">
+<span id="_CPPv3NK3f3d6reader18getLongDescriptionEv"></span><span id="_CPPv2NK3f3d6reader18getLongDescriptionEv"></span><span id="f3d::reader::getLongDescriptionC"></span><span class="target" id="classf3d_1_1reader_1ad53600f4629c7e3871aeb39306547f74"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getLongDescription</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d6reader18getLongDescriptionEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Get the long description of this reader </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3f3d6reader13getExtensionsEv">
+<span id="_CPPv3NK3f3d6reader13getExtensionsEv"></span><span id="_CPPv2NK3f3d6reader13getExtensionsEv"></span><span id="f3d::reader::getExtensionsC"></span><span class="target" id="classf3d_1_1reader_1a52b484e585be6846a894a7ec1d2eeeaf"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getExtensions</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3f3d6reader13getExtensionsEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Get the extensions supported by this reader </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3f3d6reader12getMimeTypesEv">
+<span id="_CPPv3NK3f3d6reader12getMimeTypesEv"></span><span id="_CPPv2NK3f3d6reader12getMimeTypesEv"></span><span id="f3d::reader::getMimeTypesC"></span><span class="target" id="classf3d_1_1reader_1a24fecc24b4301699d71bcec38afb52bd"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMimeTypes</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3f3d6reader12getMimeTypesEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Get the mimetypes supported by this reader </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3f3d6reader7canReadERKNSt6stringE">
+<span id="_CPPv3NK3f3d6reader7canReadERKNSt6stringE"></span><span id="_CPPv2NK3f3d6reader7canReadERKNSt6stringE"></span><span id="f3d::reader::canRead__ssCRC"></span><span class="target" id="classf3d_1_1reader_1ab160af56751c046302fe9a9b2e31676a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">canRead</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fileName</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d6reader7canReadERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Check if this reader can read the given filename - generally according its extension </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3f3d6reader8getScoreEv">
+<span id="_CPPv3NK3f3d6reader8getScoreEv"></span><span id="_CPPv2NK3f3d6reader8getScoreEv"></span><span id="f3d::reader::getScoreC"></span><span class="target" id="classf3d_1_1reader_1ab5625d922d48ccfa815bb70e7fb505d3"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getScore</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d6reader8getScoreEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Get the score of this reader. The score is used in case several readers are able to read the file. The reader having the highest score (from 0 to 100) is used to read the file. Default is 50. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3f3d6reader20createGeometryReaderERKNSt6stringE">
+<span id="_CPPv3NK3f3d6reader20createGeometryReaderERKNSt6stringE"></span><span id="_CPPv2NK3f3d6reader20createGeometryReaderERKNSt6stringE"></span><span id="f3d::reader::createGeometryReader__ssCRC"></span><span class="target" id="classf3d_1_1reader_1a63dcbfee52e9b78e5cb18edf9f78085f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">vtkSmartPointer</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vtkAlgorithm</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createGeometryReader</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d6reader20createGeometryReaderERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Create the geometry reader (VTK reader) for the given filename </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3f3d6reader17applyCustomReaderEP12vtkAlgorithmRKNSt6stringE">
+<span id="_CPPv3NK3f3d6reader17applyCustomReaderEP12vtkAlgorithmRKNSt6stringE"></span><span id="_CPPv2NK3f3d6reader17applyCustomReaderEP12vtkAlgorithmRKNSt6stringE"></span><span id="f3d::reader::applyCustomReader__vtkAlgorithmP.ssCRC"></span><span class="target" id="classf3d_1_1reader_1a36d28dcd9e440df96bf8afc3e4f449bd"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">applyCustomReader</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">vtkAlgorithm</span></span><span class="p"><span class="pre">*</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d6reader17applyCustomReaderEP12vtkAlgorithmRKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Apply custom code for the reader </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3f3d6reader17createSceneReaderERKNSt6stringE">
+<span id="_CPPv3NK3f3d6reader17createSceneReaderERKNSt6stringE"></span><span id="_CPPv2NK3f3d6reader17createSceneReaderERKNSt6stringE"></span><span id="f3d::reader::createSceneReader__ssCRC"></span><span class="target" id="classf3d_1_1reader_1a7a10760ad56d70091b4c67c5589d6f5a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">vtkSmartPointer</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vtkImporter</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createSceneReader</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d6reader17createSceneReaderERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Create the scene reader (VTK importer) for the given filename </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3f3d6reader19applyCustomImporterEP11vtkImporterRKNSt6stringE">
+<span id="_CPPv3NK3f3d6reader19applyCustomImporterEP11vtkImporterRKNSt6stringE"></span><span id="_CPPv2NK3f3d6reader19applyCustomImporterEP11vtkImporterRKNSt6stringE"></span><span id="f3d::reader::applyCustomImporter__vtkImporterP.ssCRC"></span><span class="target" id="classf3d_1_1reader_1a3e8cad22416bea78121de5dd41487e85"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">applyCustomImporter</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">vtkImporter</span></span><span class="p"><span class="pre">*</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d6reader19applyCustomImporterEP11vtkImporterRKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Apply custom code for the importer </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="classf3d_1_1plugin.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Class plugin</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="classf3d_1_1window.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Class window</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Michael Migliore and Mathieu Westphal<br/>
+  
+      &copy; Copyright 2022, Michael Migliore and Mathieu Westphal.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,650 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Class image &#8212; libf3d 1.3.1 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class interactor" href="classf3d_1_1interactor.html" />
+    <link rel="prev" title="Class exception" href="class_structf3d_1_1exception.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">libf3d 1.3.1 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="library_root.html">
+   Library API
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="namespace_f3d.html">
+     Namespace f3d
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="structf3d_1_1engine_1_1libInformation.html">
+     Struct engine::libInformation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="structf3d_1_1engine_1_1no__interactor__exception.html">
+     Struct engine::no_interactor_exception
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="structf3d_1_1engine_1_1no__window__exception.html">
+     Struct engine::no_window_exception
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="structf3d_1_1engine_1_1plugin__exception.html">
+     Struct engine::plugin_exception
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="structf3d_1_1engine_1_1readerInformation.html">
+     Struct engine::readerInformation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="structf3d_1_1image_1_1read__exception.html">
+     Struct image::read_exception
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="structf3d_1_1image_1_1write__exception.html">
+     Struct image::write_exception
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="structf3d_1_1options_1_1incompatible__exception.html">
+     Struct options::incompatible_exception
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="structf3d_1_1options_1_1inexistent__exception.html">
+     Struct options::inexistent_exception
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="structf3d_1_1point3__t.html">
+     Struct point3_t
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="structf3d_1_1vector3__t.html">
+     Struct vector3_t
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classf3d_1_1camera.html">
+     Class camera
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classf3d_1_1engine.html">
+     Class engine
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="class_structf3d_1_1exception.html">
+     Class exception
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Class image
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classf3d_1_1interactor.html">
+     Class interactor
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classf3d_1_1loader.html">
+     Class loader
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classf3d_1_1log.html">
+     Class log
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classf3d_1_1options.html">
+     Class options
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classf3d_1_1plugin.html">
+     Class plugin
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classf3d_1_1reader.html">
+     Class reader
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classf3d_1_1window.html">
+     Class window
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="typedef_types_8h_1a62f3e15e4e18455b52854622b27c02ed.html">
+     Typedef f3d::angle_deg_t
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/api/classf3d_1_1image.rst.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nested-relationships">
+   Nested Relationships
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nested-types">
+     Nested Types
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-documentation">
+   Class Documentation
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Class image</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nested-relationships">
+   Nested Relationships
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nested-types">
+     Nested Types
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-documentation">
+   Class Documentation
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="class-image">
+<span id="exhale-class-classf3d-1-1image"></span><h1>Class image<a class="headerlink" href="#class-image" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_public_image.h.html#file-public-image-h"><span class="std std-ref">File image.h</span></a></p></li>
+</ul>
+<section id="nested-relationships">
+<h2>Nested Relationships<a class="headerlink" href="#nested-relationships" title="Permalink to this heading">#</a></h2>
+<section id="nested-types">
+<h3>Nested Types<a class="headerlink" href="#nested-types" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="structf3d_1_1image_1_1read__exception.html#exhale-struct-structf3d-1-1image-1-1read-exception"><span class="std std-ref">Struct image::read_exception</span></a></p></li>
+<li><p><a class="reference internal" href="structf3d_1_1image_1_1write__exception.html#exhale-struct-structf3d-1-1image-1-1write-exception"><span class="std std-ref">Struct image::write_exception</span></a></p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this heading">#</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d5imageE">
+<span id="_CPPv3N3f3d5imageE"></span><span id="_CPPv2N3f3d5imageE"></span><span id="f3d::image"></span><span class="target" id="classf3d_1_1image"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">image</span></span></span><a class="headerlink" href="#_CPPv4N3f3d5imageE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Class used to represent an image. </p>
+<p>A class to represent an image, which can be created from a file, a buffer and provided by a window. It provides tools to save and compare images. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-constructors">Constructors</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d5image5imageEv">
+<span id="_CPPv3N3f3d5image5imageEv"></span><span id="_CPPv2N3f3d5image5imageEv"></span><span id="f3d::image::image"></span><span class="target" id="classf3d_1_1image_1aefc24a2599c90b88461892a9010b2521"></span><span class="sig-name descname"><span class="n"><span class="pre">image</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d5image5imageEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Default/copy/move constructors/operators. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d5imageD0Ev">
+<span id="_CPPv3N3f3d5imageD0Ev"></span><span id="_CPPv2N3f3d5imageD0Ev"></span><span id="f3d::image::~image"></span><span class="target" id="classf3d_1_1image_1a22ecd909c5406f00af4ecab8c5f65924"></span><span class="sig-name descname"><span class="n"><span class="pre">~image</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d5imageD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Default/copy/move constructors/operators. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d5image5imageERK5image">
+<span id="_CPPv3N3f3d5image5imageERK5image"></span><span id="_CPPv2N3f3d5image5imageERK5image"></span><span id="f3d::image::image__imageCR"></span><span class="target" id="classf3d_1_1image_1a3018cb02119749352d3b43c8b2fbb4c0"></span><span class="sig-name descname"><span class="n"><span class="pre">image</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d5image5imageERK5image" title="f3d::image::image"><span class="n"><span class="pre">image</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">img</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d5image5imageERK5image" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Default/copy/move constructors/operators. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d5imageaSERK5image">
+<span id="_CPPv3N3f3d5imageaSERK5image"></span><span id="_CPPv2N3f3d5imageaSERK5image"></span><span id="f3d::image::assign-operator__imageCR"></span><span class="target" id="classf3d_1_1image_1a122ce312e49c1f8f631243c0f698e96b"></span><a class="reference internal" href="#_CPPv4N3f3d5imageE" title="f3d::image"><span class="n"><span class="pre">image</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d5imageE" title="f3d::image"><span class="n"><span class="pre">image</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">img</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3f3d5imageaSERK5image" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Default/copy/move constructors/operators. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d5image5imageERR5image">
+<span id="_CPPv3N3f3d5image5imageERR5image"></span><span id="_CPPv2N3f3d5image5imageERR5image"></span><span id="f3d::image::image__imageRR"></span><span class="target" id="classf3d_1_1image_1a849dfd623e0fd30b8423a8428ce6683a"></span><span class="sig-name descname"><span class="n"><span class="pre">image</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N3f3d5image5imageERR5image" title="f3d::image::image"><span class="n"><span class="pre">image</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">img</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3f3d5image5imageERR5image" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Default/copy/move constructors/operators. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d5imageaSERR5image">
+<span id="_CPPv3N3f3d5imageaSERR5image"></span><span id="_CPPv2N3f3d5imageaSERR5image"></span><span id="f3d::image::assign-operator__imageRR"></span><span class="target" id="classf3d_1_1image_1aeb00a99210335d0d1094d76b9735b843"></span><a class="reference internal" href="#_CPPv4N3f3d5imageE" title="f3d::image"><span class="n"><span class="pre">image</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N3f3d5imageE" title="f3d::image"><span class="n"><span class="pre">image</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">img</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3f3d5imageaSERR5image" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Default/copy/move constructors/operators. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-operators">Operators</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3f3d5imageeqERK5image">
+<span id="_CPPv3NK3f3d5imageeqERK5image"></span><span id="_CPPv2NK3f3d5imageeqERK5image"></span><span id="f3d::image::eq-operator__imageCRC"></span><span class="target" id="classf3d_1_1image_1a9946310d12ccca5d8524eb99686c7852"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">==</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d5imageE" title="f3d::image"><span class="n"><span class="pre">image</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">reference</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d5imageeqERK5image" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Comparison operators, uses <a class="reference internal" href="#classf3d_1_1image_1a7fb7335a7683a4376891ce32849bc034"><span class="std std-ref">image::compare</span></a> with a threshold of 0. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3f3d5imageneERK5image">
+<span id="_CPPv3NK3f3d5imageneERK5image"></span><span id="_CPPv2NK3f3d5imageneERK5image"></span><span id="f3d::image::neq-operator__imageCRC"></span><span class="target" id="classf3d_1_1image_1a0117eff18734cc22b4658d9b5cf9ffcf"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">!=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d5imageE" title="f3d::image"><span class="n"><span class="pre">image</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">reference</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d5imageneERK5image" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Comparison operators, uses <a class="reference internal" href="#classf3d_1_1image_1a7fb7335a7683a4376891ce32849bc034"><span class="std std-ref">image::compare</span></a> with a threshold of 0. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-resolution">Resolution</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3f3d5image8getWidthEv">
+<span id="_CPPv3NK3f3d5image8getWidthEv"></span><span id="_CPPv2NK3f3d5image8getWidthEv"></span><span id="f3d::image::getWidthC"></span><span class="target" id="classf3d_1_1image_1ae59d1943a87a24c48919beb3ee4c50cd"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getWidth</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d5image8getWidthEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Set/Get image resolution. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3f3d5image9getHeightEv">
+<span id="_CPPv3NK3f3d5image9getHeightEv"></span><span id="_CPPv2NK3f3d5image9getHeightEv"></span><span id="f3d::image::getHeightC"></span><span class="target" id="classf3d_1_1image_1a1f3cede0d5c810d273d9406fbe9c9f88"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getHeight</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d5image9getHeightEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Set/Get image resolution. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d5image13setResolutionEjj">
+<span id="_CPPv3N3f3d5image13setResolutionEjj"></span><span id="_CPPv2N3f3d5image13setResolutionEjj"></span><span id="f3d::image::setResolution__unsigned-i.unsigned-i"></span><span class="target" id="classf3d_1_1image_1a6b86330ac1e4709ff8c8b6bcd7d3b8df"></span><a class="reference internal" href="#_CPPv4N3f3d5imageE" title="f3d::image"><span class="n"><span class="pre">image</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">setResolution</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">width</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">height</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d5image13setResolutionEjj" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Set/Get image resolution. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-channel-count">Channel Count</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3f3d5image15getChannelCountEv">
+<span id="_CPPv3NK3f3d5image15getChannelCountEv"></span><span id="_CPPv2NK3f3d5image15getChannelCountEv"></span><span id="f3d::image::getChannelCountC"></span><span class="target" id="classf3d_1_1image_1a02cc5b09cf3d682b918ab7d6928dd74a"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getChannelCount</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d5image15getChannelCountEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Set/Get image channel count. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d5image15setChannelCountEj">
+<span id="_CPPv3N3f3d5image15setChannelCountEj"></span><span id="_CPPv2N3f3d5image15setChannelCountEj"></span><span id="f3d::image::setChannelCount__unsigned-i"></span><span class="target" id="classf3d_1_1image_1a5fd759cb060bbaf9b7d8b4fb795ca4e3"></span><a class="reference internal" href="#_CPPv4N3f3d5imageE" title="f3d::image"><span class="n"><span class="pre">image</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">setChannelCount</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dim</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d5image15setChannelCountEj" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Set/Get image channel count. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-buffer-data">Buffer Data</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d5image7setDataEPh">
+<span id="_CPPv3N3f3d5image7setDataEPh"></span><span id="_CPPv2N3f3d5image7setDataEPh"></span><span id="f3d::image::setData__unsigned-cP"></span><span class="target" id="classf3d_1_1image_1ae4793951d04d02cf261b2ae6208f5673"></span><a class="reference internal" href="#_CPPv4N3f3d5imageE" title="f3d::image"><span class="n"><span class="pre">image</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">setData</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">buffer</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d5image7setDataEPh" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Set/Get image buffer data. Its size is expected to be <code class="docutils literal notranslate"><span class="pre">width</span> <span class="pre">*</span> <span class="pre">height</span> <span class="pre">*</span> <span class="pre">channelCount</span></code>. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3f3d5image7getDataEv">
+<span id="_CPPv3NK3f3d5image7getDataEv"></span><span id="_CPPv2NK3f3d5image7getDataEv"></span><span id="f3d::image::getDataC"></span><span class="target" id="classf3d_1_1image_1abaec51b2be5f2a9b180f519e160b9383"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getData</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d5image7getDataEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Set/Get image buffer data. Its size is expected to be <code class="docutils literal notranslate"><span class="pre">width</span> <span class="pre">*</span> <span class="pre">height</span> <span class="pre">*</span> <span class="pre">channelCount</span></code>. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d5image5imageERKNSt6stringE">
+<span id="_CPPv3N3f3d5image5imageERKNSt6stringE"></span><span id="_CPPv2N3f3d5image5imageERKNSt6stringE"></span><span id="f3d::image::image__ssCR"></span><span class="target" id="classf3d_1_1image_1a68a469873bfcd78bf8f5012dffc21899"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">image</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">path</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d5image5imageERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Create an image from file, the following formats are supported: PNG, PNM, TIFF, BMP, HDR, JPEG, GESigna, MetaImage, TGA. Throw an <a class="reference internal" href="structf3d_1_1image_1_1read__exception.html#structf3d_1_1image_1_1read__exception"><span class="std std-ref">image::read_exception</span></a> in case of failure. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3f3d5image7compareERK5imagedR5imageRd">
+<span id="_CPPv3NK3f3d5image7compareERK5imagedR5imageRd"></span><span id="_CPPv2NK3f3d5image7compareERK5imagedR5imageRd"></span><span id="f3d::image::compare__imageCR.double.imageR.doubleRC"></span><span class="target" id="classf3d_1_1image_1a7fb7335a7683a4376891ce32849bc034"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compare</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d5imageE" title="f3d::image"><span class="n"><span class="pre">image</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">reference</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">threshold</span></span>, <a class="reference internal" href="#_CPPv4N3f3d5imageE" title="f3d::image"><span class="n"><span class="pre">image</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">diff</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">error</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d5image7compareERK5imagedR5imageRd" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Compare current image to a reference using the provided threshold. If the comparison fails, ie. error is higher than the threshold, this outputs the resulting diff and error and return false, return true otherwise. The error is based on the pixel value and accumulated over neighbors pixels. 0: Pixel perfect comparison. 50: Visually indistinguishable. 100: Small visible difference. 300: Comparable images. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3f3d5image4saveERKNSt6stringE">
+<span id="_CPPv3NK3f3d5image4saveERKNSt6stringE"></span><span id="_CPPv2NK3f3d5image4saveERKNSt6stringE"></span><span id="f3d::image::save__ssCRC"></span><span class="target" id="classf3d_1_1image_1a9a984917f6c99489e67c68b324c85efd"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">save</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">path</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d5image4saveERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Save an image to a file in .png format. Throw an <a class="reference internal" href="structf3d_1_1image_1_1write__exception.html#structf3d_1_1image_1_1write__exception"><span class="std std-ref">image::write_exception</span></a> if image cannot be written. </p>
+</dd></dl>
+
+</div>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d5image14read_exceptionE">
+<span id="_CPPv3N3f3d5image14read_exceptionE"></span><span id="_CPPv2N3f3d5image14read_exceptionE"></span><span id="f3d::image::read_exception"></span><span class="target" id="structf3d_1_1image_1_1read__exception"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read_exception</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">f3d</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="class_structf3d_1_1exception.html#_CPPv4N3f3d9exceptionE" title="f3d::exception"><span class="n"><span class="pre">exception</span></span></a><a class="headerlink" href="#_CPPv4N3f3d5image14read_exceptionE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>An exception that can be thrown by the image. when there is an error on read. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d5image14read_exception14read_exceptionERKNSt6stringE">
+<span id="_CPPv3N3f3d5image14read_exception14read_exceptionERKNSt6stringE"></span><span id="_CPPv2N3f3d5image14read_exception14read_exceptionERKNSt6stringE"></span><span id="f3d::image::read_exception::read_exception__ssCR"></span><span class="target" id="structf3d_1_1image_1_1read__exception_1a8494b506cc69a6e1252b171d5ffa4477"></span><span class="sig-name descname"><span class="n"><span class="pre">read_exception</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">what</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d5image14read_exception14read_exceptionERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d5image15write_exceptionE">
+<span id="_CPPv3N3f3d5image15write_exceptionE"></span><span id="_CPPv2N3f3d5image15write_exceptionE"></span><span id="f3d::image::write_exception"></span><span class="target" id="structf3d_1_1image_1_1write__exception"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write_exception</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">f3d</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="class_structf3d_1_1exception.html#_CPPv4N3f3d9exceptionE" title="f3d::exception"><span class="n"><span class="pre">exception</span></span></a><a class="headerlink" href="#_CPPv4N3f3d5image15write_exceptionE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>An exception that can be thrown by the image when there. is an error on write. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d5image15write_exception15write_exceptionERKNSt6stringE">
+<span id="_CPPv3N3f3d5image15write_exception15write_exceptionERKNSt6stringE"></span><span id="_CPPv2N3f3d5image15write_exception15write_exceptionERKNSt6stringE"></span><span id="f3d::image::write_exception::write_exception__ssCR"></span><span class="target" id="structf3d_1_1image_1_1write__exception_1ae60ce88787aeb45de2d75c16d1ae0e3a"></span><span class="sig-name descname"><span class="n"><span class="pre">write_exception</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">what</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d5image15write_exception15write_exceptionERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="class_structf3d_1_1exception.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Class exception</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="classf3d_1_1interactor.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Class interactor</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Michael Migliore and Mathieu Westphal<br/>
+  
+      &copy; Copyright 2022, Michael Migliore and Mathieu Westphal.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
