@@ -8,9 +8,7 @@
 
     <title>Class camera &#8212; libf3d 1.3.1 documentation</title>
     
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
     
   <link rel="stylesheet"
@@ -20,12 +18,19 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
     
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -33,75 +38,51 @@
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
     <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Class engine" href="classf3d_1_1engine.html" />
     <link rel="prev" title="Struct vector3_t" href="structf3d_1_1vector3__t.html" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
-    
+    <meta name="docsearch:language" content="en" />
 
-    <!-- Google Analytics -->
-    
+
+
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
-
-    
-    <div class="container-fluid" id="banner"></div>
-
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
 
     <div class="container-xl">
       <div class="row">
           
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">libf3d 1.3.1 documentation</h1>
-      
-    </a>
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">libf3d 1.3.1 documentation</h1>
+  
+</a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <p aria-level="2" class="caption" role="heading">
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <p class="caption collapsible-parent" role="heading">
  <span class="caption-text">
   Contents:
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
   <a class="reference internal" href="library_root.html">
    Library API
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
+  <ul class="current collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="namespace_f3d.html">
      Namespace f3d
@@ -203,16 +184,6 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="classf3d_1_1plugin.html">
-     Class plugin
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="classf3d_1_1reader.html">
-     Class reader
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="classf3d_1_1window.html">
      Class window
     </a>
@@ -223,21 +194,17 @@
     </a>
    </li>
   </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
 </ul>
 
-    </div>
-</nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-            </div>
-            
-        </div>
-    </div>
-    <div id="rtd-footer-container"></div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
 </div>
 
 
@@ -245,117 +212,61 @@
 
 
           
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
     </div>
-    <div class="header-article__right">
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/api/classf3d_1_1camera.rst.txt"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.rst</span>
-</a>
-
-      </li>
-      
-      <li>
+    <div class="col pl-2 topbar-main">
         
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
-
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/api/classf3d_1_1camera.rst.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.rst</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
     </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#class-documentation">
    Class Documentation
@@ -363,121 +274,98 @@ title="Print to PDF"
  </li>
 </ul>
 
-    </nav>
-</div>
+        </nav>
+        
     </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Class camera</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#class-documentation">
-   Class Documentation
-  </a>
- </li>
-</ul>
-
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            <main id="main-content" role="main">
-                
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
               <div>
                 
   <section id="class-camera">
-<span id="exhale-class-classf3d-1-1camera"></span><h1>Class camera<a class="headerlink" href="#class-camera" title="Permalink to this heading">#</a></h1>
+<span id="exhale-class-classf3d-1-1camera"></span><h1>Class camera<a class="headerlink" href="#class-camera" title="Permalink to this heading">¶</a></h1>
 <ul class="simple">
 <li><p>Defined in <a class="reference internal" href="file_public_camera.h.html#file-public-camera-h"><span class="std std-ref">File camera.h</span></a></p></li>
 </ul>
 <section id="class-documentation">
-<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this heading">#</a></h2>
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this heading">¶</a></h2>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6cameraE">
-<span id="_CPPv3N3f3d6cameraE"></span><span id="_CPPv2N3f3d6cameraE"></span><span id="f3d::camera"></span><span class="target" id="classf3d_1_1camera"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">camera</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6cameraE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d6cameraE"></span><span id="_CPPv2N3f3d6cameraE"></span><span id="f3d::camera"></span><span class="target" id="classf3d_1_1camera"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">camera</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6cameraE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Abstract class to control a camera in a window. </p>
 <p>A class to control a camera in a window. When modifying the Position/FocalPoint/ViewUp API or the camera movements API, the view up is automatically orthogonalized. All angles are in degrees. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-parameters">Parameters</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6camera11setPositionERK8point3_t">
-<span id="_CPPv3N3f3d6camera11setPositionERK8point3_t"></span><span id="_CPPv2N3f3d6camera11setPositionERK8point3_t"></span><span id="f3d::camera::setPosition__point3_tCR"></span><span class="target" id="classf3d_1_1camera_1aff2d99ad5e3778b7af8d6bc583081e4c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6cameraE" title="f3d::camera"><span class="n"><span class="pre">camera</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">setPosition</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="structf3d_1_1point3__t.html#_CPPv4N3f3d8point3_tE" title="f3d::point3_t"><span class="n"><span class="pre">point3_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pos</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera11setPositionERK8point3_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d6camera11setPositionERK8point3_t"></span><span id="_CPPv2N3f3d6camera11setPositionERK8point3_t"></span><span id="f3d::camera::setPosition__point3_tCR"></span><span class="target" id="classf3d_1_1camera_1aff2d99ad5e3778b7af8d6bc583081e4c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6cameraE" title="f3d::camera"><span class="n"><span class="pre">camera</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">setPosition</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="structf3d_1_1point3__t.html#_CPPv4N3f3d8point3_tE" title="f3d::point3_t"><span class="n"><span class="pre">point3_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pos</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera11setPositionERK8point3_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set/Get the camera parameters. Angles are in degrees. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6camera11getPositionEv">
-<span id="_CPPv3N3f3d6camera11getPositionEv"></span><span id="_CPPv2N3f3d6camera11getPositionEv"></span><span id="f3d::camera::getPosition"></span><span class="target" id="classf3d_1_1camera_1af9c38dd7e513c71e4c80c1fd61d5d464"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="structf3d_1_1point3__t.html#_CPPv4N3f3d8point3_tE" title="f3d::point3_t"><span class="n"><span class="pre">point3_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPosition</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera11getPositionEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d6camera11getPositionEv"></span><span id="_CPPv2N3f3d6camera11getPositionEv"></span><span id="f3d::camera::getPosition"></span><span class="target" id="classf3d_1_1camera_1af9c38dd7e513c71e4c80c1fd61d5d464"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="structf3d_1_1point3__t.html#_CPPv4N3f3d8point3_tE" title="f3d::point3_t"><span class="n"><span class="pre">point3_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPosition</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera11getPositionEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set/Get the camera parameters. Angles are in degrees. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6camera11getPositionER8point3_t">
-<span id="_CPPv3N3f3d6camera11getPositionER8point3_t"></span><span id="_CPPv2N3f3d6camera11getPositionER8point3_t"></span><span id="f3d::camera::getPosition__point3_tR"></span><span class="target" id="classf3d_1_1camera_1a11aa28d837de538281d0445bf47c2d6c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPosition</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structf3d_1_1point3__t.html#_CPPv4N3f3d8point3_tE" title="f3d::point3_t"><span class="n"><span class="pre">point3_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pos</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera11getPositionER8point3_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d6camera11getPositionER8point3_t"></span><span id="_CPPv2N3f3d6camera11getPositionER8point3_t"></span><span id="f3d::camera::getPosition__point3_tR"></span><span class="target" id="classf3d_1_1camera_1a11aa28d837de538281d0445bf47c2d6c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPosition</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structf3d_1_1point3__t.html#_CPPv4N3f3d8point3_tE" title="f3d::point3_t"><span class="n"><span class="pre">point3_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pos</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera11getPositionER8point3_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set/Get the camera parameters. Angles are in degrees. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6camera13setFocalPointERK8point3_t">
-<span id="_CPPv3N3f3d6camera13setFocalPointERK8point3_t"></span><span id="_CPPv2N3f3d6camera13setFocalPointERK8point3_t"></span><span id="f3d::camera::setFocalPoint__point3_tCR"></span><span class="target" id="classf3d_1_1camera_1a85d086731af40cc8308fbf690a5d6146"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6cameraE" title="f3d::camera"><span class="n"><span class="pre">camera</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">setFocalPoint</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="structf3d_1_1point3__t.html#_CPPv4N3f3d8point3_tE" title="f3d::point3_t"><span class="n"><span class="pre">point3_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">foc</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera13setFocalPointERK8point3_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d6camera13setFocalPointERK8point3_t"></span><span id="_CPPv2N3f3d6camera13setFocalPointERK8point3_t"></span><span id="f3d::camera::setFocalPoint__point3_tCR"></span><span class="target" id="classf3d_1_1camera_1a85d086731af40cc8308fbf690a5d6146"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6cameraE" title="f3d::camera"><span class="n"><span class="pre">camera</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">setFocalPoint</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="structf3d_1_1point3__t.html#_CPPv4N3f3d8point3_tE" title="f3d::point3_t"><span class="n"><span class="pre">point3_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">foc</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera13setFocalPointERK8point3_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set/Get the camera parameters. Angles are in degrees. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6camera13getFocalPointEv">
-<span id="_CPPv3N3f3d6camera13getFocalPointEv"></span><span id="_CPPv2N3f3d6camera13getFocalPointEv"></span><span id="f3d::camera::getFocalPoint"></span><span class="target" id="classf3d_1_1camera_1a9895950ec24aac2dd984399d3a76bbda"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="structf3d_1_1point3__t.html#_CPPv4N3f3d8point3_tE" title="f3d::point3_t"><span class="n"><span class="pre">point3_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFocalPoint</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera13getFocalPointEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d6camera13getFocalPointEv"></span><span id="_CPPv2N3f3d6camera13getFocalPointEv"></span><span id="f3d::camera::getFocalPoint"></span><span class="target" id="classf3d_1_1camera_1a9895950ec24aac2dd984399d3a76bbda"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="structf3d_1_1point3__t.html#_CPPv4N3f3d8point3_tE" title="f3d::point3_t"><span class="n"><span class="pre">point3_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFocalPoint</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera13getFocalPointEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set/Get the camera parameters. Angles are in degrees. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6camera13getFocalPointER8point3_t">
-<span id="_CPPv3N3f3d6camera13getFocalPointER8point3_t"></span><span id="_CPPv2N3f3d6camera13getFocalPointER8point3_t"></span><span id="f3d::camera::getFocalPoint__point3_tR"></span><span class="target" id="classf3d_1_1camera_1a8186470e18d5ef61fccb1580eb6fe7c6"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFocalPoint</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structf3d_1_1point3__t.html#_CPPv4N3f3d8point3_tE" title="f3d::point3_t"><span class="n"><span class="pre">point3_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">foc</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera13getFocalPointER8point3_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d6camera13getFocalPointER8point3_t"></span><span id="_CPPv2N3f3d6camera13getFocalPointER8point3_t"></span><span id="f3d::camera::getFocalPoint__point3_tR"></span><span class="target" id="classf3d_1_1camera_1a8186470e18d5ef61fccb1580eb6fe7c6"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFocalPoint</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structf3d_1_1point3__t.html#_CPPv4N3f3d8point3_tE" title="f3d::point3_t"><span class="n"><span class="pre">point3_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">foc</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera13getFocalPointER8point3_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set/Get the camera parameters. Angles are in degrees. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6camera9setViewUpERK9vector3_t">
-<span id="_CPPv3N3f3d6camera9setViewUpERK9vector3_t"></span><span id="_CPPv2N3f3d6camera9setViewUpERK9vector3_t"></span><span id="f3d::camera::setViewUp__vector3_tCR"></span><span class="target" id="classf3d_1_1camera_1a7cca56dbe5707d7dc13c908b940cf7a4"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6cameraE" title="f3d::camera"><span class="n"><span class="pre">camera</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">setViewUp</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="structf3d_1_1vector3__t.html#_CPPv4N3f3d9vector3_tE" title="f3d::vector3_t"><span class="n"><span class="pre">vector3_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">up</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera9setViewUpERK9vector3_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d6camera9setViewUpERK9vector3_t"></span><span id="_CPPv2N3f3d6camera9setViewUpERK9vector3_t"></span><span id="f3d::camera::setViewUp__vector3_tCR"></span><span class="target" id="classf3d_1_1camera_1a7cca56dbe5707d7dc13c908b940cf7a4"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6cameraE" title="f3d::camera"><span class="n"><span class="pre">camera</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">setViewUp</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="structf3d_1_1vector3__t.html#_CPPv4N3f3d9vector3_tE" title="f3d::vector3_t"><span class="n"><span class="pre">vector3_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">up</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera9setViewUpERK9vector3_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set/Get the camera parameters. Angles are in degrees. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6camera9getViewUpEv">
-<span id="_CPPv3N3f3d6camera9getViewUpEv"></span><span id="_CPPv2N3f3d6camera9getViewUpEv"></span><span id="f3d::camera::getViewUp"></span><span class="target" id="classf3d_1_1camera_1a5ab680e6a0c95ed82e08391b69011b1a"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="structf3d_1_1vector3__t.html#_CPPv4N3f3d9vector3_tE" title="f3d::vector3_t"><span class="n"><span class="pre">vector3_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getViewUp</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera9getViewUpEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d6camera9getViewUpEv"></span><span id="_CPPv2N3f3d6camera9getViewUpEv"></span><span id="f3d::camera::getViewUp"></span><span class="target" id="classf3d_1_1camera_1a5ab680e6a0c95ed82e08391b69011b1a"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="structf3d_1_1vector3__t.html#_CPPv4N3f3d9vector3_tE" title="f3d::vector3_t"><span class="n"><span class="pre">vector3_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getViewUp</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera9getViewUpEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set/Get the camera parameters. Angles are in degrees. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6camera9getViewUpER9vector3_t">
-<span id="_CPPv3N3f3d6camera9getViewUpER9vector3_t"></span><span id="_CPPv2N3f3d6camera9getViewUpER9vector3_t"></span><span id="f3d::camera::getViewUp__vector3_tR"></span><span class="target" id="classf3d_1_1camera_1aa14bc0553a56d203214ee3eaab1c5fea"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getViewUp</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structf3d_1_1vector3__t.html#_CPPv4N3f3d9vector3_tE" title="f3d::vector3_t"><span class="n"><span class="pre">vector3_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">up</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera9getViewUpER9vector3_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d6camera9getViewUpER9vector3_t"></span><span id="_CPPv2N3f3d6camera9getViewUpER9vector3_t"></span><span id="f3d::camera::getViewUp__vector3_tR"></span><span class="target" id="classf3d_1_1camera_1aa14bc0553a56d203214ee3eaab1c5fea"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getViewUp</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structf3d_1_1vector3__t.html#_CPPv4N3f3d9vector3_tE" title="f3d::vector3_t"><span class="n"><span class="pre">vector3_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">up</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera9getViewUpER9vector3_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set/Get the camera parameters. Angles are in degrees. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6camera12setViewAngleERK11angle_deg_t">
-<span id="_CPPv3N3f3d6camera12setViewAngleERK11angle_deg_t"></span><span id="_CPPv2N3f3d6camera12setViewAngleERK11angle_deg_t"></span><span id="f3d::camera::setViewAngle__angle_deg_tCR"></span><span class="target" id="classf3d_1_1camera_1aebbe98a60ab0e0a30f8516a8ba5cd20a"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6cameraE" title="f3d::camera"><span class="n"><span class="pre">camera</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">setViewAngle</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="typedef_types_8h_1a62f3e15e4e18455b52854622b27c02ed.html#_CPPv4N3f3d11angle_deg_tE" title="f3d::angle_deg_t"><span class="n"><span class="pre">angle_deg_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">angle</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera12setViewAngleERK11angle_deg_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d6camera12setViewAngleERK11angle_deg_t"></span><span id="_CPPv2N3f3d6camera12setViewAngleERK11angle_deg_t"></span><span id="f3d::camera::setViewAngle__angle_deg_tCR"></span><span class="target" id="classf3d_1_1camera_1aebbe98a60ab0e0a30f8516a8ba5cd20a"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6cameraE" title="f3d::camera"><span class="n"><span class="pre">camera</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">setViewAngle</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="typedef_types_8h_1a62f3e15e4e18455b52854622b27c02ed.html#_CPPv4N3f3d11angle_deg_tE" title="f3d::angle_deg_t"><span class="n"><span class="pre">angle_deg_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">angle</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera12setViewAngleERK11angle_deg_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set/Get the camera parameters. Angles are in degrees. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6camera12getViewAngleEv">
-<span id="_CPPv3N3f3d6camera12getViewAngleEv"></span><span id="_CPPv2N3f3d6camera12getViewAngleEv"></span><span id="f3d::camera::getViewAngle"></span><span class="target" id="classf3d_1_1camera_1ae2ba1490e04694c66d5dbd87ecf8728c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="typedef_types_8h_1a62f3e15e4e18455b52854622b27c02ed.html#_CPPv4N3f3d11angle_deg_tE" title="f3d::angle_deg_t"><span class="n"><span class="pre">angle_deg_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getViewAngle</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera12getViewAngleEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d6camera12getViewAngleEv"></span><span id="_CPPv2N3f3d6camera12getViewAngleEv"></span><span id="f3d::camera::getViewAngle"></span><span class="target" id="classf3d_1_1camera_1ae2ba1490e04694c66d5dbd87ecf8728c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="typedef_types_8h_1a62f3e15e4e18455b52854622b27c02ed.html#_CPPv4N3f3d11angle_deg_tE" title="f3d::angle_deg_t"><span class="n"><span class="pre">angle_deg_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getViewAngle</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera12getViewAngleEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set/Get the camera parameters. Angles are in degrees. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6camera12getViewAngleER11angle_deg_t">
-<span id="_CPPv3N3f3d6camera12getViewAngleER11angle_deg_t"></span><span id="_CPPv2N3f3d6camera12getViewAngleER11angle_deg_t"></span><span id="f3d::camera::getViewAngle__angle_deg_tR"></span><span class="target" id="classf3d_1_1camera_1a266993b7e1f31d447bcfc9d16a445c47"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getViewAngle</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_types_8h_1a62f3e15e4e18455b52854622b27c02ed.html#_CPPv4N3f3d11angle_deg_tE" title="f3d::angle_deg_t"><span class="n"><span class="pre">angle_deg_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">angle</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera12getViewAngleER11angle_deg_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d6camera12getViewAngleER11angle_deg_t"></span><span id="_CPPv2N3f3d6camera12getViewAngleER11angle_deg_t"></span><span id="f3d::camera::getViewAngle__angle_deg_tR"></span><span class="target" id="classf3d_1_1camera_1a266993b7e1f31d447bcfc9d16a445c47"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getViewAngle</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_types_8h_1a62f3e15e4e18455b52854622b27c02ed.html#_CPPv4N3f3d11angle_deg_tE" title="f3d::angle_deg_t"><span class="n"><span class="pre">angle_deg_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">angle</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera12getViewAngleER11angle_deg_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set/Get the camera parameters. Angles are in degrees. </p>
 </dd></dl>
 
@@ -486,37 +374,37 @@ title="Print to PDF"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-manipulation">Manipulation</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6camera5dollyEd">
-<span id="_CPPv3N3f3d6camera5dollyEd"></span><span id="_CPPv2N3f3d6camera5dollyEd"></span><span id="f3d::camera::dolly__double"></span><span class="target" id="classf3d_1_1camera_1af165a5d07c03927361e176ee9a105c97"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6cameraE" title="f3d::camera"><span class="n"><span class="pre">camera</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">dolly</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera5dollyEd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d6camera5dollyEd"></span><span id="_CPPv2N3f3d6camera5dollyEd"></span><span id="f3d::camera::dolly__double"></span><span class="target" id="classf3d_1_1camera_1af165a5d07c03927361e176ee9a105c97"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6cameraE" title="f3d::camera"><span class="n"><span class="pre">camera</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">dolly</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera5dollyEd" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Standard camera manipulation methods. Angles are in degrees. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6camera4rollE11angle_deg_t">
-<span id="_CPPv3N3f3d6camera4rollE11angle_deg_t"></span><span id="_CPPv2N3f3d6camera4rollE11angle_deg_t"></span><span id="f3d::camera::roll__angle_deg_t"></span><span class="target" id="classf3d_1_1camera_1a2e357e873f7e97be2de5e0d7f4daa0d7"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6cameraE" title="f3d::camera"><span class="n"><span class="pre">camera</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">roll</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_types_8h_1a62f3e15e4e18455b52854622b27c02ed.html#_CPPv4N3f3d11angle_deg_tE" title="f3d::angle_deg_t"><span class="n"><span class="pre">angle_deg_t</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">angle</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera4rollE11angle_deg_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d6camera4rollE11angle_deg_t"></span><span id="_CPPv2N3f3d6camera4rollE11angle_deg_t"></span><span id="f3d::camera::roll__angle_deg_t"></span><span class="target" id="classf3d_1_1camera_1a2e357e873f7e97be2de5e0d7f4daa0d7"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6cameraE" title="f3d::camera"><span class="n"><span class="pre">camera</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">roll</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_types_8h_1a62f3e15e4e18455b52854622b27c02ed.html#_CPPv4N3f3d11angle_deg_tE" title="f3d::angle_deg_t"><span class="n"><span class="pre">angle_deg_t</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">angle</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera4rollE11angle_deg_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Standard camera manipulation methods. Angles are in degrees. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6camera7azimuthE11angle_deg_t">
-<span id="_CPPv3N3f3d6camera7azimuthE11angle_deg_t"></span><span id="_CPPv2N3f3d6camera7azimuthE11angle_deg_t"></span><span id="f3d::camera::azimuth__angle_deg_t"></span><span class="target" id="classf3d_1_1camera_1a3a01f46d5415815db134df3c7f3d85fc"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6cameraE" title="f3d::camera"><span class="n"><span class="pre">camera</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">azimuth</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_types_8h_1a62f3e15e4e18455b52854622b27c02ed.html#_CPPv4N3f3d11angle_deg_tE" title="f3d::angle_deg_t"><span class="n"><span class="pre">angle_deg_t</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">angle</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera7azimuthE11angle_deg_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d6camera7azimuthE11angle_deg_t"></span><span id="_CPPv2N3f3d6camera7azimuthE11angle_deg_t"></span><span id="f3d::camera::azimuth__angle_deg_t"></span><span class="target" id="classf3d_1_1camera_1a3a01f46d5415815db134df3c7f3d85fc"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6cameraE" title="f3d::camera"><span class="n"><span class="pre">camera</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">azimuth</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_types_8h_1a62f3e15e4e18455b52854622b27c02ed.html#_CPPv4N3f3d11angle_deg_tE" title="f3d::angle_deg_t"><span class="n"><span class="pre">angle_deg_t</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">angle</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera7azimuthE11angle_deg_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Standard camera manipulation methods. Angles are in degrees. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6camera3yawE11angle_deg_t">
-<span id="_CPPv3N3f3d6camera3yawE11angle_deg_t"></span><span id="_CPPv2N3f3d6camera3yawE11angle_deg_t"></span><span id="f3d::camera::yaw__angle_deg_t"></span><span class="target" id="classf3d_1_1camera_1a56dea0b192ee46db80ad76907b9f8846"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6cameraE" title="f3d::camera"><span class="n"><span class="pre">camera</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">yaw</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_types_8h_1a62f3e15e4e18455b52854622b27c02ed.html#_CPPv4N3f3d11angle_deg_tE" title="f3d::angle_deg_t"><span class="n"><span class="pre">angle_deg_t</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">angle</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera3yawE11angle_deg_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d6camera3yawE11angle_deg_t"></span><span id="_CPPv2N3f3d6camera3yawE11angle_deg_t"></span><span id="f3d::camera::yaw__angle_deg_t"></span><span class="target" id="classf3d_1_1camera_1a56dea0b192ee46db80ad76907b9f8846"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6cameraE" title="f3d::camera"><span class="n"><span class="pre">camera</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">yaw</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_types_8h_1a62f3e15e4e18455b52854622b27c02ed.html#_CPPv4N3f3d11angle_deg_tE" title="f3d::angle_deg_t"><span class="n"><span class="pre">angle_deg_t</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">angle</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera3yawE11angle_deg_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Standard camera manipulation methods. Angles are in degrees. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6camera9elevationE11angle_deg_t">
-<span id="_CPPv3N3f3d6camera9elevationE11angle_deg_t"></span><span id="_CPPv2N3f3d6camera9elevationE11angle_deg_t"></span><span id="f3d::camera::elevation__angle_deg_t"></span><span class="target" id="classf3d_1_1camera_1a73c6358d4f9cbfaba84431d21b310c4a"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6cameraE" title="f3d::camera"><span class="n"><span class="pre">camera</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">elevation</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_types_8h_1a62f3e15e4e18455b52854622b27c02ed.html#_CPPv4N3f3d11angle_deg_tE" title="f3d::angle_deg_t"><span class="n"><span class="pre">angle_deg_t</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">angle</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera9elevationE11angle_deg_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d6camera9elevationE11angle_deg_t"></span><span id="_CPPv2N3f3d6camera9elevationE11angle_deg_t"></span><span id="f3d::camera::elevation__angle_deg_t"></span><span class="target" id="classf3d_1_1camera_1a73c6358d4f9cbfaba84431d21b310c4a"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6cameraE" title="f3d::camera"><span class="n"><span class="pre">camera</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">elevation</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_types_8h_1a62f3e15e4e18455b52854622b27c02ed.html#_CPPv4N3f3d11angle_deg_tE" title="f3d::angle_deg_t"><span class="n"><span class="pre">angle_deg_t</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">angle</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera9elevationE11angle_deg_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Standard camera manipulation methods. Angles are in degrees. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6camera5pitchE11angle_deg_t">
-<span id="_CPPv3N3f3d6camera5pitchE11angle_deg_t"></span><span id="_CPPv2N3f3d6camera5pitchE11angle_deg_t"></span><span id="f3d::camera::pitch__angle_deg_t"></span><span class="target" id="classf3d_1_1camera_1ad72e8bf8b23ac6f052df5cfab2335332"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6cameraE" title="f3d::camera"><span class="n"><span class="pre">camera</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">pitch</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_types_8h_1a62f3e15e4e18455b52854622b27c02ed.html#_CPPv4N3f3d11angle_deg_tE" title="f3d::angle_deg_t"><span class="n"><span class="pre">angle_deg_t</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">angle</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera5pitchE11angle_deg_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d6camera5pitchE11angle_deg_t"></span><span id="_CPPv2N3f3d6camera5pitchE11angle_deg_t"></span><span id="f3d::camera::pitch__angle_deg_t"></span><span class="target" id="classf3d_1_1camera_1ad72e8bf8b23ac6f052df5cfab2335332"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6cameraE" title="f3d::camera"><span class="n"><span class="pre">camera</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">pitch</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_types_8h_1a62f3e15e4e18455b52854622b27c02ed.html#_CPPv4N3f3d11angle_deg_tE" title="f3d::angle_deg_t"><span class="n"><span class="pre">angle_deg_t</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">angle</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera5pitchE11angle_deg_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Standard camera manipulation methods. Angles are in degrees. </p>
 </dd></dl>
 
@@ -525,19 +413,19 @@ title="Print to PDF"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6camera19setCurrentAsDefaultEv">
-<span id="_CPPv3N3f3d6camera19setCurrentAsDefaultEv"></span><span id="_CPPv2N3f3d6camera19setCurrentAsDefaultEv"></span><span id="f3d::camera::setCurrentAsDefault"></span><span class="target" id="classf3d_1_1camera_1a47087d415401a50a214ab2a636ef7e93"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6cameraE" title="f3d::camera"><span class="n"><span class="pre">camera</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">setCurrentAsDefault</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera19setCurrentAsDefaultEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d6camera19setCurrentAsDefaultEv"></span><span id="_CPPv2N3f3d6camera19setCurrentAsDefaultEv"></span><span id="f3d::camera::setCurrentAsDefault"></span><span class="target" id="classf3d_1_1camera_1a47087d415401a50a214ab2a636ef7e93"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6cameraE" title="f3d::camera"><span class="n"><span class="pre">camera</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">setCurrentAsDefault</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera19setCurrentAsDefaultEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Store the current camera configuration as default. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6camera14resetToDefaultEv">
-<span id="_CPPv3N3f3d6camera14resetToDefaultEv"></span><span id="_CPPv2N3f3d6camera14resetToDefaultEv"></span><span id="f3d::camera::resetToDefault"></span><span class="target" id="classf3d_1_1camera_1afd7ede1d51b8d847e91f7e879022f7b1"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6cameraE" title="f3d::camera"><span class="n"><span class="pre">camera</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">resetToDefault</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera14resetToDefaultEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d6camera14resetToDefaultEv"></span><span id="_CPPv2N3f3d6camera14resetToDefaultEv"></span><span id="f3d::camera::resetToDefault"></span><span class="target" id="classf3d_1_1camera_1afd7ede1d51b8d847e91f7e879022f7b1"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6cameraE" title="f3d::camera"><span class="n"><span class="pre">camera</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">resetToDefault</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera14resetToDefaultEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Reset the camera to the stored default camera configuration. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6camera13resetToBoundsEv">
-<span id="_CPPv3N3f3d6camera13resetToBoundsEv"></span><span id="_CPPv2N3f3d6camera13resetToBoundsEv"></span><span id="f3d::camera::resetToBounds"></span><span class="target" id="classf3d_1_1camera_1a1a3af427d86079e95c8b052e73629e01"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6cameraE" title="f3d::camera"><span class="n"><span class="pre">camera</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">resetToBounds</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera13resetToBoundsEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d6camera13resetToBoundsEv"></span><span id="_CPPv2N3f3d6camera13resetToBoundsEv"></span><span id="f3d::camera::resetToBounds"></span><span class="target" id="classf3d_1_1camera_1a1a3af427d86079e95c8b052e73629e01"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6cameraE" title="f3d::camera"><span class="n"><span class="pre">camera</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">resetToBounds</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6camera13resetToBoundsEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Reset the camera using the bounds of actors in the scene. </p>
 </dd></dl>
 
@@ -550,48 +438,36 @@ title="Print to PDF"
 
               </div>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="structf3d_1_1vector3__t.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Struct vector3_t</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="classf3d_1_1engine.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Class engine</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Michael Migliore and Mathieu Westphal<br/>
-  
-      &copy; Copyright 2022, Michael Migliore and Mathieu Westphal.<br/>
-</p>
-        </footer>
     </div>
     
-</div>
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="structf3d_1_1vector3__t.html" title="previous page">Struct vector3_t</a>
+    <a class='right-next' id="next-link" href="classf3d_1_1engine.html" title="next page">Class engine</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Michael Migliore and Mathieu Westphal<br/>
+        
+            &copy; Copyright 2022, Michael Migliore and Mathieu Westphal.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
 
 
       </div>
     </div>
-  
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
+    
   </body>
 </html>

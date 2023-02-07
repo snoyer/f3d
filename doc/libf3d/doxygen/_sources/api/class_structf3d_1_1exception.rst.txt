@@ -12,7 +12,7 @@ Inheritance Relationships
 Base Type
 *********
 
-- ``public runtime_error``
+- ``public std::runtime_error``
 
 
 Derived Types
@@ -32,7 +32,6 @@ Class Documentation
 
 
 .. doxygenclass:: f3d::exception
-   :project: libf3d
    :members:
    :protected-members:
    :undoc-members:

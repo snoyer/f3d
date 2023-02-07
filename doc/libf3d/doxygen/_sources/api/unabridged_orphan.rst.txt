@@ -60,16 +60,6 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file_public_plugin.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file_public_reader.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file_public_types.h.rst
 
 .. toctree::

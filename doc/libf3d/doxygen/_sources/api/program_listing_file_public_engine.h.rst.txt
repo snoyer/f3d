@@ -33,6 +33,8 @@ Program Listing for File engine.h
    
      ~engine();
    
+     void setCachePath(const std::string& cachePath);
+   
      engine& setOptions(const options& opt);
    
      engine& setOptions(options&& opt);

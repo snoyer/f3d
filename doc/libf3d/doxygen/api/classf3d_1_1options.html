@@ -8,9 +8,7 @@
 
     <title>Class options &#8212; libf3d 1.3.1 documentation</title>
     
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
     
   <link rel="stylesheet"
@@ -20,12 +18,19 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
     
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -33,75 +38,51 @@
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
     <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Class plugin" href="classf3d_1_1plugin.html" />
+    <link rel="next" title="Class window" href="classf3d_1_1window.html" />
     <link rel="prev" title="Class log" href="classf3d_1_1log.html" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
-    
+    <meta name="docsearch:language" content="en" />
 
-    <!-- Google Analytics -->
-    
+
+
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
-
-    
-    <div class="container-fluid" id="banner"></div>
-
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
 
     <div class="container-xl">
       <div class="row">
           
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">libf3d 1.3.1 documentation</h1>
-      
-    </a>
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">libf3d 1.3.1 documentation</h1>
+  
+</a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <p aria-level="2" class="caption" role="heading">
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <p class="caption collapsible-parent" role="heading">
  <span class="caption-text">
   Contents:
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
   <a class="reference internal" href="library_root.html">
    Library API
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
+  <ul class="current collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="namespace_f3d.html">
      Namespace f3d
@@ -203,16 +184,6 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="classf3d_1_1plugin.html">
-     Class plugin
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="classf3d_1_1reader.html">
-     Class reader
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="classf3d_1_1window.html">
      Class window
     </a>
@@ -223,21 +194,17 @@
     </a>
    </li>
   </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
 </ul>
 
-    </div>
-</nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-            </div>
-            
-        </div>
-    </div>
-    <div id="rtd-footer-container"></div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
 </div>
 
 
@@ -245,117 +212,61 @@
 
 
           
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
     </div>
-    <div class="header-article__right">
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/api/classf3d_1_1options.rst.txt"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.rst</span>
-</a>
-
-      </li>
-      
-      <li>
+    <div class="col pl-2 topbar-main">
         
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
-
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/api/classf3d_1_1options.rst.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.rst</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
     </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#nested-relationships">
    Nested Relationships
@@ -375,59 +286,24 @@ title="Print to PDF"
  </li>
 </ul>
 
-    </nav>
-</div>
+        </nav>
+        
     </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Class options</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#nested-relationships">
-   Nested Relationships
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#nested-types">
-     Nested Types
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#class-documentation">
-   Class Documentation
-  </a>
- </li>
-</ul>
-
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            <main id="main-content" role="main">
-                
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
               <div>
                 
   <section id="class-options">
-<span id="exhale-class-classf3d-1-1options"></span><h1>Class options<a class="headerlink" href="#class-options" title="Permalink to this heading">#</a></h1>
+<span id="exhale-class-classf3d-1-1options"></span><h1>Class options<a class="headerlink" href="#class-options" title="Permalink to this heading">¶</a></h1>
 <ul class="simple">
 <li><p>Defined in <a class="reference internal" href="file_public_options.h.html#file-public-options-h"><span class="std std-ref">File options.h</span></a></p></li>
 </ul>
 <section id="nested-relationships">
-<h2>Nested Relationships<a class="headerlink" href="#nested-relationships" title="Permalink to this heading">#</a></h2>
+<h2>Nested Relationships<a class="headerlink" href="#nested-relationships" title="Permalink to this heading">¶</a></h2>
 <section id="nested-types">
-<h3>Nested Types<a class="headerlink" href="#nested-types" title="Permalink to this heading">#</a></h3>
+<h3>Nested Types<a class="headerlink" href="#nested-types" title="Permalink to this heading">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference internal" href="structf3d_1_1options_1_1incompatible__exception.html#exhale-struct-structf3d-1-1options-1-1incompatible-exception"><span class="std std-ref">Struct options::incompatible_exception</span></a></p></li>
 <li><p><a class="reference internal" href="structf3d_1_1options_1_1inexistent__exception.html#exhale-struct-structf3d-1-1options-1-1inexistent-exception"><span class="std std-ref">Struct options::inexistent_exception</span></a></p></li>
@@ -435,47 +311,47 @@ title="Print to PDF"
 </section>
 </section>
 <section id="class-documentation">
-<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this heading">#</a></h2>
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this heading">¶</a></h2>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d7optionsE">
-<span id="_CPPv3N3f3d7optionsE"></span><span id="_CPPv2N3f3d7optionsE"></span><span id="f3d::options"></span><span class="target" id="classf3d_1_1options"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">options</span></span></span><a class="headerlink" href="#_CPPv4N3f3d7optionsE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d7optionsE"></span><span id="_CPPv2N3f3d7optionsE"></span><span id="f3d::options"></span><span class="target" id="classf3d_1_1options"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">options</span></span></span><a class="headerlink" href="#_CPPv4N3f3d7optionsE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Class used to control the different options. </p>
 <p>A class to control the different options of f3d. See the README_libf3d.md for the full listing of options </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-constructors">Constructors</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d7options7optionsEv">
-<span id="_CPPv3N3f3d7options7optionsEv"></span><span id="_CPPv2N3f3d7options7optionsEv"></span><span id="f3d::options::options"></span><span class="target" id="classf3d_1_1options_1ac7d2a41fa0d89a27674fce76f097df07"></span><span class="sig-name descname"><span class="n"><span class="pre">options</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options7optionsEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d7options7optionsEv"></span><span id="_CPPv2N3f3d7options7optionsEv"></span><span id="f3d::options::options"></span><span class="target" id="classf3d_1_1options_1ac7d2a41fa0d89a27674fce76f097df07"></span><span class="sig-name descname"><span class="n"><span class="pre">options</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options7optionsEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Default/Copy/move constructors/operators. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d7optionsD0Ev">
-<span id="_CPPv3N3f3d7optionsD0Ev"></span><span id="_CPPv2N3f3d7optionsD0Ev"></span><span id="f3d::options::~options"></span><span class="target" id="classf3d_1_1options_1a4f9b6f55863744717bfcca64c0d2db10"></span><span class="sig-name descname"><span class="n"><span class="pre">~options</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7optionsD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d7optionsD0Ev"></span><span id="_CPPv2N3f3d7optionsD0Ev"></span><span id="f3d::options::~options"></span><span class="target" id="classf3d_1_1options_1a4f9b6f55863744717bfcca64c0d2db10"></span><span class="sig-name descname"><span class="n"><span class="pre">~options</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7optionsD0Ev" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Default/Copy/move constructors/operators. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d7options7optionsERK7options">
-<span id="_CPPv3N3f3d7options7optionsERK7options"></span><span id="_CPPv2N3f3d7options7optionsERK7options"></span><span id="f3d::options::options__optionsCR"></span><span class="target" id="classf3d_1_1options_1a1b05085aaa9b359e26bf1dc34c447277"></span><span class="sig-name descname"><span class="n"><span class="pre">options</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d7options7optionsERK7options" title="f3d::options::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">opt</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options7optionsERK7options" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d7options7optionsERK7options"></span><span id="_CPPv2N3f3d7options7optionsERK7options"></span><span id="f3d::options::options__optionsCR"></span><span class="target" id="classf3d_1_1options_1a1b05085aaa9b359e26bf1dc34c447277"></span><span class="sig-name descname"><span class="n"><span class="pre">options</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d7options7optionsERK7options" title="f3d::options::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">opt</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options7optionsERK7options" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Default/Copy/move constructors/operators. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d7optionsaSERK7options">
-<span id="_CPPv3N3f3d7optionsaSERK7options"></span><span id="_CPPv2N3f3d7optionsaSERK7options"></span><span id="f3d::options::assign-operator__optionsCR"></span><span class="target" id="classf3d_1_1options_1af96eb5c68b6b95891203ad05d3ee057e"></span><a class="reference internal" href="#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">opt</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3f3d7optionsaSERK7options" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d7optionsaSERK7options"></span><span id="_CPPv2N3f3d7optionsaSERK7options"></span><span id="f3d::options::assign-operator__optionsCR"></span><span class="target" id="classf3d_1_1options_1af96eb5c68b6b95891203ad05d3ee057e"></span><a class="reference internal" href="#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">opt</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3f3d7optionsaSERK7options" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Default/Copy/move constructors/operators. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d7options7optionsERR7options">
-<span id="_CPPv3N3f3d7options7optionsERR7options"></span><span id="_CPPv2N3f3d7options7optionsERR7options"></span><span id="f3d::options::options__optionsRR"></span><span class="target" id="classf3d_1_1options_1aaf9453ef24d28f1da697afbcfa65e67a"></span><span class="sig-name descname"><span class="n"><span class="pre">options</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N3f3d7options7optionsERR7options" title="f3d::options::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3f3d7options7optionsERR7options" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d7options7optionsERR7options"></span><span id="_CPPv2N3f3d7options7optionsERR7options"></span><span id="f3d::options::options__optionsRR"></span><span class="target" id="classf3d_1_1options_1aaf9453ef24d28f1da697afbcfa65e67a"></span><span class="sig-name descname"><span class="n"><span class="pre">options</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N3f3d7options7optionsERR7options" title="f3d::options::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3f3d7options7optionsERR7options" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Default/Copy/move constructors/operators. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d7optionsaSERR7options">
-<span id="_CPPv3N3f3d7optionsaSERR7options"></span><span id="_CPPv2N3f3d7optionsaSERR7options"></span><span id="f3d::options::assign-operator__optionsRR"></span><span class="target" id="classf3d_1_1options_1a6c1de431649173dc2e7bac995223d312"></span><a class="reference internal" href="#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3f3d7optionsaSERR7options" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d7optionsaSERR7options"></span><span id="_CPPv2N3f3d7optionsaSERR7options"></span><span id="f3d::options::assign-operator__optionsRR"></span><span class="target" id="classf3d_1_1options_1a6c1de431649173dc2e7bac995223d312"></span><a class="reference internal" href="#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3f3d7optionsaSERR7options" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Default/Copy/move constructors/operators. </p>
 </dd></dl>
 
@@ -484,55 +360,55 @@ title="Print to PDF"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-setters">Setters</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d7options3setERKNSt6stringEb">
-<span id="_CPPv3N3f3d7options3setERKNSt6stringEb"></span><span id="_CPPv2N3f3d7options3setERKNSt6stringEb"></span><span id="f3d::options::set__ssCR.b"></span><span class="target" id="classf3d_1_1options_1aae5ad8204a3f9cff379c62b1bb1b13cb"></span><a class="reference internal" href="#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options3setERKNSt6stringEb" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d7options3setERKNSt6stringEb"></span><span id="_CPPv2N3f3d7options3setERKNSt6stringEb"></span><span id="f3d::options::set__ssCR.b"></span><span class="target" id="classf3d_1_1options_1aae5ad8204a3f9cff379c62b1bb1b13cb"></span><a class="reference internal" href="#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options3setERKNSt6stringEb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Setters for all supported types. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d7options3setERKNSt6stringEi">
-<span id="_CPPv3N3f3d7options3setERKNSt6stringEi"></span><span id="_CPPv2N3f3d7options3setERKNSt6stringEi"></span><span id="f3d::options::set__ssCR.i"></span><span class="target" id="classf3d_1_1options_1abc65859f3550403bdc8a83e703967ca0"></span><a class="reference internal" href="#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options3setERKNSt6stringEi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d7options3setERKNSt6stringEi"></span><span id="_CPPv2N3f3d7options3setERKNSt6stringEi"></span><span id="f3d::options::set__ssCR.i"></span><span class="target" id="classf3d_1_1options_1abc65859f3550403bdc8a83e703967ca0"></span><a class="reference internal" href="#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options3setERKNSt6stringEi" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Setters for all supported types. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d7options3setERKNSt6stringEd">
-<span id="_CPPv3N3f3d7options3setERKNSt6stringEd"></span><span id="_CPPv2N3f3d7options3setERKNSt6stringEd"></span><span id="f3d::options::set__ssCR.double"></span><span class="target" id="classf3d_1_1options_1aeee71f4155bb5f9cfdd6d7e3a0501835"></span><a class="reference internal" href="#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options3setERKNSt6stringEd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d7options3setERKNSt6stringEd"></span><span id="_CPPv2N3f3d7options3setERKNSt6stringEd"></span><span id="f3d::options::set__ssCR.double"></span><span class="target" id="classf3d_1_1options_1aeee71f4155bb5f9cfdd6d7e3a0501835"></span><a class="reference internal" href="#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options3setERKNSt6stringEd" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Setters for all supported types. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d7options3setERKNSt6stringERKNSt6stringE">
-<span id="_CPPv3N3f3d7options3setERKNSt6stringERKNSt6stringE"></span><span id="_CPPv2N3f3d7options3setERKNSt6stringERKNSt6stringE"></span><span id="f3d::options::set__ssCR.ssCR"></span><span class="target" id="classf3d_1_1options_1a1b223a3fd446d75b047454e2af4ea1e1"></span><a class="reference internal" href="#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options3setERKNSt6stringERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d7options3setERKNSt6stringERKNSt6stringE"></span><span id="_CPPv2N3f3d7options3setERKNSt6stringERKNSt6stringE"></span><span id="f3d::options::set__ssCR.ssCR"></span><span class="target" id="classf3d_1_1options_1a1b223a3fd446d75b047454e2af4ea1e1"></span><a class="reference internal" href="#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options3setERKNSt6stringERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Setters for all supported types. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d7options3setERKNSt6stringEPKc">
-<span id="_CPPv3N3f3d7options3setERKNSt6stringEPKc"></span><span id="_CPPv2N3f3d7options3setERKNSt6stringEPKc"></span><span id="f3d::options::set__ssCR.cCP"></span><span class="target" id="classf3d_1_1options_1a3b6c046f44e889faae9a175a14945d85"></span><a class="reference internal" href="#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options3setERKNSt6stringEPKc" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d7options3setERKNSt6stringEPKc"></span><span id="_CPPv2N3f3d7options3setERKNSt6stringEPKc"></span><span id="f3d::options::set__ssCR.cCP"></span><span class="target" id="classf3d_1_1options_1a3b6c046f44e889faae9a175a14945d85"></span><a class="reference internal" href="#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options3setERKNSt6stringEPKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Setters for all supported types. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d7options3setERKNSt6stringERKNSt6vectorIiEE">
-<span id="_CPPv3N3f3d7options3setERKNSt6stringERKNSt6vectorIiEE"></span><span id="_CPPv2N3f3d7options3setERKNSt6stringERKNSt6vectorIiEE"></span><span id="f3d::options::set__ssCR.std::vector:i:CR"></span><span class="target" id="classf3d_1_1options_1ac70aea93b43a12c2ae4a0cdeeb386121"></span><a class="reference internal" href="#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">values</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options3setERKNSt6stringERKNSt6vectorIiEE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d7options3setERKNSt6stringERKNSt6vectorIiEE"></span><span id="_CPPv2N3f3d7options3setERKNSt6stringERKNSt6vectorIiEE"></span><span id="f3d::options::set__ssCR.std::vector:i:CR"></span><span class="target" id="classf3d_1_1options_1ac70aea93b43a12c2ae4a0cdeeb386121"></span><a class="reference internal" href="#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">values</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options3setERKNSt6stringERKNSt6vectorIiEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Setters for all supported types. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d7options3setERKNSt6stringERKNSt6vectorIdEE">
-<span id="_CPPv3N3f3d7options3setERKNSt6stringERKNSt6vectorIdEE"></span><span id="_CPPv2N3f3d7options3setERKNSt6stringERKNSt6vectorIdEE"></span><span id="f3d::options::set__ssCR.std::vector:double:CR"></span><span class="target" id="classf3d_1_1options_1a8c4ab0ed75b5b45e703004389a747077"></span><a class="reference internal" href="#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">values</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options3setERKNSt6stringERKNSt6vectorIdEE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d7options3setERKNSt6stringERKNSt6vectorIdEE"></span><span id="_CPPv2N3f3d7options3setERKNSt6stringERKNSt6vectorIdEE"></span><span id="f3d::options::set__ssCR.std::vector:double:CR"></span><span class="target" id="classf3d_1_1options_1a8c4ab0ed75b5b45e703004389a747077"></span><a class="reference internal" href="#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">values</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options3setERKNSt6stringERKNSt6vectorIdEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Setters for all supported types. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d7options3setERKNSt6stringENSt16initializer_listIiEE">
-<span id="_CPPv3N3f3d7options3setERKNSt6stringENSt16initializer_listIiEE"></span><span id="_CPPv2N3f3d7options3setERKNSt6stringENSt16initializer_listIiEE"></span><span id="f3d::options::set__ssCR.std::initializer_list:i:"></span><span class="target" id="classf3d_1_1options_1ac74a7f7217a4a5535d4e6156b063f53d"></span><a class="reference internal" href="#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">initializer_list</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">values</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options3setERKNSt6stringENSt16initializer_listIiEE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d7options3setERKNSt6stringENSt16initializer_listIiEE"></span><span id="_CPPv2N3f3d7options3setERKNSt6stringENSt16initializer_listIiEE"></span><span id="f3d::options::set__ssCR.std::initializer_list:i:"></span><span class="target" id="classf3d_1_1options_1ac74a7f7217a4a5535d4e6156b063f53d"></span><a class="reference internal" href="#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">initializer_list</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">values</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options3setERKNSt6stringENSt16initializer_listIiEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Setters for all supported types. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d7options3setERKNSt6stringENSt16initializer_listIdEE">
-<span id="_CPPv3N3f3d7options3setERKNSt6stringENSt16initializer_listIdEE"></span><span id="_CPPv2N3f3d7options3setERKNSt6stringENSt16initializer_listIdEE"></span><span id="f3d::options::set__ssCR.std::initializer_list:double:"></span><span class="target" id="classf3d_1_1options_1a17350d4ae0089fe15600f8eadede9979"></span><a class="reference internal" href="#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">initializer_list</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">values</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options3setERKNSt6stringENSt16initializer_listIdEE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d7options3setERKNSt6stringENSt16initializer_listIdEE"></span><span id="_CPPv2N3f3d7options3setERKNSt6stringENSt16initializer_listIdEE"></span><span id="f3d::options::set__ssCR.std::initializer_list:double:"></span><span class="target" id="classf3d_1_1options_1a17350d4ae0089fe15600f8eadede9979"></span><a class="reference internal" href="#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">initializer_list</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">values</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options3setERKNSt6stringENSt16initializer_listIdEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Setters for all supported types. </p>
 </dd></dl>
 
@@ -541,37 +417,37 @@ title="Print to PDF"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-reference-getters">Reference Getters</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK3f3d7options3getERKNSt6stringERb">
-<span id="_CPPv3NK3f3d7options3getERKNSt6stringERb"></span><span id="_CPPv2NK3f3d7options3getERKNSt6stringERb"></span><span id="f3d::options::get__ssCR.bRC"></span><span class="target" id="classf3d_1_1options_1ac0c5a2fbb5bae268a5504fdf87b777a9"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d7options3getERKNSt6stringERb" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3NK3f3d7options3getERKNSt6stringERb"></span><span id="_CPPv2NK3f3d7options3getERKNSt6stringERb"></span><span id="f3d::options::get__ssCR.bRC"></span><span class="target" id="classf3d_1_1options_1ac0c5a2fbb5bae268a5504fdf87b777a9"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d7options3getERKNSt6stringERb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Copy the option value into the provided reference, for all supported types. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK3f3d7options3getERKNSt6stringERi">
-<span id="_CPPv3NK3f3d7options3getERKNSt6stringERi"></span><span id="_CPPv2NK3f3d7options3getERKNSt6stringERi"></span><span id="f3d::options::get__ssCR.iRC"></span><span class="target" id="classf3d_1_1options_1a9f9a15d820c462025d1c9c3d19b8a21f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d7options3getERKNSt6stringERi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3NK3f3d7options3getERKNSt6stringERi"></span><span id="_CPPv2NK3f3d7options3getERKNSt6stringERi"></span><span id="f3d::options::get__ssCR.iRC"></span><span class="target" id="classf3d_1_1options_1a9f9a15d820c462025d1c9c3d19b8a21f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d7options3getERKNSt6stringERi" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Copy the option value into the provided reference, for all supported types. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK3f3d7options3getERKNSt6stringERd">
-<span id="_CPPv3NK3f3d7options3getERKNSt6stringERd"></span><span id="_CPPv2NK3f3d7options3getERKNSt6stringERd"></span><span id="f3d::options::get__ssCR.doubleRC"></span><span class="target" id="classf3d_1_1options_1a132dde0143feb2774ed828190e12d7a3"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d7options3getERKNSt6stringERd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3NK3f3d7options3getERKNSt6stringERd"></span><span id="_CPPv2NK3f3d7options3getERKNSt6stringERd"></span><span id="f3d::options::get__ssCR.doubleRC"></span><span class="target" id="classf3d_1_1options_1a132dde0143feb2774ed828190e12d7a3"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d7options3getERKNSt6stringERd" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Copy the option value into the provided reference, for all supported types. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK3f3d7options3getERKNSt6stringERNSt6stringE">
-<span id="_CPPv3NK3f3d7options3getERKNSt6stringERNSt6stringE"></span><span id="_CPPv2NK3f3d7options3getERKNSt6stringERNSt6stringE"></span><span id="f3d::options::get__ssCR.ssRC"></span><span class="target" id="classf3d_1_1options_1a6d5e5b3f98ca2f93a4064f6ba79d0ed0"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d7options3getERKNSt6stringERNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3NK3f3d7options3getERKNSt6stringERNSt6stringE"></span><span id="_CPPv2NK3f3d7options3getERKNSt6stringERNSt6stringE"></span><span id="f3d::options::get__ssCR.ssRC"></span><span class="target" id="classf3d_1_1options_1a6d5e5b3f98ca2f93a4064f6ba79d0ed0"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d7options3getERKNSt6stringERNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Copy the option value into the provided reference, for all supported types. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK3f3d7options3getERKNSt6stringERNSt6vectorIiEE">
-<span id="_CPPv3NK3f3d7options3getERKNSt6stringERNSt6vectorIiEE"></span><span id="_CPPv2NK3f3d7options3getERKNSt6stringERNSt6vectorIiEE"></span><span id="f3d::options::get__ssCR.std::vector:i:RC"></span><span class="target" id="classf3d_1_1options_1ac14256df03a4a66c9c7dad98b86064a4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d7options3getERKNSt6stringERNSt6vectorIiEE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3NK3f3d7options3getERKNSt6stringERNSt6vectorIiEE"></span><span id="_CPPv2NK3f3d7options3getERKNSt6stringERNSt6vectorIiEE"></span><span id="f3d::options::get__ssCR.std::vector:i:RC"></span><span class="target" id="classf3d_1_1options_1ac14256df03a4a66c9c7dad98b86064a4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d7options3getERKNSt6stringERNSt6vectorIiEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Copy the option value into the provided reference, for all supported types. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK3f3d7options3getERKNSt6stringERNSt6vectorIdEE">
-<span id="_CPPv3NK3f3d7options3getERKNSt6stringERNSt6vectorIdEE"></span><span id="_CPPv2NK3f3d7options3getERKNSt6stringERNSt6vectorIdEE"></span><span id="f3d::options::get__ssCR.std::vector:double:RC"></span><span class="target" id="classf3d_1_1options_1a23b3265ade2225a117e497ac504efd59"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d7options3getERKNSt6stringERNSt6vectorIdEE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3NK3f3d7options3getERKNSt6stringERNSt6vectorIdEE"></span><span id="_CPPv2NK3f3d7options3getERKNSt6stringERNSt6vectorIdEE"></span><span id="f3d::options::get__ssCR.std::vector:double:RC"></span><span class="target" id="classf3d_1_1options_1a23b3265ade2225a117e497ac504efd59"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d7options3getERKNSt6stringERNSt6vectorIdEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Copy the option value into the provided reference, for all supported types. </p>
 </dd></dl>
 
@@ -580,37 +456,37 @@ title="Print to PDF"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-explicit-copy-getters">Explicit Copy Getters</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK3f3d7options9getAsBoolERKNSt6stringE">
-<span id="_CPPv3NK3f3d7options9getAsBoolERKNSt6stringE"></span><span id="_CPPv2NK3f3d7options9getAsBoolERKNSt6stringE"></span><span id="f3d::options::getAsBool__ssCRC"></span><span class="target" id="classf3d_1_1options_1a936cc1da1745a74b08da81116e6216bb"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAsBool</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d7options9getAsBoolERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3NK3f3d7options9getAsBoolERKNSt6stringE"></span><span id="_CPPv2NK3f3d7options9getAsBoolERKNSt6stringE"></span><span id="f3d::options::getAsBool__ssCRC"></span><span class="target" id="classf3d_1_1options_1a936cc1da1745a74b08da81116e6216bb"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAsBool</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d7options9getAsBoolERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Explicit getters for all supported types. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK3f3d7options8getAsIntERKNSt6stringE">
-<span id="_CPPv3NK3f3d7options8getAsIntERKNSt6stringE"></span><span id="_CPPv2NK3f3d7options8getAsIntERKNSt6stringE"></span><span id="f3d::options::getAsInt__ssCRC"></span><span class="target" id="classf3d_1_1options_1a146d7c4ebbd67ec2921db4bedbd77790"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAsInt</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d7options8getAsIntERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3NK3f3d7options8getAsIntERKNSt6stringE"></span><span id="_CPPv2NK3f3d7options8getAsIntERKNSt6stringE"></span><span id="f3d::options::getAsInt__ssCRC"></span><span class="target" id="classf3d_1_1options_1a146d7c4ebbd67ec2921db4bedbd77790"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAsInt</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d7options8getAsIntERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Explicit getters for all supported types. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK3f3d7options11getAsDoubleERKNSt6stringE">
-<span id="_CPPv3NK3f3d7options11getAsDoubleERKNSt6stringE"></span><span id="_CPPv2NK3f3d7options11getAsDoubleERKNSt6stringE"></span><span id="f3d::options::getAsDouble__ssCRC"></span><span class="target" id="classf3d_1_1options_1af1a447f0ae41510626aab1e8758a3669"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAsDouble</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d7options11getAsDoubleERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3NK3f3d7options11getAsDoubleERKNSt6stringE"></span><span id="_CPPv2NK3f3d7options11getAsDoubleERKNSt6stringE"></span><span id="f3d::options::getAsDouble__ssCRC"></span><span class="target" id="classf3d_1_1options_1af1a447f0ae41510626aab1e8758a3669"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAsDouble</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d7options11getAsDoubleERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Explicit getters for all supported types. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK3f3d7options11getAsStringERKNSt6stringE">
-<span id="_CPPv3NK3f3d7options11getAsStringERKNSt6stringE"></span><span id="_CPPv2NK3f3d7options11getAsStringERKNSt6stringE"></span><span id="f3d::options::getAsString__ssCRC"></span><span class="target" id="classf3d_1_1options_1a51f7c3497d2d004f851f9c5c11d023ee"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAsString</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d7options11getAsStringERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3NK3f3d7options11getAsStringERKNSt6stringE"></span><span id="_CPPv2NK3f3d7options11getAsStringERKNSt6stringE"></span><span id="f3d::options::getAsString__ssCRC"></span><span class="target" id="classf3d_1_1options_1a51f7c3497d2d004f851f9c5c11d023ee"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAsString</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d7options11getAsStringERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Explicit getters for all supported types. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK3f3d7options14getAsIntVectorERKNSt6stringE">
-<span id="_CPPv3NK3f3d7options14getAsIntVectorERKNSt6stringE"></span><span id="_CPPv2NK3f3d7options14getAsIntVectorERKNSt6stringE"></span><span id="f3d::options::getAsIntVector__ssCRC"></span><span class="target" id="classf3d_1_1options_1a78dc36410befc8a71f5c90c7526bb087"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAsIntVector</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d7options14getAsIntVectorERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3NK3f3d7options14getAsIntVectorERKNSt6stringE"></span><span id="_CPPv2NK3f3d7options14getAsIntVectorERKNSt6stringE"></span><span id="f3d::options::getAsIntVector__ssCRC"></span><span class="target" id="classf3d_1_1options_1a78dc36410befc8a71f5c90c7526bb087"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAsIntVector</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d7options14getAsIntVectorERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Explicit getters for all supported types. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK3f3d7options17getAsDoubleVectorERKNSt6stringE">
-<span id="_CPPv3NK3f3d7options17getAsDoubleVectorERKNSt6stringE"></span><span id="_CPPv2NK3f3d7options17getAsDoubleVectorERKNSt6stringE"></span><span id="f3d::options::getAsDoubleVector__ssCRC"></span><span class="target" id="classf3d_1_1options_1adca7f6c7dfbfb032016139f697b466b7"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAsDoubleVector</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d7options17getAsDoubleVectorERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3NK3f3d7options17getAsDoubleVectorERKNSt6stringE"></span><span id="_CPPv2NK3f3d7options17getAsDoubleVectorERKNSt6stringE"></span><span id="f3d::options::getAsDoubleVector__ssCRC"></span><span class="target" id="classf3d_1_1options_1adca7f6c7dfbfb032016139f697b466b7"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAsDoubleVector</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d7options17getAsDoubleVectorERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Explicit getters for all supported types. </p>
 </dd></dl>
 
@@ -619,37 +495,37 @@ title="Print to PDF"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-explicit-reference-getters">Explicit Reference Getters</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d7options12getAsBoolRefERKNSt6stringE">
-<span id="_CPPv3N3f3d7options12getAsBoolRefERKNSt6stringE"></span><span id="_CPPv2N3f3d7options12getAsBoolRefERKNSt6stringE"></span><span id="f3d::options::getAsBoolRef__ssCR"></span><span class="target" id="classf3d_1_1options_1a44ff5cd0ec385c9b26936f60a2f7d3e2"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getAsBoolRef</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options12getAsBoolRefERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d7options12getAsBoolRefERKNSt6stringE"></span><span id="_CPPv2N3f3d7options12getAsBoolRefERKNSt6stringE"></span><span id="f3d::options::getAsBoolRef__ssCR"></span><span class="target" id="classf3d_1_1options_1a44ff5cd0ec385c9b26936f60a2f7d3e2"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getAsBoolRef</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options12getAsBoolRefERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Explicit getters to actual reference to the options variable, for all supported types. Modifying the returned reference will modify the option. Throw an <a class="reference internal" href="structf3d_1_1options_1_1incompatible__exception.html#structf3d_1_1options_1_1incompatible__exception"><span class="std std-ref">options::incompatible_exception</span></a> if the type is not compatible with the option. Throw an <a class="reference internal" href="structf3d_1_1options_1_1inexistent__exception.html#structf3d_1_1options_1_1inexistent__exception"><span class="std std-ref">options::inexistent_exception</span></a> if option does not exist. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d7options11getAsIntRefERKNSt6stringE">
-<span id="_CPPv3N3f3d7options11getAsIntRefERKNSt6stringE"></span><span id="_CPPv2N3f3d7options11getAsIntRefERKNSt6stringE"></span><span id="f3d::options::getAsIntRef__ssCR"></span><span class="target" id="classf3d_1_1options_1ac80cbefdce51ddfb671e1cd2918fe015"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getAsIntRef</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options11getAsIntRefERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d7options11getAsIntRefERKNSt6stringE"></span><span id="_CPPv2N3f3d7options11getAsIntRefERKNSt6stringE"></span><span id="f3d::options::getAsIntRef__ssCR"></span><span class="target" id="classf3d_1_1options_1ac80cbefdce51ddfb671e1cd2918fe015"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getAsIntRef</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options11getAsIntRefERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Explicit getters to actual reference to the options variable, for all supported types. Modifying the returned reference will modify the option. Throw an <a class="reference internal" href="structf3d_1_1options_1_1incompatible__exception.html#structf3d_1_1options_1_1incompatible__exception"><span class="std std-ref">options::incompatible_exception</span></a> if the type is not compatible with the option. Throw an <a class="reference internal" href="structf3d_1_1options_1_1inexistent__exception.html#structf3d_1_1options_1_1inexistent__exception"><span class="std std-ref">options::inexistent_exception</span></a> if option does not exist. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d7options14getAsDoubleRefERKNSt6stringE">
-<span id="_CPPv3N3f3d7options14getAsDoubleRefERKNSt6stringE"></span><span id="_CPPv2N3f3d7options14getAsDoubleRefERKNSt6stringE"></span><span id="f3d::options::getAsDoubleRef__ssCR"></span><span class="target" id="classf3d_1_1options_1a7e62d1e1d33032d9442f79f87b23b486"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getAsDoubleRef</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options14getAsDoubleRefERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d7options14getAsDoubleRefERKNSt6stringE"></span><span id="_CPPv2N3f3d7options14getAsDoubleRefERKNSt6stringE"></span><span id="f3d::options::getAsDoubleRef__ssCR"></span><span class="target" id="classf3d_1_1options_1a7e62d1e1d33032d9442f79f87b23b486"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getAsDoubleRef</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options14getAsDoubleRefERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Explicit getters to actual reference to the options variable, for all supported types. Modifying the returned reference will modify the option. Throw an <a class="reference internal" href="structf3d_1_1options_1_1incompatible__exception.html#structf3d_1_1options_1_1incompatible__exception"><span class="std std-ref">options::incompatible_exception</span></a> if the type is not compatible with the option. Throw an <a class="reference internal" href="structf3d_1_1options_1_1inexistent__exception.html#structf3d_1_1options_1_1inexistent__exception"><span class="std std-ref">options::inexistent_exception</span></a> if option does not exist. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d7options14getAsStringRefERKNSt6stringE">
-<span id="_CPPv3N3f3d7options14getAsStringRefERKNSt6stringE"></span><span id="_CPPv2N3f3d7options14getAsStringRefERKNSt6stringE"></span><span id="f3d::options::getAsStringRef__ssCR"></span><span class="target" id="classf3d_1_1options_1aa4a16c4035047e2054ada8696dad9221"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getAsStringRef</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options14getAsStringRefERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d7options14getAsStringRefERKNSt6stringE"></span><span id="_CPPv2N3f3d7options14getAsStringRefERKNSt6stringE"></span><span id="f3d::options::getAsStringRef__ssCR"></span><span class="target" id="classf3d_1_1options_1aa4a16c4035047e2054ada8696dad9221"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getAsStringRef</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options14getAsStringRefERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Explicit getters to actual reference to the options variable, for all supported types. Modifying the returned reference will modify the option. Throw an <a class="reference internal" href="structf3d_1_1options_1_1incompatible__exception.html#structf3d_1_1options_1_1incompatible__exception"><span class="std std-ref">options::incompatible_exception</span></a> if the type is not compatible with the option. Throw an <a class="reference internal" href="structf3d_1_1options_1_1inexistent__exception.html#structf3d_1_1options_1_1inexistent__exception"><span class="std std-ref">options::inexistent_exception</span></a> if option does not exist. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d7options17getAsIntVectorRefERKNSt6stringE">
-<span id="_CPPv3N3f3d7options17getAsIntVectorRefERKNSt6stringE"></span><span id="_CPPv2N3f3d7options17getAsIntVectorRefERKNSt6stringE"></span><span id="f3d::options::getAsIntVectorRef__ssCR"></span><span class="target" id="classf3d_1_1options_1a68b318d7a81b505d1df8c80d6bc4d613"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getAsIntVectorRef</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options17getAsIntVectorRefERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d7options17getAsIntVectorRefERKNSt6stringE"></span><span id="_CPPv2N3f3d7options17getAsIntVectorRefERKNSt6stringE"></span><span id="f3d::options::getAsIntVectorRef__ssCR"></span><span class="target" id="classf3d_1_1options_1a68b318d7a81b505d1df8c80d6bc4d613"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getAsIntVectorRef</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options17getAsIntVectorRefERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Explicit getters to actual reference to the options variable, for all supported types. Modifying the returned reference will modify the option. Throw an <a class="reference internal" href="structf3d_1_1options_1_1incompatible__exception.html#structf3d_1_1options_1_1incompatible__exception"><span class="std std-ref">options::incompatible_exception</span></a> if the type is not compatible with the option. Throw an <a class="reference internal" href="structf3d_1_1options_1_1inexistent__exception.html#structf3d_1_1options_1_1inexistent__exception"><span class="std std-ref">options::inexistent_exception</span></a> if option does not exist. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d7options20getAsDoubleVectorRefERKNSt6stringE">
-<span id="_CPPv3N3f3d7options20getAsDoubleVectorRefERKNSt6stringE"></span><span id="_CPPv2N3f3d7options20getAsDoubleVectorRefERKNSt6stringE"></span><span id="f3d::options::getAsDoubleVectorRef__ssCR"></span><span class="target" id="classf3d_1_1options_1a5850d36cacc15c22528570c3d98217b8"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getAsDoubleVectorRef</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options20getAsDoubleVectorRefERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d7options20getAsDoubleVectorRefERKNSt6stringE"></span><span id="_CPPv2N3f3d7options20getAsDoubleVectorRefERKNSt6stringE"></span><span id="f3d::options::getAsDoubleVectorRef__ssCR"></span><span class="target" id="classf3d_1_1options_1a5850d36cacc15c22528570c3d98217b8"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getAsDoubleVectorRef</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options20getAsDoubleVectorRefERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Explicit getters to actual reference to the options variable, for all supported types. Modifying the returned reference will modify the option. Throw an <a class="reference internal" href="structf3d_1_1options_1_1incompatible__exception.html#structf3d_1_1options_1_1incompatible__exception"><span class="std std-ref">options::incompatible_exception</span></a> if the type is not compatible with the option. Throw an <a class="reference internal" href="structf3d_1_1options_1_1inexistent__exception.html#structf3d_1_1options_1_1inexistent__exception"><span class="std std-ref">options::inexistent_exception</span></a> if option does not exist. </p>
 </dd></dl>
 
@@ -658,38 +534,38 @@ title="Print to PDF"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d7options6toggleERKNSt6stringE">
-<span id="_CPPv3N3f3d7options6toggleERKNSt6stringE"></span><span id="_CPPv2N3f3d7options6toggleERKNSt6stringE"></span><span id="f3d::options::toggle__ssCR"></span><span class="target" id="classf3d_1_1options_1aa4a69d5276f333392d1f79084f57541c"></span><a class="reference internal" href="#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">toggle</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options6toggleERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d7options6toggleERKNSt6stringE"></span><span id="_CPPv2N3f3d7options6toggleERKNSt6stringE"></span><span id="f3d::options::toggle__ssCR"></span><span class="target" id="classf3d_1_1options_1aa4a69d5276f333392d1f79084f57541c"></span><a class="reference internal" href="#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">toggle</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options6toggleERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A boolean option specific method to toggle it. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK3f3d7options6isSameERK7optionsRKNSt6stringE">
-<span id="_CPPv3NK3f3d7options6isSameERK7optionsRKNSt6stringE"></span><span id="_CPPv2NK3f3d7options6isSameERK7optionsRKNSt6stringE"></span><span id="f3d::options::isSame__optionsCR.ssCRC"></span><span class="target" id="classf3d_1_1options_1a1c9b95d572ac1ba6762bd2a87fbe6c7d"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isSame</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d7options6isSameERK7optionsRKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3NK3f3d7options6isSameERK7optionsRKNSt6stringE"></span><span id="_CPPv2NK3f3d7options6isSameERK7optionsRKNSt6stringE"></span><span id="f3d::options::isSame__optionsCR.ssCRC"></span><span class="target" id="classf3d_1_1options_1a1c9b95d572ac1ba6762bd2a87fbe6c7d"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isSame</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d7options6isSameERK7optionsRKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Compare an option between this and a provided other. Return true is they are the same value, false otherwise. Throw an <a class="reference internal" href="structf3d_1_1options_1_1inexistent__exception.html#structf3d_1_1options_1_1inexistent__exception"><span class="std std-ref">options::inexistent_exception</span></a> if option does not exist. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d7options4copyERK7optionsRKNSt6stringE">
-<span id="_CPPv3N3f3d7options4copyERK7optionsRKNSt6stringE"></span><span id="_CPPv2N3f3d7options4copyERK7optionsRKNSt6stringE"></span><span id="f3d::options::copy__optionsCR.ssCR"></span><span class="target" id="classf3d_1_1options_1a85ee87d4d0ede1a97d3bac7828dac367"></span><a class="reference internal" href="#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">copy</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options4copyERK7optionsRKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d7options4copyERK7optionsRKNSt6stringE"></span><span id="_CPPv2N3f3d7options4copyERK7optionsRKNSt6stringE"></span><span id="f3d::options::copy__optionsCR.ssCR"></span><span class="target" id="classf3d_1_1options_1a85ee87d4d0ede1a97d3bac7828dac367"></span><a class="reference internal" href="#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">copy</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options4copyERK7optionsRKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Copy the value of an option from this to the provided other. Throw an <a class="reference internal" href="structf3d_1_1options_1_1inexistent__exception.html#structf3d_1_1options_1_1inexistent__exception"><span class="std std-ref">options::inexistent_exception</span></a> if option does not exist. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d7options8getNamesEv">
-<span id="_CPPv3N3f3d7options8getNamesEv"></span><span id="_CPPv2N3f3d7options8getNamesEv"></span><span id="f3d::options::getNames"></span><span class="target" id="classf3d_1_1options_1ad80c5df806e79c13b320b2c0a7fcee61"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNames</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options8getNamesEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d7options8getNamesEv"></span><span id="_CPPv2N3f3d7options8getNamesEv"></span><span id="f3d::options::getNames"></span><span class="target" id="classf3d_1_1options_1ad80c5df806e79c13b320b2c0a7fcee61"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNames</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options8getNamesEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get all available option names. </p>
 </dd></dl>
 
 </div>
 <dl class="cpp struct">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d7options22incompatible_exceptionE">
-<span id="_CPPv3N3f3d7options22incompatible_exceptionE"></span><span id="_CPPv2N3f3d7options22incompatible_exceptionE"></span><span id="f3d::options::incompatible_exception"></span><span class="target" id="structf3d_1_1options_1_1incompatible__exception"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">incompatible_exception</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">f3d</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="class_structf3d_1_1exception.html#_CPPv4N3f3d9exceptionE" title="f3d::exception"><span class="n"><span class="pre">exception</span></span></a><a class="headerlink" href="#_CPPv4N3f3d7options22incompatible_exceptionE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d7options22incompatible_exceptionE"></span><span id="_CPPv2N3f3d7options22incompatible_exceptionE"></span><span id="f3d::options::incompatible_exception"></span><span class="target" id="structf3d_1_1options_1_1incompatible__exception"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">incompatible_exception</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">f3d</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="class_structf3d_1_1exception.html#_CPPv4N3f3d9exceptionE" title="f3d::exception"><span class="n"><span class="pre">exception</span></span></a><a class="headerlink" href="#_CPPv4N3f3d7options22incompatible_exceptionE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>An exception that can be thrown by the options when a provided option type is incompatible with its internal type. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d7options22incompatible_exception22incompatible_exceptionERKNSt6stringE">
-<span id="_CPPv3N3f3d7options22incompatible_exception22incompatible_exceptionERKNSt6stringE"></span><span id="_CPPv2N3f3d7options22incompatible_exception22incompatible_exceptionERKNSt6stringE"></span><span id="f3d::options::incompatible_exception::incompatible_exception__ssCR"></span><span class="target" id="structf3d_1_1options_1_1incompatible__exception_1a01c418f614d55e39981d7a0e223a0019"></span><span class="sig-name descname"><span class="n"><span class="pre">incompatible_exception</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">what</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options22incompatible_exception22incompatible_exceptionERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d7options22incompatible_exception22incompatible_exceptionERKNSt6stringE"></span><span id="_CPPv2N3f3d7options22incompatible_exception22incompatible_exceptionERKNSt6stringE"></span><span id="f3d::options::incompatible_exception::incompatible_exception__ssCR"></span><span class="target" id="structf3d_1_1options_1_1incompatible__exception_1a01c418f614d55e39981d7a0e223a0019"></span><span class="sig-name descname"><span class="n"><span class="pre">incompatible_exception</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">what</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options22incompatible_exception22incompatible_exceptionERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -697,13 +573,13 @@ title="Print to PDF"
 
 <dl class="cpp struct">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d7options20inexistent_exceptionE">
-<span id="_CPPv3N3f3d7options20inexistent_exceptionE"></span><span id="_CPPv2N3f3d7options20inexistent_exceptionE"></span><span id="f3d::options::inexistent_exception"></span><span class="target" id="structf3d_1_1options_1_1inexistent__exception"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">inexistent_exception</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">f3d</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="class_structf3d_1_1exception.html#_CPPv4N3f3d9exceptionE" title="f3d::exception"><span class="n"><span class="pre">exception</span></span></a><a class="headerlink" href="#_CPPv4N3f3d7options20inexistent_exceptionE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d7options20inexistent_exceptionE"></span><span id="_CPPv2N3f3d7options20inexistent_exceptionE"></span><span id="f3d::options::inexistent_exception"></span><span class="target" id="structf3d_1_1options_1_1inexistent__exception"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">inexistent_exception</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">f3d</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="class_structf3d_1_1exception.html#_CPPv4N3f3d9exceptionE" title="f3d::exception"><span class="n"><span class="pre">exception</span></span></a><a class="headerlink" href="#_CPPv4N3f3d7options20inexistent_exceptionE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>An exception that can be thrown by the options when a provided option does not exist. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d7options20inexistent_exception20inexistent_exceptionERKNSt6stringE">
-<span id="_CPPv3N3f3d7options20inexistent_exception20inexistent_exceptionERKNSt6stringE"></span><span id="_CPPv2N3f3d7options20inexistent_exception20inexistent_exceptionERKNSt6stringE"></span><span id="f3d::options::inexistent_exception::inexistent_exception__ssCR"></span><span class="target" id="structf3d_1_1options_1_1inexistent__exception_1a709b2f34f7c2bea677e71bfa3cae39e3"></span><span class="sig-name descname"><span class="n"><span class="pre">inexistent_exception</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">what</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options20inexistent_exception20inexistent_exceptionERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d7options20inexistent_exception20inexistent_exceptionERKNSt6stringE"></span><span id="_CPPv2N3f3d7options20inexistent_exception20inexistent_exceptionERKNSt6stringE"></span><span id="f3d::options::inexistent_exception::inexistent_exception__ssCR"></span><span class="target" id="structf3d_1_1options_1_1inexistent__exception_1a709b2f34f7c2bea677e71bfa3cae39e3"></span><span class="sig-name descname"><span class="n"><span class="pre">inexistent_exception</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">what</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options20inexistent_exception20inexistent_exceptionERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -717,48 +593,36 @@ title="Print to PDF"
 
               </div>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="classf3d_1_1log.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Class log</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="classf3d_1_1plugin.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Class plugin</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Michael Migliore and Mathieu Westphal<br/>
-  
-      &copy; Copyright 2022, Michael Migliore and Mathieu Westphal.<br/>
-</p>
-        </footer>
     </div>
     
-</div>
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="classf3d_1_1log.html" title="previous page">Class log</a>
+    <a class='right-next' id="next-link" href="classf3d_1_1window.html" title="next page">Class window</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Michael Migliore and Mathieu Westphal<br/>
+        
+            &copy; Copyright 2022, Michael Migliore and Mathieu Westphal.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
 
 
       </div>
     </div>
-  
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
+    
   </body>
 </html>

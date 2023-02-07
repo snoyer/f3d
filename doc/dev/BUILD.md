@@ -12,6 +12,7 @@ needed dependencies, configuring and building.
 * Optionally, [Assimp](https://www.assimp.org/) >= 5.0.
 * Optionally, Open CASCADE [OCCT](https://dev.opencascade.org/) >= 7.5.2.
 * Optionally, [Alembic](http://www.alembic.io/) >= 1.7.
+* Optionally, [Draco](https://google.github.io/draco/) >= 1.5.
 * Optionally, [Python](https://www.python.org/) >= 3.6 and [pybind11](https://github.com/pybind/pybind11) >= 2.2.
 * Optionally, [Java](https://www.java.com) >= 18.
 
@@ -30,7 +31,7 @@ Here is some CMake options of interest::
 * `BUILD_TESTING`: Enable the [tests](TESTING.md).
 * `F3D_MACOS_BUNDLE`: On macOS, build a `.app` bundle.
 * `F3D_WINDOWS_GUI`: On Windows, build a Win32 application (without console).
-* `F3D_BUILD_WINDOWS_SHELL_THUMBNAILS_EXTENSION`: On Windows, build the shell thumbnails extension.
+* `F3D_WINDOWS_BUILD_SHELL_THUMBNAILS_EXTENSION`: On Windows, build the shell thumbnails extension.
 * `F3D_PLUGINS_STATIC_BUILD`: Build all plugins as static library (embedded into `libf3d`) and automatically loaded by the application.
 
 Some modules, plugins and bindings depending on external libraries can be optionally enabled with the following CMake variables:
@@ -41,5 +42,24 @@ Some modules, plugins and bindings depending on external libraries can be option
 * `F3D_PLUGIN_BUILD_OCCT`: Support for STEP and IGES file formats. Requires `OpenCASCADE`. Disabled by default.
 * `F3D_PLUGIN_BUILD_ASSIMP`: Support for FBX, DAE, OFF and DXF file formats. Requires `Assimp`. Disabled by default.
 * `F3D_PLUGIN_BUILD_ALEMBIC`: Support for ABC file format. Requires `Alembic`. Disabled by default.
+* `F3D_PLUGIN_BUILD_DRACO`: Support for DRC file format. Requires `Draco`. Disabled by default.
 * `F3D_BINDINGS_PYTHON`: Generate python bindings (requires `Python` and `pybind11`). Disabled by default.
 * `F3D_BINDINGS_JAVA`: Generate java bindings (requires `Java` and `JNI`). Disabled by default.
+
+## Installing
+
+Installation can be done through CMake, by running the following command:
+
+```
+cmake --install ${your_build_dir}
+```
+
+Optional components can be installed by specifying the component name:
+
+```
+cmake --install ${your_build_dir} --component ${component_name}
+```
+
+Here is the list of the optional components you can install:
+
+* `mimetypes`: Install plugins mimetype XML files for integration with Freedesktop (Linux only)

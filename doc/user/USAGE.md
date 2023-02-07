@@ -47,9 +47,14 @@ If you installed F3D using a package manager, it's possible that the packager ch
 In this case, in order to open a file that requires a plugin, you will have to make sure all needed dependencies are installed and specify which plugin you want to load in order to be able to open this file. You can either use the `--load-plugins` option or add a line in the [configuration file](CONFIGURATION_FILE.md), if not already.
 Here is the list of plugins provided officially by F3D:
 
-- **assimp**: FBX, DAE, OFF and DXF support
-- **occt**: STEP and IGES support
 - **alembic**: ABC support
+- **assimp**: FBX, DAE, OFF and DXF support
+- **draco**: DRC support
 - **exodus**: EX2 support
+- **occt**: STEP and IGES support
 
 > Note: If you downloaded the binaries from the Release page, it's not necessary to specify manually the plugins above, all of them are loaded automatically.
+
+You can also try plugins maintained by the community. If you have created a plugin and would like it to be listed here, please submit a pull request.
+
+- **Abaqus**: ODB support by @YangShen398 ([repository](https://github.com/YangShen398/F3D-ODB-Reader-Plugin))

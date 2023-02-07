@@ -8,7 +8,6 @@ File exception.h
 
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
-
 .. contents:: Contents
    :local:
    :backlinks: none
@@ -42,9 +41,9 @@ Included By
 
 - :ref:`file_public_engine.h`
 
-- :ref:`file_public_options.h`
-
 - :ref:`file_public_image.h`
+
+- :ref:`file_public_options.h`
 
 
 
