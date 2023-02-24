@@ -44,8 +44,8 @@ Program Listing for File loader.h
    
      virtual bool loadFile(LoadFileEnum load = LoadFileEnum::LOAD_CURRENT) = 0;
    
-     virtual void getFileInfo(
-       LoadFileEnum load, int& nextFileIndex, std::string& filePath, std::string& fileInfo) const = 0;
+     virtual void getFileInfo(LoadFileEnum load, int& nextFileIndex, std::string& filePath,
+       std::string& fileName, std::string& fileInfo) const = 0;
    
    protected:
      loader() = default;
