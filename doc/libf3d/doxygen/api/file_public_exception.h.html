@@ -1,36 +1,41 @@
 
+
 <!DOCTYPE html>
 
-<html lang="en">
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>File exception.h &#8212; libf3d 1.3.1 documentation</title>
-    
-  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-  <link rel="stylesheet"
-    href="../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
-    
-  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -38,277 +43,279 @@
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
     <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
-    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/file_public_exception.h';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
-
-
-
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-        <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../index.html">
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
   
   
-  <h1 class="site-logo" id="site-title">libf3d 1.3.1 documentation</h1>
   
+  
+  
+    <p class="title logo__title">libf3d 1.3.1 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="library_root.html">Library API</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="namespace_f3d.html">Namespace f3d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1engine_1_1libInformation.html">Struct engine::libInformation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1engine_1_1no__interactor__exception.html">Struct engine::no_interactor_exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1engine_1_1no__window__exception.html">Struct engine::no_window_exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1engine_1_1plugin__exception.html">Struct engine::plugin_exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1engine_1_1readerInformation.html">Struct engine::readerInformation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1image_1_1read__exception.html">Struct image::read_exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1image_1_1write__exception.html">Struct image::write_exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1options_1_1incompatible__exception.html">Struct options::incompatible_exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1options_1_1inexistent__exception.html">Struct options::inexistent_exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1point3__t.html">Struct point3_t</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1vector3__t.html">Struct vector3_t</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classf3d_1_1camera.html">Class camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classf3d_1_1engine.html">Class engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_structf3d_1_1exception.html">Class exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classf3d_1_1image.html">Class image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classf3d_1_1interactor.html">Class interactor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classf3d_1_1loader.html">Class loader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classf3d_1_1log.html">Class log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classf3d_1_1options.html">Class options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classf3d_1_1window.html">Class window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typedef_types_8h_1a62f3e15e4e18455b52854622b27c02ed.html">Typedef f3d::angle_deg_t</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/api/file_public_exception.h.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
 </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <p class="caption collapsible-parent" role="heading">
- <span class="caption-text">
-  Contents:
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="library_root.html">
-   Library API
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="namespace_f3d.html">
-     Namespace f3d
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="structf3d_1_1engine_1_1libInformation.html">
-     Struct engine::libInformation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="structf3d_1_1engine_1_1no__interactor__exception.html">
-     Struct engine::no_interactor_exception
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="structf3d_1_1engine_1_1no__window__exception.html">
-     Struct engine::no_window_exception
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="structf3d_1_1engine_1_1plugin__exception.html">
-     Struct engine::plugin_exception
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="structf3d_1_1engine_1_1readerInformation.html">
-     Struct engine::readerInformation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="structf3d_1_1image_1_1read__exception.html">
-     Struct image::read_exception
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="structf3d_1_1image_1_1write__exception.html">
-     Struct image::write_exception
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="structf3d_1_1options_1_1incompatible__exception.html">
-     Struct options::incompatible_exception
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="structf3d_1_1options_1_1inexistent__exception.html">
-     Struct options::inexistent_exception
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="structf3d_1_1point3__t.html">
-     Struct point3_t
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="structf3d_1_1vector3__t.html">
-     Struct vector3_t
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="classf3d_1_1camera.html">
-     Class camera
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="classf3d_1_1engine.html">
-     Class engine
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="class_structf3d_1_1exception.html">
-     Class exception
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="classf3d_1_1image.html">
-     Class image
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="classf3d_1_1interactor.html">
-     Class interactor
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="classf3d_1_1loader.html">
-     Class loader
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="classf3d_1_1log.html">
-     Class log
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="classf3d_1_1options.html">
-     Class options
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="classf3d_1_1window.html">
-     Class window
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="typedef_types_8h_1a62f3e15e4e18455b52854622b27c02ed.html">
-     Typedef f3d::angle_deg_t
-    </a>
-   </li>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
-</ul>
-
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-</div>
-
 </div>
 
 
-          
 
 
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
     </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/api/file_public_exception.h.rst.txt"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.rst</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
+  
 </div>
+</div>
+              
+              
 
-        <!-- Source interaction buttons -->
-
-
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
-
-        <!-- Launch buttons -->
-
-    </div>
-
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>File exception.h</h1>
     <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#definition-public-exception-h">
-   Definition (
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     public/exception.h
-    </span>
-   </code>
-   )
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#includes">
-   Includes
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#included-by">
-   Included By
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#namespaces">
-   Namespaces
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#classes">
-   Classes
-  </a>
- </li>
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-public-exception-h">Definition (<code class="docutils literal notranslate"><span class="pre">public/exception.h</span></code>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#includes">Includes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#included-by">Included By</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#namespaces">Namespaces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">Classes</a></li>
 </ul>
-
-        </nav>
-        
+            </nav>
+        </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
+
+              
                 
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section id="file-exception-h">
-<span id="file-public-exception-h"></span><h1>File exception.h<a class="headerlink" href="#file-exception-h" title="Permalink to this heading">¶</a></h1>
+<span id="file-public-exception-h"></span><h1>File exception.h<a class="headerlink" href="#file-exception-h" title="Permalink to this heading">#</a></h1>
 <p>↰ <a class="reference internal" href="dir_public.html#dir-public"><span class="std std-ref">Parent directory</span></a> (<code class="docutils literal notranslate"><span class="pre">public</span></code>)</p>
 <nav class="contents local" id="contents">
 <p class="topic-title">Contents</p>
@@ -321,7 +328,7 @@
 </ul>
 </nav>
 <section id="definition-public-exception-h">
-<h2>Definition (<code class="docutils literal notranslate"><span class="pre">public/exception.h</span></code>)<a class="headerlink" href="#definition-public-exception-h" title="Permalink to this heading">¶</a></h2>
+<h2>Definition (<code class="docutils literal notranslate"><span class="pre">public/exception.h</span></code>)<a class="headerlink" href="#definition-public-exception-h" title="Permalink to this heading">#</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="program_listing_file_public_exception.h.html">Program Listing for File exception.h</a></li>
@@ -329,14 +336,14 @@
 </div>
 </section>
 <section id="includes">
-<h2>Includes<a class="headerlink" href="#includes" title="Permalink to this heading">¶</a></h2>
+<h2>Includes<a class="headerlink" href="#includes" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">stdexcept</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></li>
 </ul>
 </section>
 <section id="included-by">
-<h2>Included By<a class="headerlink" href="#included-by" title="Permalink to this heading">¶</a></h2>
+<h2>Included By<a class="headerlink" href="#included-by" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="file_public_engine.h.html#file-public-engine-h"><span class="std std-ref">File engine.h</span></a></p></li>
 <li><p><a class="reference internal" href="file_public_image.h.html#file-public-image-h"><span class="std std-ref">File image.h</span></a></p></li>
@@ -344,13 +351,13 @@
 </ul>
 </section>
 <section id="namespaces">
-<h2>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this heading">¶</a></h2>
+<h2>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="namespace_f3d.html#namespace-f3d"><span class="std std-ref">Namespace f3d</span></a></p></li>
 </ul>
 </section>
 <section id="classes">
-<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this heading">¶</a></h2>
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="class_structf3d_1_1exception.html#exhale-class-structf3d-1-1exception"><span class="std std-ref">Class exception</span></a></p></li>
 </ul>
@@ -358,36 +365,85 @@
 </section>
 
 
-              </div>
+                </article>
               
-        </div>
-    </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-public-exception-h">Definition (<code class="docutils literal notranslate"><span class="pre">public/exception.h</span></code>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#includes">Includes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#included-by">Included By</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#namespaces">Namespaces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">Classes</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
     
+<p class="component-author">
+By Michael Migliore and Mathieu Westphal
+</p>
+
+  </div>
+  
+  <div class="footer-item">
     
-    <div class='prev-next-bottom'>
+  <p class="copyright">
+    
+      © Copyright 2022, Michael Migliore and Mathieu Westphal.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
         
 
+      </main>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Michael Migliore and Mathieu Westphal<br/>
-        
-            &copy; Copyright 2022, Michael Migliore and Mathieu Westphal.<br/>
-      </p>
-    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
   </footer>
-</main>
-
-
-      </div>
-    </div>
-
-    
-  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
-
-
-    
   </body>
 </html>

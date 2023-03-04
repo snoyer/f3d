@@ -1,36 +1,41 @@
 
+
 <!DOCTYPE html>
 
-<html lang="en">
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Class interactor &#8212; libf3d 1.3.1 documentation</title>
-    
-  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-  <link rel="stylesheet"
-    href="../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
-    
-  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -38,286 +43,310 @@
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
     <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
-    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/classf3d_1_1interactor';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Class loader" href="classf3d_1_1loader.html" />
     <link rel="prev" title="Class image" href="classf3d_1_1image.html" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
-
-
-
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-        <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../index.html">
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
   
   
-  <h1 class="site-logo" id="site-title">libf3d 1.3.1 documentation</h1>
   
+  
+  
+    <p class="title logo__title">libf3d 1.3.1 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="library_root.html">Library API</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_f3d.html">Namespace f3d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1engine_1_1libInformation.html">Struct engine::libInformation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1engine_1_1no__interactor__exception.html">Struct engine::no_interactor_exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1engine_1_1no__window__exception.html">Struct engine::no_window_exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1engine_1_1plugin__exception.html">Struct engine::plugin_exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1engine_1_1readerInformation.html">Struct engine::readerInformation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1image_1_1read__exception.html">Struct image::read_exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1image_1_1write__exception.html">Struct image::write_exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1options_1_1incompatible__exception.html">Struct options::incompatible_exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1options_1_1inexistent__exception.html">Struct options::inexistent_exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1point3__t.html">Struct point3_t</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1vector3__t.html">Struct vector3_t</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classf3d_1_1camera.html">Class camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classf3d_1_1engine.html">Class engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_structf3d_1_1exception.html">Class exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classf3d_1_1image.html">Class image</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Class interactor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classf3d_1_1loader.html">Class loader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classf3d_1_1log.html">Class log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classf3d_1_1options.html">Class options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classf3d_1_1window.html">Class window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typedef_types_8h_1a62f3e15e4e18455b52854622b27c02ed.html">Typedef f3d::angle_deg_t</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/api/classf3d_1_1interactor.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
 </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <p class="caption collapsible-parent" role="heading">
- <span class="caption-text">
-  Contents:
- </span>
-</p>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active collapsible-parent">
-  <a class="reference internal" href="library_root.html">
-   Library API
-  </a>
-  <ul class="current collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="namespace_f3d.html">
-     Namespace f3d
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="structf3d_1_1engine_1_1libInformation.html">
-     Struct engine::libInformation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="structf3d_1_1engine_1_1no__interactor__exception.html">
-     Struct engine::no_interactor_exception
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="structf3d_1_1engine_1_1no__window__exception.html">
-     Struct engine::no_window_exception
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="structf3d_1_1engine_1_1plugin__exception.html">
-     Struct engine::plugin_exception
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="structf3d_1_1engine_1_1readerInformation.html">
-     Struct engine::readerInformation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="structf3d_1_1image_1_1read__exception.html">
-     Struct image::read_exception
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="structf3d_1_1image_1_1write__exception.html">
-     Struct image::write_exception
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="structf3d_1_1options_1_1incompatible__exception.html">
-     Struct options::incompatible_exception
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="structf3d_1_1options_1_1inexistent__exception.html">
-     Struct options::inexistent_exception
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="structf3d_1_1point3__t.html">
-     Struct point3_t
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="structf3d_1_1vector3__t.html">
-     Struct vector3_t
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="classf3d_1_1camera.html">
-     Class camera
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="classf3d_1_1engine.html">
-     Class engine
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="class_structf3d_1_1exception.html">
-     Class exception
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="classf3d_1_1image.html">
-     Class image
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Class interactor
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="classf3d_1_1loader.html">
-     Class loader
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="classf3d_1_1log.html">
-     Class log
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="classf3d_1_1options.html">
-     Class options
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="classf3d_1_1window.html">
-     Class window
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="typedef_types_8h_1a62f3e15e4e18455b52854622b27c02ed.html">
-     Typedef f3d::angle_deg_t
-    </a>
-   </li>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
-</ul>
-
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-</div>
-
 </div>
 
 
-          
 
 
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
     </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/api/classf3d_1_1interactor.rst.txt"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.rst</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
+  
 </div>
+</div>
+              
+              
 
-        <!-- Source interaction buttons -->
-
-
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
-
-        <!-- Launch buttons -->
-
-    </div>
-
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Class interactor</h1>
     <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#class-documentation">
-   Class Documentation
-  </a>
- </li>
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a></li>
 </ul>
-
-        </nav>
-        
+            </nav>
+        </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
+
+              
                 
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section id="class-interactor">
-<span id="exhale-class-classf3d-1-1interactor"></span><h1>Class interactor<a class="headerlink" href="#class-interactor" title="Permalink to this heading">¶</a></h1>
+<span id="exhale-class-classf3d-1-1interactor"></span><h1>Class interactor<a class="headerlink" href="#class-interactor" title="Permalink to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Defined in <a class="reference internal" href="file_public_interactor.h.html#file-public-interactor-h"><span class="std std-ref">File interactor.h</span></a></p></li>
 </ul>
 <section id="class-documentation">
-<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this heading">¶</a></h2>
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this heading">#</a></h2>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d10interactorE">
-<span id="_CPPv3N3f3d10interactorE"></span><span id="_CPPv2N3f3d10interactorE"></span><span id="f3d::interactor"></span><span class="target" id="classf3d_1_1interactor"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">interactor</span></span></span><a class="headerlink" href="#_CPPv4N3f3d10interactorE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d10interactorE"></span><span id="_CPPv2N3f3d10interactorE"></span><span id="f3d::interactor"></span><span class="target" id="classf3d_1_1interactor"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">interactor</span></span></span><a class="headerlink" href="#_CPPv4N3f3d10interactorE" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Class used to control interaction and animation. </p>
 <p>A class to control interaction with the window as well as animation. It also provide a timer callback if needed and can record/play interaction file. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-animation">Animation</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d10interactor15toggleAnimationEv">
-<span id="_CPPv3N3f3d10interactor15toggleAnimationEv"></span><span id="_CPPv2N3f3d10interactor15toggleAnimationEv"></span><span id="f3d::interactor::toggleAnimation"></span><span class="target" id="classf3d_1_1interactor_1a1aaf0c25f17d39dd9fd1b066d7e680ad"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">toggleAnimation</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d10interactor15toggleAnimationEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d10interactor15toggleAnimationEv"></span><span id="_CPPv2N3f3d10interactor15toggleAnimationEv"></span><span id="f3d::interactor::toggleAnimation"></span><span class="target" id="classf3d_1_1interactor_1a1aaf0c25f17d39dd9fd1b066d7e680ad"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">toggleAnimation</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d10interactor15toggleAnimationEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Control the animation. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d10interactor14startAnimationEv">
-<span id="_CPPv3N3f3d10interactor14startAnimationEv"></span><span id="_CPPv2N3f3d10interactor14startAnimationEv"></span><span id="f3d::interactor::startAnimation"></span><span class="target" id="classf3d_1_1interactor_1a312760fc76adc09b24199ecc0198dff4"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">startAnimation</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d10interactor14startAnimationEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d10interactor14startAnimationEv"></span><span id="_CPPv2N3f3d10interactor14startAnimationEv"></span><span id="f3d::interactor::startAnimation"></span><span class="target" id="classf3d_1_1interactor_1a312760fc76adc09b24199ecc0198dff4"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">startAnimation</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d10interactor14startAnimationEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Control the animation. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d10interactor13stopAnimationEv">
-<span id="_CPPv3N3f3d10interactor13stopAnimationEv"></span><span id="_CPPv2N3f3d10interactor13stopAnimationEv"></span><span id="f3d::interactor::stopAnimation"></span><span class="target" id="classf3d_1_1interactor_1a055b02ad798a22f850d3f3821cc27d8a"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stopAnimation</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d10interactor13stopAnimationEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d10interactor13stopAnimationEv"></span><span id="_CPPv2N3f3d10interactor13stopAnimationEv"></span><span id="f3d::interactor::stopAnimation"></span><span class="target" id="classf3d_1_1interactor_1a055b02ad798a22f850d3f3821cc27d8a"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stopAnimation</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d10interactor13stopAnimationEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Control the animation. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d10interactor18isPlayingAnimationEv">
-<span id="_CPPv3N3f3d10interactor18isPlayingAnimationEv"></span><span id="_CPPv2N3f3d10interactor18isPlayingAnimationEv"></span><span id="f3d::interactor::isPlayingAnimation"></span><span class="target" id="classf3d_1_1interactor_1a4c1b56b4ec237630491274511a17fe8e"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isPlayingAnimation</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d10interactor18isPlayingAnimationEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d10interactor18isPlayingAnimationEv"></span><span id="_CPPv2N3f3d10interactor18isPlayingAnimationEv"></span><span id="f3d::interactor::isPlayingAnimation"></span><span class="target" id="classf3d_1_1interactor_1a4c1b56b4ec237630491274511a17fe8e"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isPlayingAnimation</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d10interactor18isPlayingAnimationEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Control the animation. </p>
 </dd></dl>
 
@@ -326,13 +355,13 @@
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-movement">Movement</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d10interactor20enableCameraMovementEv">
-<span id="_CPPv3N3f3d10interactor20enableCameraMovementEv"></span><span id="_CPPv2N3f3d10interactor20enableCameraMovementEv"></span><span id="f3d::interactor::enableCameraMovement"></span><span class="target" id="classf3d_1_1interactor_1abe6256d709428b8e04b14ac899edab69"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableCameraMovement</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d10interactor20enableCameraMovementEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d10interactor20enableCameraMovementEv"></span><span id="_CPPv2N3f3d10interactor20enableCameraMovementEv"></span><span id="f3d::interactor::enableCameraMovement"></span><span class="target" id="classf3d_1_1interactor_1abe6256d709428b8e04b14ac899edab69"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableCameraMovement</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d10interactor20enableCameraMovementEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Control if camera movements are enabled, which they are by default. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d10interactor21disableCameraMovementEv">
-<span id="_CPPv3N3f3d10interactor21disableCameraMovementEv"></span><span id="_CPPv2N3f3d10interactor21disableCameraMovementEv"></span><span id="f3d::interactor::disableCameraMovement"></span><span class="target" id="classf3d_1_1interactor_1a05e8cd74a7e6024994faeeac26788206"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">disableCameraMovement</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d10interactor21disableCameraMovementEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d10interactor21disableCameraMovementEv"></span><span id="_CPPv2N3f3d10interactor21disableCameraMovementEv"></span><span id="f3d::interactor::disableCameraMovement"></span><span class="target" id="classf3d_1_1interactor_1a05e8cd74a7e6024994faeeac26788206"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">disableCameraMovement</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d10interactor21disableCameraMovementEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Control if camera movements are enabled, which they are by default. </p>
 </dd></dl>
 
@@ -341,7 +370,7 @@
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d10interactor19setKeyPressCallBackENSt8functionIFbiNSt6stringEEEE">
-<span id="_CPPv3N3f3d10interactor19setKeyPressCallBackENSt8functionIFbiNSt6stringEEEE"></span><span id="_CPPv2N3f3d10interactor19setKeyPressCallBackENSt8functionIFbiNSt6stringEEEE"></span><span class="target" id="classf3d_1_1interactor_1a0abaf8904856e5c9560161a99cc452c1"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d10interactorE" title="f3d::interactor"><span class="n"><span class="pre">interactor</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">setKeyPressCallBack</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">bool</span></span><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">callBack</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d10interactor19setKeyPressCallBackENSt8functionIFbiNSt6stringEEEE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d10interactor19setKeyPressCallBackENSt8functionIFbiNSt6stringEEEE"></span><span id="_CPPv2N3f3d10interactor19setKeyPressCallBackENSt8functionIFbiNSt6stringEEEE"></span><span class="target" id="classf3d_1_1interactor_1a0abaf8904856e5c9560161a99cc452c1"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d10interactorE" title="f3d::interactor"><span class="n"><span class="pre">interactor</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">setKeyPressCallBack</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">bool</span></span><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">callBack</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d10interactor19setKeyPressCallBackENSt8functionIFbiNSt6stringEEEE" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Use this method to specify your own keypress callback, with the expected API: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="n">callBack</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">keyCode</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">keySym</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -350,7 +379,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d10interactor20setDropFilesCallBackENSt8functionIFbNSt6vectorINSt6stringEEEEEE">
-<span id="_CPPv3N3f3d10interactor20setDropFilesCallBackENSt8functionIFbNSt6vectorINSt6stringEEEEEE"></span><span id="_CPPv2N3f3d10interactor20setDropFilesCallBackENSt8functionIFbNSt6vectorINSt6stringEEEEEE"></span><span class="target" id="classf3d_1_1interactor_1a5b6b0d1828d32515f9c409be2a8c86f3"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d10interactorE" title="f3d::interactor"><span class="n"><span class="pre">interactor</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">setDropFilesCallBack</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">bool</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">callBack</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d10interactor20setDropFilesCallBackENSt8functionIFbNSt6vectorINSt6stringEEEEEE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d10interactor20setDropFilesCallBackENSt8functionIFbNSt6vectorINSt6stringEEEEEE"></span><span id="_CPPv2N3f3d10interactor20setDropFilesCallBackENSt8functionIFbNSt6vectorINSt6stringEEEEEE"></span><span class="target" id="classf3d_1_1interactor_1a5b6b0d1828d32515f9c409be2a8c86f3"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d10interactorE" title="f3d::interactor"><span class="n"><span class="pre">interactor</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">setDropFilesCallBack</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">bool</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">callBack</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d10interactor20setDropFilesCallBackENSt8functionIFbNSt6vectorINSt6stringEEEEEE" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Use this method to specify your own drop files callback, with the expected API: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="n">callBack</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">files</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -359,37 +388,37 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d10interactor19createTimerCallBackEdNSt8functionIFvvEEE">
-<span id="_CPPv3N3f3d10interactor19createTimerCallBackEdNSt8functionIFvvEEE"></span><span id="_CPPv2N3f3d10interactor19createTimerCallBackEdNSt8functionIFvvEEE"></span><span class="target" id="classf3d_1_1interactor_1abb45525e7ffd6430056911a42837eeb0"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createTimerCallBack</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">time</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">callBack</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d10interactor19createTimerCallBackEdNSt8functionIFvvEEE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d10interactor19createTimerCallBackEdNSt8functionIFvvEEE"></span><span id="_CPPv2N3f3d10interactor19createTimerCallBackEdNSt8functionIFvvEEE"></span><span class="target" id="classf3d_1_1interactor_1abb45525e7ffd6430056911a42837eeb0"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createTimerCallBack</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">time</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">callBack</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d10interactor19createTimerCallBackEdNSt8functionIFvvEEE" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Use this method to create your own timer callback. You callback will be called once every time ms. Return an id to use in removeTimeCallBack. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d10interactor19removeTimerCallBackEm">
-<span id="_CPPv3N3f3d10interactor19removeTimerCallBackEm"></span><span id="_CPPv2N3f3d10interactor19removeTimerCallBackEm"></span><span id="f3d::interactor::removeTimerCallBack__unsigned-l"></span><span class="target" id="classf3d_1_1interactor_1a268e05a656c85c59e2717178df408ecf"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">removeTimerCallBack</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d10interactor19removeTimerCallBackEm" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d10interactor19removeTimerCallBackEm"></span><span id="_CPPv2N3f3d10interactor19removeTimerCallBackEm"></span><span id="f3d::interactor::removeTimerCallBack__unsigned-l"></span><span class="target" id="classf3d_1_1interactor_1a268e05a656c85c59e2717178df408ecf"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">removeTimerCallBack</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d10interactor19removeTimerCallBackEm" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Remove a previously created timer callback using the id. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d10interactor15playInteractionERKNSt6stringE">
-<span id="_CPPv3N3f3d10interactor15playInteractionERKNSt6stringE"></span><span id="_CPPv2N3f3d10interactor15playInteractionERKNSt6stringE"></span><span id="f3d::interactor::playInteraction__ssCR"></span><span class="target" id="classf3d_1_1interactor_1a31b1a2d4c39c7fe1079467613342e26a"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">playInteraction</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">file</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d10interactor15playInteractionERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d10interactor15playInteractionERKNSt6stringE"></span><span id="_CPPv2N3f3d10interactor15playInteractionERKNSt6stringE"></span><span id="f3d::interactor::playInteraction__ssCR"></span><span class="target" id="classf3d_1_1interactor_1a31b1a2d4c39c7fe1079467613342e26a"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">playInteraction</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">file</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d10interactor15playInteractionERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Play a VTK interaction file. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d10interactor17recordInteractionERKNSt6stringE">
-<span id="_CPPv3N3f3d10interactor17recordInteractionERKNSt6stringE"></span><span id="_CPPv2N3f3d10interactor17recordInteractionERKNSt6stringE"></span><span id="f3d::interactor::recordInteraction__ssCR"></span><span class="target" id="classf3d_1_1interactor_1a5b0c1aee8eca4545d3dbb64b2b9ebfd6"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">recordInteraction</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">file</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d10interactor17recordInteractionERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d10interactor17recordInteractionERKNSt6stringE"></span><span id="_CPPv2N3f3d10interactor17recordInteractionERKNSt6stringE"></span><span id="f3d::interactor::recordInteraction__ssCR"></span><span class="target" id="classf3d_1_1interactor_1a5b0c1aee8eca4545d3dbb64b2b9ebfd6"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">recordInteraction</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">file</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d10interactor17recordInteractionERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Start interaction and record it all in a VTK interaction file. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d10interactor5startEv">
-<span id="_CPPv3N3f3d10interactor5startEv"></span><span id="_CPPv2N3f3d10interactor5startEv"></span><span id="f3d::interactor::start"></span><span class="target" id="classf3d_1_1interactor_1a34280db75d7811c2adf1d4e2fed0a348"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">start</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d10interactor5startEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d10interactor5startEv"></span><span id="_CPPv2N3f3d10interactor5startEv"></span><span id="f3d::interactor::start"></span><span class="target" id="classf3d_1_1interactor_1a34280db75d7811c2adf1d4e2fed0a348"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">start</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d10interactor5startEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Start the interactor. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d10interactor4stopEv">
-<span id="_CPPv3N3f3d10interactor4stopEv"></span><span id="_CPPv2N3f3d10interactor4stopEv"></span><span id="f3d::interactor::stop"></span><span class="target" id="classf3d_1_1interactor_1a20f1a22e9b8f27b425e1f5b12471359a"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d10interactor4stopEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d10interactor4stopEv"></span><span id="_CPPv2N3f3d10interactor4stopEv"></span><span id="f3d::interactor::stop"></span><span class="target" id="classf3d_1_1interactor_1a20f1a22e9b8f27b425e1f5b12471359a"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d10interactor4stopEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Stop the interactor. </p>
 </dd></dl>
 
@@ -398,7 +427,7 @@
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d10interactor26getDefaultInteractionsInfoEv">
-<span id="_CPPv3N3f3d10interactor26getDefaultInteractionsInfoEv"></span><span id="_CPPv2N3f3d10interactor26getDefaultInteractionsInfoEv"></span><span id="f3d::interactor::getDefaultInteractionsInfo"></span><span class="target" id="classf3d_1_1interactor_1aa857930e172521b892a7c47873f94e2f"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getDefaultInteractionsInfo</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d10interactor26getDefaultInteractionsInfoEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d10interactor26getDefaultInteractionsInfoEv"></span><span id="_CPPv2N3f3d10interactor26getDefaultInteractionsInfoEv"></span><span id="f3d::interactor::getDefaultInteractionsInfo"></span><span class="target" id="classf3d_1_1interactor_1aa857930e172521b892a7c47873f94e2f"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getDefaultInteractionsInfo</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d10interactor26getDefaultInteractionsInfoEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Get a structure of strings describing default interactions. </p>
 </dd></dl>
 
@@ -409,38 +438,99 @@
 </section>
 
 
-              </div>
+                </article>
               
-        </div>
-    </div>
-    
-    
-    <div class='prev-next-bottom'>
-        
-    <a class='left-prev' id="prev-link" href="classf3d_1_1image.html" title="previous page">Class image</a>
-    <a class='right-next' id="next-link" href="classf3d_1_1loader.html" title="next page">Class loader</a>
 
-    </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Michael Migliore and Mathieu Westphal<br/>
-        
-            &copy; Copyright 2022, Michael Migliore and Mathieu Westphal.<br/>
-      </p>
-    </div>
-  </footer>
-</main>
-
-
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="classf3d_1_1image.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Class image</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="classf3d_1_1loader.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Class loader</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Michael Migliore and Mathieu Westphal
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022, Michael Migliore and Mathieu Westphal.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
 
-    
-  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
-
-
-    
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

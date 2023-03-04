@@ -1,36 +1,41 @@
 
+
 <!DOCTYPE html>
 
-<html lang="en">
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Class engine &#8212; libf3d 1.3.1 documentation</title>
-    
-  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-  <link rel="stylesheet"
-    href="../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
-    
-  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -38,272 +43,288 @@
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
     <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
-    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/classf3d_1_1engine';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Class exception" href="class_structf3d_1_1exception.html" />
     <link rel="prev" title="Class camera" href="classf3d_1_1camera.html" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
-
-
-
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-        <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../index.html">
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
   
   
-  <h1 class="site-logo" id="site-title">libf3d 1.3.1 documentation</h1>
   
+  
+  
+    <p class="title logo__title">libf3d 1.3.1 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="library_root.html">Library API</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_f3d.html">Namespace f3d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1engine_1_1libInformation.html">Struct engine::libInformation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1engine_1_1no__interactor__exception.html">Struct engine::no_interactor_exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1engine_1_1no__window__exception.html">Struct engine::no_window_exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1engine_1_1plugin__exception.html">Struct engine::plugin_exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1engine_1_1readerInformation.html">Struct engine::readerInformation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1image_1_1read__exception.html">Struct image::read_exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1image_1_1write__exception.html">Struct image::write_exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1options_1_1incompatible__exception.html">Struct options::incompatible_exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1options_1_1inexistent__exception.html">Struct options::inexistent_exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1point3__t.html">Struct point3_t</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1vector3__t.html">Struct vector3_t</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classf3d_1_1camera.html">Class camera</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Class engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_structf3d_1_1exception.html">Class exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classf3d_1_1image.html">Class image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classf3d_1_1interactor.html">Class interactor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classf3d_1_1loader.html">Class loader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classf3d_1_1log.html">Class log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classf3d_1_1options.html">Class options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classf3d_1_1window.html">Class window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typedef_types_8h_1a62f3e15e4e18455b52854622b27c02ed.html">Typedef f3d::angle_deg_t</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/api/classf3d_1_1engine.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
 </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <p class="caption collapsible-parent" role="heading">
- <span class="caption-text">
-  Contents:
- </span>
-</p>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active collapsible-parent">
-  <a class="reference internal" href="library_root.html">
-   Library API
-  </a>
-  <ul class="current collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="namespace_f3d.html">
-     Namespace f3d
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="structf3d_1_1engine_1_1libInformation.html">
-     Struct engine::libInformation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="structf3d_1_1engine_1_1no__interactor__exception.html">
-     Struct engine::no_interactor_exception
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="structf3d_1_1engine_1_1no__window__exception.html">
-     Struct engine::no_window_exception
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="structf3d_1_1engine_1_1plugin__exception.html">
-     Struct engine::plugin_exception
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="structf3d_1_1engine_1_1readerInformation.html">
-     Struct engine::readerInformation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="structf3d_1_1image_1_1read__exception.html">
-     Struct image::read_exception
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="structf3d_1_1image_1_1write__exception.html">
-     Struct image::write_exception
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="structf3d_1_1options_1_1incompatible__exception.html">
-     Struct options::incompatible_exception
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="structf3d_1_1options_1_1inexistent__exception.html">
-     Struct options::inexistent_exception
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="structf3d_1_1point3__t.html">
-     Struct point3_t
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="structf3d_1_1vector3__t.html">
-     Struct vector3_t
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="classf3d_1_1camera.html">
-     Class camera
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Class engine
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="class_structf3d_1_1exception.html">
-     Class exception
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="classf3d_1_1image.html">
-     Class image
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="classf3d_1_1interactor.html">
-     Class interactor
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="classf3d_1_1loader.html">
-     Class loader
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="classf3d_1_1log.html">
-     Class log
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="classf3d_1_1options.html">
-     Class options
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="classf3d_1_1window.html">
-     Class window
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="typedef_types_8h_1a62f3e15e4e18455b52854622b27c02ed.html">
-     Typedef f3d::angle_deg_t
-    </a>
-   </li>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
-</ul>
-
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-</div>
-
 </div>
 
 
-          
 
 
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
     </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/api/classf3d_1_1engine.rst.txt"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.rst</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
+  
 </div>
+</div>
+              
+              
 
-        <!-- Source interaction buttons -->
-
-
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
-
-        <!-- Launch buttons -->
-
-    </div>
-
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Class engine</h1>
     <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#nested-relationships">
-   Nested Relationships
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#nested-types">
-     Nested Types
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#class-documentation">
-   Class Documentation
-  </a>
- </li>
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-relationships">Nested Relationships</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-types">Nested Types</a></li>
 </ul>
-
-        </nav>
-        
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a></li>
+</ul>
+            </nav>
+        </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
+
+              
                 
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section id="class-engine">
-<span id="exhale-class-classf3d-1-1engine"></span><h1>Class engine<a class="headerlink" href="#class-engine" title="Permalink to this heading">¶</a></h1>
+<span id="exhale-class-classf3d-1-1engine"></span><h1>Class engine<a class="headerlink" href="#class-engine" title="Permalink to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Defined in <a class="reference internal" href="file_public_engine.h.html#file-public-engine-h"><span class="std std-ref">File engine.h</span></a></p></li>
 </ul>
 <section id="nested-relationships">
-<h2>Nested Relationships<a class="headerlink" href="#nested-relationships" title="Permalink to this heading">¶</a></h2>
+<h2>Nested Relationships<a class="headerlink" href="#nested-relationships" title="Permalink to this heading">#</a></h2>
 <section id="nested-types">
-<h3>Nested Types<a class="headerlink" href="#nested-types" title="Permalink to this heading">¶</a></h3>
+<h3>Nested Types<a class="headerlink" href="#nested-types" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference internal" href="structf3d_1_1engine_1_1libInformation.html#exhale-struct-structf3d-1-1engine-1-1libinformation"><span class="std std-ref">Struct engine::libInformation</span></a></p></li>
 <li><p><a class="reference internal" href="structf3d_1_1engine_1_1no__interactor__exception.html#exhale-struct-structf3d-1-1engine-1-1no-interactor-exception"><span class="std std-ref">Struct engine::no_interactor_exception</span></a></p></li>
@@ -314,14 +335,14 @@
 </section>
 </section>
 <section id="class-documentation">
-<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this heading">¶</a></h2>
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this heading">#</a></h2>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engineE">
-<span id="_CPPv3N3f3d6engineE"></span><span id="_CPPv2N3f3d6engineE"></span><span id="f3d::engine"></span><span class="target" id="classf3d_1_1engine"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">engine</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engineE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engineE"></span><span id="_CPPv2N3f3d6engineE"></span><span id="f3d::engine"></span><span class="target" id="classf3d_1_1engine"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">engine</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engineE" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Class used to create instance of other classes. </p>
 <p>The main class of the libf3d to create all other instances. Configured on creation using an enum, then all objects can be accessed through their getter.</p>
 <p>Example usage:</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">f3d</span><span class="o">::</span><span class="n">engine</span><span class="w"> </span><span class="nf">eng</span><span class="p">(</span><span class="n">f3d</span><span class="o">::</span><span class="n">engine</span><span class="o">::</span><span class="n">CREATE_WINDOW</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">f3d</span><span class="o">::</span><span class="n">engine</span><span class="o">::</span><span class="n">CREATE_INTERACTOR</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">f3d</span><span class="o">::</span><span class="n">engine</span><span class="w"> </span><span class="nf">eng</span><span class="p">(</span><span class="n">f3d</span><span class="o">::</span><span class="n">engine</span><span class="o">::</span><span class="n">CREATE_WINDOW</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">f3d</span><span class="o">::</span><span class="n">engine</span><span class="o">::</span><span class="n">CREATE_INTERACTOR</span><span class="p">);</span>
 <span class="n">f3d</span><span class="o">::</span><span class="n">loader</span><span class="o">&amp;</span><span class="w"> </span><span class="n">load</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">eng</span><span class="p">.</span><span class="n">getLoader</span><span class="p">();</span>
 <span class="n">load</span><span class="p">.</span><span class="n">addFile</span><span class="p">(</span><span class="s">&quot;path/to/file&quot;</span><span class="p">);</span>
 <span class="n">load</span><span class="p">.</span><span class="n">loadFile</span><span class="p">(</span><span class="n">f3d</span><span class="o">::</span><span class="n">loader</span><span class="o">::</span><span class="n">LoadFileEnum</span><span class="o">::</span><span class="n">LOAD_CURRENT</span><span class="p">);</span>
@@ -329,24 +350,23 @@
 <span class="n">inter</span><span class="p">.</span><span class="n">start</span><span class="p">();</span>
 </pre></div>
 </div>
- </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine6engineEN6window4TypeE">
-<span id="_CPPv3N3f3d6engine6engineEN6window4TypeE"></span><span id="_CPPv2N3f3d6engine6engineEN6window4TypeE"></span><span id="f3d::engine::engine__window::Type"></span><span class="target" id="classf3d_1_1engine_1a233c1b13e896ef43c19cbb8bd391163e"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">engine</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classf3d_1_1window.html#_CPPv4N3f3d6windowE" title="f3d::window"><span class="n"><span class="pre">window</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classf3d_1_1window.html#_CPPv4N3f3d6window4TypeE" title="f3d::window::Type"><span class="n"><span class="pre">Type</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">windowType</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="classf3d_1_1window.html#_CPPv4N3f3d6windowE" title="f3d::window"><span class="n"><span class="pre">window</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classf3d_1_1window.html#_CPPv4N3f3d6window4TypeE" title="f3d::window::Type"><span class="n"><span class="pre">Type</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classf3d_1_1window.html#_CPPv4N3f3d6window4Type6NATIVEE" title="f3d::window::Type::NATIVE"><span class="n"><span class="pre">NATIVE</span></span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine6engineEN6window4TypeE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine6engineEN6window4TypeE"></span><span id="_CPPv2N3f3d6engine6engineEN6window4TypeE"></span><span id="f3d::engine::engine__window::Type"></span><span class="target" id="classf3d_1_1engine_1a233c1b13e896ef43c19cbb8bd391163e"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">engine</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classf3d_1_1window.html#_CPPv4N3f3d6windowE" title="f3d::window"><span class="n"><span class="pre">window</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classf3d_1_1window.html#_CPPv4N3f3d6window4TypeE" title="f3d::window::Type"><span class="n"><span class="pre">Type</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">windowType</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="classf3d_1_1window.html#_CPPv4N3f3d6windowE" title="f3d::window"><span class="n"><span class="pre">window</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classf3d_1_1window.html#_CPPv4N3f3d6window4TypeE" title="f3d::window::Type"><span class="n"><span class="pre">Type</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classf3d_1_1window.html#_CPPv4N3f3d6window4Type6NATIVEE" title="f3d::window::Type::NATIVE"><span class="n"><span class="pre">NATIVE</span></span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine6engineEN6window4TypeE" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Engine constructor, choose the window type using the enum. see window.h for details about the window. When using window::Type::NONE, window and interactor will not be provided by the engine. When using window::Type::EXTERNAL, interactor will not be provided by the engine. All objects instances will be created on construction. Default is window::Type::NATIVE. Throw a <a class="reference internal" href="structf3d_1_1engine_1_1no__window__exception.html#structf3d_1_1engine_1_1no__window__exception"><span class="std std-ref">no_window_exception</span></a> when using a Using window::Type::EXTERNAL without the right cmake option. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engineD0Ev">
-<span id="_CPPv3N3f3d6engineD0Ev"></span><span id="_CPPv2N3f3d6engineD0Ev"></span><span id="f3d::engine::~engine"></span><span class="target" id="classf3d_1_1engine_1a42c3dd21a33f10e849c804d91af3ca37"></span><span class="sig-name descname"><span class="n"><span class="pre">~engine</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engineD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engineD0Ev"></span><span id="_CPPv2N3f3d6engineD0Ev"></span><span id="f3d::engine::~engine"></span><span class="target" id="classf3d_1_1engine_1a42c3dd21a33f10e849c804d91af3ca37"></span><span class="sig-name descname"><span class="n"><span class="pre">~engine</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engineD0Ev" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Engine destructor, delete all object instances as well. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine12setCachePathERKNSt6stringE">
-<span id="_CPPv3N3f3d6engine12setCachePathERKNSt6stringE"></span><span id="_CPPv2N3f3d6engine12setCachePathERKNSt6stringE"></span><span id="f3d::engine::setCachePath__ssCR"></span><span class="target" id="classf3d_1_1engine_1a7039eefae52ffb49264cd4f07f2e8180"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setCachePath</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">cachePath</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine12setCachePathERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine12setCachePathERKNSt6stringE"></span><span id="_CPPv2N3f3d6engine12setCachePathERKNSt6stringE"></span><span id="f3d::engine::setCachePath__ssCR"></span><span class="target" id="classf3d_1_1engine_1a7039eefae52ffb49264cd4f07f2e8180"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setCachePath</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">cachePath</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine12setCachePathERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Set the cache path. Must be an absolute path. Currently, it’s only used to store HDRI baked textures. By default, the cache path is:<ul class="simple">
 <li><p>Windows: LOCALAPPDATA%\f3d</p></li>
 <li><p>Linux: ~/.cache/f3d</p></li>
@@ -357,37 +377,37 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine10setOptionsERK7options">
-<span id="_CPPv3N3f3d6engine10setOptionsERK7options"></span><span id="_CPPv2N3f3d6engine10setOptionsERK7options"></span><span id="f3d::engine::setOptions__optionsCR"></span><span class="target" id="classf3d_1_1engine_1a4613240a2cc5c27c0fa5f4c3107d20d7"></span><a class="reference internal" href="#_CPPv4N3f3d6engineE" title="f3d::engine"><span class="n"><span class="pre">engine</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">setOptions</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classf3d_1_1options.html#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">opt</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine10setOptionsERK7options" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine10setOptionsERK7options"></span><span id="_CPPv2N3f3d6engine10setOptionsERK7options"></span><span id="f3d::engine::setOptions__optionsCR"></span><span class="target" id="classf3d_1_1engine_1a4613240a2cc5c27c0fa5f4c3107d20d7"></span><a class="reference internal" href="#_CPPv4N3f3d6engineE" title="f3d::engine"><span class="n"><span class="pre">engine</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">setOptions</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classf3d_1_1options.html#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">opt</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine10setOptionsERK7options" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Engine provide a default options that you can use using <a class="reference internal" href="#classf3d_1_1engine_1a82afa7d56eed653f1d378489fc4a91b9"><span class="std std-ref">engine::getOptions()</span></a>. But you can use this setter to use other options directly. It will copy options into engine. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine10setOptionsERR7options">
-<span id="_CPPv3N3f3d6engine10setOptionsERR7options"></span><span id="_CPPv2N3f3d6engine10setOptionsERR7options"></span><span id="f3d::engine::setOptions__optionsRR"></span><span class="target" id="classf3d_1_1engine_1a8b69f5895974c8139dbdb47446d5b2ea"></span><a class="reference internal" href="#_CPPv4N3f3d6engineE" title="f3d::engine"><span class="n"><span class="pre">engine</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">setOptions</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classf3d_1_1options.html#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">opt</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine10setOptionsERR7options" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine10setOptionsERR7options"></span><span id="_CPPv2N3f3d6engine10setOptionsERR7options"></span><span id="f3d::engine::setOptions__optionsRR"></span><span class="target" id="classf3d_1_1engine_1a8b69f5895974c8139dbdb47446d5b2ea"></span><a class="reference internal" href="#_CPPv4N3f3d6engineE" title="f3d::engine"><span class="n"><span class="pre">engine</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">setOptions</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classf3d_1_1options.html#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">opt</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine10setOptionsERR7options" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Engine provide a default options that you can use using <a class="reference internal" href="#classf3d_1_1engine_1a82afa7d56eed653f1d378489fc4a91b9"><span class="std std-ref">engine::getOptions()</span></a>. But you can use this setter to use other options directly. It will move options into engine. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine10getOptionsEv">
-<span id="_CPPv3N3f3d6engine10getOptionsEv"></span><span id="_CPPv2N3f3d6engine10getOptionsEv"></span><span id="f3d::engine::getOptions"></span><span class="target" id="classf3d_1_1engine_1a82afa7d56eed653f1d378489fc4a91b9"></span><a class="reference internal" href="classf3d_1_1options.html#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getOptions</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine10getOptionsEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine10getOptionsEv"></span><span id="_CPPv2N3f3d6engine10getOptionsEv"></span><span id="f3d::engine::getOptions"></span><span class="target" id="classf3d_1_1engine_1a82afa7d56eed653f1d378489fc4a91b9"></span><a class="reference internal" href="classf3d_1_1options.html#_CPPv4N3f3d7optionsE" title="f3d::options"><span class="n"><span class="pre">options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getOptions</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine10getOptionsEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Get the default options provided by the engine. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine9getWindowEv">
-<span id="_CPPv3N3f3d6engine9getWindowEv"></span><span id="_CPPv2N3f3d6engine9getWindowEv"></span><span id="f3d::engine::getWindow"></span><span class="target" id="classf3d_1_1engine_1a2821be632c112a33ac0f45bbbe4e4ba6"></span><a class="reference internal" href="classf3d_1_1window.html#_CPPv4N3f3d6windowE" title="f3d::window"><span class="n"><span class="pre">window</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getWindow</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine9getWindowEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine9getWindowEv"></span><span id="_CPPv2N3f3d6engine9getWindowEv"></span><span id="f3d::engine::getWindow"></span><span class="target" id="classf3d_1_1engine_1a2821be632c112a33ac0f45bbbe4e4ba6"></span><a class="reference internal" href="classf3d_1_1window.html#_CPPv4N3f3d6windowE" title="f3d::window"><span class="n"><span class="pre">window</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getWindow</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine9getWindowEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Get the window provided by the engine, if any. If not, will throw a <a class="reference internal" href="structf3d_1_1engine_1_1no__window__exception.html#structf3d_1_1engine_1_1no__window__exception"><span class="std std-ref">engine::no_window_exception</span></a>. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine9getLoaderEv">
-<span id="_CPPv3N3f3d6engine9getLoaderEv"></span><span id="_CPPv2N3f3d6engine9getLoaderEv"></span><span id="f3d::engine::getLoader"></span><span class="target" id="classf3d_1_1engine_1aa6efd6d7ef102a4c18311cdf7d97d327"></span><a class="reference internal" href="classf3d_1_1loader.html#_CPPv4N3f3d6loaderE" title="f3d::loader"><span class="n"><span class="pre">loader</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getLoader</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine9getLoaderEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine9getLoaderEv"></span><span id="_CPPv2N3f3d6engine9getLoaderEv"></span><span id="f3d::engine::getLoader"></span><span class="target" id="classf3d_1_1engine_1aa6efd6d7ef102a4c18311cdf7d97d327"></span><a class="reference internal" href="classf3d_1_1loader.html#_CPPv4N3f3d6loaderE" title="f3d::loader"><span class="n"><span class="pre">loader</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getLoader</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine9getLoaderEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Get the loaded provided by the engine. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine13getInteractorEv">
-<span id="_CPPv3N3f3d6engine13getInteractorEv"></span><span id="_CPPv2N3f3d6engine13getInteractorEv"></span><span id="f3d::engine::getInteractor"></span><span class="target" id="classf3d_1_1engine_1aa4c34af23d40b4faab24d317468ec934"></span><a class="reference internal" href="classf3d_1_1interactor.html#_CPPv4N3f3d10interactorE" title="f3d::interactor"><span class="n"><span class="pre">interactor</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getInteractor</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine13getInteractorEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine13getInteractorEv"></span><span id="_CPPv2N3f3d6engine13getInteractorEv"></span><span id="f3d::engine::getInteractor"></span><span class="target" id="classf3d_1_1engine_1aa4c34af23d40b4faab24d317468ec934"></span><a class="reference internal" href="classf3d_1_1interactor.html#_CPPv4N3f3d10interactorE" title="f3d::interactor"><span class="n"><span class="pre">interactor</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getInteractor</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine13getInteractorEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Get the interactor provided by the engine, if any. If not, will throw a <a class="reference internal" href="structf3d_1_1engine_1_1no__interactor__exception.html#structf3d_1_1engine_1_1no__interactor__exception"><span class="std std-ref">engine::no_interactor_exception</span></a>. </p>
 </dd></dl>
 
@@ -396,88 +416,88 @@
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine10loadPluginERKNSt6stringE">
-<span id="_CPPv3N3f3d6engine10loadPluginERKNSt6stringE"></span><span id="_CPPv2N3f3d6engine10loadPluginERKNSt6stringE"></span><span id="f3d::engine::loadPlugin__ssCR"></span><span class="target" id="classf3d_1_1engine_1ab5a41bea7bcbd0d6f2317727a85fb61e"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">loadPlugin</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">path</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine10loadPluginERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine10loadPluginERKNSt6stringE"></span><span id="_CPPv2N3f3d6engine10loadPluginERKNSt6stringE"></span><span id="f3d::engine::loadPlugin__ssCR"></span><span class="target" id="classf3d_1_1engine_1ab5a41bea7bcbd0d6f2317727a85fb61e"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">loadPlugin</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">path</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine10loadPluginERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Load a plugin. Supports full path, relative path, and plugin name. On Linux and macOS, uses LD_LIBRARY_PATH to find the plugin. On Windows, the plugin should be located in the same folder as the executable. The plugin “native” is always available and includes native VTK readers. If built and available in your build, F3D is providing 5 additional plugins: “alembic”, “assimp”, “draco”, “exodus”, “occt”. Custom plugins can also be available that F3D is not supporting officially. Throw a <a class="reference internal" href="structf3d_1_1engine_1_1plugin__exception.html#structf3d_1_1engine_1_1plugin__exception"><span class="std std-ref">plugin_exception</span></a> if the plugin can’t be loaded for some reason. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine15autoloadPluginsEv">
-<span id="_CPPv3N3f3d6engine15autoloadPluginsEv"></span><span id="_CPPv2N3f3d6engine15autoloadPluginsEv"></span><span id="f3d::engine::autoloadPlugins"></span><span class="target" id="classf3d_1_1engine_1ac4d909a879b94b496a3e9292162fb855"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">autoloadPlugins</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine15autoloadPluginsEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine15autoloadPluginsEv"></span><span id="_CPPv2N3f3d6engine15autoloadPluginsEv"></span><span id="f3d::engine::autoloadPlugins"></span><span class="target" id="classf3d_1_1engine_1ac4d909a879b94b496a3e9292162fb855"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">autoloadPlugins</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine15autoloadPluginsEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Automatically load all the static plugins. The plugin “native” is guaranteed to be static. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine10getLibInfoEv">
-<span id="_CPPv3N3f3d6engine10getLibInfoEv"></span><span id="_CPPv2N3f3d6engine10getLibInfoEv"></span><span id="f3d::engine::getLibInfo"></span><span class="target" id="classf3d_1_1engine_1aaf3b6314d61f6b033887ed09255fe5a7"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6engine14libInformationE" title="f3d::engine::libInformation"><span class="n"><span class="pre">libInformation</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getLibInfo</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine10getLibInfoEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine10getLibInfoEv"></span><span id="_CPPv2N3f3d6engine10getLibInfoEv"></span><span id="f3d::engine::getLibInfo"></span><span class="target" id="classf3d_1_1engine_1aaf3b6314d61f6b033887ed09255fe5a7"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6engine14libInformationE" title="f3d::engine::libInformation"><span class="n"><span class="pre">libInformation</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getLibInfo</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine10getLibInfoEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Get a struct containing info about the libf3d. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine14getReadersInfoEv">
-<span id="_CPPv3N3f3d6engine14getReadersInfoEv"></span><span id="_CPPv2N3f3d6engine14getReadersInfoEv"></span><span id="f3d::engine::getReadersInfo"></span><span class="target" id="classf3d_1_1engine_1aaf69c1661ba19ff28bb45eb3332841c3"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N3f3d6engine17readerInformationE" title="f3d::engine::readerInformation"><span class="n"><span class="pre">readerInformation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getReadersInfo</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine14getReadersInfoEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine14getReadersInfoEv"></span><span id="_CPPv2N3f3d6engine14getReadersInfoEv"></span><span id="f3d::engine::getReadersInfo"></span><span class="target" id="classf3d_1_1engine_1aaf69c1661ba19ff28bb45eb3332841c3"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N3f3d6engine17readerInformationE" title="f3d::engine::readerInformation"><span class="n"><span class="pre">readerInformation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getReadersInfo</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine14getReadersInfoEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Get a vector of struct containing info about the supported readers. </p>
 </dd></dl>
 
 </div>
 <dl class="cpp struct">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine14libInformationE">
-<span id="_CPPv3N3f3d6engine14libInformationE"></span><span id="_CPPv2N3f3d6engine14libInformationE"></span><span id="f3d::engine::libInformation"></span><span class="target" id="structf3d_1_1engine_1_1libInformation"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">libInformation</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine14libInformationE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine14libInformationE"></span><span id="_CPPv2N3f3d6engine14libInformationE"></span><span id="f3d::engine::libInformation"></span><span class="target" id="structf3d_1_1engine_1_1libInformation"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">libInformation</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine14libInformationE" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>A structure providing information about the libf3d. Returned by <a class="reference internal" href="#classf3d_1_1engine_1aaf3b6314d61f6b033887ed09255fe5a7"><span class="std std-ref">getLibInfo()</span></a>. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine14libInformation7VersionE">
-<span id="_CPPv3N3f3d6engine14libInformation7VersionE"></span><span id="_CPPv2N3f3d6engine14libInformation7VersionE"></span><span id="f3d::engine::libInformation::Version__ss"></span><span class="target" id="structf3d_1_1engine_1_1libInformation_1a77e76b84e18488fd4cbc69011632809c"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Version</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine14libInformation7VersionE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine14libInformation7VersionE"></span><span id="_CPPv2N3f3d6engine14libInformation7VersionE"></span><span id="f3d::engine::libInformation::Version__ss"></span><span class="target" id="structf3d_1_1engine_1_1libInformation_1a77e76b84e18488fd4cbc69011632809c"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Version</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine14libInformation7VersionE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine14libInformation9BuildDateE">
-<span id="_CPPv3N3f3d6engine14libInformation9BuildDateE"></span><span id="_CPPv2N3f3d6engine14libInformation9BuildDateE"></span><span id="f3d::engine::libInformation::BuildDate__ss"></span><span class="target" id="structf3d_1_1engine_1_1libInformation_1a96f5421664b16f4911a2a244a5b17130"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BuildDate</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine14libInformation9BuildDateE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine14libInformation9BuildDateE"></span><span id="_CPPv2N3f3d6engine14libInformation9BuildDateE"></span><span id="f3d::engine::libInformation::BuildDate__ss"></span><span class="target" id="structf3d_1_1engine_1_1libInformation_1a96f5421664b16f4911a2a244a5b17130"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BuildDate</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine14libInformation9BuildDateE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine14libInformation11BuildSystemE">
-<span id="_CPPv3N3f3d6engine14libInformation11BuildSystemE"></span><span id="_CPPv2N3f3d6engine14libInformation11BuildSystemE"></span><span id="f3d::engine::libInformation::BuildSystem__ss"></span><span class="target" id="structf3d_1_1engine_1_1libInformation_1a9bc8f08c8a6a54d8c398db63a100f103"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BuildSystem</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine14libInformation11BuildSystemE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine14libInformation11BuildSystemE"></span><span id="_CPPv2N3f3d6engine14libInformation11BuildSystemE"></span><span id="f3d::engine::libInformation::BuildSystem__ss"></span><span class="target" id="structf3d_1_1engine_1_1libInformation_1a9bc8f08c8a6a54d8c398db63a100f103"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BuildSystem</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine14libInformation11BuildSystemE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine14libInformation8CompilerE">
-<span id="_CPPv3N3f3d6engine14libInformation8CompilerE"></span><span id="_CPPv2N3f3d6engine14libInformation8CompilerE"></span><span id="f3d::engine::libInformation::Compiler__ss"></span><span class="target" id="structf3d_1_1engine_1_1libInformation_1a89403217bdae41dc3cb2af5a46123fc2"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Compiler</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine14libInformation8CompilerE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine14libInformation8CompilerE"></span><span id="_CPPv2N3f3d6engine14libInformation8CompilerE"></span><span id="f3d::engine::libInformation::Compiler__ss"></span><span class="target" id="structf3d_1_1engine_1_1libInformation_1a89403217bdae41dc3cb2af5a46123fc2"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Compiler</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine14libInformation8CompilerE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine14libInformation16RaytracingModuleE">
-<span id="_CPPv3N3f3d6engine14libInformation16RaytracingModuleE"></span><span id="_CPPv2N3f3d6engine14libInformation16RaytracingModuleE"></span><span id="f3d::engine::libInformation::RaytracingModule__ss"></span><span class="target" id="structf3d_1_1engine_1_1libInformation_1aa93ce6de00d06d6128d701705e396c15"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RaytracingModule</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine14libInformation16RaytracingModuleE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine14libInformation16RaytracingModuleE"></span><span id="_CPPv2N3f3d6engine14libInformation16RaytracingModuleE"></span><span id="f3d::engine::libInformation::RaytracingModule__ss"></span><span class="target" id="structf3d_1_1engine_1_1libInformation_1aa93ce6de00d06d6128d701705e396c15"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RaytracingModule</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine14libInformation16RaytracingModuleE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine14libInformation23ExternalRenderingModuleE">
-<span id="_CPPv3N3f3d6engine14libInformation23ExternalRenderingModuleE"></span><span id="_CPPv2N3f3d6engine14libInformation23ExternalRenderingModuleE"></span><span id="f3d::engine::libInformation::ExternalRenderingModule__ss"></span><span class="target" id="structf3d_1_1engine_1_1libInformation_1ae23b5ab8674ef470aebd6806d26ddd91"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ExternalRenderingModule</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine14libInformation23ExternalRenderingModuleE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine14libInformation23ExternalRenderingModuleE"></span><span id="_CPPv2N3f3d6engine14libInformation23ExternalRenderingModuleE"></span><span id="f3d::engine::libInformation::ExternalRenderingModule__ss"></span><span class="target" id="structf3d_1_1engine_1_1libInformation_1ae23b5ab8674ef470aebd6806d26ddd91"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ExternalRenderingModule</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine14libInformation23ExternalRenderingModuleE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine14libInformation10VTKVersionE">
-<span id="_CPPv3N3f3d6engine14libInformation10VTKVersionE"></span><span id="_CPPv2N3f3d6engine14libInformation10VTKVersionE"></span><span id="f3d::engine::libInformation::VTKVersion__ss"></span><span class="target" id="structf3d_1_1engine_1_1libInformation_1ae18443c52968409bbba45aa86ecbe116"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VTKVersion</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine14libInformation10VTKVersionE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine14libInformation10VTKVersionE"></span><span id="_CPPv2N3f3d6engine14libInformation10VTKVersionE"></span><span id="f3d::engine::libInformation::VTKVersion__ss"></span><span class="target" id="structf3d_1_1engine_1_1libInformation_1ae18443c52968409bbba45aa86ecbe116"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VTKVersion</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine14libInformation10VTKVersionE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine14libInformation17PreviousCopyrightE">
-<span id="_CPPv3N3f3d6engine14libInformation17PreviousCopyrightE"></span><span id="_CPPv2N3f3d6engine14libInformation17PreviousCopyrightE"></span><span id="f3d::engine::libInformation::PreviousCopyright__ss"></span><span class="target" id="structf3d_1_1engine_1_1libInformation_1a9abbbac98bde290b2cbed6305442022d"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PreviousCopyright</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine14libInformation17PreviousCopyrightE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine14libInformation17PreviousCopyrightE"></span><span id="_CPPv2N3f3d6engine14libInformation17PreviousCopyrightE"></span><span id="f3d::engine::libInformation::PreviousCopyright__ss"></span><span class="target" id="structf3d_1_1engine_1_1libInformation_1a9abbbac98bde290b2cbed6305442022d"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PreviousCopyright</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine14libInformation17PreviousCopyrightE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine14libInformation9CopyrightE">
-<span id="_CPPv3N3f3d6engine14libInformation9CopyrightE"></span><span id="_CPPv2N3f3d6engine14libInformation9CopyrightE"></span><span id="f3d::engine::libInformation::Copyright__ss"></span><span class="target" id="structf3d_1_1engine_1_1libInformation_1a89f07b1d4cd2b9c754f5847320ed268a"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Copyright</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine14libInformation9CopyrightE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine14libInformation9CopyrightE"></span><span id="_CPPv2N3f3d6engine14libInformation9CopyrightE"></span><span id="f3d::engine::libInformation::Copyright__ss"></span><span class="target" id="structf3d_1_1engine_1_1libInformation_1a89f07b1d4cd2b9c754f5847320ed268a"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Copyright</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine14libInformation9CopyrightE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine14libInformation7LicenseE">
-<span id="_CPPv3N3f3d6engine14libInformation7LicenseE"></span><span id="_CPPv2N3f3d6engine14libInformation7LicenseE"></span><span id="f3d::engine::libInformation::License__ss"></span><span class="target" id="structf3d_1_1engine_1_1libInformation_1aa1fc55f2019aefc29181dc1220d29093"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">License</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine14libInformation7LicenseE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine14libInformation7LicenseE"></span><span id="_CPPv2N3f3d6engine14libInformation7LicenseE"></span><span id="f3d::engine::libInformation::License__ss"></span><span class="target" id="structf3d_1_1engine_1_1libInformation_1aa1fc55f2019aefc29181dc1220d29093"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">License</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine14libInformation7LicenseE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine14libInformation7AuthorsE">
-<span id="_CPPv3N3f3d6engine14libInformation7AuthorsE"></span><span id="_CPPv2N3f3d6engine14libInformation7AuthorsE"></span><span id="f3d::engine::libInformation::Authors__ss"></span><span class="target" id="structf3d_1_1engine_1_1libInformation_1ae0463a8f78ab34199911979ed4e8e116"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Authors</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine14libInformation7AuthorsE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine14libInformation7AuthorsE"></span><span id="_CPPv2N3f3d6engine14libInformation7AuthorsE"></span><span id="f3d::engine::libInformation::Authors__ss"></span><span class="target" id="structf3d_1_1engine_1_1libInformation_1ae0463a8f78ab34199911979ed4e8e116"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Authors</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine14libInformation7AuthorsE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -485,13 +505,13 @@
 
 <dl class="cpp struct">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine23no_interactor_exceptionE">
-<span id="_CPPv3N3f3d6engine23no_interactor_exceptionE"></span><span id="_CPPv2N3f3d6engine23no_interactor_exceptionE"></span><span id="f3d::engine::no_interactor_exception"></span><span class="target" id="structf3d_1_1engine_1_1no__interactor__exception"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">no_interactor_exception</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">f3d</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="class_structf3d_1_1exception.html#_CPPv4N3f3d9exceptionE" title="f3d::exception"><span class="n"><span class="pre">exception</span></span></a><a class="headerlink" href="#_CPPv4N3f3d6engine23no_interactor_exceptionE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine23no_interactor_exceptionE"></span><span id="_CPPv2N3f3d6engine23no_interactor_exceptionE"></span><span id="f3d::engine::no_interactor_exception"></span><span class="target" id="structf3d_1_1engine_1_1no__interactor__exception"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">no_interactor_exception</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">f3d</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="class_structf3d_1_1exception.html#_CPPv4N3f3d9exceptionE" title="f3d::exception"><span class="n"><span class="pre">exception</span></span></a><a class="headerlink" href="#_CPPv4N3f3d6engine23no_interactor_exceptionE" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>An exception that can be thrown by the engine when no interactor is available . </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine23no_interactor_exception23no_interactor_exceptionERKNSt6stringE">
-<span id="_CPPv3N3f3d6engine23no_interactor_exception23no_interactor_exceptionERKNSt6stringE"></span><span id="_CPPv2N3f3d6engine23no_interactor_exception23no_interactor_exceptionERKNSt6stringE"></span><span id="f3d::engine::no_interactor_exception::no_interactor_exception__ssCR"></span><span class="target" id="structf3d_1_1engine_1_1no__interactor__exception_1ab6af47fb76e7a030e2cd4353387277e3"></span><span class="sig-name descname"><span class="n"><span class="pre">no_interactor_exception</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">what</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine23no_interactor_exception23no_interactor_exceptionERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine23no_interactor_exception23no_interactor_exceptionERKNSt6stringE"></span><span id="_CPPv2N3f3d6engine23no_interactor_exception23no_interactor_exceptionERKNSt6stringE"></span><span id="f3d::engine::no_interactor_exception::no_interactor_exception__ssCR"></span><span class="target" id="structf3d_1_1engine_1_1no__interactor__exception_1ab6af47fb76e7a030e2cd4353387277e3"></span><span class="sig-name descname"><span class="n"><span class="pre">no_interactor_exception</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">what</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine23no_interactor_exception23no_interactor_exceptionERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -499,13 +519,13 @@
 
 <dl class="cpp struct">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine19no_window_exceptionE">
-<span id="_CPPv3N3f3d6engine19no_window_exceptionE"></span><span id="_CPPv2N3f3d6engine19no_window_exceptionE"></span><span id="f3d::engine::no_window_exception"></span><span class="target" id="structf3d_1_1engine_1_1no__window__exception"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">no_window_exception</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">f3d</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="class_structf3d_1_1exception.html#_CPPv4N3f3d9exceptionE" title="f3d::exception"><span class="n"><span class="pre">exception</span></span></a><a class="headerlink" href="#_CPPv4N3f3d6engine19no_window_exceptionE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine19no_window_exceptionE"></span><span id="_CPPv2N3f3d6engine19no_window_exceptionE"></span><span id="f3d::engine::no_window_exception"></span><span class="target" id="structf3d_1_1engine_1_1no__window__exception"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">no_window_exception</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">f3d</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="class_structf3d_1_1exception.html#_CPPv4N3f3d9exceptionE" title="f3d::exception"><span class="n"><span class="pre">exception</span></span></a><a class="headerlink" href="#_CPPv4N3f3d6engine19no_window_exceptionE" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>An exception that can be thrown by the engine when no window is available. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine19no_window_exception19no_window_exceptionERKNSt6stringE">
-<span id="_CPPv3N3f3d6engine19no_window_exception19no_window_exceptionERKNSt6stringE"></span><span id="_CPPv2N3f3d6engine19no_window_exception19no_window_exceptionERKNSt6stringE"></span><span id="f3d::engine::no_window_exception::no_window_exception__ssCR"></span><span class="target" id="structf3d_1_1engine_1_1no__window__exception_1a696bd4e971733f40df2d91c2a8ff0f64"></span><span class="sig-name descname"><span class="n"><span class="pre">no_window_exception</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">what</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine19no_window_exception19no_window_exceptionERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine19no_window_exception19no_window_exceptionERKNSt6stringE"></span><span id="_CPPv2N3f3d6engine19no_window_exception19no_window_exceptionERKNSt6stringE"></span><span id="f3d::engine::no_window_exception::no_window_exception__ssCR"></span><span class="target" id="structf3d_1_1engine_1_1no__window__exception_1a696bd4e971733f40df2d91c2a8ff0f64"></span><span class="sig-name descname"><span class="n"><span class="pre">no_window_exception</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">what</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine19no_window_exception19no_window_exceptionERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -513,13 +533,13 @@
 
 <dl class="cpp struct">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine16plugin_exceptionE">
-<span id="_CPPv3N3f3d6engine16plugin_exceptionE"></span><span id="_CPPv2N3f3d6engine16plugin_exceptionE"></span><span id="f3d::engine::plugin_exception"></span><span class="target" id="structf3d_1_1engine_1_1plugin__exception"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">plugin_exception</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">f3d</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="class_structf3d_1_1exception.html#_CPPv4N3f3d9exceptionE" title="f3d::exception"><span class="n"><span class="pre">exception</span></span></a><a class="headerlink" href="#_CPPv4N3f3d6engine16plugin_exceptionE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine16plugin_exceptionE"></span><span id="_CPPv2N3f3d6engine16plugin_exceptionE"></span><span id="f3d::engine::plugin_exception"></span><span class="target" id="structf3d_1_1engine_1_1plugin__exception"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">plugin_exception</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">f3d</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="class_structf3d_1_1exception.html#_CPPv4N3f3d9exceptionE" title="f3d::exception"><span class="n"><span class="pre">exception</span></span></a><a class="headerlink" href="#_CPPv4N3f3d6engine16plugin_exceptionE" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>An exception that can be thrown by the engine when a plugin cannot be loaded. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine16plugin_exception16plugin_exceptionERKNSt6stringE">
-<span id="_CPPv3N3f3d6engine16plugin_exception16plugin_exceptionERKNSt6stringE"></span><span id="_CPPv2N3f3d6engine16plugin_exception16plugin_exceptionERKNSt6stringE"></span><span id="f3d::engine::plugin_exception::plugin_exception__ssCR"></span><span class="target" id="structf3d_1_1engine_1_1plugin__exception_1a912959867189cd1c31a315af92278119"></span><span class="sig-name descname"><span class="n"><span class="pre">plugin_exception</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">what</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine16plugin_exception16plugin_exceptionERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine16plugin_exception16plugin_exceptionERKNSt6stringE"></span><span id="_CPPv2N3f3d6engine16plugin_exception16plugin_exceptionERKNSt6stringE"></span><span id="f3d::engine::plugin_exception::plugin_exception__ssCR"></span><span class="target" id="structf3d_1_1engine_1_1plugin__exception_1a912959867189cd1c31a315af92278119"></span><span class="sig-name descname"><span class="n"><span class="pre">plugin_exception</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">what</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine16plugin_exception16plugin_exceptionERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -527,33 +547,33 @@
 
 <dl class="cpp struct">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine17readerInformationE">
-<span id="_CPPv3N3f3d6engine17readerInformationE"></span><span id="_CPPv2N3f3d6engine17readerInformationE"></span><span id="f3d::engine::readerInformation"></span><span class="target" id="structf3d_1_1engine_1_1readerInformation"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readerInformation</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine17readerInformationE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine17readerInformationE"></span><span id="_CPPv2N3f3d6engine17readerInformationE"></span><span id="f3d::engine::readerInformation"></span><span class="target" id="structf3d_1_1engine_1_1readerInformation"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readerInformation</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine17readerInformationE" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>A structure providing information about a reader. Returned in a vector by <a class="reference internal" href="#classf3d_1_1engine_1aaf69c1661ba19ff28bb45eb3332841c3"><span class="std std-ref">getReadersInfo()</span></a>. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine17readerInformation4NameE">
-<span id="_CPPv3N3f3d6engine17readerInformation4NameE"></span><span id="_CPPv2N3f3d6engine17readerInformation4NameE"></span><span id="f3d::engine::readerInformation::Name__ss"></span><span class="target" id="structf3d_1_1engine_1_1readerInformation_1a30aac8488fbed9ef92fba2bba859263a"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Name</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine17readerInformation4NameE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine17readerInformation4NameE"></span><span id="_CPPv2N3f3d6engine17readerInformation4NameE"></span><span id="f3d::engine::readerInformation::Name__ss"></span><span class="target" id="structf3d_1_1engine_1_1readerInformation_1a30aac8488fbed9ef92fba2bba859263a"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Name</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine17readerInformation4NameE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine17readerInformation11DescriptionE">
-<span id="_CPPv3N3f3d6engine17readerInformation11DescriptionE"></span><span id="_CPPv2N3f3d6engine17readerInformation11DescriptionE"></span><span id="f3d::engine::readerInformation::Description__ss"></span><span class="target" id="structf3d_1_1engine_1_1readerInformation_1a8cd967fb8400bcafb84fac1aff4bc0af"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Description</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine17readerInformation11DescriptionE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine17readerInformation11DescriptionE"></span><span id="_CPPv2N3f3d6engine17readerInformation11DescriptionE"></span><span id="f3d::engine::readerInformation::Description__ss"></span><span class="target" id="structf3d_1_1engine_1_1readerInformation_1a8cd967fb8400bcafb84fac1aff4bc0af"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Description</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine17readerInformation11DescriptionE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine17readerInformation10ExtensionsE">
-<span id="_CPPv3N3f3d6engine17readerInformation10ExtensionsE"></span><span id="_CPPv2N3f3d6engine17readerInformation10ExtensionsE"></span><span id="f3d::engine::readerInformation::Extensions__std::vector:ss:"></span><span class="target" id="structf3d_1_1engine_1_1readerInformation_1a9e778db98dc3a41875ed9c2caeaf3517"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Extensions</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine17readerInformation10ExtensionsE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine17readerInformation10ExtensionsE"></span><span id="_CPPv2N3f3d6engine17readerInformation10ExtensionsE"></span><span id="f3d::engine::readerInformation::Extensions__std::vector:ss:"></span><span class="target" id="structf3d_1_1engine_1_1readerInformation_1a9e778db98dc3a41875ed9c2caeaf3517"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Extensions</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine17readerInformation10ExtensionsE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine17readerInformation9MimeTypesE">
-<span id="_CPPv3N3f3d6engine17readerInformation9MimeTypesE"></span><span id="_CPPv2N3f3d6engine17readerInformation9MimeTypesE"></span><span id="f3d::engine::readerInformation::MimeTypes__std::vector:ss:"></span><span class="target" id="structf3d_1_1engine_1_1readerInformation_1aac8ec25ca07da4cafd1f8a157d583f27"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MimeTypes</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine17readerInformation9MimeTypesE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine17readerInformation9MimeTypesE"></span><span id="_CPPv2N3f3d6engine17readerInformation9MimeTypesE"></span><span id="f3d::engine::readerInformation::MimeTypes__std::vector:ss:"></span><span class="target" id="structf3d_1_1engine_1_1readerInformation_1aac8ec25ca07da4cafd1f8a157d583f27"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MimeTypes</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine17readerInformation9MimeTypesE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine17readerInformation10PluginNameE">
-<span id="_CPPv3N3f3d6engine17readerInformation10PluginNameE"></span><span id="_CPPv2N3f3d6engine17readerInformation10PluginNameE"></span><span id="f3d::engine::readerInformation::PluginName__ss"></span><span class="target" id="structf3d_1_1engine_1_1readerInformation_1a9d938bd142eb2feb3ac72f6c07eafb6b"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PluginName</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine17readerInformation10PluginNameE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3f3d6engine17readerInformation10PluginNameE"></span><span id="_CPPv2N3f3d6engine17readerInformation10PluginNameE"></span><span id="f3d::engine::readerInformation::PluginName__ss"></span><span class="target" id="structf3d_1_1engine_1_1readerInformation_1a9d938bd142eb2feb3ac72f6c07eafb6b"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PluginName</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine17readerInformation10PluginNameE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -565,38 +585,103 @@
 </section>
 
 
-              </div>
+                </article>
               
-        </div>
-    </div>
-    
-    
-    <div class='prev-next-bottom'>
-        
-    <a class='left-prev' id="prev-link" href="classf3d_1_1camera.html" title="previous page">Class camera</a>
-    <a class='right-next' id="next-link" href="class_structf3d_1_1exception.html" title="next page">Class exception</a>
 
-    </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Michael Migliore and Mathieu Westphal<br/>
-        
-            &copy; Copyright 2022, Michael Migliore and Mathieu Westphal.<br/>
-      </p>
-    </div>
-  </footer>
-</main>
-
-
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="classf3d_1_1camera.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Class camera</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="class_structf3d_1_1exception.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Class exception</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-relationships">Nested Relationships</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-types">Nested Types</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Michael Migliore and Mathieu Westphal
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022, Michael Migliore and Mathieu Westphal.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
 
-    
-  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
-
-
-    
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
