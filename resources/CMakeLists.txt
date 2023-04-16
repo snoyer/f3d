@@ -1,31 +1,25 @@
-list(APPEND config_files
-     "${CMAKE_CURRENT_SOURCE_DIR}/config.json"
-     "${CMAKE_CURRENT_SOURCE_DIR}/thumbnail.json"
-    )
-
-# Default config file
+# Shared resources dir
+set(f3d_resources_dir "share/f3d")
+if (F3D_MACOS_BUNDLE)
+  set(f3d_resources_dir "f3d.app/Contents/Resources")
+endif()
+set(f3d_configs_dir "${f3d_resources_dir}/configs")
 if (UNIX AND NOT APPLE)
-  if (F3D_INSTALL_DEFAULT_CONFIGURATION_FILE)
-    if (F3D_LINUX_INSTALL_DEFAULT_CONFIGURATION_FILE_IN_PREFIX)
-      install(FILES ${config_files}
-        DESTINATION "share/f3d" COMPONENT configuration)
-    else()
-      install(FILES ${config_files}
-        DESTINATION "${CMAKE_INSTALL_FULL_SYSCONFDIR}/f3d" COMPONENT configuration)
-    endif()
+  if (NOT F3D_LINUX_INSTALL_DEFAULT_CONFIGURATION_FILE_IN_PREFIX)
+    set(f3d_configs_dir "${CMAKE_INSTALL_FULL_SYSCONFDIR}/f3d")
   endif()
 endif()
 
-# Get supported mime types
-get_property(F3D_SUPPORTED_MIME_TYPES GLOBAL PROPERTY F3D_SUPPORTED_MIME_TYPES)
+# Default config files
+install(
+  DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/configs/"
+  DESTINATION "${f3d_configs_dir}"
+  COMPONENT configuration
+  EXCLUDE_FROM_ALL)
 
 # Other ressoure files
 if(UNIX AND NOT APPLE AND NOT ANDROID)
-  configure_file(
-    "${CMAKE_CURRENT_SOURCE_DIR}/f3d.desktop.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/f3d.desktop")
-
-  install(FILES "${CMAKE_CURRENT_BINARY_DIR}/f3d.desktop"
+  install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/f3d.desktop"
     DESTINATION "share/applications" COMPONENT assets)
   install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/logo32.png"
     DESTINATION "share/icons/hicolor/32x32/apps" COMPONENT assets
@@ -54,27 +48,11 @@ if(UNIX AND NOT APPLE AND NOT ANDROID)
     install(FILES "${CMAKE_BINARY_DIR}/f3d.1.gz"
       DESTINATION "share/man/man1/" COMPONENT documentation)
   endif()
-  if (F3D_LINUX_INSTALL_THUMBNAILER_FILES)
-    configure_file(
-      "${CMAKE_CURRENT_SOURCE_DIR}/f3d.thumbnailer.in"
-      "${CMAKE_CURRENT_BINARY_DIR}/f3d.thumbnailer")
-    install(FILES "${CMAKE_CURRENT_BINARY_DIR}/f3d.thumbnailer"
-      DESTINATION "share/thumbnailers/" COMPONENT shellext)
-  endif()
 elseif(WIN32)
   if (F3D_WINDOWS_INSTALL_LOGOS_FOR_NSIS_PACKAGING)
     install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/logo.ico"
-      DESTINATION "./${F3D_WINDOWS_RESOURCES_INSTALL_DIR}" COMPONENT assets)
+      DESTINATION "${f3d_resources_dir}" COMPONENT assets)
     install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/logotype64.bmp"
-      DESTINATION "./${F3D_WINDOWS_RESOURCES_INSTALL_DIR}" COMPONENT assets)
-  endif()
-  if (F3D_INSTALL_DEFAULT_CONFIGURATION_FILE)
-    install(FILES ${config_files}
-      DESTINATION "./${F3D_WINDOWS_RESOURCES_INSTALL_DIR}" COMPONENT configuration)
-  endif()
-elseif(APPLE AND NOT F3D_MACOS_BUNDLE)
-  if (F3D_INSTALL_DEFAULT_CONFIGURATION_FILE)
-    install(FILES ${config_files}
-      DESTINATION "." COMPONENT configuration)
+      DESTINATION "${f3d_resources_dir}" COMPONENT assets)
   endif()
 endif()

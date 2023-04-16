@@ -29,6 +29,8 @@ Includes
 --------
 
 
+- ``exception.h`` (:ref:`file_public_exception.h`)
+
 - ``export.h``
 
 - ``string``
@@ -58,6 +60,8 @@ Namespaces
 Classes
 -------
 
+
+- :ref:`exhale_struct_structf3d_1_1loader_1_1load__failure__exception`
 
 - :ref:`exhale_class_classf3d_1_1loader`
 

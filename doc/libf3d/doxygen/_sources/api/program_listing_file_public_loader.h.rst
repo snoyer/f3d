@@ -13,6 +13,7 @@ Program Listing for File loader.h
    #ifndef f3d_loader_h
    #define f3d_loader_h
    
+   #include "exception.h"
    #include "export.h"
    
    #include <string>
@@ -23,29 +24,19 @@ Program Listing for File loader.h
    class F3D_EXPORT loader
    {
    public:
-     enum class LoadFileEnum
+     struct load_failure_exception : public exception
      {
-       LOAD_FIRST,
-       LOAD_PREVIOUS,
-       LOAD_CURRENT,
-       LOAD_NEXT,
-       LOAD_LAST
+       load_failure_exception(const std::string& what = "")
+         : exception(what){};
      };
    
-     virtual loader& addFiles(const std::vector<std::string>& files, bool recursive = false) = 0;
+     virtual bool hasGeometryReader(const std::string& filePath) = 0;
    
-     virtual loader& addFile(const std::string& path, bool recursive = false) = 0;
+     virtual loader& loadGeometry(const std::string& filePath, bool reset = false) = 0;
    
-     virtual const std::vector<std::string>& getFiles() const = 0;
+     virtual bool hasSceneReader(const std::string& filePath) = 0;
    
-     virtual loader& setCurrentFileIndex(int index) = 0;
-   
-     virtual int getCurrentFileIndex() const = 0;
-   
-     virtual bool loadFile(LoadFileEnum load = LoadFileEnum::LOAD_CURRENT) = 0;
-   
-     virtual void getFileInfo(LoadFileEnum load, int& nextFileIndex, std::string& filePath,
-       std::string& fileName, std::string& fileInfo) const = 0;
+     virtual loader& loadScene(const std::string& filePath) = 0;
    
    protected:
      loader() = default;

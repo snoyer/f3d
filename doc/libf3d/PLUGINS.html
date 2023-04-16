@@ -2,9 +2,9 @@
 
 <span class="nf">f3d_plugin_declare_reader</span><span class="p">(</span>
   NAME <span class="s2">"ReaderName"</span>
-  EXTENSIONS <span class="si">${</span><span class="nv">reader_ext</span><span class="si">}</span>     <span class="c1"># set the extensions the reader can support</span>
-  MIMETYPES <span class="si">${</span><span class="nv">reader_mime</span><span class="si">}</span>     <span class="c1"># set the mimetypes the reader can support</span>
-  VTK_READER <span class="si">${</span><span class="nv">vtk_classname</span><span class="si">}</span>  <span class="c1"># set the name of the VTK class you have created</span>
+  EXTENSIONS <span class="s2">"myext"</span>                <span class="c1"># set the extensions the reader can support</span>
+  MIMETYPES <span class="s2">"application/vnd.myext"</span> <span class="c1"># set the mimetypes the reader can support</span>
+  VTK_READER <span class="si">${</span><span class="nv">vtk_classname</span><span class="si">}</span>       <span class="c1"># set the name of the VTK class you have created</span>
   DESCRIPTION <span class="s2">"Reader description"</span>
 <span class="p">)</span>
 
@@ -16,4 +16,19 @@
   DESCRIPTION <span class="s2">"Plugin description"</span>
   VTK_MODULES CommonCore CommonExecutionModel <span class="c1"># Add more VTK modules if necessary</span>
 <span class="p">)</span>
-</code></pre></div></div> <p>If the build succeeds, a library called <code class="language-plaintext highlighter-rouge">libf3d-plugin-&lt;name&gt;.so</code> will be created (<code class="language-plaintext highlighter-rouge">f3d-plugin-&lt;name&gt;.dll</code> on Windows)</p> <h2 id="loading-your-plugin"> <a href="#loading-your-plugin" class="anchor-heading" aria-labelledby="loading-your-plugin"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Loading your plugin </h2> <p>The plugin can be loaded using <code class="language-plaintext highlighter-rouge">f3d::engine::loadPlugin("path or name")</code> api if you are using libf3d, or <code class="language-plaintext highlighter-rouge">--load-plugins="path or name"</code> option if you are using F3D application.</p> </div> </div> <div class="search-overlay"></div> </div> </body> </html>
+</code></pre></div></div> <p>If the build succeeds, a library called <code class="language-plaintext highlighter-rouge">libf3d-plugin-&lt;name&gt;.so</code> will be created (<code class="language-plaintext highlighter-rouge">f3d-plugin-&lt;name&gt;.dll</code> on Windows)<br /> A JSON file of the following form will also be generated. It’s used by F3D internally to get information about supported file formats.</p> <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"description"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Plugin description"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"PluginName"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"readers"</span><span class="w"> </span><span class="p">:</span><span class="w"> 
+  </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"description"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Reader description"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"extensions"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">"myext"</span><span class="w"> </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"mimetypes"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">"application/vnd.myext"</span><span class="w"> </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ReaderName"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"MODULE"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div> <p>The list of existing mimetypes can be find <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">here</a>. If your file format is not listed, the mimetype should be <code class="language-plaintext highlighter-rouge">application/vnd.${extension}</code></p> <h2 id="loading-your-plugin"> <a href="#loading-your-plugin" class="anchor-heading" aria-labelledby="loading-your-plugin"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Loading your plugin </h2> <p>The plugin can be loaded using <code class="language-plaintext highlighter-rouge">f3d::engine::loadPlugin("path or name")</code> api if you are using libf3d, or <code class="language-plaintext highlighter-rouge">--load-plugins="path or name"</code> option if you are using F3D application.</p> </div> </div> <div class="search-overlay"></div> </div> </body> </html>

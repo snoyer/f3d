@@ -75,6 +75,8 @@ Program Listing for File engine.h
        std::vector<std::string> Extensions;
        std::vector<std::string> MimeTypes;
        std::string PluginName;
+       bool HasSceneReader;
+       bool HasGeometryReader;
      };
    
      static std::vector<readerInformation> getReadersInfo();

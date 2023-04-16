@@ -138,6 +138,7 @@
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1engine_1_1readerInformation.html">Struct engine::readerInformation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1image_1_1read__exception.html">Struct image::read_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1image_1_1write__exception.html">Struct image::write_exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1loader_1_1load__failure__exception.html">Struct loader::load_failure_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1options_1_1incompatible__exception.html">Struct options::incompatible_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1options_1_1inexistent__exception.html">Struct options::inexistent_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1point3__t.html">Struct point3_t</a></li>
@@ -341,11 +342,18 @@ document.write(`
 <span id="_CPPv3N3f3d6engineE"></span><span id="_CPPv2N3f3d6engineE"></span><span id="f3d::engine"></span><span class="target" id="classf3d_1_1engine"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">engine</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engineE" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Class used to create instance of other classes. </p>
 <p>The main class of the libf3d to create all other instances. Configured on creation using an enum, then all objects can be accessed through their getter.</p>
-<p>Example usage:</p>
+<p>Example usage for a default scene file:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">f3d</span><span class="o">::</span><span class="n">engine</span><span class="w"> </span><span class="nf">eng</span><span class="p">(</span><span class="n">f3d</span><span class="o">::</span><span class="n">engine</span><span class="o">::</span><span class="n">CREATE_WINDOW</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">f3d</span><span class="o">::</span><span class="n">engine</span><span class="o">::</span><span class="n">CREATE_INTERACTOR</span><span class="p">);</span>
 <span class="n">f3d</span><span class="o">::</span><span class="n">loader</span><span class="o">&amp;</span><span class="w"> </span><span class="n">load</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">eng</span><span class="p">.</span><span class="n">getLoader</span><span class="p">();</span>
-<span class="n">load</span><span class="p">.</span><span class="n">addFile</span><span class="p">(</span><span class="s">&quot;path/to/file&quot;</span><span class="p">);</span>
-<span class="n">load</span><span class="p">.</span><span class="n">loadFile</span><span class="p">(</span><span class="n">f3d</span><span class="o">::</span><span class="n">loader</span><span class="o">::</span><span class="n">LoadFileEnum</span><span class="o">::</span><span class="n">LOAD_CURRENT</span><span class="p">);</span>
+<span class="n">load</span><span class="p">.</span><span class="n">loadGeometry</span><span class="p">(</span><span class="s">&quot;path/to/file&quot;</span><span class="p">).</span><span class="n">loadGeometry</span><span class="p">(</span><span class="s">&quot;path/to/another/file&quot;</span><span class="p">);</span>
+<span class="n">f3d</span><span class="o">::</span><span class="n">interactor</span><span class="o">&amp;</span><span class="w"> </span><span class="n">inter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">eng</span><span class="p">.</span><span class="n">getInteractor</span><span class="p">();</span>
+<span class="n">inter</span><span class="p">.</span><span class="n">start</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>Example usage for a full scene file:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">f3d</span><span class="o">::</span><span class="n">engine</span><span class="w"> </span><span class="nf">eng</span><span class="p">(</span><span class="n">f3d</span><span class="o">::</span><span class="n">engine</span><span class="o">::</span><span class="n">CREATE_WINDOW</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">f3d</span><span class="o">::</span><span class="n">engine</span><span class="o">::</span><span class="n">CREATE_INTERACTOR</span><span class="p">);</span>
+<span class="n">f3d</span><span class="o">::</span><span class="n">loader</span><span class="o">&amp;</span><span class="w"> </span><span class="n">load</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">eng</span><span class="p">.</span><span class="n">getLoader</span><span class="p">();</span>
+<span class="n">load</span><span class="p">.</span><span class="n">loadScene</span><span class="p">(</span><span class="s">&quot;path/to/file&quot;</span><span class="p">);</span>
 <span class="n">f3d</span><span class="o">::</span><span class="n">interactor</span><span class="o">&amp;</span><span class="w"> </span><span class="n">inter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">eng</span><span class="p">.</span><span class="n">getInteractor</span><span class="p">();</span>
 <span class="n">inter</span><span class="p">.</span><span class="n">start</span><span class="p">();</span>
 </pre></div>
@@ -574,6 +582,16 @@ document.write(`
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine17readerInformation10PluginNameE">
 <span id="_CPPv3N3f3d6engine17readerInformation10PluginNameE"></span><span id="_CPPv2N3f3d6engine17readerInformation10PluginNameE"></span><span id="f3d::engine::readerInformation::PluginName__ss"></span><span class="target" id="structf3d_1_1engine_1_1readerInformation_1a9d938bd142eb2feb3ac72f6c07eafb6b"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PluginName</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine17readerInformation10PluginNameE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine17readerInformation14HasSceneReaderE">
+<span id="_CPPv3N3f3d6engine17readerInformation14HasSceneReaderE"></span><span id="_CPPv2N3f3d6engine17readerInformation14HasSceneReaderE"></span><span id="f3d::engine::readerInformation::HasSceneReader__b"></span><span class="target" id="structf3d_1_1engine_1_1readerInformation_1ac0dc89d52c535db198c513fb0543755e"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HasSceneReader</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine17readerInformation14HasSceneReaderE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine17readerInformation17HasGeometryReaderE">
+<span id="_CPPv3N3f3d6engine17readerInformation17HasGeometryReaderE"></span><span id="_CPPv2N3f3d6engine17readerInformation17HasGeometryReaderE"></span><span id="f3d::engine::readerInformation::HasGeometryReader__b"></span><span class="target" id="structf3d_1_1engine_1_1readerInformation_1a63da7048de227a690590703369523aa3"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HasGeometryReader</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engine17readerInformation17HasGeometryReaderE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 </div>

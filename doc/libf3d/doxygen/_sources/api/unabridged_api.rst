@@ -53,6 +53,11 @@ Classes and Structs
 .. toctree::
    :maxdepth: 5
 
+   structf3d_1_1loader_1_1load__failure__exception.rst
+
+.. toctree::
+   :maxdepth: 5
+
    structf3d_1_1options_1_1incompatible__exception.rst
 
 .. toctree::

@@ -31,6 +31,8 @@ Classes
 
 - :ref:`exhale_struct_structf3d_1_1image_1_1write__exception`
 
+- :ref:`exhale_struct_structf3d_1_1loader_1_1load__failure__exception`
+
 - :ref:`exhale_struct_structf3d_1_1options_1_1incompatible__exception`
 
 - :ref:`exhale_struct_structf3d_1_1options_1_1inexistent__exception`
