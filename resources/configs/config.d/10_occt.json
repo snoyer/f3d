@@ -1,9 +1,0 @@
-{
-  ".*(step|stp|iges|igs)":
-  {
-    "up": "+Z",
-    "ambient-occlusion": true,
-    "comp": "-2",
-    "cells": true
-  }
-}

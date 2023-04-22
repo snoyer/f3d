@@ -6,7 +6,7 @@ needed dependencies, configuring and building.
 ## Dependencies
 
 * [CMake](https://cmake.org) >= 3.1.
-* [VTK](https://vtk.org) >= 9.0.0 (9.2.2 recommended).
+* [VTK](https://vtk.org) >= 9.0.0 (9.2.6 recommended).
 * A C++17 compiler.
 * A CMake-compatible build system (Visual Studio, XCode, Ninja, Make, etc.).
 * Optionally, [Assimp](https://www.assimp.org/) >= 5.0.
@@ -18,7 +18,7 @@ needed dependencies, configuring and building.
 
 ## VTK compatibility
 
-As stated in the dependencies, F3D is compatible with VTK >= 9.0.0, however, many features are only available in certain conditions. We suggest using VTK 9.2.2 with RenderingRayTracing, RenderingExternal and IOExodus modules enabled in order to get as many features as possible in F3D.
+As stated in the dependencies, F3D is compatible with VTK >= 9.0.0, however, many features are only available in certain conditions. We suggest using VTK 9.2.6 with RenderingRayTracing, RenderingExternal and IOExodus modules enabled in order to get as many features as possible in F3D.
 
 ## Configuration and building
 
@@ -31,7 +31,7 @@ Here is some CMake options of interest::
 * `F3D_MACOS_BUNDLE`: On macOS, build a `.app` bundle.
 * `F3D_WINDOWS_GUI`: On Windows, build a Win32 application (without console).
 * `F3D_WINDOWS_BUILD_SHELL_THUMBNAILS_EXTENSION`: On Windows, build the shell thumbnails extension.
-* `F3D_PLUGINS_STATIC_BUILD`: Build all plugins as static library (embedded into `libf3d`) and automatically loaded by the application.
+* `F3D_PLUGINS_STATIC_BUILD`: Build all plugins as static library (embedded into `libf3d`) and automatically loaded by the application. Incompatible with `F3D_MACOS_BUNDLE`.
 
 Some modules, plugins and bindings depending on external libraries can be optionally enabled with the following CMake variables:
 
