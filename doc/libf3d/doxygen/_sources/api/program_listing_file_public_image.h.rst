@@ -56,12 +56,12 @@ Program Listing for File image.h
    
      struct write_exception : public exception
      {
-       write_exception(const std::string& what = "");
+       explicit write_exception(const std::string& what = "");
      };
    
      struct read_exception : public exception
      {
-       read_exception(const std::string& what = "");
+       explicit read_exception(const std::string& what = "");
      };
    
    private:

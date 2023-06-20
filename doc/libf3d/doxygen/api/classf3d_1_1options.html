@@ -49,7 +49,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'api/classf3d_1_1options';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Class window" href="classf3d_1_1window.html" />
+    <link rel="next" title="Class utils" href="classf3d_1_1utils.html" />
     <link rel="prev" title="Class log" href="classf3d_1_1log.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -131,6 +131,7 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="library_root.html">Library API</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="namespace_f3d.html">Namespace f3d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1camera__state__t.html">Struct camera_state_t</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1engine_1_1libInformation.html">Struct engine::libInformation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1engine_1_1no__interactor__exception.html">Struct engine::no_interactor_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1engine_1_1no__window__exception.html">Struct engine::no_window_exception</a></li>
@@ -151,6 +152,7 @@
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1loader.html">Class loader</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1log.html">Class log</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Class options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classf3d_1_1utils.html">Class utils</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1window.html">Class window</a></li>
 <li class="toctree-l2"><a class="reference internal" href="typedef_types_8h_1a62f3e15e4e18455b52854622b27c02ed.html">Typedef f3d::angle_deg_t</a></li>
 </ul>
@@ -578,6 +580,12 @@ document.write(`
 <dd><p>Get all available option names. </p>
 </dd></dl>
 
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3f3d7options16getClosestOptionERKNSt6stringE">
+<span id="_CPPv3NK3f3d7options16getClosestOptionERKNSt6stringE"></span><span id="_CPPv2NK3f3d7options16getClosestOptionERKNSt6stringE"></span><span id="f3d::options::getClosestOption__ssCRC"></span><span class="target" id="classf3d_1_1options_1af2feb71c41cf89e9dbe3df4ed08834a0"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getClosestOption</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">option</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d7options16getClosestOptionERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Get the closest option name and its Levenshtein distance. </p>
+</dd></dl>
+
 </div>
 <dl class="cpp struct">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d7options22incompatible_exceptionE">
@@ -587,7 +595,7 @@ document.write(`
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d7options22incompatible_exception22incompatible_exceptionERKNSt6stringE">
-<span id="_CPPv3N3f3d7options22incompatible_exception22incompatible_exceptionERKNSt6stringE"></span><span id="_CPPv2N3f3d7options22incompatible_exception22incompatible_exceptionERKNSt6stringE"></span><span id="f3d::options::incompatible_exception::incompatible_exception__ssCR"></span><span class="target" id="structf3d_1_1options_1_1incompatible__exception_1a01c418f614d55e39981d7a0e223a0019"></span><span class="sig-name descname"><span class="n"><span class="pre">incompatible_exception</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">what</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options22incompatible_exception22incompatible_exceptionERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d7options22incompatible_exception22incompatible_exceptionERKNSt6stringE"></span><span id="_CPPv2N3f3d7options22incompatible_exception22incompatible_exceptionERKNSt6stringE"></span><span id="f3d::options::incompatible_exception::incompatible_exception__ssCR"></span><span class="target" id="structf3d_1_1options_1_1incompatible__exception_1a01c418f614d55e39981d7a0e223a0019"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">incompatible_exception</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">what</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options22incompatible_exception22incompatible_exceptionERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -601,7 +609,7 @@ document.write(`
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d7options20inexistent_exception20inexistent_exceptionERKNSt6stringE">
-<span id="_CPPv3N3f3d7options20inexistent_exception20inexistent_exceptionERKNSt6stringE"></span><span id="_CPPv2N3f3d7options20inexistent_exception20inexistent_exceptionERKNSt6stringE"></span><span id="f3d::options::inexistent_exception::inexistent_exception__ssCR"></span><span class="target" id="structf3d_1_1options_1_1inexistent__exception_1a709b2f34f7c2bea677e71bfa3cae39e3"></span><span class="sig-name descname"><span class="n"><span class="pre">inexistent_exception</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">what</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options20inexistent_exception20inexistent_exceptionERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3f3d7options20inexistent_exception20inexistent_exceptionERKNSt6stringE"></span><span id="_CPPv2N3f3d7options20inexistent_exception20inexistent_exceptionERKNSt6stringE"></span><span id="f3d::options::inexistent_exception::inexistent_exception__ssCR"></span><span class="target" id="structf3d_1_1options_1_1inexistent__exception_1a709b2f34f7c2bea677e71bfa3cae39e3"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">inexistent_exception</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">what</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d7options20inexistent_exception20inexistent_exceptionERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -631,11 +639,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="classf3d_1_1window.html"
+       href="classf3d_1_1utils.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Class window</p>
+        <p class="prev-next-title">Class utils</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

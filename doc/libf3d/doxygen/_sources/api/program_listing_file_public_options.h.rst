@@ -75,14 +75,16 @@ Program Listing for File options.h
    
      std::vector<std::string> getNames();
    
+     std::pair<std::string, unsigned int> getClosestOption(const std::string& option) const;
+   
      struct incompatible_exception : public exception
      {
-       incompatible_exception(const std::string& what = "");
+       explicit incompatible_exception(const std::string& what = "");
      };
    
      struct inexistent_exception : public exception
      {
-       inexistent_exception(const std::string& what = "");
+       explicit inexistent_exception(const std::string& what = "");
      };
    
    private:

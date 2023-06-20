@@ -18,6 +18,11 @@ Classes and Structs
 .. toctree::
    :maxdepth: 5
 
+   structf3d_1_1camera__state__t.rst
+
+.. toctree::
+   :maxdepth: 5
+
    structf3d_1_1engine_1_1libInformation.rst
 
 .. toctree::
@@ -114,6 +119,11 @@ Classes and Structs
    :maxdepth: 5
 
    classf3d_1_1options.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classf3d_1_1utils.rst
 
 .. toctree::
    :maxdepth: 5

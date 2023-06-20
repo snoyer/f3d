@@ -65,4 +65,9 @@ Files
 .. toctree::
    :maxdepth: 5
 
+   file_public_utils.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
    file_public_window.h.rst

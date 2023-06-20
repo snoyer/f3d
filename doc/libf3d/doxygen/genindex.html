@@ -128,6 +128,7 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="api/library_root.html">Library API</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="api/namespace_f3d.html">Namespace f3d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1camera__state__t.html">Struct camera_state_t</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1engine_1_1libInformation.html">Struct engine::libInformation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1engine_1_1no__interactor__exception.html">Struct engine::no_interactor_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1engine_1_1no__window__exception.html">Struct engine::no_window_exception</a></li>
@@ -148,6 +149,7 @@
 <li class="toctree-l2"><a class="reference internal" href="api/classf3d_1_1loader.html">Class loader</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/classf3d_1_1log.html">Class log</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/classf3d_1_1options.html">Class options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/classf3d_1_1utils.html">Class utils</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/classf3d_1_1window.html">Class window</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/typedef_types_8h_1a62f3e15e4e18455b52854622b27c02ed.html">Typedef f3d::angle_deg_t</a></li>
 </ul>
@@ -276,13 +278,15 @@ document.write(`
 </li>
       <li><a href="api/classf3d_1_1camera.html#_CPPv4N3f3d6camera11getPositionER8point3_t">f3d::camera::getPosition (C++ function)</a>, <a href="api/classf3d_1_1camera.html#_CPPv4N3f3d6camera11getPositionEv">[1]</a>
 </li>
+      <li><a href="api/classf3d_1_1camera.html#_CPPv4N3f3d6camera8getStateER14camera_state_t">f3d::camera::getState (C++ function)</a>, <a href="api/classf3d_1_1camera.html#_CPPv4N3f3d6camera8getStateEv">[1]</a>
+</li>
       <li><a href="api/classf3d_1_1camera.html#_CPPv4N3f3d6camera12getViewAngleER11angle_deg_t">f3d::camera::getViewAngle (C++ function)</a>, <a href="api/classf3d_1_1camera.html#_CPPv4N3f3d6camera12getViewAngleEv">[1]</a>
 </li>
       <li><a href="api/classf3d_1_1camera.html#_CPPv4N3f3d6camera9getViewUpER9vector3_t">f3d::camera::getViewUp (C++ function)</a>, <a href="api/classf3d_1_1camera.html#_CPPv4N3f3d6camera9getViewUpEv">[1]</a>
 </li>
       <li><a href="api/classf3d_1_1camera.html#_CPPv4N3f3d6camera5pitchE11angle_deg_t">f3d::camera::pitch (C++ function)</a>
 </li>
-      <li><a href="api/classf3d_1_1camera.html#_CPPv4N3f3d6camera13resetToBoundsEv">f3d::camera::resetToBounds (C++ function)</a>
+      <li><a href="api/classf3d_1_1camera.html#_CPPv4N3f3d6camera13resetToBoundsEd">f3d::camera::resetToBounds (C++ function)</a>
 </li>
       <li><a href="api/classf3d_1_1camera.html#_CPPv4N3f3d6camera14resetToDefaultEv">f3d::camera::resetToDefault (C++ function)</a>
 </li>
@@ -294,11 +298,23 @@ document.write(`
 </li>
       <li><a href="api/classf3d_1_1camera.html#_CPPv4N3f3d6camera11setPositionERK8point3_t">f3d::camera::setPosition (C++ function)</a>
 </li>
+      <li><a href="api/classf3d_1_1camera.html#_CPPv4N3f3d6camera8setStateERK14camera_state_t">f3d::camera::setState (C++ function)</a>
+</li>
       <li><a href="api/classf3d_1_1camera.html#_CPPv4N3f3d6camera12setViewAngleERK11angle_deg_t">f3d::camera::setViewAngle (C++ function)</a>
 </li>
       <li><a href="api/classf3d_1_1camera.html#_CPPv4N3f3d6camera9setViewUpERK9vector3_t">f3d::camera::setViewUp (C++ function)</a>
 </li>
       <li><a href="api/classf3d_1_1camera.html#_CPPv4N3f3d6camera3yawE11angle_deg_t">f3d::camera::yaw (C++ function)</a>
+</li>
+      <li><a href="api/structf3d_1_1camera__state__t.html#_CPPv4N3f3d14camera_state_tE">f3d::camera_state_t (C++ struct)</a>
+</li>
+      <li><a href="api/structf3d_1_1camera__state__t.html#_CPPv4N3f3d14camera_state_t5angleE">f3d::camera_state_t::angle (C++ member)</a>
+</li>
+      <li><a href="api/structf3d_1_1camera__state__t.html#_CPPv4N3f3d14camera_state_t3focE">f3d::camera_state_t::foc (C++ member)</a>
+</li>
+      <li><a href="api/structf3d_1_1camera__state__t.html#_CPPv4N3f3d14camera_state_t3posE">f3d::camera_state_t::pos (C++ member)</a>
+</li>
+      <li><a href="api/structf3d_1_1camera__state__t.html#_CPPv4N3f3d14camera_state_t2upE">f3d::camera_state_t::up (C++ member)</a>
 </li>
       <li><a href="api/classf3d_1_1engine.html#_CPPv4N3f3d6engineE">f3d::engine (C++ class)</a>
 </li>
@@ -336,11 +352,15 @@ document.write(`
 </li>
       <li><a href="api/classf3d_1_1engine.html#_CPPv4N3f3d6engine14libInformation7LicenseE">f3d::engine::libInformation::License (C++ member)</a>, <a href="api/structf3d_1_1engine_1_1libInformation.html#_CPPv4N3f3d6engine14libInformation7LicenseE">[1]</a>
 </li>
+      <li><a href="api/classf3d_1_1engine.html#_CPPv4N3f3d6engine14libInformation13OpenEXRModuleE">f3d::engine::libInformation::OpenEXRModule (C++ member)</a>, <a href="api/structf3d_1_1engine_1_1libInformation.html#_CPPv4N3f3d6engine14libInformation13OpenEXRModuleE">[1]</a>
+</li>
       <li><a href="api/classf3d_1_1engine.html#_CPPv4N3f3d6engine14libInformation17PreviousCopyrightE">f3d::engine::libInformation::PreviousCopyright (C++ member)</a>, <a href="api/structf3d_1_1engine_1_1libInformation.html#_CPPv4N3f3d6engine14libInformation17PreviousCopyrightE">[1]</a>
 </li>
       <li><a href="api/classf3d_1_1engine.html#_CPPv4N3f3d6engine14libInformation16RaytracingModuleE">f3d::engine::libInformation::RaytracingModule (C++ member)</a>, <a href="api/structf3d_1_1engine_1_1libInformation.html#_CPPv4N3f3d6engine14libInformation16RaytracingModuleE">[1]</a>
 </li>
       <li><a href="api/classf3d_1_1engine.html#_CPPv4N3f3d6engine14libInformation7VersionE">f3d::engine::libInformation::Version (C++ member)</a>, <a href="api/structf3d_1_1engine_1_1libInformation.html#_CPPv4N3f3d6engine14libInformation7VersionE">[1]</a>
+</li>
+      <li><a href="api/classf3d_1_1engine.html#_CPPv4N3f3d6engine14libInformation11VersionFullE">f3d::engine::libInformation::VersionFull (C++ member)</a>, <a href="api/structf3d_1_1engine_1_1libInformation.html#_CPPv4N3f3d6engine14libInformation11VersionFullE">[1]</a>
 </li>
       <li><a href="api/classf3d_1_1engine.html#_CPPv4N3f3d6engine14libInformation10VTKVersionE">f3d::engine::libInformation::VTKVersion (C++ member)</a>, <a href="api/structf3d_1_1engine_1_1libInformation.html#_CPPv4N3f3d6engine14libInformation10VTKVersionE">[1]</a>
 </li>
@@ -422,14 +442,14 @@ document.write(`
 </li>
       <li><a href="api/classf3d_1_1image.html#_CPPv4N3f3d5imageD0Ev">f3d::image::~image (C++ function)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactorE">f3d::interactor (C++ class)</a>
 </li>
       <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor19createTimerCallBackEdNSt8functionIFvvEEE">f3d::interactor::createTimerCallBack (C++ function)</a>
 </li>
       <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor21disableCameraMovementEv">f3d::interactor::disableCameraMovement (C++ function)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor20enableCameraMovementEv">f3d::interactor::enableCameraMovement (C++ function)</a>
 </li>
       <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor26getDefaultInteractionsInfoEv">f3d::interactor::getDefaultInteractionsInfo (C++ function)</a>
@@ -530,6 +550,8 @@ document.write(`
 </li>
       <li><a href="api/classf3d_1_1options.html#_CPPv4N3f3d7options14getAsStringRefERKNSt6stringE">f3d::options::getAsStringRef (C++ function)</a>
 </li>
+      <li><a href="api/classf3d_1_1options.html#_CPPv4NK3f3d7options16getClosestOptionERKNSt6stringE">f3d::options::getClosestOption (C++ function)</a>
+</li>
       <li><a href="api/classf3d_1_1options.html#_CPPv4N3f3d7options8getNamesEv">f3d::options::getNames (C++ function)</a>
 </li>
       <li><a href="api/classf3d_1_1options.html#_CPPv4N3f3d7options22incompatible_exceptionE">f3d::options::incompatible_exception (C++ struct)</a>, <a href="api/structf3d_1_1options_1_1incompatible__exception.html#_CPPv4N3f3d7options22incompatible_exceptionE">[1]</a>
@@ -555,6 +577,10 @@ document.write(`
       <li><a href="api/structf3d_1_1point3__t.html#_CPPv4N3f3d8point3_tE">f3d::point3_t (C++ struct)</a>
 </li>
       <li><a href="api/structf3d_1_1point3__t.html#_CPPv4IDpEN3f3d8point3_t8point3_tEDpRR4Args">f3d::point3_t::point3_t (C++ function)</a>
+</li>
+      <li><a href="api/classf3d_1_1utils.html#_CPPv4N3f3d5utilsE">f3d::utils (C++ class)</a>
+</li>
+      <li><a href="api/classf3d_1_1utils.html#_CPPv4N3f3d5utils12textDistanceERKNSt6stringERKNSt6stringE">f3d::utils::textDistance (C++ function)</a>
 </li>
       <li><a href="api/structf3d_1_1vector3__t.html#_CPPv4N3f3d9vector3_tE">f3d::vector3_t (C++ struct)</a>
 </li>

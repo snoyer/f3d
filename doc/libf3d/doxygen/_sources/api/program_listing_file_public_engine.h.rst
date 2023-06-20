@@ -57,11 +57,13 @@ Program Listing for File engine.h
      struct libInformation
      {
        std::string Version;
+       std::string VersionFull;
        std::string BuildDate;
        std::string BuildSystem;
        std::string Compiler;
        std::string RaytracingModule;
        std::string ExternalRenderingModule;
+       std::string OpenEXRModule;
        std::string VTKVersion;
        std::string PreviousCopyright;
        std::string Copyright;
@@ -86,17 +88,17 @@ Program Listing for File engine.h
    
      struct no_window_exception : public exception
      {
-       no_window_exception(const std::string& what = "");
+       explicit no_window_exception(const std::string& what = "");
      };
    
      struct no_interactor_exception : public exception
      {
-       no_interactor_exception(const std::string& what = "");
+       explicit no_interactor_exception(const std::string& what = "");
      };
    
      struct plugin_exception : public exception
      {
-       plugin_exception(const std::string& what = "");
+       explicit plugin_exception(const std::string& what = "");
      };
    
    private:

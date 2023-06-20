@@ -13,11 +13,13 @@ Program Listing for File types.h
    #ifndef f3d_types_h
    #define f3d_types_h
    
+   #include "export.h"
+   
    #include <array>
    
    namespace f3d
    {
-   struct point3_t : std::array<double, 3>
+   struct F3D_EXPORT point3_t : std::array<double, 3>
    {
      template<typename... Args>
      point3_t(Args&&... args)
@@ -26,7 +28,7 @@ Program Listing for File types.h
      }
    };
    
-   struct vector3_t : std::array<double, 3>
+   struct F3D_EXPORT vector3_t : std::array<double, 3>
    {
      template<typename... Args>
      vector3_t(Args&&... args)

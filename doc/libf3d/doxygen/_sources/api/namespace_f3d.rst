@@ -17,6 +17,8 @@ Classes
 -------
 
 
+- :ref:`exhale_struct_structf3d_1_1camera__state__t`
+
 - :ref:`exhale_struct_structf3d_1_1engine_1_1libInformation`
 
 - :ref:`exhale_struct_structf3d_1_1engine_1_1no__interactor__exception`
@@ -56,6 +58,8 @@ Classes
 - :ref:`exhale_class_classf3d_1_1log`
 
 - :ref:`exhale_class_classf3d_1_1options`
+
+- :ref:`exhale_class_classf3d_1_1utils`
 
 - :ref:`exhale_class_classf3d_1_1window`
 

@@ -59,5 +59,7 @@ Classes
 -------
 
 
+- :ref:`exhale_struct_structf3d_1_1camera__state__t`
+
 - :ref:`exhale_class_classf3d_1_1camera`
 
