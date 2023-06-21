@@ -19,6 +19,7 @@
 #include <vtkRenderWindowInteractor.h>
 #include <vtkRendererCollection.h>
 #include <vtkStringArray.h>
+#include <vtkTransform.h>
 #include <vtkVersion.h>
 #include <vtksys/SystemTools.hxx>
 
@@ -28,6 +29,74 @@
 
 namespace f3d::detail
 {
+
+vtkNew<vtkTransform> zUpTransform(vtkRenderer* renderer)
+{
+  const double* up = renderer->GetEnvironmentUp();
+  const double* right = renderer->GetEnvironmentRight();
+  double fwd[3];
+  vtkMath::Cross(right, up, fwd);
+
+  const double m[16] = {
+    right[0], right[1], right[2], 0, //
+    fwd[0], fwd[1], fwd[2], 0,       //
+    up[0], up[1], up[2], 0,          //
+    0, 0, 0, 1,                      //
+  };
+  vtkNew<vtkTransform> toZup;
+  toZup->SetMatrix(m);
+  return toZup;
+}
+
+vtkNew<vtkTransform> zUpTransform(vtkRenderWindowInteractor* interactor)
+{
+  return zUpTransform(interactor->GetRenderWindow()->GetRenderers()->GetFirstRenderer());
+}
+
+vector3_t to_spherical(const point3_t& xyz_pos, const point3_t& xyz_origin)
+{
+  // TODO edge cases? replace with vtkSphericalTransfrom?
+  const double x = xyz_pos[0] - xyz_origin[0];
+  const double y = xyz_pos[1] - xyz_origin[1];
+  const double z = xyz_pos[2] - xyz_origin[2];
+  const double r = std::sqrt(x * x + y * y + z * z);
+  const double theta = std::acos(z / r);
+  const double phi = (y < 0 ? -1 : +1) * std::acos(x / std::sqrt(x * x + y * y));
+  return vector3_t({ r, phi, theta });
+}
+
+point3_t from_spherical(const vector3_t& spherical, const point3_t& xyz_origin)
+{
+  // TODO edge cases? replace with vtkSphericalTransfrom?
+  return point3_t({
+    xyz_origin[0] + spherical[0] * std::sin(spherical[2]) * std::cos(spherical[1]),
+    xyz_origin[1] + spherical[0] * std::sin(spherical[2]) * std::sin(spherical[1]),
+    xyz_origin[2] + spherical[0] * std::cos(spherical[2]),
+  });
+}
+
+vector3_t lerp3(const vector3_t& v0, const vector3_t& v1, double t, bool clamp = false)
+{
+  if (clamp)
+    t = std::min(std::max(t, 0.), 1.);
+  return vector3_t({
+    v0[0] + (v1[0] - v0[0]) * t,
+    v0[1] + (v1[1] - v0[1]) * t,
+    v0[2] + (v1[2] - v0[2]) * t,
+  });
+};
+
+point3_t lerp3(const point3_t& v0, const point3_t& v1, double t, bool clamp = false)
+{
+  if (clamp)
+    t = std::min(std::max(t, 0.), 1.);
+  return point3_t({
+    v0[0] + (v1[0] - v0[0]) * t,
+    v0[1] + (v1[1] - v0[1]) * t,
+    v0[2] + (v1[2] - v0[2]) * t,
+  });
+}
+
 class interactor_impl::internals
 {
 public:
@@ -223,6 +292,65 @@ public:
         render = true;
         break;
       }
+      case 'W':
+      {
+        const double snapping_angle_deg = 45.0; // TODO add to config
+        const double PI = vtkMath::Pi();
+
+        const auto toZup = zUpTransform(self->VTKInteractor);
+        const auto fromZup = toZup->GetInverse();
+
+        camera& cam = self->Window.getCamera();
+
+        point3_t foc0, pos0, foc1;
+        vector3_t up0, up1 = { 0., 0., 1. };
+        const auto currentState = cam.getState();
+        toZup->TransformPoint(currentState.pos.data(), pos0.data());
+        toZup->TransformPoint(currentState.foc.data(), foc0.data());
+        toZup->TransformPoint(currentState.up.data(), up0.data());
+
+        cam.resetToBounds(); // to know proper center
+        toZup->TransformPoint(cam.getFocalPoint().data(), foc1.data());
+        cam.setState(currentState); // "cancel" resetToBounds
+
+        const double snapping_angle_rad = snapping_angle_deg * PI / 180;
+        const vector3_t spherical0 = to_spherical(pos0, foc0);
+        const double angle_epsilon = 1e-6;
+
+        vector3_t spherical1 = {
+          spherical0[0],
+          std::round(spherical0[1] / snapping_angle_rad) * snapping_angle_rad,
+          std::round(spherical0[2] / snapping_angle_rad) * snapping_angle_rad,
+        };
+        /* avoid gimbal lock */
+        spherical1[2] = std::min(std::max(spherical1[2], angle_epsilon), PI - angle_epsilon);
+
+        /* cycle to next position if already snapped */
+        if (std::abs(spherical1[1] - spherical0[1]) < angle_epsilon &&
+          std::abs(spherical1[2] - spherical0[2]) < angle_epsilon)
+        {
+          spherical1[1] += snapping_angle_rad;
+        }
+
+        const auto update_camera = [&spherical0, &spherical1, &foc0, &foc1, &up0, &up1, &fromZup](
+                                     camera& cam, double t)
+        {
+          point3_t foc = lerp3(foc0, foc1, t);
+          point3_t pos = from_spherical(lerp3(spherical0, spherical1, t), foc);
+          vector3_t up = lerp3(up0, up1, t * 5, true); // faster to hide the wobble :/
+          fromZup->TransformPoint(pos.data(), pos.data());
+          fromZup->TransformPoint(foc.data(), foc.data());
+          fromZup->TransformPoint(up.data(), up.data());
+
+          cam.setPosition(pos);
+          cam.setFocalPoint(foc);
+          cam.setViewUp(up);
+        };
+
+        self->AnimateCameraTransition(update_camera);
+        render = true;
+        break;
+      }
       case 'H':
         self->Options.toggle("ui.cheatsheet");
         render = true;
@@ -381,10 +509,7 @@ public:
   std::function<bool(const std::vector<std::string>&)> DropFilesUserCallBack =
     [](const std::vector<std::string>&) { return false; };
 
-  void StartInteractor()
-  {
-    this->VTKInteractor->Start();
-  }
+  void StartInteractor() { this->VTKInteractor->Start(); }
 
   void StopInteractor()
   {
