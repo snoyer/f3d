@@ -30,29 +30,6 @@
 namespace f3d::detail
 {
 
-vtkNew<vtkTransform> zUpTransform(vtkRenderer* renderer)
-{
-  const double* up = renderer->GetEnvironmentUp();
-  const double* right = renderer->GetEnvironmentRight();
-  double fwd[3];
-  vtkMath::Cross(right, up, fwd);
-
-  const double m[16] = {
-    right[0], right[1], right[2], 0, //
-    fwd[0], fwd[1], fwd[2], 0,       //
-    up[0], up[1], up[2], 0,          //
-    0, 0, 0, 1,                      //
-  };
-  vtkNew<vtkTransform> toZup;
-  toZup->SetMatrix(m);
-  return toZup;
-}
-
-vtkNew<vtkTransform> zUpTransform(vtkRenderWindowInteractor* interactor)
-{
-  return zUpTransform(interactor->GetRenderWindow()->GetRenderers()->GetFirstRenderer());
-}
-
 vector3_t to_spherical(const point3_t& xyz_pos, const point3_t& xyz_origin)
 {
   // TODO edge cases? replace with vtkSphericalTransfrom?
@@ -138,6 +115,26 @@ public:
     this->Recorder = vtkSmartPointer<vtkF3DInteractorEventRecorder>::New();
     this->Recorder->SetInteractor(this->VTKInteractor);
 #endif
+  }
+
+  void zUpTransforms(vtkTransform* to, vtkTransform* from)
+  {
+    vtkRenderer* renderer =
+      this->VTKInteractor->GetRenderWindow()->GetRenderers()->GetFirstRenderer();
+    const double* up = renderer->GetEnvironmentUp();
+    const double* right = renderer->GetEnvironmentRight();
+    double fwd[3];
+    vtkMath::Cross(right, up, fwd);
+
+    const double m[16] = {
+      right[0], right[1], right[2], 0, //
+      fwd[0], fwd[1], fwd[2], 0,       //
+      up[0], up[1], up[2], 0,          //
+      0, 0, 0, 1,                      //
+    };
+    to->SetMatrix(m);
+    from->SetMatrix(m);
+    from->Inverse();
   }
 
   static void OnKeyPress(vtkObject*, unsigned long, void* clientData, void*)
@@ -297,8 +294,8 @@ public:
         const double snapping_angle_deg = 45.0; // TODO add to config
         const double PI = vtkMath::Pi();
 
-        const auto toZup = zUpTransform(self->VTKInteractor);
-        const auto fromZup = toZup->GetInverse();
+        vtkNew<vtkTransform> toZup, fromZup;
+        self->zUpTransforms(toZup, fromZup);
 
         camera& cam = self->Window.getCamera();
 
