@@ -305,6 +305,7 @@ public:
         toZup->TransformPoint(currentState.pos.data(), pos0.data());
         toZup->TransformPoint(currentState.foc.data(), foc0.data());
         toZup->TransformPoint(currentState.up.data(), up0.data());
+        const double viewAngle = currentState.angle;
 
         cam.resetToBounds(); // to know proper center
         toZup->TransformPoint(cam.getFocalPoint().data(), foc1.data());
@@ -329,22 +330,21 @@ public:
           spherical1[1] += snapping_angle_rad;
         }
 
-        const auto update_camera = [&spherical0, &spherical1, &foc0, &foc1, &up0, &up1, &fromZup](
-                                     camera& cam, double t)
+        const auto iterpolateCameraState =
+          [&spherical0, &spherical1, &foc0, &foc1, &up0, &up1, &viewAngle, &fromZup](double ratio)
         {
-          point3_t foc = lerp3(foc0, foc1, t);
-          point3_t pos = from_spherical(lerp3(spherical0, spherical1, t), foc);
-          vector3_t up = lerp3(up0, up1, t * 5, true); // faster to hide the wobble :/
-          fromZup->TransformPoint(pos.data(), pos.data());
-          fromZup->TransformPoint(foc.data(), foc.data());
-          fromZup->TransformPoint(up.data(), up.data());
+          const point3_t foc = lerp3(foc0, foc1, ratio);
+          const point3_t pos = from_spherical(lerp3(spherical0, spherical1, ratio), foc);
+          const vector3_t up = lerp3(up0, up1, ratio * 5, true); // faster to hide the wobble :/
 
-          cam.setPosition(pos);
-          cam.setFocalPoint(foc);
-          cam.setViewUp(up);
+          camera_state_t s = { pos, foc, up, viewAngle };
+          fromZup->TransformPoint(s.pos.data(), s.pos.data());
+          fromZup->TransformPoint(s.foc.data(), s.foc.data());
+          fromZup->TransformPoint(s.up.data(), s.up.data());
+          return s;
         };
 
-        self->AnimateCameraTransition(update_camera);
+        self->AnimateCameraTransition(iterpolateCameraState);
         render = true;
         break;
       }
@@ -471,30 +471,39 @@ public:
          *     .--.-----------------.picked
          * pos1    pos2
          */
-        camera& cam = self->Window.getCamera();
-        const point3_t pos = cam.getPosition();
-        const point3_t foc = cam.getFocalPoint();
+        const camera_state_t state0 = self->Window.getCamera().getState();
 
         double focV[3];
-        vtkMath::Subtract(picked, foc.data(), focV); /* foc -> picked */
+        vtkMath::Subtract(picked, state0.foc.data(), focV); /* foc -> picked */
 
         double posV[3];
-        vtkMath::Subtract(picked, foc.data(), posV); /* pos -> pos1, parallel to focV */
+        vtkMath::Subtract(picked, state0.foc.data(), posV); /* pos -> pos1, parallel to focV */
         if (!self->Style->GetInteractor()->GetShiftKey())
         {
           double v[3];
-          vtkMath::Subtract(foc.data(), pos.data(), v); /* pos -> foc */
-          vtkMath::ProjectVector(focV, v, v);           /* pos2 -> pos1 */
-          vtkMath::Subtract(posV, v, posV);             /* pos -> pos2, keeps on camera plane */
+          vtkMath::Subtract(state0.foc.data(), state0.pos.data(), v); /* pos -> foc */
+          vtkMath::ProjectVector(focV, v, v);                         /* pos2 -> pos1 */
+          vtkMath::Subtract(posV, v, posV); /* pos -> pos2, keeps on camera plane */
         }
 
-        const auto update_camera = [&foc, &focV, &pos, &posV](camera& c, double t)
+        const auto iterpolateCameraState = [&state0, &focV, &posV](double ratio) -> camera_state_t
         {
-          c.setPosition({ pos[0] + posV[0] * t, pos[1] + posV[1] * t, pos[2] + posV[2] * t });
-          c.setFocalPoint({ foc[0] + focV[0] * t, foc[1] + focV[1] * t, foc[2] + focV[2] * t });
+          return { //
+            {
+              state0.pos[0] + posV[0] * ratio,
+              state0.pos[1] + posV[1] * ratio,
+              state0.pos[2] + posV[2] * ratio,
+            },
+            {
+              state0.foc[0] + focV[0] * ratio,
+              state0.foc[1] + focV[1] * ratio,
+              state0.foc[2] + focV[2] * ratio,
+            },
+            state0.up, state0.angle
+          };
         };
 
-        self->AnimateCameraTransition(update_camera);
+        self->AnimateCameraTransition(iterpolateCameraState);
       }
     }
 
@@ -514,7 +523,7 @@ public:
     this->VTKInteractor->ExitCallback();
   }
 
-  void AnimateCameraTransition(const std::function<void(camera&, double)>& update_camera)
+  void AnimateCameraTransition(const std::function<camera_state_t(double)>& iterpolateCameraState)
   {
     window& win = this->Window;
     camera& cam = win.getCamera();
@@ -522,22 +531,23 @@ public:
 
     if (duration > 0)
     {
-      // TODO can we disable inputs so we don't queue key presses while the animation is running?
+      // TODO implement a way to not queue key presses while the animation is running
 
       const auto start = std::chrono::high_resolution_clock::now();
       const auto end = start + std::chrono::milliseconds(duration);
       auto now = start;
       while (now < end)
       {
-        const double t = std::chrono::duration_cast<std::chrono::milliseconds>(now - start).count();
-        const double u = (1 - std::cos(vtkMath::Pi() * (t / duration))) / 2;
-        update_camera(cam, u);
+        const double timeDelta =
+          std::chrono::duration_cast<std::chrono::milliseconds>(now - start).count();
+        const double ratio = (1 - std::cos(vtkMath::Pi() * (timeDelta / duration))) / 2;
+        cam.setState(iterpolateCameraState(ratio));
         this->Window.render();
         now = std::chrono::high_resolution_clock::now();
       }
     }
 
-    update_camera(cam, 1.); // ensure last update
+    cam.setState(iterpolateCameraState(1.)); // ensure final update
     this->Window.render();
   }
 
