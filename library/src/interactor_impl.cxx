@@ -339,19 +339,20 @@ public:
           };
           spherical1[2] = std::min(std::max(spherical1[2], gimbal_epsilon), PI - gimbal_epsilon);
 
-          /* cycle to next angle if already snapped */
-          const double angle_epsilon = 1e-6;
-          if (std::abs(spherical1[1] - spherical0[1]) < angle_epsilon &&
-            std::abs(spherical1[2] - spherical0[2]) < angle_epsilon)
-          {
-            spherical1[1] += snapping_angle_rad;
-          }
-
           /* final up vector and focal point */
           vector3_t up1 = { 0., 0., 1. };
           point3_t foc1;
           cam.resetToBounds();
           toZup->MultiplyPoint(cam.getFocalPoint().data(), foc1.data());
+
+          /* cycle to next angle if already snapped */
+          const double epsilon = 1e-6;
+          if (vtkMath::Distance2BetweenPoints(foc0.data(), foc1.data()) < epsilon * epsilon &&
+            std::abs(spherical1[1] - spherical0[1]) < epsilon &&
+            std::abs(spherical1[2] - spherical0[2]) < epsilon)
+          {
+            spherical1[1] += snapping_angle_rad;
+          }
 
           const double viewAngle = currentState.angle;
           const auto iterpolateCameraState =
