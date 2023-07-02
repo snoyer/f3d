@@ -13,13 +13,13 @@
 #include <vtkCallbackCommand.h>
 #include <vtkCellPicker.h>
 #include <vtkMath.h>
+#include <vtkMatrix3x3.h>
 #include <vtkNew.h>
 #include <vtkPointPicker.h>
 #include <vtkRenderWindow.h>
 #include <vtkRenderWindowInteractor.h>
 #include <vtkRendererCollection.h>
 #include <vtkStringArray.h>
-#include <vtkTransform.h>
 #include <vtkVersion.h>
 #include <vtksys/SystemTools.hxx>
 
@@ -117,7 +117,7 @@ public:
 #endif
   }
 
-  void zUpTransforms(vtkTransform* to, vtkTransform* from)
+  void zUpTransforms(vtkMatrix3x3* to, vtkMatrix3x3* from)
   {
     vtkRenderer* renderer =
       this->VTKInteractor->GetRenderWindow()->GetRenderers()->GetFirstRenderer();
@@ -126,15 +126,14 @@ public:
     double fwd[3];
     vtkMath::Cross(right, up, fwd);
 
-    const double m[16] = {
-      right[0], right[1], right[2], 0, //
-      fwd[0], fwd[1], fwd[2], 0,       //
-      up[0], up[1], up[2], 0,          //
-      0, 0, 0, 1,                      //
+    const double m[9] = {
+      right[0], right[1], right[2], //
+      fwd[0], fwd[1], fwd[2],       //
+      up[0], up[1], up[2],          //
     };
-    to->SetMatrix(m);
-    from->SetMatrix(m);
-    from->Inverse();
+    to->DeepCopy(m);
+    from->DeepCopy(m);
+    from->Invert();
   }
 
   static void OnKeyPress(vtkObject*, unsigned long, void* clientData, void*)
@@ -289,65 +288,6 @@ public:
         render = true;
         break;
       }
-      case 'W':
-      {
-        const double snapping_angle_deg = 45.0; // TODO add to config
-        const double PI = vtkMath::Pi();
-
-        vtkNew<vtkTransform> toZup, fromZup;
-        self->zUpTransforms(toZup, fromZup);
-
-        camera& cam = self->Window.getCamera();
-
-        point3_t foc0, pos0, foc1;
-        vector3_t up0, up1 = { 0., 0., 1. };
-        const auto currentState = cam.getState();
-        toZup->TransformPoint(currentState.pos.data(), pos0.data());
-        toZup->TransformPoint(currentState.foc.data(), foc0.data());
-        toZup->TransformPoint(currentState.up.data(), up0.data());
-        const double viewAngle = currentState.angle;
-
-        cam.resetToBounds(); // to know proper center
-        toZup->TransformPoint(cam.getFocalPoint().data(), foc1.data());
-        cam.setState(currentState); // "cancel" resetToBounds
-
-        const double snapping_angle_rad = snapping_angle_deg * PI / 180;
-        const vector3_t spherical0 = to_spherical(pos0, foc0);
-        const double angle_epsilon = 1e-6;
-
-        vector3_t spherical1 = {
-          spherical0[0],
-          std::round(spherical0[1] / snapping_angle_rad) * snapping_angle_rad,
-          std::round(spherical0[2] / snapping_angle_rad) * snapping_angle_rad,
-        };
-        /* avoid gimbal lock */
-        spherical1[2] = std::min(std::max(spherical1[2], angle_epsilon), PI - angle_epsilon);
-
-        /* cycle to next position if already snapped */
-        if (std::abs(spherical1[1] - spherical0[1]) < angle_epsilon &&
-          std::abs(spherical1[2] - spherical0[2]) < angle_epsilon)
-        {
-          spherical1[1] += snapping_angle_rad;
-        }
-
-        const auto iterpolateCameraState =
-          [&spherical0, &spherical1, &foc0, &foc1, &up0, &up1, &viewAngle, &fromZup](double ratio)
-        {
-          const point3_t foc = lerp3(foc0, foc1, ratio);
-          const point3_t pos = from_spherical(lerp3(spherical0, spherical1, ratio), foc);
-          const vector3_t up = lerp3(up0, up1, ratio * 5, true); // faster to hide the wobble :/
-
-          camera_state_t s = { pos, foc, up, viewAngle };
-          fromZup->TransformPoint(s.pos.data(), s.pos.data());
-          fromZup->TransformPoint(s.foc.data(), s.foc.data());
-          fromZup->TransformPoint(s.up.data(), s.up.data());
-          return s;
-        };
-
-        self->AnimateCameraTransition(iterpolateCameraState);
-        render = true;
-        break;
-      }
       case 'H':
         self->Options.toggle("ui.cheatsheet");
         render = true;
@@ -370,6 +310,67 @@ public:
         {
           assert(self->AnimationManager);
           self->AnimationManager->ToggleAnimation();
+        }
+        else if (keySym == "Tab")
+        {
+          const double snapping_angle_deg = 45.0; // TODO add to config
+          const double PI = vtkMath::Pi();
+          const double gimbal_epsilon = 1e-5;
+
+          vtkNew<vtkMatrix3x3> toZup, fromZup;
+          self->zUpTransforms(toZup, fromZup);
+          camera& cam = self->Window.getCamera();
+
+          /* original angles, up vector, and focal point */
+          point3_t foc0, pos0;
+          vector3_t up0;
+          const auto currentState = cam.getState();
+          toZup->MultiplyPoint(currentState.pos.data(), pos0.data());
+          toZup->MultiplyPoint(currentState.foc.data(), foc0.data());
+          toZup->MultiplyPoint(currentState.up.data(), up0.data());
+          const vector3_t spherical0 = to_spherical(pos0, foc0);
+
+          /* final angles */
+          const double snapping_angle_rad = snapping_angle_deg * PI / 180;
+          vector3_t spherical1 = {
+            spherical0[0],
+            std::round(spherical0[1] / snapping_angle_rad) * snapping_angle_rad,
+            std::round(spherical0[2] / snapping_angle_rad) * snapping_angle_rad,
+          };
+          spherical1[2] = std::min(std::max(spherical1[2], gimbal_epsilon), PI - gimbal_epsilon);
+
+          /* cycle to next angle if already snapped */
+          const double angle_epsilon = 1e-6;
+          if (std::abs(spherical1[1] - spherical0[1]) < angle_epsilon &&
+            std::abs(spherical1[2] - spherical0[2]) < angle_epsilon)
+          {
+            spherical1[1] += snapping_angle_rad;
+          }
+
+          /* final up vector and focal point */
+          vector3_t up1 = { 0., 0., 1. };
+          point3_t foc1;
+          cam.resetToBounds();
+          toZup->MultiplyPoint(cam.getFocalPoint().data(), foc1.data());
+
+          const double viewAngle = currentState.angle;
+          const auto iterpolateCameraState =
+            [&spherical0, &spherical1, &foc0, &foc1, &up0, &up1, &viewAngle, &fromZup](double ratio)
+          {
+            const point3_t foc = lerp3(foc0, foc1, ratio);
+            const point3_t pos = from_spherical(lerp3(spherical0, spherical1, ratio), foc);
+            const vector3_t up = lerp3(up0, up1, ratio * 5, true); // faster to hide the wobble :/
+
+            camera_state_t s = { pos, foc, up, viewAngle };
+            fromZup->MultiplyPoint(s.pos.data(), s.pos.data());
+            fromZup->MultiplyPoint(s.foc.data(), s.foc.data());
+            fromZup->MultiplyPoint(s.up.data(), s.up.data());
+            return s;
+          };
+
+          self->AnimateCameraTransition(iterpolateCameraState);
+          render = true;
+          break;
         }
         break;
     }
