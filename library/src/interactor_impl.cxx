@@ -30,26 +30,37 @@
 namespace f3d::detail
 {
 
-vector3_t to_spherical(const point3_t& xyz_pos, const point3_t& xyz_origin)
+vector3_t to_spherical(const point3_t& xyz_pos, const point3_t& xyz_origin, vtkMatrix3x3* toZup)
 {
   // TODO edge cases? replace with vtkSphericalTransfrom?
-  const double x = xyz_pos[0] - xyz_origin[0];
-  const double y = xyz_pos[1] - xyz_origin[1];
-  const double z = xyz_pos[2] - xyz_origin[2];
-  const double r = std::sqrt(x * x + y * y + z * z);
-  const double theta = std::acos(z / r);
-  const double phi = (y < 0 ? -1 : +1) * std::acos(x / std::sqrt(x * x + y * y));
+  point3_t p = {
+    xyz_pos[0] - xyz_origin[0],
+    xyz_pos[1] - xyz_origin[1],
+    xyz_pos[2] - xyz_origin[2],
+  };
+  toZup->MultiplyPoint(p.data(), p.data());
+
+  const double r = std::sqrt(p[0] * p[0] + p[1] * p[1] + p[2] * p[2]);
+  const double theta = std::acos(p[2] / r);
+  const double phi = (p[1] < 0 ? -1 : +1) * std::acos(p[0] / std::sqrt(p[0] * p[0] + p[1] * p[1]));
   return vector3_t({ r, phi, theta });
 }
 
-point3_t from_spherical(const vector3_t& spherical, const point3_t& xyz_origin)
+point3_t from_spherical(
+  const vector3_t& spherical, const point3_t& xyz_origin, vtkMatrix3x3* fromZup)
 {
   // TODO edge cases? replace with vtkSphericalTransfrom?
-  return point3_t({
-    xyz_origin[0] + spherical[0] * std::sin(spherical[2]) * std::cos(spherical[1]),
-    xyz_origin[1] + spherical[0] * std::sin(spherical[2]) * std::sin(spherical[1]),
-    xyz_origin[2] + spherical[0] * std::cos(spherical[2]),
-  });
+  point3_t p = {
+    spherical[0] * std::sin(spherical[2]) * std::cos(spherical[1]),
+    spherical[0] * std::sin(spherical[2]) * std::sin(spherical[1]),
+    spherical[0] * std::cos(spherical[2]),
+  };
+  fromZup->MultiplyPoint(p.data(), p.data());
+  return {
+    xyz_origin[0] + p[0],
+    xyz_origin[1] + p[1],
+    xyz_origin[2] + p[2],
+  };
 }
 
 vector3_t lerp3(const vector3_t& v0, const vector3_t& v1, double t, bool clamp = false)
@@ -314,6 +325,9 @@ public:
         else if (keySym == "Tab")
         {
           const double snapping_angle_deg = 45.0; // TODO add to config
+          const bool recenter = !rwi->GetShiftKey();
+          const bool rezoom = !rwi->GetShiftKey();
+
           const double PI = vtkMath::Pi();
           const double gimbal_epsilon = 1e-5;
 
@@ -321,14 +335,9 @@ public:
           self->zUpTransforms(toZup, fromZup);
           camera& cam = self->Window.getCamera();
 
-          /* original angles, up vector, and focal point */
-          point3_t foc0, pos0;
-          vector3_t up0;
+          /* original angles */
           const auto currentState = cam.getState();
-          toZup->MultiplyPoint(currentState.pos.data(), pos0.data());
-          toZup->MultiplyPoint(currentState.foc.data(), foc0.data());
-          toZup->MultiplyPoint(currentState.up.data(), up0.data());
-          const vector3_t spherical0 = to_spherical(pos0, foc0);
+          const vector3_t spherical0 = to_spherical(currentState.pos, currentState.foc, toZup);
 
           /* final angles */
           const double snapping_angle_rad = snapping_angle_deg * PI / 180;
@@ -339,37 +348,40 @@ public:
           };
           spherical1[2] = std::min(std::max(spherical1[2], gimbal_epsilon), PI - gimbal_epsilon);
 
-          /* final up vector and focal point */
-          vector3_t up1 = { 0., 0., 1. };
-          point3_t foc1;
-          cam.resetToBounds();
-          toZup->MultiplyPoint(cam.getFocalPoint().data(), foc1.data());
+          /* maybe re-center and re-zoom */
+          const point3_t foc0 = currentState.foc;
+          const camera_state_t newState = cam.resetToBounds().getState();
+          const point3_t foc1 = recenter ? newState.foc : foc0;
+          if (rezoom)
+          {
+            spherical1[0] =
+              std::sqrt(vtkMath::Distance2BetweenPoints(newState.pos.data(), newState.foc.data()));
+          }
 
           /* cycle to next angle if already snapped */
           const double epsilon = 1e-6;
           if (vtkMath::Distance2BetweenPoints(foc0.data(), foc1.data()) < epsilon * epsilon &&
+            std::abs(spherical1[0] - spherical0[0]) < epsilon &&
             std::abs(spherical1[1] - spherical0[1]) < epsilon &&
             std::abs(spherical1[2] - spherical0[2]) < epsilon)
           {
             spherical1[1] += snapping_angle_rad;
           }
 
+          vector3_t up0 = currentState.up;
+          vector3_t up1 = { 0., 0., 1. };
+          fromZup->MultiplyPoint(up1.data(), up1.data());
           const double viewAngle = currentState.angle;
-          const auto iterpolateCameraState =
-            [&spherical0, &spherical1, &foc0, &foc1, &up0, &up1, &viewAngle, &fromZup](double ratio)
+          const auto interpolateCameraState = [&spherical0, &spherical1, &foc0, &foc1, &up0, &up1,
+                                               &viewAngle, &fromZup](double ratio) -> camera_state_t
           {
             const point3_t foc = lerp3(foc0, foc1, ratio);
-            const point3_t pos = from_spherical(lerp3(spherical0, spherical1, ratio), foc);
+            const point3_t pos = from_spherical(lerp3(spherical0, spherical1, ratio), foc, fromZup);
             const vector3_t up = lerp3(up0, up1, ratio * 5, true); // faster to hide the wobble :/
-
-            camera_state_t s = { pos, foc, up, viewAngle };
-            fromZup->MultiplyPoint(s.pos.data(), s.pos.data());
-            fromZup->MultiplyPoint(s.foc.data(), s.foc.data());
-            fromZup->MultiplyPoint(s.up.data(), s.up.data());
-            return s;
+            return { pos, foc, up, viewAngle };
           };
 
-          self->AnimateCameraTransition(iterpolateCameraState);
+          self->AnimateCameraTransition(interpolateCameraState);
           render = true;
           break;
         }
@@ -525,7 +537,7 @@ public:
     this->VTKInteractor->ExitCallback();
   }
 
-  void AnimateCameraTransition(const std::function<camera_state_t(double)>& iterpolateCameraState)
+  void AnimateCameraTransition(const std::function<camera_state_t(double)>& interpolateCameraState)
   {
     window& win = this->Window;
     camera& cam = win.getCamera();
@@ -543,13 +555,13 @@ public:
         const double timeDelta =
           std::chrono::duration_cast<std::chrono::milliseconds>(now - start).count();
         const double ratio = (1 - std::cos(vtkMath::Pi() * (timeDelta / duration))) / 2;
-        cam.setState(iterpolateCameraState(ratio));
+        cam.setState(interpolateCameraState(ratio));
         this->Window.render();
         now = std::chrono::high_resolution_clock::now();
       }
     }
 
-    cam.setState(iterpolateCameraState(1.)); // ensure final update
+    cam.setState(interpolateCameraState(1.)); // ensure final update
     this->Window.render();
   }
 
