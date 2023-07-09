@@ -340,9 +340,21 @@ document.write(`
 <span id="_CPPv3N3f3d6loaderE"></span><span id="_CPPv2N3f3d6loaderE"></span><span id="f3d::loader"></span><span class="target" id="classf3d_1_1loader"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">loader</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6loaderE" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Class to load files in F3D. </p>
 <p>A class to load files in F3D. The loader can load a full scene or multiple geometries into a default scene. It also support checking if a scene or geometry reader is available for a given file.</p>
-<p>Example usage:</p>
-<p>std::string path = … <a class="reference internal" href="classf3d_1_1engine.html#classf3d_1_1engine"><span class="std std-ref">f3d::engine</span></a> eng(f3d::window::Type::NATIVE); <a class="reference internal" href="#classf3d_1_1loader"><span class="std std-ref">f3d::loader</span></a>&amp; load = eng.getLoader();</p>
-<p>if (load.hasSceneReader(path) { load.loadScene(path); } else if (load.hasGeometryReader(path) { load.loadGeometry(path); } </p>
+<p>Example usage: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span>
+<span class="n">f3d</span><span class="o">::</span><span class="n">engine</span><span class="w"> </span><span class="n">eng</span><span class="p">(</span><span class="n">f3d</span><span class="o">::</span><span class="n">window</span><span class="o">::</span><span class="n">Type</span><span class="o">::</span><span class="n">NATIVE</span><span class="p">);</span>
+<span class="n">f3d</span><span class="o">::</span><span class="n">loader</span><span class="o">&amp;</span><span class="w"> </span><span class="n">load</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">eng</span><span class="p">.</span><span class="n">getLoader</span><span class="p">();</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">load</span><span class="p">.</span><span class="n">hasSceneReader</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">load</span><span class="p">.</span><span class="n">loadScene</span><span class="p">(</span><span class="n">path</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">load</span><span class="p">.</span><span class="n">hasGeometryReader</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">load</span><span class="p">.</span><span class="n">loadGeometry</span><span class="p">(</span><span class="n">path</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">

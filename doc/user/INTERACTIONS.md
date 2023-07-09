@@ -10,7 +10,7 @@ Simple interaction with the displayed data is possible directly within the windo
 * *Move the mouse wheel* to zoom in/out.
 * *Click and drag* with the *middle* mouse button to translate the camera.
 * *Click* with the *middle* mouse button to center the camera on the point under the cursor (hold *Shift* to allow forward or backward movement).
-* Drag and drop a file or directory into the F3D window to load it
+* Drag and drop a file, directory or HDRI into the F3D window to load it. F3D relies on the extension (`.hdr` or `.exr`) to detect if the dropped file is an HDRI.
 
 > Note: When playing an animation with a scene camera, camera interactions are locked.
 
@@ -48,12 +48,18 @@ Other options can be toggled directly by pressing the following hotkeys:
 
 Note that some hotkeys can be available or not depending on the file being loaded and the F3D configuration.
 
+Camera Hotkeys:
+* `1`: front view camera.
+* `3`: right view camera.
+* `7`: top view camera.
+* `9`: isometric view camera.
+* `ENTER`: reset the camera to its initial parameters.
+
 Other hotkeys are available:
 
 * `H`: key to toggle the display of a cheat sheet showing all these hotkeys and their statuses.
 * `?`: key to print scene description to the terminal.
 * `ESC`: close the window and quit F3D.
-* `ENTER`: reset the camera to its initial parameters.
 * `SPACE`: play the animation if any.
 * `LEFT`: load the previous file if any.
 * `RIGHT`: load the next file if any.
