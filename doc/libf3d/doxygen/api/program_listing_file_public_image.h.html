@@ -319,7 +319,25 @@ document.write(`
 <span class="k">class</span><span class="w"> </span><span class="nc">F3D_EXPORT</span><span class="w"> </span><span class="n">image</span>
 <span class="p">{</span>
 <span class="k">public</span><span class="o">:</span>
+<span class="w">  </span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">SaveFormat</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">PNG</span><span class="p">,</span>
+<span class="w">    </span><span class="n">JPG</span><span class="p">,</span>
+<span class="w">    </span><span class="n">TIF</span><span class="p">,</span>
+<span class="w">    </span><span class="n">BMP</span>
+<span class="w">  </span><span class="p">};</span>
+
+<span class="w">  </span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">ChannelType</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">BYTE</span><span class="p">,</span>
+<span class="w">    </span><span class="n">SHORT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">FLOAT</span>
+<span class="w">  </span><span class="p">};</span>
+
 <span class="w">  </span><span class="k">explicit</span><span class="w"> </span><span class="n">image</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">path</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">image</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">channelCount</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ChannelType</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ChannelType</span><span class="o">::</span><span class="n">BYTE</span><span class="p">);</span>
 
 
 <span class="w">  </span><span class="n">image</span><span class="p">();</span>
@@ -336,19 +354,31 @@ document.write(`
 
 <span class="w">  </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getWidth</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 <span class="w">  </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getHeight</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
-<span class="w">  </span><span class="n">image</span><span class="o">&amp;</span><span class="w"> </span><span class="nf">setResolution</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">);</span>
+<span class="cp">#ifndef F3D_NO_DEPRECATED</span>
+<span class="w">  </span><span class="n">F3D_DEPRECATED</span><span class="w"> </span><span class="n">image</span><span class="o">&amp;</span><span class="w"> </span><span class="n">setResolution</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">);</span>
+<span class="cp">#endif</span>
 
 
 <span class="w">  </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getChannelCount</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
-<span class="w">  </span><span class="n">image</span><span class="o">&amp;</span><span class="w"> </span><span class="nf">setChannelCount</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">dim</span><span class="p">);</span>
+<span class="cp">#ifndef F3D_NO_DEPRECATED</span>
+<span class="w">  </span><span class="n">F3D_DEPRECATED</span><span class="w"> </span><span class="n">image</span><span class="o">&amp;</span><span class="w"> </span><span class="n">setChannelCount</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">dim</span><span class="p">);</span>
+<span class="cp">#endif</span>
+
+<span class="w">  </span><span class="n">ChannelType</span><span class="w"> </span><span class="nf">getChannelType</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getChannelTypeSize</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 
 
-<span class="w">  </span><span class="n">image</span><span class="o">&amp;</span><span class="w"> </span><span class="nf">setData</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">buffer</span><span class="p">);</span>
-<span class="w">  </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="nf">getData</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<span class="w">  </span><span class="n">image</span><span class="o">&amp;</span><span class="w"> </span><span class="nf">setContent</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">buffer</span><span class="p">);</span>
+<span class="w">  </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="nf">getContent</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<span class="cp">#ifndef F3D_NO_DEPRECATED</span>
+<span class="w">  </span><span class="n">F3D_DEPRECATED</span><span class="w"> </span><span class="n">image</span><span class="o">&amp;</span><span class="w"> </span><span class="n">setData</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">buffer</span><span class="p">);</span>
+<span class="w">  </span><span class="n">F3D_DEPRECATED</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">getData</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<span class="cp">#endif</span>
 
 <span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="nf">compare</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">image</span><span class="o">&amp;</span><span class="w"> </span><span class="n">reference</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">threshold</span><span class="p">,</span><span class="w"> </span><span class="n">image</span><span class="o">&amp;</span><span class="w"> </span><span class="n">diff</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&amp;</span><span class="w"> </span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 
-<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">save</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">path</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">save</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">path</span><span class="p">,</span><span class="w"> </span><span class="n">SaveFormat</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SaveFormat</span><span class="o">::</span><span class="n">PNG</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 
 <span class="w">  </span><span class="k">struct</span><span class="w"> </span><span class="nc">write_exception</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">exception</span>
 <span class="w">  </span><span class="p">{</span>

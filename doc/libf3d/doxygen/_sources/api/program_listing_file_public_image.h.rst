@@ -23,7 +23,25 @@ Program Listing for File image.h
    class F3D_EXPORT image
    {
    public:
+     enum class SaveFormat : unsigned char
+     {
+       PNG,
+       JPG,
+       TIF,
+       BMP
+     };
+   
+     enum class ChannelType : unsigned char
+     {
+       BYTE,
+       SHORT,
+       FLOAT
+     };
+   
      explicit image(const std::string& path);
+   
+     image(unsigned int width, unsigned int height, unsigned int channelCount,
+       ChannelType type = ChannelType::BYTE);
    
    
      image();
@@ -40,19 +58,31 @@ Program Listing for File image.h
    
      unsigned int getWidth() const;
      unsigned int getHeight() const;
-     image& setResolution(unsigned int width, unsigned int height);
+   #ifndef F3D_NO_DEPRECATED
+     F3D_DEPRECATED image& setResolution(unsigned int width, unsigned int height);
+   #endif
    
    
      unsigned int getChannelCount() const;
-     image& setChannelCount(unsigned int dim);
+   #ifndef F3D_NO_DEPRECATED
+     F3D_DEPRECATED image& setChannelCount(unsigned int dim);
+   #endif
+   
+     ChannelType getChannelType() const;
+   
+     unsigned int getChannelTypeSize() const;
    
    
-     image& setData(unsigned char* buffer);
-     unsigned char* getData() const;
+     image& setContent(void* buffer);
+     void* getContent() const;
+   #ifndef F3D_NO_DEPRECATED
+     F3D_DEPRECATED image& setData(unsigned char* buffer);
+     F3D_DEPRECATED unsigned char* getData() const;
+   #endif
    
      bool compare(const image& reference, double threshold, image& diff, double& error) const;
    
-     void save(const std::string& path) const;
+     void save(const std::string& path, SaveFormat format = SaveFormat::PNG) const;
    
      struct write_exception : public exception
      {

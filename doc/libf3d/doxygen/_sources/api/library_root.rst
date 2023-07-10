@@ -2,6 +2,8 @@
 Library API
 ===========
 
+.. include:: page_view_hierarchy.rst
+
 .. include:: class_view_hierarchy.rst
 
 .. include:: file_view_hierarchy.rst
