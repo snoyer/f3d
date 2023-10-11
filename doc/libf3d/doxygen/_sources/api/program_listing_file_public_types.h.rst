@@ -16,6 +16,8 @@ Program Listing for File types.h
    #include "export.h"
    
    #include <array>
+   #include <string>
+   #include <vector>
    
    namespace f3d
    {
@@ -38,6 +40,17 @@ Program Listing for File types.h
    };
    
    using angle_deg_t = double;
+   
+   struct mesh_t
+   {
+     std::vector<float> points;
+     std::vector<float> normals;
+     std::vector<float> texture_coordinates;
+     std::vector<unsigned int> face_sides;
+     std::vector<unsigned int> face_indices;
+   
+     F3D_EXPORT std::pair<bool, std::string> isValid() const;
+   };
    }
    
    #endif
