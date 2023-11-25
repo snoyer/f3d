@@ -16,7 +16,7 @@ Options|Default|Description
 \-\-dry-run||Do not read any configuration file and consider only the command line options.
 \-\-no-render||Print information about the first provided file (as with \-\-verbose) and exit, without rendering anything, useful to recover information about a file.
 \-\-max-size=\<size in MiB\>|-1|Prevent F3D to load a file bigger than the provided size in Mib, negative value means unlimited, useful for thumbnails.
-\-\-load-plugins=\<paths or names\>||List of plugins to load separated with a comma. Official plugins are `alembic`, `assimp`, `exodus`, `occt`. See [usage](USAGE.md) for more info.
+\-\-load-plugins=\<paths or names\>||List of plugins to load separated with a comma. Official plugins are `alembic`, `assimp`, `draco`, `exodus`, `occt`, `usd`. See [usage](USAGE.md) for more info.
 
 ## General Options
 
@@ -35,6 +35,7 @@ Options|Default|Description
 -e, \-\-edges||Show the *cell edges*.
 \-\-camera-index=\<idx\>|-1|Select the scene camera to use when available in the file.<br>Any negative value means automatic camera.<br>The default scene always uses automatic camera.
 -k, \-\-trackball||Enable trackball interaction.
+\-\-animation-autoplay||Automatically start animation.
 \-\-animation-index=\<idx\>|0|Select the animation to show.<br>Any negative value means all animations (glTF only).<br>The default scene always has at most one animation.
 \-\-animation-speed-factor=\<factor\>|1|Set the animation speed factor to slow, speed up or even invert animation time.
 \-\-animation-frame-rate=\<factor\>|60|Set the animation frame rate used when playing animation interactively.
