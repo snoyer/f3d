@@ -314,6 +314,7 @@ document.write(`
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;export.h&quot;</span>
 
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
 
 <span class="k">namespace</span><span class="w"> </span><span class="nn">f3d</span>
 <span class="p">{</span>
@@ -380,6 +381,8 @@ document.write(`
 <span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="nf">compare</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">image</span><span class="o">&amp;</span><span class="w"> </span><span class="n">reference</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">threshold</span><span class="p">,</span><span class="w"> </span><span class="n">image</span><span class="o">&amp;</span><span class="w"> </span><span class="n">diff</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&amp;</span><span class="w"> </span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 
 <span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">save</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">path</span><span class="p">,</span><span class="w"> </span><span class="n">SaveFormat</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SaveFormat</span><span class="o">::</span><span class="n">PNG</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="n">saveBuffer</span><span class="p">(</span><span class="n">SaveFormat</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SaveFormat</span><span class="o">::</span><span class="n">PNG</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 
 <span class="w">  </span><span class="k">struct</span><span class="w"> </span><span class="nc">write_exception</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">exception</span>
 <span class="w">  </span><span class="p">{</span>

@@ -3,9 +3,16 @@
 ## Ongoing development
 For F3D users:
  - Added `--animation-autoplay` option (libf3d: `scene.animation.autoplay`) to automatically start animation on file load.
+ - Changed `--verbose` into a string based option, eg: `--verbose=quiet` or `--verbose=debug`. `--verbose` is still supported.
+ - Changed `--no-render` behavior so that it doesn't impact verbosity anymore
+ - Deprecated `--quiet`, use `--verbose=quiet` instead.
+ - Reading EXR files is now multi-threaded and much faster.
+ - Translucency support is now enabled by default.
+ - A small margin is added between the model and the grid to avoid potential z-fighting.
 
 For libf3d users:
  - Added `scene.animation.autoplay` option.
+ - Added a `f3d::image::saveBuffer` API to save an image as a file format in memory.
 
 ## v2.2.1
 

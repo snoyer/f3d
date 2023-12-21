@@ -17,6 +17,7 @@ Program Listing for File image.h
    #include "export.h"
    
    #include <string>
+   #include <vector>
    
    namespace f3d
    {
@@ -83,6 +84,8 @@ Program Listing for File image.h
      bool compare(const image& reference, double threshold, image& diff, double& error) const;
    
      void save(const std::string& path, SaveFormat format = SaveFormat::PNG) const;
+   
+     std::vector<unsigned char> saveBuffer(SaveFormat format = SaveFormat::PNG) const;
    
      struct write_exception : public exception
      {

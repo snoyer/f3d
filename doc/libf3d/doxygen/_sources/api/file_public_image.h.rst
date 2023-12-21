@@ -35,6 +35,8 @@ Includes
 
 - ``string``
 
+- ``vector``
+
 
 
 Included By
