@@ -1,18 +1,25 @@
 # Changelog
 
 ## Ongoing development
+
 For F3D users:
  - Added `--animation-autoplay` option (libf3d: `scene.animation.autoplay`) to automatically start animation on file load.
+ - Added an experimental VDB reader for .vdb files using OpenVDB
  - Changed `--verbose` into a string based option, eg: `--verbose=quiet` or `--verbose=debug`. `--verbose` is still supported.
  - Changed `--no-render` behavior so that it doesn't impact verbosity anymore
  - Deprecated `--quiet`, use `--verbose=quiet` instead.
  - Reading EXR files is now multi-threaded and much faster.
  - Translucency support is now enabled by default.
  - A small margin is added between the model and the grid to avoid potential z-fighting.
+ - Add 3MF and X files support (part of `assimp` plugin)
+ - Fix potential crashes when reading `assimp` plugin file format
 
 For libf3d users:
  - Added `scene.animation.autoplay` option.
  - Added a `f3d::image::saveBuffer` API to save an image as a file format in memory.
+
+For F3D packagers:
+ - Added a new optional dependency through VTK, OpenVDB
 
 ## v2.2.1
 
