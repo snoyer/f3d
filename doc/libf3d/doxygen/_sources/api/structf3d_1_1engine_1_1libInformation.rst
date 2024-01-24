@@ -17,6 +17,7 @@ Struct Documentation
 
 
 .. doxygenstruct:: f3d::engine::libInformation
+   :project: libf3d
    :members:
    :protected-members:
    :undoc-members:

@@ -20,6 +20,7 @@ Struct Documentation
 
 
 .. doxygenstruct:: f3d::vector3_t
+   :project: libf3d
    :members:
    :protected-members:
    :undoc-members:

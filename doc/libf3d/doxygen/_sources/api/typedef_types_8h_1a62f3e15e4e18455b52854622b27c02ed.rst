@@ -11,3 +11,4 @@ Typedef Documentation
 
 
 .. doxygentypedef:: f3d::angle_deg_t
+   :project: libf3d

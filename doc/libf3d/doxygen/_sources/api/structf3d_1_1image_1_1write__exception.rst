@@ -26,6 +26,7 @@ Struct Documentation
 
 
 .. doxygenstruct:: f3d::image::write_exception
+   :project: libf3d
    :members:
    :protected-members:
    :undoc-members:

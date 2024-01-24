@@ -11,6 +11,7 @@ Struct Documentation
 
 
 .. doxygenstruct:: f3d::mesh_t
+   :project: libf3d
    :members:
    :protected-members:
    :undoc-members:

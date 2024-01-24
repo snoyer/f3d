@@ -21,6 +21,7 @@ Class Documentation
 
 
 .. doxygenclass:: f3d::loader
+   :project: libf3d
    :members:
    :protected-members:
    :undoc-members:

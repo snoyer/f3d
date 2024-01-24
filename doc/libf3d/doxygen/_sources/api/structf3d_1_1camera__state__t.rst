@@ -11,6 +11,7 @@ Struct Documentation
 
 
 .. doxygenstruct:: f3d::camera_state_t
+   :project: libf3d
    :members:
    :protected-members:
    :undoc-members:

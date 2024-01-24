@@ -56,6 +56,8 @@ Program Listing for File image.h
      bool operator==(const image& reference) const;
      bool operator!=(const image& reference) const;
    
+     static std::vector<std::string> getSupportedFormats();
+   
    
      unsigned int getWidth() const;
      unsigned int getHeight() const;

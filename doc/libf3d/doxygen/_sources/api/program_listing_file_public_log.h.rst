@@ -79,7 +79,9 @@ Program Listing for File log.h
      static void waitForUser();
    
    protected:
-     static void appendArg(std::stringstream&) {}
+     static void appendArg(std::stringstream&)
+     {
+     }
    
      template<typename T, typename... Args>
      static void appendArg(std::stringstream& ss, T value, Args... args)

@@ -11,6 +11,7 @@ Class Documentation
 
 
 .. doxygenclass:: f3d::log
+   :project: libf3d
    :members:
    :protected-members:
    :undoc-members:

@@ -26,6 +26,7 @@ Struct Documentation
 
 
 .. doxygenstruct:: f3d::engine::no_window_exception
+   :project: libf3d
    :members:
    :protected-members:
    :undoc-members:

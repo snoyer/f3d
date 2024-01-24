@@ -33,6 +33,7 @@ Class Documentation
 
 
 .. doxygenclass:: f3d::exception
+   :project: libf3d
    :members:
    :protected-members:
    :undoc-members:
