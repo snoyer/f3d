@@ -69,7 +69,6 @@ EVENT_PATTERN = rb"""
     |(\<1;(?P<btn2_dn_x>\d+);(?P<btn2_dn_y>\d+)M)
     |(\<2;(?P<btn3_up_x>\d+);(?P<btn3_up_y>\d+)m)
     |(\<2;(?P<btn3_dn_x>\d+);(?P<btn3_dn_y>\d+)M)
-    |(?P<unknown>[^\x1b]+)
 )
 """
 EVENT_REGEX = re.compile(EVENT_PATTERN, re.VERBOSE)
