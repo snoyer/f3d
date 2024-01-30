@@ -624,6 +624,23 @@ document.write(`
 <dd><p>Save an image to a memory buffer in the specified format. Default format is PNG if not specified. TIF format is not supported yet. Throw an <a class="reference internal" href="structf3d_1_1image_1_1write__exception.html#structf3d_1_1image_1_1write__exception"><span class="std std-ref">image::write_exception</span></a> if the type is TIF. </p>
 </dd></dl>
 
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3f3d5image14toTerminalTextERNSt7ostreamE">
+<span id="_CPPv3NK3f3d5image14toTerminalTextERNSt7ostreamE"></span><span id="_CPPv2NK3f3d5image14toTerminalTextERNSt7ostreamE"></span><span id="f3d::image::toTerminalText__osRC"></span><span class="target" id="classf3d_1_1image_1add2ea5f92042084675a1559955fec882"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">f3d</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N3f3d5imageE" title="f3d::image"><span class="n"><span class="pre">image</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">toTerminalText</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">stream</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d5image14toTerminalTextERNSt7ostreamE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Convert to colored text using ANSI escape sequences for printing in a terminal. Block and half-block characters are used to represent two pixels per character (vertically) meaning that each text line represent two rows of pixels. Byte encoded RGB and RGBA images are supported (alpha channel values are binarized). Assumes terminal support for:<ul class="simple">
+<li><p>unicode block characters (<code class="docutils literal notranslate"><span class="pre">U+2580</span></code>, <code class="docutils literal notranslate"><span class="pre">U+2584</span></code>, <code class="docutils literal notranslate"><span class="pre">U+2588</span></code>)</p></li>
+<li><p>SGR escape codes (<code class="docutils literal notranslate"><span class="pre">ESC[0m</span></code>, <code class="docutils literal notranslate"><span class="pre">ESC[49m</span></code>)</p></li>
+<li><p>24-bit escape codes (<code class="docutils literal notranslate"><span class="pre">ESC[38;2;{r};{g};{b}m</span></code>, <code class="docutils literal notranslate"><span class="pre">ESC[48;2;{r};{g};{b}m</span></code>) Throw an exception if the type is not byte RGB or RGBA. </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3f3d5image14toTerminalTextEv">
+<span id="_CPPv3NK3f3d5image14toTerminalTextEv"></span><span id="_CPPv2NK3f3d5image14toTerminalTextEv"></span><span id="f3d::image::toTerminalTextC"></span><span class="target" id="classf3d_1_1image_1a73c7e3090c75126b2f5bc03b9a57d3b6"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">toTerminalText</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d5image14toTerminalTextEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Convert to colored text using ANSI escape sequences for printing in a terminal. See <code class="docutils literal notranslate"><span class="pre">toTerminalText(std::ostream&amp;</span> <span class="pre">stream)</span></code>. Throw an exception if the type is not byte RGB or RGBA. </p>
+</dd></dl>
+
 </div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>

@@ -89,6 +89,10 @@ Program Listing for File image.h
    
      std::vector<unsigned char> saveBuffer(SaveFormat format = SaveFormat::PNG) const;
    
+     const f3d::image& toTerminalText(std::ostream& stream) const;
+   
+     std::string toTerminalText() const;
+   
      struct write_exception : public exception
      {
        explicit write_exception(const std::string& what = "");
