@@ -25,8 +25,8 @@ git clone https://github.com/Microsoft/vcpkg.git
 <span class="nb">cd </span>vcpkg
 git fetch origin c9140a3b500812ad3206317885860d9553b93f13
 </code></pre></div></div> <ul> <li>Open cmd</li> </ul> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>C:<span class="se">\d</span>ev
-.<span class="se">\v</span>cpkg<span class="se">\b</span>ootstrap-vcpkg.sh
-cmake <span class="nt">-B</span> .<span class="se">\f</span>3d<span class="se">\b</span>uild <span class="nt">-S</span> .<span class="se">\f</span>3d<span class="se">\s</span>rc <span class="nt">-DCMAKE_TOOLCHAIN_FILE</span><span class="o">=</span>C:<span class="se">\v</span>cpkg<span class="se">\s</span>cripts<span class="se">\b</span>uildsystems<span class="se">\v</span>cpkg.cmake
+.<span class="se">\v</span>cpkg<span class="se">\b</span>ootstrap-vcpkg.bat
+cmake <span class="nt">-B</span> .<span class="se">\f</span>3d<span class="se">\b</span>uild <span class="nt">-S</span> .<span class="se">\f</span>3d<span class="se">\s</span>rc <span class="nt">-DCMAKE_TOOLCHAIN_FILE</span><span class="o">=</span>C:<span class="se">\d</span>ev<span class="se">\v</span>cpkg<span class="se">\s</span>cripts<span class="se">\b</span>uildsystems<span class="se">\v</span>cpkg.cmake
 </code></pre></div></div> <p>Note: Last command will take a while. It download, compile and install all dependencies, including many optional ones.</p> <h4 id="build-f3d"> <a href="#build-f3d" class="anchor-heading" aria-labelledby="build-f3d"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Build F3D </h4> <ul> <li>Open cmd</li> </ul> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>C:<span class="se">\d</span>ev<span class="se">\f</span>3d<span class="se">\b</span>uild
 cmake <span class="nb">.</span>
 cmake <span class="nt">--build</span> <span class="nb">.</span>
