@@ -93,6 +93,12 @@ Program Listing for File image.h
    
      std::string toTerminalText() const;
    
+     f3d::image& setMetadata(const std::string& key, const std::string& value);
+   
+     std::string getMetadata(const std::string& key) const;
+   
+     std::vector<std::string> allMetadata() const;
+   
      struct write_exception : public exception
      {
        explicit write_exception(const std::string& what = "");
