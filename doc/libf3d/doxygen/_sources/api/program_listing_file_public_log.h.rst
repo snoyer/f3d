@@ -74,7 +74,7 @@ Program Listing for File log.h
    
      static void setUseColoring(bool use);
    
-     static void setVerboseLevel(VerboseLevel level);
+     static void setVerboseLevel(VerboseLevel level, bool forceStdErr = false);
    
      static void waitForUser();
    

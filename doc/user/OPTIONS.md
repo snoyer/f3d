@@ -6,7 +6,7 @@ F3D behavior can be fully controlled from the command line using the following o
 
 Options|Default|Description
 ------|------|------
-\-\-output=\<png file\>||Instead of showing a render view and render into it, *render directly into a png file*. When used with \-\-ref option, only outputs on failure.
+\-\-output=\<png file\>||Instead of showing a render view and render into it, *render directly into a png file*. When used with \-\-ref option, only outputs on failure. If `-` is specified instead of a filename, the PNG file is streamed to the stdout.
 \-\-no-background||Use with \-\-output to output a png file with a transparent background.
 -h, \-\-help||Print *help* and exit. Ignore `--verbose`.
 \-\-version||Show *version* information and exit. Ignore `--verbose`.
@@ -15,6 +15,7 @@ Options|Default|Description
 \-\-dry-run||Do not read any configuration file and consider only the command line options.
 \-\-no-render||Do not render anything and quit just after loading the first file, use with \-\-verbose to recover information about a file.
 \-\-max-size=\<size in MiB\>|-1|Prevent F3D to load a file bigger than the provided size in Mib, negative value means unlimited, useful for thumbnails.
+\-\-watch||Watch current file and automatically reload it whenever it is modified on disk.
 \-\-load-plugins=\<paths or names\>||List of plugins to load separated with a comma. Official plugins are `alembic`, `assimp`, `draco`, `exodus`, `occt`, `usd`, `vdb`. See [usage](USAGE.md) for more info.
 
 ## General Options
@@ -99,6 +100,7 @@ Options|Default|Description
 \-\-camera-zoom-factor=\<factor\>||Set the camera zoom factor relative to the autozoom on data, a strictly positive value.
 \-\-camera-azimuth-angle=\<angle\>|0.0|Apply an azimuth transformation to the camera, in degrees, added after other camera options.
 \-\-camera-elevation-angle=\<angle\>|0.0|Apply an elevation transformation to the camera, in degrees, added after other camera options.
+\-\-camera-orthographic||Set the camera to use the orthographic projection.
 
 ## Raytracing options
 
