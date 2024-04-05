@@ -56,6 +56,7 @@ public:
   void SetBackground(const double* backgroundColor) override;
   void SetLightIntensity(const double intensity);
   void SetFilenameInfo(const std::string& info);
+  void SetAnimationnameInfo(const std::string& info);
   void SetDropZoneInfo(const std::string& info);
   void SetGridAbsolute(bool absolute);
   void SetGridUnitSquare(double unitSquare);
@@ -234,6 +235,11 @@ protected:
    */
   void CreateCacheDirectory();
 
+  /**
+   * Shorten a provided name with "..."
+   */
+  static std::string ShortName(const std::string& name, int maxChar);
+
   vtkNew<vtkCamera> InitialCamera;
 
   vtkSmartPointer<vtkOrientationMarkerWidget> AxisWidget;
@@ -316,6 +322,7 @@ protected:
   std::string GridInfo;
 
   std::string CachePath;
+  std::string AnimationNameInfo;
 };
 
 #endif

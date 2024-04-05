@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Class image &#8212; libf3d 2.3.0 documentation</title>
+    <title>Class image &#8212; libf3d 2.4.0 documentation</title>
   
   
   
@@ -122,7 +122,7 @@
   
   
   
-    <p class="title logo__title">libf3d 2.3.0 documentation</p>
+    <p class="title logo__title">libf3d 2.4.0 documentation</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -592,6 +592,16 @@ document.write(`
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d5image5imageEjjj11ChannelType">
 <span id="_CPPv3N3f3d5image5imageEjjj11ChannelType"></span><span id="_CPPv2N3f3d5image5imageEjjj11ChannelType"></span><span id="f3d::image::image__unsigned-i.unsigned-i.unsigned-i.ChannelType"></span><span class="target" id="classf3d_1_1image_1a86af78ae19a5d661fd4d91ea6d27d5b3"></span><span class="sig-name descname"><span class="n"><span class="pre">image</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">width</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">height</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">channelCount</span></span>, <a class="reference internal" href="#_CPPv4N3f3d5image11ChannelTypeE" title="f3d::image::ChannelType"><span class="n"><span class="pre">ChannelType</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">type</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d5image11ChannelTypeE" title="f3d::image::ChannelType"><span class="n"><span class="pre">ChannelType</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N3f3d5image11ChannelType4BYTEE" title="f3d::image::ChannelType::BYTE"><span class="n"><span class="pre">BYTE</span></span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d5image5imageEjjj11ChannelType" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Create an image from a given width, height, and channel count. A channel type can also be given. Default is BYTE. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3f3d5image18getNormalizedPixelERKNSt4pairIiiEE">
+<span id="_CPPv3NK3f3d5image18getNormalizedPixelERKNSt4pairIiiEE"></span><span id="_CPPv2NK3f3d5image18getNormalizedPixelERKNSt4pairIiiEE"></span><span id="f3d::image::getNormalizedPixel__std::pair:i.i:CRC"></span><span class="target" id="classf3d_1_1image_1aea5f94444558208b147f0d3db155424c"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNormalizedPixel</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">xy</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3f3d5image18getNormalizedPixelERKNSt4pairIiiEE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Read one specific pixel and return all channel normalized values. If the channel type is BYTE or SHORT, the values are normalized to [0, 1] range. </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Because of the normalization, this function can be slow, prefer getContent when reading several pixels and normalization is not needed. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp function">

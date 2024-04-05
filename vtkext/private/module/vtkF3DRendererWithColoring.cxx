@@ -15,6 +15,7 @@
 #include <vtkProperty.h>
 #include <vtkScalarBarActor.h>
 #include <vtkScalarsToColors.h>
+#include <vtkShader.h>
 #include <vtkSmartVolumeMapper.h>
 #include <vtkTexture.h>
 #include <vtkVolumeProperty.h>
@@ -257,6 +258,18 @@ void vtkF3DRendererWithColoring::SetPointProperties(SplatType type, double point
     return;
   }
 
+  if (type == SplatType::GAUSSIAN)
+  {
+#if VTK_VERSION_NUMBER >= VTK_VERSION_CHECK(9, 3, 20231102)
+    if (!vtkShader::IsComputeShaderSupported())
+    {
+      F3DLog::Print(F3DLog::Severity::Warning,
+        "Compute shaders are not supported, gaussians are not sorted, resulting in blending "
+        "artifacts");
+    }
+#endif
+  }
+
   const vtkBoundingBox& bbox = this->Importer->GetGeometryBoundingBox();
 
   double scaleFactor = 1.0;
@@ -274,11 +287,11 @@ void vtkF3DRendererWithColoring::SetPointProperties(SplatType type, double point
     {
       mapper->SetScaleFactor(1.0);
       mapper->SetSplatShaderCode(nullptr); // gaussian is the default VTK shader
+      mapper->SetScaleArray("scale");
 
 #if VTK_VERSION_NUMBER >= VTK_VERSION_CHECK(9, 3, 20231102)
       mapper->AnisotropicOn();
       mapper->SetBoundScale(3.0);
-      mapper->SetScaleArray("scale");
       mapper->SetRotationArray("rotation");
 
       int* viewport = this->GetSize();
@@ -286,6 +299,9 @@ void vtkF3DRendererWithColoring::SetPointProperties(SplatType type, double point
       float lowPass[3] = { 0.3f / (viewport[0] * viewport[0]), 0.f,
         0.3f / (viewport[1] * viewport[1]) };
       mapper->SetLowpassMatrix(lowPass);
+#else
+      F3DLog::Print(F3DLog::Severity::Warning,
+        "Gaussian splatting selected but VTK <= 9.3 only supports isotropic gaussians");
 #endif
 
       actor->ForceTranslucentOn();
@@ -962,8 +978,7 @@ void vtkF3DRendererWithColoring::FillCheatSheetHotkeys(std::stringstream& cheatS
   cheatSheetText << " C: Cell scalars coloring [" << (this->UseCellColoring ? "ON" : "OFF")
                  << "]\n";
   cheatSheetText << " S: Scalars coloring ["
-                 << (hasColoring ? vtkF3DRendererWithColoring::ShortName(info.Name, 19) : "OFF")
-                 << "]\n";
+                 << (hasColoring ? vtkF3DRenderer::ShortName(info.Name, 19) : "OFF") << "]\n";
   cheatSheetText << " Y: Coloring component ["
                  << vtkF3DRendererWithColoring::ComponentToString(this->ComponentForColoring)
                  << "]\n";
@@ -1089,18 +1104,5 @@ std::string vtkF3DRendererWithColoring::ComponentToString(int component)
       componentName += std::to_string(component);
     }
     return componentName;
-  }
-}
-
-//----------------------------------------------------------------------------
-std::string vtkF3DRendererWithColoring::ShortName(const std::string& name, int maxChar)
-{
-  if (name.size() <= static_cast<size_t>(maxChar) || maxChar <= 3)
-  {
-    return name;
-  }
-  else
-  {
-    return name.substr(0, maxChar - 3) + "...";
   }
 }

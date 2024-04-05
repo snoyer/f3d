@@ -56,6 +56,8 @@ Program Listing for File image.h
      bool operator==(const image& reference) const;
      bool operator!=(const image& reference) const;
    
+     std::vector<double> getNormalizedPixel(const std::pair<int, int>& xy) const;
+   
      static std::vector<std::string> getSupportedFormats();
    
    
