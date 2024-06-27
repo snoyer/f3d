@@ -8,6 +8,7 @@
 #include "vtkF3DDropZoneActor.h"
 #include "vtkF3DOpenGLGridMapper.h"
 #include "vtkF3DRenderPass.h"
+#include "vtkF3DUserRenderPass.h"
 
 #include <vtkAxesActor.h>
 #include <vtkBoundingBox.h>
@@ -296,8 +297,13 @@ void vtkF3DRenderer::ConfigureRenderPasses()
   if (this->UseToneMappingPass)
   {
     vtkNew<vtkToneMappingPass> toneP;
+
+#if VTK_VERSION_NUMBER >= VTK_VERSION_CHECK(9, 3, 20240609)
+    toneP->SetToneMappingType(vtkToneMappingPass::NeutralPBR);
+#else
     toneP->SetToneMappingType(vtkToneMappingPass::GenericFilmic);
     toneP->SetGenericFilmicDefaultPresets();
+#endif
     toneP->SetDelegatePass(renderingPass);
     renderingPass = toneP;
   }
@@ -309,6 +315,25 @@ void vtkF3DRenderer::ConfigureRenderPasses()
 
     this->SetPass(fxaaP);
     renderingPass = fxaaP;
+  }
+
+  if (!this->FinalShader.empty())
+  {
+    // basic validation
+    if (this->FinalShader.find("pixel") != std::string::npos)
+    {
+      vtkNew<vtkF3DUserRenderPass> userP;
+      userP->SetUserShader(this->FinalShader.c_str());
+      userP->SetDelegatePass(renderingPass);
+
+      this->SetPass(userP);
+      renderingPass = userP;
+    }
+    else
+    {
+      F3DLog::Print(F3DLog::Severity::Warning,
+        "Final shader must define a function named \"pixel\"");
+    }
   }
 
   this->SetPass(renderingPass);
@@ -454,6 +479,20 @@ void vtkF3DRenderer::SetGridSubdivisions(int subdivisions)
 }
 
 //----------------------------------------------------------------------------
+void vtkF3DRenderer::SetGridColor(const std::vector<double>& color)
+{
+  assert(color.size() == 3);
+
+  if (this->GridColor[0] != color[0] || this->GridColor[1] != color[1] || this->GridColor[2] != color[2])
+  {
+    this->GridColor[0] = color[0];
+    this->GridColor[1] = color[1];
+    this->GridColor[2] = color[2];
+    this->GridConfigured = false;
+  }
+}
+
+//----------------------------------------------------------------------------
 void vtkF3DRenderer::ShowGrid(bool show)
 {
   if (this->GridVisible != show)
@@ -525,7 +564,7 @@ void vtkF3DRenderer::ConfigureGridUsingCurrentActors()
       if (this->GridAbsolute)
         gridMapper->SetOriginOffset(-gridPos[0], -gridPos[1], -gridPos[2]);
 
-      this->GridActor->GetProperty()->SetColor(0.0, 0.0, 0.0);
+      this->GridActor->GetProperty()->SetColor(this->GridColor);
       this->GridActor->ForceTranslucentOn();
       this->GridActor->SetPosition(gridPos);
       this->GridActor->SetMapper(gridMapper);
@@ -1102,6 +1141,17 @@ void vtkF3DRenderer::SetUseBlurBackground(bool use)
     this->CheatSheetConfigured = false;
   }
 }
+
+//----------------------------------------------------------------------------
+void vtkF3DRenderer::SetBackfaceType(const std::string& backfaceType)
+{
+  if (this->BackfaceType != backfaceType)
+  {
+    this->BackfaceType = backfaceType;
+    this->RenderPassesConfigured = false;
+  }
+}
+
 //----------------------------------------------------------------------------
 void vtkF3DRenderer::SetBlurCircleOfConfusionRadius(double radius)
 {
@@ -1120,6 +1170,16 @@ void vtkF3DRenderer::SetUseSSAOPass(bool use)
     this->UseSSAOPass = use;
     this->RenderPassesConfigured = false;
     this->CheatSheetConfigured = false;
+  }
+}
+
+//----------------------------------------------------------------------------
+void vtkF3DRenderer::SetFinalShader(const std::string& finalShader)
+{
+  if (this->FinalShader != finalShader)
+  {
+    this->FinalShader = finalShader;
+    this->RenderPassesConfigured = false;
   }
 }
 
@@ -1338,6 +1398,18 @@ void vtkF3DRenderer::ConfigureActorsProperties()
       anActor->GetProperty()->SetEdgeVisibility(this->EdgeVisible);
       anActor->GetProperty()->SetLineWidth(this->LineWidth);
       anActor->GetProperty()->SetPointSize(this->PointSize);
+      if (this->BackfaceType == "visible")
+      {
+        anActor->GetProperty()->SetBackfaceCulling(false);
+      }
+      else if (this->BackfaceType == "hidden")
+      {
+        anActor->GetProperty()->SetBackfaceCulling(true);
+      }
+      else if (this->BackfaceType != "default")
+      {
+        F3DLog::Print(F3DLog::Severity::Warning, this->BackfaceType + " is not a valid backface type, assuming default");
+      }
     }
   }
   this->ActorsPropertiesConfigured = true;

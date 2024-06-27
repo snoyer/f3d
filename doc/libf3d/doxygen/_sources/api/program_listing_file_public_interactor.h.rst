@@ -55,7 +55,7 @@ Program Listing for File interactor.h
    
      virtual void stop() = 0;
    
-     static const std::vector<std::pair<std::string, std::string> >& getDefaultInteractionsInfo();
+     static const std::vector<std::pair<std::string, std::string>>& getDefaultInteractionsInfo();
    
    protected:
      interactor() = default;
