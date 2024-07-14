@@ -46,3 +46,13 @@ Files
    :maxdepth: 5
 
    file_module_vtkF3DFaceVaryingPointDispatcher.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_module_vtkF3DImporter.cxx.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_module_vtkF3DImporter.h.rst
