@@ -360,15 +360,9 @@ document.write(`
 
 <span class="w">  </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getWidth</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 <span class="w">  </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getHeight</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
-<span class="cp">#ifndef F3D_NO_DEPRECATED</span>
-<span class="w">  </span><span class="n">F3D_DEPRECATED</span><span class="w"> </span><span class="n">image</span><span class="o">&amp;</span><span class="w"> </span><span class="n">setResolution</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">);</span>
-<span class="cp">#endif</span>
 
 
 <span class="w">  </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getChannelCount</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
-<span class="cp">#ifndef F3D_NO_DEPRECATED</span>
-<span class="w">  </span><span class="n">F3D_DEPRECATED</span><span class="w"> </span><span class="n">image</span><span class="o">&amp;</span><span class="w"> </span><span class="n">setChannelCount</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">dim</span><span class="p">);</span>
-<span class="cp">#endif</span>
 
 <span class="w">  </span><span class="n">ChannelType</span><span class="w"> </span><span class="nf">getChannelType</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 
@@ -377,10 +371,6 @@ document.write(`
 
 <span class="w">  </span><span class="n">image</span><span class="o">&amp;</span><span class="w"> </span><span class="nf">setContent</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">buffer</span><span class="p">);</span>
 <span class="w">  </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="nf">getContent</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
-<span class="cp">#ifndef F3D_NO_DEPRECATED</span>
-<span class="w">  </span><span class="n">F3D_DEPRECATED</span><span class="w"> </span><span class="n">image</span><span class="o">&amp;</span><span class="w"> </span><span class="n">setData</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">buffer</span><span class="p">);</span>
-<span class="w">  </span><span class="n">F3D_DEPRECATED</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">getData</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
-<span class="cp">#endif</span>
 
 <span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="nf">compare</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">image</span><span class="o">&amp;</span><span class="w"> </span><span class="n">reference</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">threshold</span><span class="p">,</span><span class="w"> </span><span class="n">image</span><span class="o">&amp;</span><span class="w"> </span><span class="n">diff</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&amp;</span><span class="w"> </span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 

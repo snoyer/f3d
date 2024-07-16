@@ -63,15 +63,9 @@ Program Listing for File image.h
    
      unsigned int getWidth() const;
      unsigned int getHeight() const;
-   #ifndef F3D_NO_DEPRECATED
-     F3D_DEPRECATED image& setResolution(unsigned int width, unsigned int height);
-   #endif
    
    
      unsigned int getChannelCount() const;
-   #ifndef F3D_NO_DEPRECATED
-     F3D_DEPRECATED image& setChannelCount(unsigned int dim);
-   #endif
    
      ChannelType getChannelType() const;
    
@@ -80,10 +74,6 @@ Program Listing for File image.h
    
      image& setContent(void* buffer);
      void* getContent() const;
-   #ifndef F3D_NO_DEPRECATED
-     F3D_DEPRECATED image& setData(unsigned char* buffer);
-     F3D_DEPRECATED unsigned char* getData() const;
-   #endif
    
      bool compare(const image& reference, double threshold, image& diff, double& error) const;
    
