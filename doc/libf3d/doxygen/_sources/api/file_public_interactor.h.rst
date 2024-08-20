@@ -36,7 +36,7 @@ Includes
 
 - ``loader.h`` (:ref:`file_public_loader.h`)
 
-- ``options.h`` (:ref:`file_public_options.h`)
+- ``options.h``
 
 - ``string``
 

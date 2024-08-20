@@ -139,8 +139,6 @@
 <li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1image_1_1write__exception.html">Struct image::write_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1loader_1_1load__failure__exception.html">Struct loader::load_failure_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1mesh__t.html">Struct mesh_t</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1options_1_1incompatible__exception.html">Struct options::incompatible_exception</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1options_1_1inexistent__exception.html">Struct options::inexistent_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1point3__t.html">Struct point3_t</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1vector3__t.html">Struct vector3_t</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/classf3d_1_1camera.html">Class camera</a></li>
@@ -150,7 +148,7 @@
 <li class="toctree-l2"><a class="reference internal" href="api/classf3d_1_1interactor.html">Class interactor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/classf3d_1_1loader.html">Class loader</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/classf3d_1_1log.html">Class log</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/classf3d_1_1options.html">Class options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/classf3d_1_1ratio__t.html">Class ratio_t</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/classf3d_1_1utils.html">Class utils</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/classf3d_1_1window.html">Class window</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/typedef_types_8h_1a62f3e15e4e18455b52854622b27c02ed.html">Typedef f3d::angle_deg_t</a></li>
@@ -446,6 +444,8 @@ document.write(`
 </li>
       <li><a href="api/classf3d_1_1image.html#_CPPv4N3f3d5image18metadata_exceptionE">f3d::image::metadata_exception (C++ struct)</a>, <a href="api/structf3d_1_1image_1_1metadata__exception.html#_CPPv4N3f3d5image18metadata_exceptionE">[1]</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/classf3d_1_1image.html#_CPPv4N3f3d5image18metadata_exception18metadata_exceptionERKNSt6stringE">f3d::image::metadata_exception::metadata_exception (C++ function)</a>, <a href="api/structf3d_1_1image_1_1metadata__exception.html#_CPPv4N3f3d5image18metadata_exception18metadata_exceptionERKNSt6stringE">[1]</a>
 </li>
       <li><a href="api/classf3d_1_1image.html#_CPPv4NK3f3d5imageneERK5image">f3d::image::operator!= (C++ function)</a>
@@ -470,8 +470,6 @@ document.write(`
 </li>
       <li><a href="api/classf3d_1_1image.html#_CPPv4N3f3d5image10SaveFormat3PNGE">f3d::image::SaveFormat::PNG (C++ enumerator)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/classf3d_1_1image.html#_CPPv4N3f3d5image10SaveFormat3TIFE">f3d::image::SaveFormat::TIF (C++ enumerator)</a>
 </li>
       <li><a href="api/classf3d_1_1image.html#_CPPv4N3f3d5image10setContentEPv">f3d::image::setContent (C++ function)</a>
@@ -574,63 +572,15 @@ document.write(`
 </li>
       <li><a href="api/structf3d_1_1mesh__t.html#_CPPv4N3f3d6mesh_t19texture_coordinatesE">f3d::mesh_t::texture_coordinates (C++ member)</a>
 </li>
-      <li><a href="api/classf3d_1_1options.html#_CPPv4N3f3d7optionsE">f3d::options (C++ class)</a>
-</li>
-      <li><a href="api/classf3d_1_1options.html#_CPPv4N3f3d7options4copyERK7optionsRKNSt6stringE">f3d::options::copy (C++ function)</a>
-</li>
-      <li><a href="api/classf3d_1_1options.html#_CPPv4NK3f3d7options3getERKNSt6stringERNSt6stringE">f3d::options::get (C++ function)</a>, <a href="api/classf3d_1_1options.html#_CPPv4NK3f3d7options3getERKNSt6stringERNSt6vectorIdEE">[1]</a>, <a href="api/classf3d_1_1options.html#_CPPv4NK3f3d7options3getERKNSt6stringERNSt6vectorIiEE">[2]</a>, <a href="api/classf3d_1_1options.html#_CPPv4NK3f3d7options3getERKNSt6stringERb">[3]</a>, <a href="api/classf3d_1_1options.html#_CPPv4NK3f3d7options3getERKNSt6stringERd">[4]</a>, <a href="api/classf3d_1_1options.html#_CPPv4NK3f3d7options3getERKNSt6stringERi">[5]</a>
-</li>
-      <li><a href="api/classf3d_1_1options.html#_CPPv4NK3f3d7options9getAsBoolERKNSt6stringE">f3d::options::getAsBool (C++ function)</a>
-</li>
-      <li><a href="api/classf3d_1_1options.html#_CPPv4N3f3d7options12getAsBoolRefERKNSt6stringE">f3d::options::getAsBoolRef (C++ function)</a>
-</li>
-      <li><a href="api/classf3d_1_1options.html#_CPPv4NK3f3d7options11getAsDoubleERKNSt6stringE">f3d::options::getAsDouble (C++ function)</a>
-</li>
-      <li><a href="api/classf3d_1_1options.html#_CPPv4N3f3d7options14getAsDoubleRefERKNSt6stringE">f3d::options::getAsDoubleRef (C++ function)</a>
-</li>
-      <li><a href="api/classf3d_1_1options.html#_CPPv4NK3f3d7options17getAsDoubleVectorERKNSt6stringE">f3d::options::getAsDoubleVector (C++ function)</a>
-</li>
-      <li><a href="api/classf3d_1_1options.html#_CPPv4N3f3d7options20getAsDoubleVectorRefERKNSt6stringE">f3d::options::getAsDoubleVectorRef (C++ function)</a>
-</li>
-      <li><a href="api/classf3d_1_1options.html#_CPPv4NK3f3d7options8getAsIntERKNSt6stringE">f3d::options::getAsInt (C++ function)</a>
-</li>
-      <li><a href="api/classf3d_1_1options.html#_CPPv4N3f3d7options11getAsIntRefERKNSt6stringE">f3d::options::getAsIntRef (C++ function)</a>
-</li>
-      <li><a href="api/classf3d_1_1options.html#_CPPv4NK3f3d7options14getAsIntVectorERKNSt6stringE">f3d::options::getAsIntVector (C++ function)</a>
-</li>
-      <li><a href="api/classf3d_1_1options.html#_CPPv4N3f3d7options17getAsIntVectorRefERKNSt6stringE">f3d::options::getAsIntVectorRef (C++ function)</a>
-</li>
-      <li><a href="api/classf3d_1_1options.html#_CPPv4NK3f3d7options11getAsStringERKNSt6stringE">f3d::options::getAsString (C++ function)</a>
-</li>
-      <li><a href="api/classf3d_1_1options.html#_CPPv4N3f3d7options14getAsStringRefERKNSt6stringE">f3d::options::getAsStringRef (C++ function)</a>
-</li>
-      <li><a href="api/classf3d_1_1options.html#_CPPv4NK3f3d7options16getClosestOptionERKNSt6stringE">f3d::options::getClosestOption (C++ function)</a>
-</li>
-      <li><a href="api/classf3d_1_1options.html#_CPPv4N3f3d7options8getNamesEv">f3d::options::getNames (C++ function)</a>
-</li>
-      <li><a href="api/classf3d_1_1options.html#_CPPv4N3f3d7options22incompatible_exceptionE">f3d::options::incompatible_exception (C++ struct)</a>, <a href="api/structf3d_1_1options_1_1incompatible__exception.html#_CPPv4N3f3d7options22incompatible_exceptionE">[1]</a>
-</li>
-      <li><a href="api/classf3d_1_1options.html#_CPPv4N3f3d7options22incompatible_exception22incompatible_exceptionERKNSt6stringE">f3d::options::incompatible_exception::incompatible_exception (C++ function)</a>, <a href="api/structf3d_1_1options_1_1incompatible__exception.html#_CPPv4N3f3d7options22incompatible_exception22incompatible_exceptionERKNSt6stringE">[1]</a>
-</li>
-      <li><a href="api/classf3d_1_1options.html#_CPPv4N3f3d7options20inexistent_exceptionE">f3d::options::inexistent_exception (C++ struct)</a>, <a href="api/structf3d_1_1options_1_1inexistent__exception.html#_CPPv4N3f3d7options20inexistent_exceptionE">[1]</a>
-</li>
-      <li><a href="api/classf3d_1_1options.html#_CPPv4N3f3d7options20inexistent_exception20inexistent_exceptionERKNSt6stringE">f3d::options::inexistent_exception::inexistent_exception (C++ function)</a>, <a href="api/structf3d_1_1options_1_1inexistent__exception.html#_CPPv4N3f3d7options20inexistent_exception20inexistent_exceptionERKNSt6stringE">[1]</a>
-</li>
-      <li><a href="api/classf3d_1_1options.html#_CPPv4NK3f3d7options6isSameERK7optionsRKNSt6stringE">f3d::options::isSame (C++ function)</a>
-</li>
-      <li><a href="api/classf3d_1_1options.html#_CPPv4N3f3d7optionsaSERK7options">f3d::options::operator= (C++ function)</a>, <a href="api/classf3d_1_1options.html#_CPPv4N3f3d7optionsaSERR7options">[1]</a>
-</li>
-      <li><a href="api/classf3d_1_1options.html#_CPPv4N3f3d7options7optionsERK7options">f3d::options::options (C++ function)</a>, <a href="api/classf3d_1_1options.html#_CPPv4N3f3d7options7optionsERR7options">[1]</a>, <a href="api/classf3d_1_1options.html#_CPPv4N3f3d7options7optionsEv">[2]</a>
-</li>
-      <li><a href="api/classf3d_1_1options.html#_CPPv4N3f3d7options3setERKNSt6stringENSt16initializer_listIdEE">f3d::options::set (C++ function)</a>, <a href="api/classf3d_1_1options.html#_CPPv4N3f3d7options3setERKNSt6stringENSt16initializer_listIiEE">[1]</a>, <a href="api/classf3d_1_1options.html#_CPPv4N3f3d7options3setERKNSt6stringEPKc">[2]</a>, <a href="api/classf3d_1_1options.html#_CPPv4N3f3d7options3setERKNSt6stringERKNSt6stringE">[3]</a>, <a href="api/classf3d_1_1options.html#_CPPv4N3f3d7options3setERKNSt6stringERKNSt6vectorIdEE">[4]</a>, <a href="api/classf3d_1_1options.html#_CPPv4N3f3d7options3setERKNSt6stringERKNSt6vectorIiEE">[5]</a>, <a href="api/classf3d_1_1options.html#_CPPv4N3f3d7options3setERKNSt6stringEb">[6]</a>, <a href="api/classf3d_1_1options.html#_CPPv4N3f3d7options3setERKNSt6stringEd">[7]</a>, <a href="api/classf3d_1_1options.html#_CPPv4N3f3d7options3setERKNSt6stringEi">[8]</a>
-</li>
-      <li><a href="api/classf3d_1_1options.html#_CPPv4N3f3d7options6toggleERKNSt6stringE">f3d::options::toggle (C++ function)</a>
-</li>
-      <li><a href="api/classf3d_1_1options.html#_CPPv4N3f3d7optionsD0Ev">f3d::options::~options (C++ function)</a>
-</li>
       <li><a href="api/structf3d_1_1point3__t.html#_CPPv4N3f3d8point3_tE">f3d::point3_t (C++ struct)</a>
 </li>
       <li><a href="api/structf3d_1_1point3__t.html#_CPPv4IDpEN3f3d8point3_t8point3_tEDpRR4Args">f3d::point3_t::point3_t (C++ function)</a>
+</li>
+      <li><a href="api/classf3d_1_1ratio__t.html#_CPPv4N3f3d7ratio_tE">f3d::ratio_t (C++ class)</a>
+</li>
+      <li><a href="api/classf3d_1_1ratio__t.html#_CPPv4NK3f3d7ratio_tcvdEv">f3d::ratio_t::operator double (C++ function)</a>
+</li>
+      <li><a href="api/classf3d_1_1ratio__t.html#_CPPv4N3f3d7ratio_t7ratio_tEd">f3d::ratio_t::ratio_t (C++ function)</a>, <a href="api/classf3d_1_1ratio__t.html#_CPPv4N3f3d7ratio_t7ratio_tEv">[1]</a>
 </li>
       <li><a href="api/classf3d_1_1utils.html#_CPPv4N3f3d5utilsE">f3d::utils (C++ class)</a>
 </li>

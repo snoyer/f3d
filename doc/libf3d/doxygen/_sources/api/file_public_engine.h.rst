@@ -40,7 +40,7 @@ Includes
 
 - ``map``
 
-- ``options.h`` (:ref:`file_public_options.h`)
+- ``options.h``
 
 - ``string``
 

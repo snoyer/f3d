@@ -68,6 +68,8 @@ Classes
 
 - :ref:`exhale_struct_structf3d_1_1vector3__t`
 
+- :ref:`exhale_class_classf3d_1_1ratio__t`
+
 
 Typedefs
 --------

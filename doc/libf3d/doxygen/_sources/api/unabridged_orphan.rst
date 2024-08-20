@@ -55,11 +55,6 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file_public_options.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file_public_types.h.rst
 
 .. toctree::

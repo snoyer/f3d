@@ -75,9 +75,9 @@
 <span class="n">f3d</span><span class="o">::</span><span class="n">engine</span> <span class="nf">eng</span><span class="p">();</span>
 
 <span class="c1">// Recover the options and set the wanted value</span>
-<span class="n">eng</span><span class="p">.</span><span class="n">getOptions</span><span class="p">()</span>
-  <span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="s">"render.effect.ambient-occlusion"</span><span class="p">,</span> <span class="nb">true</span><span class="p">)</span>
-  <span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="s">"render.effect.anti-aliasing"</span><span class="p">,</span> <span class="nb">true</span><span class="p">);</span>
+<span class="n">options</span><span class="o">&amp;</span> <span class="n">opt</span> <span class="o">=</span> <span class="n">eng</span><span class="p">.</span><span class="n">getOptions</span><span class="p">();</span>
+<span class="n">opt</span><span class="p">.</span><span class="n">render</span><span class="p">.</span><span class="n">effect</span><span class="p">.</span><span class="n">ambient_occlusion</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+<span class="n">opt</span><span class="p">.</span><span class="n">render</span><span class="p">.</span><span class="n">effect</span><span class="p">.</span><span class="n">anti_aliasing</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
 
 <span class="c1">// Standard libf3d usage</span>
 <span class="n">eng</span><span class="p">.</span><span class="n">getLoader</span><span class="p">().</span><span class="n">loadGeometry</span><span class="p">(</span><span class="s">"path/to/file.ext"</span><span class="p">);</span>

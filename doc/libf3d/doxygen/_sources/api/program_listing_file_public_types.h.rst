@@ -41,6 +41,23 @@ Program Listing for File types.h
    
    using angle_deg_t = double;
    
+   class ratio_t
+   {
+   public:
+     ratio_t() = default;
+     ratio_t(double val)
+       : Value(val)
+     {
+     }
+     operator double() const
+     {
+       return this->Value;
+     }
+   
+   private:
+     double Value;
+   };
+   
    struct mesh_t
    {
      std::vector<float> points;

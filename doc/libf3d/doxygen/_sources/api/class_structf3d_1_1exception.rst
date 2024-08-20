@@ -25,8 +25,6 @@ Derived Types
 - ``public f3d::image::read_exception`` (:ref:`exhale_struct_structf3d_1_1image_1_1read__exception`)
 - ``public f3d::image::write_exception`` (:ref:`exhale_struct_structf3d_1_1image_1_1write__exception`)
 - ``public f3d::loader::load_failure_exception`` (:ref:`exhale_struct_structf3d_1_1loader_1_1load__failure__exception`)
-- ``public f3d::options::incompatible_exception`` (:ref:`exhale_struct_structf3d_1_1options_1_1incompatible__exception`)
-- ``public f3d::options::inexistent_exception`` (:ref:`exhale_struct_structf3d_1_1options_1_1inexistent__exception`)
 
 
 Class Documentation

@@ -39,10 +39,6 @@ Classes
 
 - :ref:`exhale_struct_structf3d_1_1mesh__t`
 
-- :ref:`exhale_struct_structf3d_1_1options_1_1incompatible__exception`
-
-- :ref:`exhale_struct_structf3d_1_1options_1_1inexistent__exception`
-
 - :ref:`exhale_struct_structf3d_1_1point3__t`
 
 - :ref:`exhale_struct_structf3d_1_1vector3__t`
@@ -61,7 +57,7 @@ Classes
 
 - :ref:`exhale_class_classf3d_1_1log`
 
-- :ref:`exhale_class_classf3d_1_1options`
+- :ref:`exhale_class_classf3d_1_1ratio__t`
 
 - :ref:`exhale_class_classf3d_1_1utils`
 
