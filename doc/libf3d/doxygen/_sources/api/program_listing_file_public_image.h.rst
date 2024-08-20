@@ -75,7 +75,7 @@ Program Listing for File image.h
      image& setContent(void* buffer);
      void* getContent() const;
    
-     bool compare(const image& reference, double threshold, image& diff, double& error) const;
+     bool compare(const image& reference, double threshold, double& error) const;
    
      void save(const std::string& path, SaveFormat format = SaveFormat::PNG) const;
    
@@ -99,6 +99,11 @@ Program Listing for File image.h
      struct read_exception : public exception
      {
        explicit read_exception(const std::string& what = "");
+     };
+   
+     struct metadata_exception : public exception
+     {
+       explicit metadata_exception(const std::string& what = "");
      };
    
    private:

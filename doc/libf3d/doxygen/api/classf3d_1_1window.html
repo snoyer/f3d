@@ -137,6 +137,7 @@
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1engine_1_1no__window__exception.html">Struct engine::no_window_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1engine_1_1plugin__exception.html">Struct engine::plugin_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1engine_1_1readerInformation.html">Struct engine::readerInformation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1image_1_1metadata__exception.html">Struct image::metadata_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1image_1_1read__exception.html">Struct image::read_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1image_1_1write__exception.html">Struct image::write_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1loader_1_1load__failure__exception.html">Struct loader::load_failure_exception</a></li>
@@ -333,9 +334,9 @@ document.write(`
 <dl class="cpp enum-class">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6window4TypeE">
 <span id="_CPPv3N3f3d6window4TypeE"></span><span id="_CPPv2N3f3d6window4TypeE"></span><span class="target" id="classf3d_1_1window_1a4742753b53b500ca62f402424aa1f471"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Type</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><a class="headerlink" href="#_CPPv4N3f3d6window4TypeE" title="Permalink to this definition">#</a><br /></dt>
-<dd><section id="classf3d_1_1window_1autotoc_md3">
-<h3>Enumeration of supported window types<a class="headerlink" href="#classf3d_1_1window_1autotoc_md3" title="Permalink to this heading">#</a></h3>
-<p id="classf3d_1_1window_1autotoc_md3">NONE: A mock window without rendering capabilities. NATIVE: A window using the native graphical stack. NATIVE_OFFSCREEN: A native window rendering to an offscreen buffer, not visible on screen. EXTERNAL: An external window that assume the OpenGL context would have been created by. another framework </p>
+<dd><section id="classf3d_1_1window_1autotoc_md2">
+<h3>Enumeration of supported window types<a class="headerlink" href="#classf3d_1_1window_1autotoc_md2" title="Permalink to this heading">#</a></h3>
+<p id="classf3d_1_1window_1autotoc_md2">NONE: A mock window without rendering capabilities. NATIVE: A window using the native graphical stack. NATIVE_OFFSCREEN: A native window rendering to an offscreen buffer, not visible on screen. EXTERNAL: An external window that assume the OpenGL context would have been created by. another framework </p>
 </section>
 <p><em>Values:</em></p>
 <dl class="cpp enumerator">
@@ -384,7 +385,7 @@ document.write(`
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6window13renderToImageEb">
 <span id="_CPPv3N3f3d6window13renderToImageEb"></span><span id="_CPPv2N3f3d6window13renderToImageEb"></span><span id="f3d::window::renderToImage__b"></span><span class="target" id="classf3d_1_1window_1a5f680e97668e40cb8640a9c6d8340b57"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="classf3d_1_1image.html#_CPPv4N3f3d5imageE" title="f3d::image"><span class="n"><span class="pre">image</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">renderToImage</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">noBackground</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6window13renderToImageEb" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Perform a render of the window to the screen and save the result in a <a class="reference internal" href="classf3d_1_1image.html#classf3d_1_1image"><span class="std std-ref">f3d::image</span></a>. Set noBackground to true to have a transparent background. Return the resulting <a class="reference internal" href="classf3d_1_1image.html#classf3d_1_1image"><span class="std std-ref">f3d::image</span></a>. </p>
+<dd><p>Perform a render of the window to the screen and save the result in a <a class="reference internal" href="classf3d_1_1image.html#classf3d_1_1image"><span class="std std-ref">f3d::image</span></a>. of ChannelType BYTE and 3 or 4 components (RGB or RGBA). Set noBackground to true to have a transparent background. Return the resulting <a class="reference internal" href="classf3d_1_1image.html#classf3d_1_1image"><span class="std std-ref">f3d::image</span></a>. </p>
 </dd></dl>
 
 <dl class="cpp function">

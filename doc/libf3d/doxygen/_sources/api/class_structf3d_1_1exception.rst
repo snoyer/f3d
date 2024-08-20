@@ -21,6 +21,7 @@ Derived Types
 - ``public f3d::engine::no_interactor_exception`` (:ref:`exhale_struct_structf3d_1_1engine_1_1no__interactor__exception`)
 - ``public f3d::engine::no_window_exception`` (:ref:`exhale_struct_structf3d_1_1engine_1_1no__window__exception`)
 - ``public f3d::engine::plugin_exception`` (:ref:`exhale_struct_structf3d_1_1engine_1_1plugin__exception`)
+- ``public f3d::image::metadata_exception`` (:ref:`exhale_struct_structf3d_1_1image_1_1metadata__exception`)
 - ``public f3d::image::read_exception`` (:ref:`exhale_struct_structf3d_1_1image_1_1read__exception`)
 - ``public f3d::image::write_exception`` (:ref:`exhale_struct_structf3d_1_1image_1_1write__exception`)
 - ``public f3d::loader::load_failure_exception`` (:ref:`exhale_struct_structf3d_1_1loader_1_1load__failure__exception`)
