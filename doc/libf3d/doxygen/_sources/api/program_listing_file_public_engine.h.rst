@@ -61,14 +61,10 @@ Program Listing for File engine.h
        std::string BuildDate;
        std::string BuildSystem;
        std::string Compiler;
-       std::string RaytracingModule;
-       std::string ExternalRenderingModule;
-       std::string OpenEXRModule;
+       std::map<std::string, bool> Modules;
        std::string VTKVersion;
-       std::string PreviousCopyright;
-       std::string Copyright;
+       std::vector<std::string> Copyrights;
        std::string License;
-       std::string Authors;
      };
    
      static libInformation getLibInfo();
