@@ -27,12 +27,19 @@ Program Listing for File window.h
      enum class Type : unsigned char
      {
        NONE,
-       NATIVE,
-       NATIVE_OFFSCREEN,
-       EXTERNAL
+       EXTERNAL,
+       GLX,
+       WGL,
+       COCOA,
+       EGL,
+       OSMESA,
+       WASM,
+       UNKNOWN
      };
    
      virtual Type getType() = 0;
+   
+     virtual bool isOffscreen() = 0;
    
      virtual camera& getCamera() = 0;
    

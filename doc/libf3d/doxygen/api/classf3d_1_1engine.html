@@ -50,7 +50,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Class exception" href="class_structf3d_1_1exception.html" />
-    <link rel="prev" title="Class camera" href="classf3d_1_1camera.html" />
+    <link rel="prev" title="Class context" href="classf3d_1_1context.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -132,6 +132,8 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="library_root.html">Library API</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="namespace_f3d.html">Namespace f3d</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1camera__state__t.html">Struct camera_state_t</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1context_1_1loading__exception.html">Struct context::loading_exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1context_1_1symbol__exception.html">Struct context::symbol_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1engine_1_1libInformation.html">Struct engine::libInformation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1engine_1_1no__interactor__exception.html">Struct engine::no_interactor_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1engine_1_1no__window__exception.html">Struct engine::no_window_exception</a></li>
@@ -140,18 +142,19 @@
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1image_1_1metadata__exception.html">Struct image::metadata_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1image_1_1read__exception.html">Struct image::read_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1image_1_1write__exception.html">Struct image::write_exception</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1loader_1_1load__failure__exception.html">Struct loader::load_failure_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1mesh__t.html">Struct mesh_t</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1point3__t.html">Struct point3_t</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1scene_1_1load__failure__exception.html">Struct scene::load_failure_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1vector3__t.html">Struct vector3_t</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1camera.html">Class camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classf3d_1_1context.html">Class context</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Class engine</a></li>
 <li class="toctree-l2"><a class="reference internal" href="class_structf3d_1_1exception.html">Class exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1image.html">Class image</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1interactor.html">Class interactor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classf3d_1_1loader.html">Class loader</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1log.html">Class log</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1ratio__t.html">Class ratio_t</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classf3d_1_1scene.html">Class scene</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1utils.html">Class utils</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1window.html">Class window</a></li>
 <li class="toctree-l2"><a class="reference internal" href="typedef_types_8h_1a62f3e15e4e18455b52854622b27c02ed.html">Typedef f3d::angle_deg_t</a></li>
@@ -344,18 +347,10 @@ document.write(`
 <span id="_CPPv3N3f3d6engineE"></span><span id="_CPPv2N3f3d6engineE"></span><span id="f3d::engine"></span><span class="target" id="classf3d_1_1engine"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">engine</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6engineE" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Class used to create instance of other classes. </p>
 <p>The main class of the libf3d to create all other instances. Configured on creation using an enum, then all objects can be accessed through their getter.</p>
-<p>Example usage for a default scene file:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">f3d</span><span class="o">::</span><span class="n">engine</span><span class="w"> </span><span class="nf">eng</span><span class="p">(</span><span class="n">f3d</span><span class="o">::</span><span class="n">engine</span><span class="o">::</span><span class="n">CREATE_WINDOW</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">f3d</span><span class="o">::</span><span class="n">engine</span><span class="o">::</span><span class="n">CREATE_INTERACTOR</span><span class="p">);</span>
-<span class="n">f3d</span><span class="o">::</span><span class="n">loader</span><span class="o">&amp;</span><span class="w"> </span><span class="n">load</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">eng</span><span class="p">.</span><span class="n">getLoader</span><span class="p">();</span>
-<span class="n">load</span><span class="p">.</span><span class="n">loadGeometry</span><span class="p">(</span><span class="s">&quot;path/to/file&quot;</span><span class="p">).</span><span class="n">loadGeometry</span><span class="p">(</span><span class="s">&quot;path/to/another/file&quot;</span><span class="p">);</span>
-<span class="n">f3d</span><span class="o">::</span><span class="n">interactor</span><span class="o">&amp;</span><span class="w"> </span><span class="n">inter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">eng</span><span class="p">.</span><span class="n">getInteractor</span><span class="p">();</span>
-<span class="n">inter</span><span class="p">.</span><span class="n">start</span><span class="p">();</span>
-</pre></div>
-</div>
-<p>Example usage for a full scene file:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">f3d</span><span class="o">::</span><span class="n">engine</span><span class="w"> </span><span class="nf">eng</span><span class="p">(</span><span class="n">f3d</span><span class="o">::</span><span class="n">engine</span><span class="o">::</span><span class="n">CREATE_WINDOW</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">f3d</span><span class="o">::</span><span class="n">engine</span><span class="o">::</span><span class="n">CREATE_INTERACTOR</span><span class="p">);</span>
-<span class="n">f3d</span><span class="o">::</span><span class="n">loader</span><span class="o">&amp;</span><span class="w"> </span><span class="n">load</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">eng</span><span class="p">.</span><span class="n">getLoader</span><span class="p">();</span>
-<span class="n">load</span><span class="p">.</span><span class="n">loadScene</span><span class="p">(</span><span class="s">&quot;path/to/file&quot;</span><span class="p">);</span>
+<p>Example usage for adding some files in the scene</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">f3d</span><span class="o">::</span><span class="n">engine</span><span class="w"> </span><span class="n">eng</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f3d</span><span class="o">::</span><span class="n">engine</span><span class="o">::</span><span class="n">create</span><span class="p">();</span>
+<span class="n">f3d</span><span class="o">::</span><span class="n">scene</span><span class="o">&amp;</span><span class="w"> </span><span class="n">sce</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">eng</span><span class="p">.</span><span class="n">getscene</span><span class="p">();</span>
+<span class="n">sce</span><span class="p">.</span><span class="n">add</span><span class="p">({</span><span class="s">&quot;path/to/file&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;path/to/another/file&quot;</span><span class="p">});</span>
 <span class="n">f3d</span><span class="o">::</span><span class="n">interactor</span><span class="o">&amp;</span><span class="w"> </span><span class="n">inter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">eng</span><span class="p">.</span><span class="n">getInteractor</span><span class="p">();</span>
 <span class="n">inter</span><span class="p">.</span><span class="n">start</span><span class="p">();</span>
 </pre></div>
@@ -363,16 +358,31 @@ document.write(`
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine6engineEN6window4TypeE">
-<span id="_CPPv3N3f3d6engine6engineEN6window4TypeE"></span><span id="_CPPv2N3f3d6engine6engineEN6window4TypeE"></span><span id="f3d::engine::engine__window::Type"></span><span class="target" id="classf3d_1_1engine_1a233c1b13e896ef43c19cbb8bd391163e"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">engine</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classf3d_1_1window.html#_CPPv4N3f3d6windowE" title="f3d::window"><span class="n"><span class="pre">window</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classf3d_1_1window.html#_CPPv4N3f3d6window4TypeE" title="f3d::window::Type"><span class="n"><span class="pre">Type</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">windowType</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="classf3d_1_1window.html#_CPPv4N3f3d6windowE" title="f3d::window"><span class="n"><span class="pre">window</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classf3d_1_1window.html#_CPPv4N3f3d6window4TypeE" title="f3d::window::Type"><span class="n"><span class="pre">Type</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classf3d_1_1window.html#_CPPv4N3f3d6window4Type6NATIVEE" title="f3d::window::Type::NATIVE"><span class="n"><span class="pre">NATIVE</span></span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine6engineEN6window4TypeE" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Engine constructor, choose the window type using the enum. see window.h for details about the window. When using window::Type::NONE, window and interactor will not be provided by the engine. When using window::Type::EXTERNAL, interactor will not be provided by the engine. All objects instances will be created on construction. Default is window::Type::NATIVE. Throw a <a class="reference internal" href="structf3d_1_1engine_1_1no__window__exception.html#structf3d_1_1engine_1_1no__window__exception"><span class="std std-ref">no_window_exception</span></a> when using a Using window::Type::EXTERNAL without the right cmake option. </p>
-</dd></dl>
-
-<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engineD0Ev">
 <span id="_CPPv3N3f3d6engineD0Ev"></span><span id="_CPPv2N3f3d6engineD0Ev"></span><span id="f3d::engine::~engine"></span><span class="target" id="classf3d_1_1engine_1a42c3dd21a33f10e849c804d91af3ca37"></span><span class="sig-name descname"><span class="n"><span class="pre">~engine</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engineD0Ev" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Engine destructor, delete all object instances as well. </p>
 </dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine6engineERK6engine">
+<span id="_CPPv3N3f3d6engine6engineERK6engine"></span><span id="_CPPv2N3f3d6engine6engineERK6engine"></span><span id="f3d::engine::engine__engineCR"></span><span class="target" id="classf3d_1_1engine_1a091ec0742f81eb1931aa008b6d2eb857"></span><span class="sig-name descname"><span class="n"><span class="pre">engine</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6engine6engineERK6engine" title="f3d::engine::engine"><span class="n"><span class="pre">engine</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N3f3d6engine6engineERK6engine" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Engine copy is not possible but move is allowed. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine6engineERR6engine">
+<span id="_CPPv3N3f3d6engine6engineERR6engine"></span><span id="_CPPv2N3f3d6engine6engineERR6engine"></span><span id="f3d::engine::engine__engineRR"></span><span class="target" id="classf3d_1_1engine_1a763538a512e6405aa5d05de6eef8e43e"></span><span class="sig-name descname"><span class="n"><span class="pre">engine</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N3f3d6engine6engineERR6engine" title="f3d::engine::engine"><span class="n"><span class="pre">engine</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3f3d6engine6engineERR6engine" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d6engineaSERK6engine">
+<span id="_CPPv3N3f3d6engineaSERK6engine"></span><span id="_CPPv2N3f3d6engineaSERK6engine"></span><span id="f3d::engine::assign-operator__engineCR"></span><span class="target" id="classf3d_1_1engine_1a8fdfc778ecef67c98405ee398536f35a"></span><a class="reference internal" href="#_CPPv4N3f3d6engineE" title="f3d::engine"><span class="n"><span class="pre">engine</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6engineE" title="f3d::engine"><span class="n"><span class="pre">engine</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N3f3d6engineaSERK6engine" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d6engineaSERR6engine">
+<span id="_CPPv3N3f3d6engineaSERR6engine"></span><span id="_CPPv2N3f3d6engineaSERR6engine"></span><span id="f3d::engine::assign-operator__engineRR"></span><span class="target" id="classf3d_1_1engine_1a827f4de2a88678301ca79466f36e2f10"></span><a class="reference internal" href="#_CPPv4N3f3d6engineE" title="f3d::engine"><span class="n"><span class="pre">engine</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N3f3d6engineE" title="f3d::engine"><span class="n"><span class="pre">engine</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3f3d6engineaSERR6engine" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine12setCachePathERKNSt6stringE">
@@ -410,8 +420,8 @@ document.write(`
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine9getLoaderEv">
-<span id="_CPPv3N3f3d6engine9getLoaderEv"></span><span id="_CPPv2N3f3d6engine9getLoaderEv"></span><span id="f3d::engine::getLoader"></span><span class="target" id="classf3d_1_1engine_1aa6efd6d7ef102a4c18311cdf7d97d327"></span><a class="reference internal" href="classf3d_1_1loader.html#_CPPv4N3f3d6loaderE" title="f3d::loader"><span class="n"><span class="pre">loader</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getLoader</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine9getLoaderEv" title="Permalink to this definition">#</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine8getSceneEv">
+<span id="_CPPv3N3f3d6engine8getSceneEv"></span><span id="_CPPv2N3f3d6engine8getSceneEv"></span><span id="f3d::engine::getScene"></span><span class="target" id="classf3d_1_1engine_1aa2ade054b183cefb18d8e395af49ea91"></span><a class="reference internal" href="classf3d_1_1scene.html#_CPPv4N3f3d5sceneE" title="f3d::scene"><span class="n"><span class="pre">scene</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getScene</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine8getSceneEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Get the loaded provided by the engine. </p>
 </dd></dl>
 
@@ -424,6 +434,81 @@ document.write(`
 </div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine6createEb">
+<span id="_CPPv3N3f3d6engine6createEb"></span><span id="_CPPv2N3f3d6engine6createEb"></span><span id="f3d::engine::create__b"></span><span class="target" id="classf3d_1_1engine_1a8dc98863d9785dee5c90725248c46b8a"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6engineE" title="f3d::engine"><span class="n"><span class="pre">engine</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">create</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">offscreen</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine6createEb" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Create an engine with an automatic window. Optionally, the window can be hidden by setting offscreen to true. For VTK &lt; 9.3, the window type will depend on the VTK build options For VTK &gt;= 9.4: Linux: Try GLX, then EGL, then OSMesa Windows: Try Win32, then EGL, then OSMesa macOS: Always use Cocoa </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine10createNoneEv">
+<span id="_CPPv3N3f3d6engine10createNoneEv"></span><span id="_CPPv2N3f3d6engine10createNoneEv"></span><span id="f3d::engine::createNone"></span><span class="target" id="classf3d_1_1engine_1a6c74166d9132a8e0e30e7bd8c4a3ce0f"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6engineE" title="f3d::engine"><span class="n"><span class="pre">engine</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createNone</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine10createNoneEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Create an engine with no window. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine9createGLXEb">
+<span id="_CPPv3N3f3d6engine9createGLXEb"></span><span id="_CPPv2N3f3d6engine9createGLXEb"></span><span id="f3d::engine::createGLX__b"></span><span class="target" id="classf3d_1_1engine_1a0cf626f2585af37614b088c5c78a2a1a"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6engineE" title="f3d::engine"><span class="n"><span class="pre">engine</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createGLX</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">offscreen</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine9createGLXEb" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Create an engine with a GLX window. Works on Linux only. VTK &gt;= 9.4 required. Optionally, the window can be hidden by setting offscreen to true. Throws engine::loading_exception in case of window creation failure. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine9createWGLEb">
+<span id="_CPPv3N3f3d6engine9createWGLEb"></span><span id="_CPPv2N3f3d6engine9createWGLEb"></span><span id="f3d::engine::createWGL__b"></span><span class="target" id="classf3d_1_1engine_1aad8377f8ceef620a494c3d1ccb86ef4a"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6engineE" title="f3d::engine"><span class="n"><span class="pre">engine</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createWGL</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">offscreen</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine9createWGLEb" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Create an engine with a WGL window. Works on Windows only. VTK &gt;= 9.4 required. Optionally, the window can be hidden by setting offscreen to true. Throws engine::loading_exception in case of window creation failure. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine9createEGLEb">
+<span id="_CPPv3N3f3d6engine9createEGLEb"></span><span id="_CPPv2N3f3d6engine9createEGLEb"></span><span id="f3d::engine::createEGL__b"></span><span class="target" id="classf3d_1_1engine_1aa1c0b3bed6fc34546d4bb7aab67abcc8"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6engineE" title="f3d::engine"><span class="n"><span class="pre">engine</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createEGL</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">offscreen</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine9createEGLEb" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Create an engine with an EGL window. VTK &gt;= 9.4 required. If several GPU are available, the environment variable <code class="docutils literal notranslate"><span class="pre">VTK_DEFAULT_EGL_DEVICE_INDEX</span></code> allows its selection. Optionally, the window can be hidden by setting offscreen to true. Throws engine::loading_exception in case of failure. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine12createOSMesaEv">
+<span id="_CPPv3N3f3d6engine12createOSMesaEv"></span><span id="_CPPv2N3f3d6engine12createOSMesaEv"></span><span id="f3d::engine::createOSMesa"></span><span class="target" id="classf3d_1_1engine_1a1ea3b63b10d5f826528545a562297cd1"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6engineE" title="f3d::engine"><span class="n"><span class="pre">engine</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createOSMesa</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine12createOSMesaEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Create an engine with an OSMesa window. VTK &gt;= 9.4 required. Throws engine::loading_exception in case of window creation failure. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine14createExternalERKN7context8functionE">
+<span id="_CPPv3N3f3d6engine14createExternalERKN7context8functionE"></span><span id="_CPPv2N3f3d6engine14createExternalERKN7context8functionE"></span><span id="f3d::engine::createExternal__context::functionCR"></span><span class="target" id="classf3d_1_1engine_1ad34defb23976727cdb2ae884e119e533"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6engineE" title="f3d::engine"><span class="n"><span class="pre">engine</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createExternal</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classf3d_1_1context.html#_CPPv4N3f3d7contextE" title="f3d::context"><span class="n"><span class="pre">context</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classf3d_1_1context.html#_CPPv4N3f3d7context8functionE" title="f3d::context::function"><span class="n"><span class="pre">function</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">getProcAddress</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine14createExternalERKN7context8functionE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Create an engine with an external window. A context to retrieve OpenGL symbols is required. The context can be nullptr for an external Cocoa window. Here’s an example if a GLFW window is used: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">f3d</span><span class="o">::</span><span class="n">engine</span><span class="w"> </span><span class="n">eng</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f3d</span><span class="o">::</span><span class="n">engine</span><span class="o">::</span><span class="n">createExternal</span><span class="p">(</span><span class="n">glfwGetProcAddress</span><span class="p">);</span>
+</pre></div>
+</div>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine17createExternalGLXEv">
+<span id="_CPPv3N3f3d6engine17createExternalGLXEv"></span><span id="_CPPv2N3f3d6engine17createExternalGLXEv"></span><span id="f3d::engine::createExternalGLX"></span><span class="target" id="classf3d_1_1engine_1a4fc077683aa9807ce52d3c0b45494250"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6engineE" title="f3d::engine"><span class="n"><span class="pre">engine</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createExternalGLX</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine17createExternalGLXEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Create an engine with an external GLX context. Equivalent to createExternal(f3d::context::glx()); VTK &gt;= 9.4 required. Throws <a class="reference internal" href="structf3d_1_1context_1_1loading__exception.html#structf3d_1_1context_1_1loading__exception"><span class="std std-ref">context::loading_exception</span></a> if GLX library is not found or if not running on Linux. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine17createExternalWGLEv">
+<span id="_CPPv3N3f3d6engine17createExternalWGLEv"></span><span id="_CPPv2N3f3d6engine17createExternalWGLEv"></span><span id="f3d::engine::createExternalWGL"></span><span class="target" id="classf3d_1_1engine_1aa5ae12e2c05726524b94df82f63e1cc3"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6engineE" title="f3d::engine"><span class="n"><span class="pre">engine</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createExternalWGL</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine17createExternalWGLEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Create an engine with an external WGL context. Equivalent to createExternal(f3d::context::wgl()); VTK &gt;= 9.4 required. Throws <a class="reference internal" href="structf3d_1_1context_1_1loading__exception.html#structf3d_1_1context_1_1loading__exception"><span class="std std-ref">context::loading_exception</span></a> if WGL library is not found or if not running on Windows. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine19createExternalCOCOAEv">
+<span id="_CPPv3N3f3d6engine19createExternalCOCOAEv"></span><span id="_CPPv2N3f3d6engine19createExternalCOCOAEv"></span><span id="f3d::engine::createExternalCOCOA"></span><span class="target" id="classf3d_1_1engine_1aa361310e43db522f80340d1b6489f614"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6engineE" title="f3d::engine"><span class="n"><span class="pre">engine</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createExternalCOCOA</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine19createExternalCOCOAEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Create an engine with an external COCOA context. Equivalent to createExternal(f3d::context::cocoa()); VTK &gt;= 9.4 required. Throws <a class="reference internal" href="structf3d_1_1context_1_1loading__exception.html#structf3d_1_1context_1_1loading__exception"><span class="std std-ref">context::loading_exception</span></a> if WGL library is not found or if not running on Windows. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine17createExternalEGLEv">
+<span id="_CPPv3N3f3d6engine17createExternalEGLEv"></span><span id="_CPPv2N3f3d6engine17createExternalEGLEv"></span><span id="f3d::engine::createExternalEGL"></span><span class="target" id="classf3d_1_1engine_1a033427bc8d9cfc37340d566e7d901fbe"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6engineE" title="f3d::engine"><span class="n"><span class="pre">engine</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createExternalEGL</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine17createExternalEGLEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Create an engine with an external EGL context. Equivalent to createExternal(f3d::context::egl()); VTK &gt;= 9.4 required. Throws <a class="reference internal" href="structf3d_1_1context_1_1loading__exception.html#structf3d_1_1context_1_1loading__exception"><span class="std std-ref">context::loading_exception</span></a> if EGL library is not found. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine20createExternalOSMesaEv">
+<span id="_CPPv3N3f3d6engine20createExternalOSMesaEv"></span><span id="_CPPv2N3f3d6engine20createExternalOSMesaEv"></span><span id="f3d::engine::createExternalOSMesa"></span><span class="target" id="classf3d_1_1engine_1a2228768b97a56a53ce23fb315ff368ab"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6engineE" title="f3d::engine"><span class="n"><span class="pre">engine</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createExternalOSMesa</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine20createExternalOSMesaEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Create an engine with an external OSMesa context. Equivalent to createExternal(f3d::context::osmesa()); VTK &gt;= 9.4 required. Throws <a class="reference internal" href="structf3d_1_1context_1_1loading__exception.html#structf3d_1_1context_1_1loading__exception"><span class="std std-ref">context::loading_exception</span></a> if OSMesa library is not found. </p>
+</dd></dl>
+
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine10loadPluginERKNSt6stringERKNSt6vectorINSt6stringEEE">
 <span id="_CPPv3N3f3d6engine10loadPluginERKNSt6stringERKNSt6vectorINSt6stringEEE"></span><span id="_CPPv2N3f3d6engine10loadPluginERKNSt6stringERKNSt6vectorINSt6stringEEE"></span><span id="f3d::engine::loadPlugin__ssCR.std::vector:ss:CR"></span><span class="target" id="classf3d_1_1engine_1a12fa9451d72b97da39dae0edc386c0a8"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">loadPlugin</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">nameOrPath</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pluginSearchPaths</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine10loadPluginERKNSt6stringERKNSt6vectorINSt6stringEEE" title="Permalink to this definition">#</a><br /></dt>
@@ -610,12 +695,12 @@ document.write(`
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="classf3d_1_1camera.html"
+       href="classf3d_1_1context.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Class camera</p>
+        <p class="prev-next-title">Class context</p>
       </div>
     </a>
     <a class="right-next"

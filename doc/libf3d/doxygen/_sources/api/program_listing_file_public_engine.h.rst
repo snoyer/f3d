@@ -13,11 +13,12 @@ Program Listing for File engine.h
    #ifndef f3d_engine_h
    #define f3d_engine_h
    
+   #include "context.h"
    #include "exception.h"
    #include "export.h"
    #include "interactor.h"
-   #include "loader.h"
    #include "options.h"
+   #include "scene.h"
    #include "window.h"
    
    #include <map>
@@ -29,9 +30,37 @@ Program Listing for File engine.h
    class F3D_EXPORT engine
    {
    public:
-     explicit engine(window::Type windowType = window::Type::NATIVE);
+     static engine create(bool offscreen = false);
+   
+     static engine createNone();
+   
+     static engine createGLX(bool offscreen = false);
+   
+     static engine createWGL(bool offscreen = false);
+   
+     static engine createEGL(bool offscreen = false);
+   
+     static engine createOSMesa();
+   
+     static engine createExternal(const context::function& getProcAddress);
+   
+     static engine createExternalGLX();
+   
+     static engine createExternalWGL();
+   
+     static engine createExternalCOCOA();
+   
+     static engine createExternalEGL();
+   
+     static engine createExternalOSMesa();
    
      ~engine();
+   
+   
+     engine(const engine& other) = delete;
+     engine(engine&& other) noexcept;
+     engine& operator=(const engine& other) = delete;
+     engine& operator=(engine&& other) noexcept;
    
      void setCachePath(const std::string& cachePath);
    
@@ -43,7 +72,7 @@ Program Listing for File engine.h
    
      window& getWindow();
    
-     loader& getLoader();
+     scene& getScene();
    
      interactor& getInteractor();
    
@@ -100,10 +129,9 @@ Program Listing for File engine.h
    private:
      class internals;
      internals* Internals;
-     engine(const engine& opt) = delete;
-     engine(engine&& opt) = delete;
-     engine& operator=(const engine& opt) = delete;
-     engine& operator=(engine&& opt) = delete;
+   
+     engine(
+       const std::optional<window::Type>& windowType, bool offscreen, const context::function& loader);
    };
    }
    

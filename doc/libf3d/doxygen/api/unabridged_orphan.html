@@ -130,6 +130,8 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="library_root.html">Library API</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="namespace_f3d.html">Namespace f3d</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1camera__state__t.html">Struct camera_state_t</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1context_1_1loading__exception.html">Struct context::loading_exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1context_1_1symbol__exception.html">Struct context::symbol_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1engine_1_1libInformation.html">Struct engine::libInformation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1engine_1_1no__interactor__exception.html">Struct engine::no_interactor_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1engine_1_1no__window__exception.html">Struct engine::no_window_exception</a></li>
@@ -138,18 +140,19 @@
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1image_1_1metadata__exception.html">Struct image::metadata_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1image_1_1read__exception.html">Struct image::read_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1image_1_1write__exception.html">Struct image::write_exception</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1loader_1_1load__failure__exception.html">Struct loader::load_failure_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1mesh__t.html">Struct mesh_t</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1point3__t.html">Struct point3_t</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1scene_1_1load__failure__exception.html">Struct scene::load_failure_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1vector3__t.html">Struct vector3_t</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1camera.html">Class camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classf3d_1_1context.html">Class context</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1engine.html">Class engine</a></li>
 <li class="toctree-l2"><a class="reference internal" href="class_structf3d_1_1exception.html">Class exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1image.html">Class image</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1interactor.html">Class interactor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classf3d_1_1loader.html">Class loader</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1log.html">Class log</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1ratio__t.html">Class ratio_t</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classf3d_1_1scene.html">Class scene</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1utils.html">Class utils</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1window.html">Class window</a></li>
 <li class="toctree-l2"><a class="reference internal" href="typedef_types_8h_1a62f3e15e4e18455b52854622b27c02ed.html">Typedef f3d::angle_deg_t</a></li>
@@ -349,6 +352,21 @@ document.write(`
 </div>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="file_public_context.h.html">File context.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_public_context.h.html#definition-public-context-h">Definition (<code class="docutils literal notranslate"><span class="pre">public/context.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_public_context.h.html">Program Listing for File context.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_public_context.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_public_context.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_public_context.h.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_public_context.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="file_public_engine.h.html">File engine.h</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="file_public_engine.h.html#definition-public-engine-h">Definition (<code class="docutils literal notranslate"><span class="pre">public/engine.h</span></code>)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="program_listing_file_public_engine.h.html">Program Listing for File engine.h</a></li>
@@ -408,21 +426,6 @@ document.write(`
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="file_public_loader.h.html">File loader.h</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="file_public_loader.h.html#definition-public-loader-h">Definition (<code class="docutils literal notranslate"><span class="pre">public/loader.h</span></code>)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="program_listing_file_public_loader.h.html">Program Listing for File loader.h</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="file_public_loader.h.html#includes">Includes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="file_public_loader.h.html#included-by">Included By</a></li>
-<li class="toctree-l2"><a class="reference internal" href="file_public_loader.h.html#namespaces">Namespaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="file_public_loader.h.html#classes">Classes</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="file_public_log.h.html">File log.h</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="file_public_log.h.html#definition-public-log-h">Definition (<code class="docutils literal notranslate"><span class="pre">public/log.h</span></code>)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="program_listing_file_public_log.h.html">Program Listing for File log.h</a></li>
@@ -431,6 +434,21 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="file_public_log.h.html#includes">Includes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="file_public_log.h.html#namespaces">Namespaces</a></li>
 <li class="toctree-l2"><a class="reference internal" href="file_public_log.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_public_scene.h.html">File scene.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_public_scene.h.html#definition-public-scene-h">Definition (<code class="docutils literal notranslate"><span class="pre">public/scene.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_public_scene.h.html">Program Listing for File scene.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_public_scene.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_public_scene.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_public_scene.h.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_public_scene.h.html#classes">Classes</a></li>
 </ul>
 </li>
 </ul>

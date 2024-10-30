@@ -46,7 +46,7 @@ Included By
 
 - :ref:`file_public_camera.h`
 
-- :ref:`file_public_loader.h`
+- :ref:`file_public_scene.h`
 
 
 

@@ -30,17 +30,19 @@ Includes
 --------
 
 
+- ``context.h`` (:ref:`file_public_context.h`)
+
 - ``exception.h`` (:ref:`file_public_exception.h`)
 
 - ``export.h``
 
 - ``interactor.h`` (:ref:`file_public_interactor.h`)
 
-- ``loader.h`` (:ref:`file_public_loader.h`)
-
 - ``map``
 
 - ``options.h``
+
+- ``scene.h`` (:ref:`file_public_scene.h`)
 
 - ``string``
 

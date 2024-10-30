@@ -25,6 +25,11 @@ Files
 .. toctree::
    :maxdepth: 5
 
+   file_public_context.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
    file_public_engine.h.rst
 
 .. toctree::
@@ -45,12 +50,12 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file_public_loader.h.rst
+   file_public_log.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_public_log.h.rst
+   file_public_scene.h.rst
 
 .. toctree::
    :maxdepth: 5

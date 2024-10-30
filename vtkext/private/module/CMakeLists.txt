@@ -31,6 +31,7 @@ endforeach()
 
 set(classes
   F3DLog
+  F3DColoringInfoHandler
   vtkF3DCachedLUTTexture
   vtkF3DCachedSpecularTexture
   vtkF3DConsoleOutputWindow
@@ -40,6 +41,7 @@ set(classes
   vtkF3DInteractorEventRecorder
   vtkF3DInteractorStyle
   vtkF3DMemoryMesh
+  vtkF3DMetaImporter
   vtkF3DNoRenderWindow
   vtkF3DObjectFactory
   vtkF3DOpenGLGridMapper
@@ -47,7 +49,6 @@ set(classes
   vtkF3DPostProcessFilter
   vtkF3DRenderPass
   vtkF3DRenderer
-  vtkF3DRendererWithColoring
   vtkF3DUserRenderPass
   )
 

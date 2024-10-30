@@ -34,8 +34,6 @@ Includes
 
 - ``functional``
 
-- ``loader.h`` (:ref:`file_public_loader.h`)
-
 - ``options.h``
 
 - ``string``

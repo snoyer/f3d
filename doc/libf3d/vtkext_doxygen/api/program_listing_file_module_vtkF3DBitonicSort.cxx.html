@@ -290,19 +290,25 @@ document.write(`
 <p>↰ <a class="reference internal" href="file_module_vtkF3DBitonicSort.cxx.html#file-module-vtkf3dbitonicsort-cxx"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">module/vtkF3DBitonicSort.cxx</span></code>)</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;vtkF3DBitonicSort.h&quot;</span>
 
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;vtkF3DBitonicSortFunctions.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;vtkF3DBitonicSortGlobalDisperseCS.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;vtkF3DBitonicSortGlobalFlipCS.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;vtkF3DBitonicSortLocalDisperseCS.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;vtkF3DBitonicSortLocalSortCS.h&quot;</span>
+
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vtkObjectFactory.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vtkOpenGLBufferObject.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vtkOpenGLRenderWindow.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vtkOpenGLShaderCache.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vtkShader.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vtkShaderProgram.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vtk_glew.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vtkVersion.h&gt;</span>
 
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;vtkF3DBitonicSortFunctions.h&quot;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;vtkF3DBitonicSortGlobalDisperseCS.h&quot;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;vtkF3DBitonicSortGlobalFlipCS.h&quot;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;vtkF3DBitonicSortLocalDisperseCS.h&quot;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;vtkF3DBitonicSortLocalSortCS.h&quot;</span>
+<span class="cp">#if VTK_VERSION_NUMBER &gt;= VTK_VERSION_CHECK(9, 3, 20240914)</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vtk_glad.h&gt;</span>
+<span class="cp">#else</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vtk_glew.h&gt;</span>
+<span class="cp">#endif</span>
 
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sstream&gt;</span>
 

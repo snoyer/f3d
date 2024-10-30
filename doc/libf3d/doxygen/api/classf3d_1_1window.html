@@ -132,6 +132,8 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="library_root.html">Library API</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="namespace_f3d.html">Namespace f3d</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1camera__state__t.html">Struct camera_state_t</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1context_1_1loading__exception.html">Struct context::loading_exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1context_1_1symbol__exception.html">Struct context::symbol_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1engine_1_1libInformation.html">Struct engine::libInformation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1engine_1_1no__interactor__exception.html">Struct engine::no_interactor_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1engine_1_1no__window__exception.html">Struct engine::no_window_exception</a></li>
@@ -140,18 +142,19 @@
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1image_1_1metadata__exception.html">Struct image::metadata_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1image_1_1read__exception.html">Struct image::read_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1image_1_1write__exception.html">Struct image::write_exception</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1loader_1_1load__failure__exception.html">Struct loader::load_failure_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1mesh__t.html">Struct mesh_t</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1point3__t.html">Struct point3_t</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1scene_1_1load__failure__exception.html">Struct scene::load_failure_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1vector3__t.html">Struct vector3_t</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1camera.html">Class camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classf3d_1_1context.html">Class context</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1engine.html">Class engine</a></li>
 <li class="toctree-l2"><a class="reference internal" href="class_structf3d_1_1exception.html">Class exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1image.html">Class image</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1interactor.html">Class interactor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classf3d_1_1loader.html">Class loader</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1log.html">Class log</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1ratio__t.html">Class ratio_t</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classf3d_1_1scene.html">Class scene</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1utils.html">Class utils</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Class window</a></li>
 <li class="toctree-l2"><a class="reference internal" href="typedef_types_8h_1a62f3e15e4e18455b52854622b27c02ed.html">Typedef f3d::angle_deg_t</a></li>
@@ -334,7 +337,7 @@ document.write(`
 <span id="_CPPv3N3f3d6window4TypeE"></span><span id="_CPPv2N3f3d6window4TypeE"></span><span class="target" id="classf3d_1_1window_1a4742753b53b500ca62f402424aa1f471"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Type</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><a class="headerlink" href="#_CPPv4N3f3d6window4TypeE" title="Permalink to this definition">#</a><br /></dt>
 <dd><section id="classf3d_1_1window_1autotoc_md2">
 <h3>Enumeration of supported window types<a class="headerlink" href="#classf3d_1_1window_1autotoc_md2" title="Permalink to this heading">#</a></h3>
-<p id="classf3d_1_1window_1autotoc_md2">NONE: A mock window without rendering capabilities. NATIVE: A window using the native graphical stack. NATIVE_OFFSCREEN: A native window rendering to an offscreen buffer, not visible on screen. EXTERNAL: An external window that assume the OpenGL context would have been created by. another framework </p>
+<p id="classf3d_1_1window_1autotoc_md2">NONE: A mock window without rendering capabilities. EXTERNAL: An external window that assume the OpenGL context would have been created by another framework. GLX: A window using GLX. WGL: A window using WGL. COCOA: A window using COCOA. EGL: An offscreen window using hardware acceleration that can run headless. OSMESA: An offscreen window using software rendering that is always run headless. WASM: A webassembly window (when libf3d is built with emscripten). UNKNOWN: An unknown window (should not happen). </p>
 </section>
 <p><em>Values:</em></p>
 <dl class="cpp enumerator">
@@ -343,18 +346,43 @@ document.write(`
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
-<dt class="sig sig-object cpp" id="_CPPv4N3f3d6window4Type6NATIVEE">
-<span id="_CPPv3N3f3d6window4Type6NATIVEE"></span><span id="_CPPv2N3f3d6window4Type6NATIVEE"></span><span class="target" id="classf3d_1_1window_1a4742753b53b500ca62f402424aa1f471af78504d96ba7177dc0c6784905ac8743"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NATIVE</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6window4Type6NATIVEE" title="Permalink to this definition">#</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp enumerator">
-<dt class="sig sig-object cpp" id="_CPPv4N3f3d6window4Type16NATIVE_OFFSCREENE">
-<span id="_CPPv3N3f3d6window4Type16NATIVE_OFFSCREENE"></span><span id="_CPPv2N3f3d6window4Type16NATIVE_OFFSCREENE"></span><span class="target" id="classf3d_1_1window_1a4742753b53b500ca62f402424aa1f471ae1f9f17bf23322590e62ddf75bd72fa1"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NATIVE_OFFSCREEN</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6window4Type16NATIVE_OFFSCREENE" title="Permalink to this definition">#</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6window4Type8EXTERNALE">
 <span id="_CPPv3N3f3d6window4Type8EXTERNALE"></span><span id="_CPPv2N3f3d6window4Type8EXTERNALE"></span><span class="target" id="classf3d_1_1window_1a4742753b53b500ca62f402424aa1f471a3932d629fb5e2be9d09b3a4485b3cc9d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EXTERNAL</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6window4Type8EXTERNALE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d6window4Type3GLXE">
+<span id="_CPPv3N3f3d6window4Type3GLXE"></span><span id="_CPPv2N3f3d6window4Type3GLXE"></span><span class="target" id="classf3d_1_1window_1a4742753b53b500ca62f402424aa1f471ac313d26d26abf7402a24ce15663b52b6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GLX</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6window4Type3GLXE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d6window4Type3WGLE">
+<span id="_CPPv3N3f3d6window4Type3WGLE"></span><span id="_CPPv2N3f3d6window4Type3WGLE"></span><span class="target" id="classf3d_1_1window_1a4742753b53b500ca62f402424aa1f471aef3c7326c5c23cc9c408d29410352b67"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WGL</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6window4Type3WGLE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d6window4Type5COCOAE">
+<span id="_CPPv3N3f3d6window4Type5COCOAE"></span><span id="_CPPv2N3f3d6window4Type5COCOAE"></span><span class="target" id="classf3d_1_1window_1a4742753b53b500ca62f402424aa1f471a0439e3cee63c8741e500230121911962"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COCOA</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6window4Type5COCOAE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d6window4Type3EGLE">
+<span id="_CPPv3N3f3d6window4Type3EGLE"></span><span id="_CPPv2N3f3d6window4Type3EGLE"></span><span class="target" id="classf3d_1_1window_1a4742753b53b500ca62f402424aa1f471ab1e1fe0cc927dbeae22dc1839e01bb20"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EGL</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6window4Type3EGLE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d6window4Type6OSMESAE">
+<span id="_CPPv3N3f3d6window4Type6OSMESAE"></span><span id="_CPPv2N3f3d6window4Type6OSMESAE"></span><span class="target" id="classf3d_1_1window_1a4742753b53b500ca62f402424aa1f471a8e7cb674425fba84b801d46f1fd26b34"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OSMESA</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6window4Type6OSMESAE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d6window4Type4WASME">
+<span id="_CPPv3N3f3d6window4Type4WASME"></span><span id="_CPPv2N3f3d6window4Type4WASME"></span><span class="target" id="classf3d_1_1window_1a4742753b53b500ca62f402424aa1f471ac7dbeb10b3299406a04231654cf6defd"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WASM</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6window4Type4WASME" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d6window4Type7UNKNOWNE">
+<span id="_CPPv3N3f3d6window4Type7UNKNOWNE"></span><span id="_CPPv2N3f3d6window4Type7UNKNOWNE"></span><span class="target" id="classf3d_1_1window_1a4742753b53b500ca62f402424aa1f471a696b031073e74bf2cb98e5ef201d4aa3"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UNKNOWN</span></span></span><a class="headerlink" href="#_CPPv4N3f3d6window4Type7UNKNOWNE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -366,6 +394,12 @@ document.write(`
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6window7getTypeEv">
 <span id="_CPPv3N3f3d6window7getTypeEv"></span><span id="_CPPv2N3f3d6window7getTypeEv"></span><span id="f3d::window::getType"></span><span class="target" id="classf3d_1_1window_1aef4007b0592061fa3f47152b311cc680"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6window4TypeE" title="f3d::window::Type"><span class="n"><span class="pre">Type</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getType</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6window7getTypeEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Get the type of the window. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d6window11isOffscreenEv">
+<span id="_CPPv3N3f3d6window11isOffscreenEv"></span><span id="_CPPv2N3f3d6window11isOffscreenEv"></span><span id="f3d::window::isOffscreen"></span><span class="target" id="classf3d_1_1window_1a0c44d1982ff046a99204937e0df1169d"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isOffscreen</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d6window11isOffscreenEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Is the window offscreen. </p>
 </dd></dl>
 
 <dl class="cpp function">

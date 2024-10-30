@@ -19,6 +19,10 @@ Classes
 
 - :ref:`exhale_struct_structf3d_1_1camera__state__t`
 
+- :ref:`exhale_struct_structf3d_1_1context_1_1loading__exception`
+
+- :ref:`exhale_struct_structf3d_1_1context_1_1symbol__exception`
+
 - :ref:`exhale_struct_structf3d_1_1engine_1_1libInformation`
 
 - :ref:`exhale_struct_structf3d_1_1engine_1_1no__interactor__exception`
@@ -35,15 +39,17 @@ Classes
 
 - :ref:`exhale_struct_structf3d_1_1image_1_1write__exception`
 
-- :ref:`exhale_struct_structf3d_1_1loader_1_1load__failure__exception`
-
 - :ref:`exhale_struct_structf3d_1_1mesh__t`
 
 - :ref:`exhale_struct_structf3d_1_1point3__t`
 
+- :ref:`exhale_struct_structf3d_1_1scene_1_1load__failure__exception`
+
 - :ref:`exhale_struct_structf3d_1_1vector3__t`
 
 - :ref:`exhale_class_classf3d_1_1camera`
+
+- :ref:`exhale_class_classf3d_1_1context`
 
 - :ref:`exhale_class_classf3d_1_1engine`
 
@@ -53,11 +59,11 @@ Classes
 
 - :ref:`exhale_class_classf3d_1_1interactor`
 
-- :ref:`exhale_class_classf3d_1_1loader`
-
 - :ref:`exhale_class_classf3d_1_1log`
 
 - :ref:`exhale_class_classf3d_1_1ratio__t`
+
+- :ref:`exhale_class_classf3d_1_1scene`
 
 - :ref:`exhale_class_classf3d_1_1utils`
 
