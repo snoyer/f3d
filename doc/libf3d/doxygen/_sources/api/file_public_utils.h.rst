@@ -30,9 +30,13 @@ Includes
 --------
 
 
+- ``exception.h`` (:ref:`file_public_exception.h`)
+
 - ``export.h``
 
 - ``string``
+
+- ``vector``
 
 
 
@@ -49,6 +53,8 @@ Namespaces
 Classes
 -------
 
+
+- :ref:`exhale_struct_structf3d_1_1utils_1_1tokenize__exception`
 
 - :ref:`exhale_class_classf3d_1_1utils`
 

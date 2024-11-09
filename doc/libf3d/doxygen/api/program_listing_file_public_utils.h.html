@@ -143,6 +143,7 @@
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1mesh__t.html">Struct mesh_t</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1point3__t.html">Struct point3_t</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1scene_1_1load__failure__exception.html">Struct scene::load_failure_exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1utils_1_1tokenize__exception.html">Struct utils::tokenize_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1vector3__t.html">Struct vector3_t</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1camera.html">Class camera</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1context.html">Class context</a></li>
@@ -312,9 +313,11 @@ document.write(`
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifndef f3d_utils_h</span>
 <span class="cp">#define f3d_utils_h</span>
 
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;exception.h&quot;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;export.h&quot;</span>
 
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
 
 <span class="k">namespace</span><span class="w"> </span><span class="nn">f3d</span>
 <span class="p">{</span>
@@ -322,6 +325,15 @@ document.write(`
 <span class="p">{</span>
 <span class="k">public</span><span class="o">:</span>
 <span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">textDistance</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">strA</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">strB</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// clang-format off</span>
+<span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">tokenize</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">str</span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// clang-format on</span>
+
+<span class="w">  </span><span class="k">struct</span><span class="w"> </span><span class="nc">tokenize_exception</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">exception</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="k">explicit</span><span class="w"> </span><span class="n">tokenize_exception</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">what</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">};</span>
 <span class="p">};</span>
 <span class="p">}</span>
 

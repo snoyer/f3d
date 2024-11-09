@@ -149,7 +149,7 @@ vtkSmartPointer<vtkTexture> GetTexture(const std::string& filePath, bool isSRGB 
     std::string fullPath = vtksys::SystemTools::CollapseFullPath(filePath);
     if (!vtksys::SystemTools::FileExists(fullPath))
     {
-      F3DLog::Print(F3DLog::Severity::Warning, "Texture file does not exist " + fullPath + "\n");
+      F3DLog::Print(F3DLog::Severity::Warning, "Texture file does not exist " + fullPath);
     }
     else
     {
@@ -171,7 +171,7 @@ vtkSmartPointer<vtkTexture> GetTexture(const std::string& filePath, bool isSRGB 
       }
       else
       {
-        F3DLog::Print(F3DLog::Severity::Warning, "Cannot open texture file " + fullPath + "\n");
+        F3DLog::Print(F3DLog::Severity::Warning, "Cannot open texture file " + fullPath);
       }
     }
   }
@@ -614,7 +614,7 @@ void vtkF3DRenderer::ConfigureGridUsingCurrentActors()
       std::stringstream stream;
       stream << "Using grid unit square size = " << tmpUnitSquare << "\n"
              << "Grid origin set to [" << gridPos[0] << ", " << gridPos[1] << ", " << gridPos[2]
-             << "]\n\n";
+             << "]\n";
       this->GridInfo = stream.str();
 
       vtkNew<vtkF3DOpenGLGridMapper> gridMapper;
@@ -1386,7 +1386,7 @@ void vtkF3DRenderer::ConfigureCheatSheet()
     cheatSheetText << " Q: Ambient occlusion " << (this->UseSSAOPass ? "[ON]" : "[OFF]") << "\n";
     cheatSheetText << " A: Anti-aliasing " << (this->UseFXAAPass ? "[ON]" : "[OFF]") << "\n";
     cheatSheetText << " T: Tone mapping " << (this->UseToneMappingPass ? "[ON]" : "[OFF]") << "\n";
-    cheatSheetText << " E: Edge visibility " << (this->EdgeVisible ? "[ON]" : "[OFF]") << "\n";
+    cheatSheetText << " E: Edge visibility " << (this->EdgeVisible.has_value() ? (this->EdgeVisible.value() ? "[ON]" : "[OFF]") : "[NOT SET]") << "\n";
     cheatSheetText << " X: Axis " << (this->AxisVisible ? "[ON]" : "[OFF]") << "\n";
     cheatSheetText << " G: Grid " << (this->GridVisible ? "[ON]" : "[OFF]") << "\n";
     cheatSheetText << " N: File name " << (this->FilenameVisible ? "[ON]" : "[OFF]") << "\n";
@@ -1418,7 +1418,7 @@ void vtkF3DRenderer::ConfigureCheatSheet()
     cheatSheetText << " 3: Right View camera\n";
     cheatSheetText << " 4: Roll the camera left by 90 degrees\n";
     cheatSheetText << " 5: Toggle Orthographic Projection "
-      << (this->UseOrthographicProjection ? "[ON]" : "[OFF]") << "\n";
+      << (this->UseOrthographicProjection.has_value() ? (this->UseOrthographicProjection.value() ? "[ON]" : "[OFF]") : "[NOT SET]") << "\n";
     cheatSheetText << " 6: Roll the camera right by 90 degrees\n";
     cheatSheetText << " 7: Top View camera\n";
     cheatSheetText << " 9: Isometric View camera\n";
@@ -1503,6 +1503,7 @@ void vtkF3DRenderer::SetUseOrthographicProjection(const std::optional<bool>& use
       camera->SetParallelProjection(this->UseOrthographicProjection.value());
       this->ResetCameraClippingRange();
     }
+    this->CheatSheetConfigured = false;
   }
 }
 
@@ -1877,7 +1878,7 @@ void vtkF3DRenderer::ConfigureActorsProperties()
     if (this->SurfaceColor.value().size() != 3)
     {
       F3DLog::Print(F3DLog::Severity::Warning,
-        std::string("Invalid surface color provided, not applying\n"));
+        std::string("Invalid surface color provided, not applying"));
     }
     else
     {
@@ -1891,7 +1892,7 @@ void vtkF3DRenderer::ConfigureActorsProperties()
     if (this->EmissiveFactor.value().size() != 3)
     {
       F3DLog::Print(F3DLog::Severity::Warning,
-        std::string("Invalid emissive factor provided, not applying\n"));
+        std::string("Invalid emissive factor provided, not applying"));
     }
     else
     {
@@ -2416,11 +2417,11 @@ std::string vtkF3DRenderer::GetColoringDescription()
   {
     stream << "Coloring using " << (this->UseCellColoring ? "cell" : "point") << " array named "
            << info.value().Name << (this->EnableColoring ? ", " : " (forced), ")
-           << vtkF3DRenderer::ComponentToString(this->ComponentForColoring) << "\n";
+           << vtkF3DRenderer::ComponentToString(this->ComponentForColoring);
   }
   else
   {
-    stream << "Not coloring\n";
+    stream << "Not coloring";
   }
   return stream.str();
 }
@@ -2555,7 +2556,7 @@ void vtkF3DRenderer::ConfigureRangeAndCTFForColoring(
   if (this->ComponentForColoring >= info.MaximumNumberOfComponents)
   {
     F3DLog::Print(F3DLog::Severity::Warning,
-      std::string("Invalid component index: ") + std::to_string(this->ComponentForColoring) + "\n");
+      std::string("Invalid component index: ") + std::to_string(this->ComponentForColoring));
     return;
   }
 
@@ -2572,7 +2573,7 @@ void vtkF3DRenderer::ConfigureRangeAndCTFForColoring(
     else
     {
       F3DLog::Print(F3DLog::Severity::Warning,
-        std::string("Invalid scalar range provided, using automatic range\n"));
+        std::string("Invalid scalar range provided, using automatic range"));
     }
   }
 

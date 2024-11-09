@@ -6,6 +6,16 @@ Class utils
 - Defined in :ref:`file_public_utils.h`
 
 
+Nested Relationships
+--------------------
+
+
+Nested Types
+************
+
+- :ref:`exhale_struct_structf3d_1_1utils_1_1tokenize__exception`
+
+
 Class Documentation
 -------------------
 

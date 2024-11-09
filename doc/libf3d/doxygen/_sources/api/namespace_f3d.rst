@@ -45,6 +45,8 @@ Classes
 
 - :ref:`exhale_struct_structf3d_1_1scene_1_1load__failure__exception`
 
+- :ref:`exhale_struct_structf3d_1_1utils_1_1tokenize__exception`
+
 - :ref:`exhale_struct_structf3d_1_1vector3__t`
 
 - :ref:`exhale_class_classf3d_1_1camera`

@@ -13,9 +13,11 @@ Program Listing for File utils.h
    #ifndef f3d_utils_h
    #define f3d_utils_h
    
+   #include "exception.h"
    #include "export.h"
    
    #include <string>
+   #include <vector>
    
    namespace f3d
    {
@@ -23,6 +25,15 @@ Program Listing for File utils.h
    {
    public:
      static unsigned int textDistance(const std::string& strA, const std::string& strB);
+   
+     // clang-format off
+     static std::vector<std::string> tokenize(std::string_view str);
+     // clang-format on
+   
+     struct tokenize_exception : public exception
+     {
+       explicit tokenize_exception(const std::string& what = "");
+     };
    };
    }
    

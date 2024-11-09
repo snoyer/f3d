@@ -32,6 +32,14 @@ Program Listing for File interactor.h
      virtual interactor& setDropFilesCallBack(
        std::function<bool(std::vector<std::string>)> callBack) = 0;
    
+   
+     virtual interactor& addCommandCallback(
+       std::string action, std::function<bool(const std::vector<std::string>&)> callback) = 0;
+   
+     virtual interactor& removeCommandCallback(const std::string& action) = 0;
+   
+     virtual bool triggerCommand(std::string_view command) = 0;
+   
      virtual unsigned long createTimerCallBack(double time, std::function<void()> callBack) = 0;
    
      virtual void removeTimerCallBack(unsigned long id) = 0;
