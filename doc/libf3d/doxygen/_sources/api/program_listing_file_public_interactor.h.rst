@@ -27,11 +27,6 @@ Program Listing for File interactor.h
    class F3D_EXPORT interactor
    {
    public:
-     virtual interactor& setKeyPressCallBack(std::function<bool(int, std::string)> callBack) = 0;
-   
-     virtual interactor& setDropFilesCallBack(
-       std::function<bool(std::vector<std::string>)> callBack) = 0;
-   
    
      virtual interactor& addCommandCallback(
        std::string action, std::function<bool(const std::vector<std::string>&)> callback) = 0;
@@ -39,6 +34,25 @@ Program Listing for File interactor.h
      virtual interactor& removeCommandCallback(const std::string& action) = 0;
    
      virtual bool triggerCommand(std::string_view command) = 0;
+   
+   
+     enum class ModifierKeys : unsigned char
+     {
+       ANY = 0x80,      // 10000000
+       NONE = 0x0,      // 00000000
+       CTRL = 0x1,      // 00000001
+       SHIFT = 0x2,     // 00000010
+       CTRL_SHIFT = 0x3 // 00000011
+     };
+   
+     virtual interactor& addInteractionCommands(
+       std::string interaction, ModifierKeys modifiers, std::vector<std::string> commands) = 0;
+   
+     virtual interactor& addInteractionCommand(
+       std::string interaction, ModifierKeys modifiers, std::string command) = 0;
+   
+     virtual interactor& removeInteractionCommands(
+       std::string interaction, ModifierKeys modifiers) = 0;
    
      virtual unsigned long createTimerCallBack(double time, std::function<void()> callBack) = 0;
    
