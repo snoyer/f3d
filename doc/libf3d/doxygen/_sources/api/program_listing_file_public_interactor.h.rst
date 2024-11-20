@@ -13,6 +13,7 @@ Program Listing for File interactor.h
    #ifndef f3d_interactor_h
    #define f3d_interactor_h
    
+   #include "exception.h"
    #include "export.h"
    #include "options.h"
    #include "window.h"
@@ -28,10 +29,14 @@ Program Listing for File interactor.h
    {
    public:
    
-     virtual interactor& addCommandCallback(
-       std::string action, std::function<bool(const std::vector<std::string>&)> callback) = 0;
+     virtual interactor& initCommands() = 0;
    
-     virtual interactor& removeCommandCallback(const std::string& action) = 0;
+     virtual interactor& addCommand(
+       const std::string& action, std::function<void(const std::vector<std::string>&)> callback) = 0;
+   
+     virtual interactor& removeCommand(const std::string& action) = 0;
+   
+     virtual std::vector<std::string> getCommandActions() const = 0;
    
      virtual bool triggerCommand(std::string_view command) = 0;
    
@@ -45,14 +50,23 @@ Program Listing for File interactor.h
        CTRL_SHIFT = 0x3 // 00000011
      };
    
-     virtual interactor& addInteractionCommands(
-       std::string interaction, ModifierKeys modifiers, std::vector<std::string> commands) = 0;
+     virtual interactor& initBindings() = 0;
    
-     virtual interactor& addInteractionCommand(
-       std::string interaction, ModifierKeys modifiers, std::string command) = 0;
+     virtual interactor& addBinding(
+       const std::string& interaction, ModifierKeys modifiers, std::vector<std::string> commands) = 0;
    
-     virtual interactor& removeInteractionCommands(
-       std::string interaction, ModifierKeys modifiers) = 0;
+     virtual interactor& addBinding(
+       const std::string& interaction, ModifierKeys modifiers, std::string command) = 0;
+   
+     interactor& addBinding(
+       const std::string& interaction, ModifierKeys modifiers, std::initializer_list<std::string> list)
+     {
+       return this->addBinding(interaction, modifiers, std::vector<std::string>(list));
+     }
+   
+     virtual interactor& removeBinding(std::string interaction, ModifierKeys modifiers) = 0;
+   
+     virtual std::vector<std::pair<std::string, ModifierKeys>> getBindingInteractions() const = 0;
    
      virtual unsigned long createTimerCallBack(double time, std::function<void()> callBack) = 0;
    
@@ -77,6 +91,16 @@ Program Listing for File interactor.h
      virtual void stop() = 0;
    
      static const std::vector<std::pair<std::string, std::string>>& getDefaultInteractionsInfo();
+   
+     struct already_exists_exception : public exception
+     {
+       explicit already_exists_exception(const std::string& what = "");
+     };
+   
+     struct command_runtime_exception : public exception
+     {
+       explicit command_runtime_exception(const std::string& what = "");
+     };
    
    protected:
      interactor() = default;

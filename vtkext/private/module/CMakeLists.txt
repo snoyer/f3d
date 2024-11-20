@@ -36,6 +36,7 @@ set(classes
   vtkF3DCachedSpecularTexture
   vtkF3DConsoleOutputWindow
   vtkF3DDropZoneActor
+  vtkF3DExternalRenderWindow
   vtkF3DGenericImporter
   vtkF3DHexagonalBokehBlurPass
   vtkF3DInteractorEventRecorder
@@ -61,8 +62,8 @@ if(NOT VTK_VERSION VERSION_GREATER_EQUAL 9.2.20220907)
   set(classes ${classes} vtkF3DOrientationMarkerWidget)
 endif()
 
-if(WIN32 AND F3D_WINDOWS_GUI)
-  list(APPEND classes vtkF3DWin32OutputWindow)
+if(WIN32)
+  list(APPEND classes vtkF3DWin32OutputWindow vtkF3DWGLRenderWindow)
 endif()
 
 if(ANDROID)

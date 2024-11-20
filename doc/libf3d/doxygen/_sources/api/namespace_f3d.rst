@@ -39,6 +39,10 @@ Classes
 
 - :ref:`exhale_struct_structf3d_1_1image_1_1write__exception`
 
+- :ref:`exhale_struct_structf3d_1_1interactor_1_1already__exists__exception`
+
+- :ref:`exhale_struct_structf3d_1_1interactor_1_1command__runtime__exception`
+
 - :ref:`exhale_struct_structf3d_1_1mesh__t`
 
 - :ref:`exhale_struct_structf3d_1_1point3__t`

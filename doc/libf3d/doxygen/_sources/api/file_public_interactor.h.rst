@@ -30,6 +30,8 @@ Includes
 --------
 
 
+- ``exception.h`` (:ref:`file_public_exception.h`)
+
 - ``export.h``
 
 - ``functional``
@@ -65,6 +67,10 @@ Namespaces
 Classes
 -------
 
+
+- :ref:`exhale_struct_structf3d_1_1interactor_1_1already__exists__exception`
+
+- :ref:`exhale_struct_structf3d_1_1interactor_1_1command__runtime__exception`
 
 - :ref:`exhale_class_classf3d_1_1interactor`
 

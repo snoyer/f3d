@@ -139,6 +139,8 @@
 <li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1image_1_1metadata__exception.html">Struct image::metadata_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1image_1_1read__exception.html">Struct image::read_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1image_1_1write__exception.html">Struct image::write_exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1interactor_1_1already__exists__exception.html">Struct interactor::already_exists_exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1interactor_1_1command__runtime__exception.html">Struct interactor::command_runtime_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1mesh__t.html">Struct mesh_t</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1point3__t.html">Struct point3_t</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1scene_1_1load__failure__exception.html">Struct scene::load_failure_exception</a></li>
@@ -488,14 +490,14 @@ document.write(`
 </li>
       <li><a href="api/classf3d_1_1image.html#_CPPv4NK3f3d5image8getWidthEv">f3d::image::getWidth (C++ function)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/classf3d_1_1image.html#_CPPv4N3f3d5image5imageERK5image">f3d::image::image (C++ function)</a>, <a href="api/classf3d_1_1image.html#_CPPv4N3f3d5image5imageERKNSt6stringE">[1]</a>, <a href="api/classf3d_1_1image.html#_CPPv4N3f3d5image5imageERR5image">[2]</a>, <a href="api/classf3d_1_1image.html#_CPPv4N3f3d5image5imageEjjj11ChannelType">[3]</a>, <a href="api/classf3d_1_1image.html#_CPPv4N3f3d5image5imageEv">[4]</a>
 </li>
       <li><a href="api/classf3d_1_1image.html#_CPPv4N3f3d5image18metadata_exceptionE">f3d::image::metadata_exception (C++ struct)</a>, <a href="api/structf3d_1_1image_1_1metadata__exception.html#_CPPv4N3f3d5image18metadata_exceptionE">[1]</a>
 </li>
       <li><a href="api/classf3d_1_1image.html#_CPPv4N3f3d5image18metadata_exception18metadata_exceptionERKNSt6stringE">f3d::image::metadata_exception::metadata_exception (C++ function)</a>, <a href="api/structf3d_1_1image_1_1metadata__exception.html#_CPPv4N3f3d5image18metadata_exception18metadata_exceptionERKNSt6stringE">[1]</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/classf3d_1_1image.html#_CPPv4NK3f3d5imageneERK5image">f3d::image::operator!= (C++ function)</a>
 </li>
       <li><a href="api/classf3d_1_1image.html#_CPPv4N3f3d5imageaSERK5image">f3d::image::operator= (C++ function)</a>, <a href="api/classf3d_1_1image.html#_CPPv4N3f3d5imageaSERR5image">[1]</a>
@@ -534,11 +536,17 @@ document.write(`
 </li>
       <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactorE">f3d::interactor (C++ class)</a>
 </li>
-      <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor18addCommandCallbackENSt6stringENSt8functionIFbRKNSt6vectorINSt6stringEEEEEE">f3d::interactor::addCommandCallback (C++ function)</a>
+      <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor10addBindingERKNSt6stringE12ModifierKeysNSt16initializer_listINSt6stringEEE">f3d::interactor::addBinding (C++ function)</a>, <a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor10addBindingERKNSt6stringE12ModifierKeysNSt6stringE">[1]</a>, <a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor10addBindingERKNSt6stringE12ModifierKeysNSt6vectorINSt6stringEEE">[2]</a>
 </li>
-      <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor21addInteractionCommandENSt6stringE12ModifierKeysNSt6stringE">f3d::interactor::addInteractionCommand (C++ function)</a>
+      <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor10addCommandERKNSt6stringENSt8functionIFvRKNSt6vectorINSt6stringEEEEEE">f3d::interactor::addCommand (C++ function)</a>
 </li>
-      <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor22addInteractionCommandsENSt6stringE12ModifierKeysNSt6vectorINSt6stringEEE">f3d::interactor::addInteractionCommands (C++ function)</a>
+      <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor24already_exists_exceptionE">f3d::interactor::already_exists_exception (C++ struct)</a>, <a href="api/structf3d_1_1interactor_1_1already__exists__exception.html#_CPPv4N3f3d10interactor24already_exists_exceptionE">[1]</a>
+</li>
+      <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor24already_exists_exception24already_exists_exceptionERKNSt6stringE">f3d::interactor::already_exists_exception::already_exists_exception (C++ function)</a>, <a href="api/structf3d_1_1interactor_1_1already__exists__exception.html#_CPPv4N3f3d10interactor24already_exists_exception24already_exists_exceptionERKNSt6stringE">[1]</a>
+</li>
+      <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor25command_runtime_exceptionE">f3d::interactor::command_runtime_exception (C++ struct)</a>, <a href="api/structf3d_1_1interactor_1_1command__runtime__exception.html#_CPPv4N3f3d10interactor25command_runtime_exceptionE">[1]</a>
+</li>
+      <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor25command_runtime_exception25command_runtime_exceptionERKNSt6stringE">f3d::interactor::command_runtime_exception::command_runtime_exception (C++ function)</a>, <a href="api/structf3d_1_1interactor_1_1command__runtime__exception.html#_CPPv4N3f3d10interactor25command_runtime_exception25command_runtime_exceptionERKNSt6stringE">[1]</a>
 </li>
       <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor19createTimerCallBackEdNSt8functionIFvvEEE">f3d::interactor::createTimerCallBack (C++ function)</a>
 </li>
@@ -546,7 +554,15 @@ document.write(`
 </li>
       <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor20enableCameraMovementEv">f3d::interactor::enableCameraMovement (C++ function)</a>
 </li>
+      <li><a href="api/classf3d_1_1interactor.html#_CPPv4NK3f3d10interactor22getBindingInteractionsEv">f3d::interactor::getBindingInteractions (C++ function)</a>
+</li>
+      <li><a href="api/classf3d_1_1interactor.html#_CPPv4NK3f3d10interactor17getCommandActionsEv">f3d::interactor::getCommandActions (C++ function)</a>
+</li>
       <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor26getDefaultInteractionsInfoEv">f3d::interactor::getDefaultInteractionsInfo (C++ function)</a>
+</li>
+      <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor12initBindingsEv">f3d::interactor::initBindings (C++ function)</a>
+</li>
+      <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor12initCommandsEv">f3d::interactor::initCommands (C++ function)</a>
 </li>
       <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor18isPlayingAnimationEv">f3d::interactor::isPlayingAnimation (C++ function)</a>
 </li>
@@ -566,9 +582,9 @@ document.write(`
 </li>
       <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor17recordInteractionERKNSt6stringE">f3d::interactor::recordInteraction (C++ function)</a>
 </li>
-      <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor21removeCommandCallbackERKNSt6stringE">f3d::interactor::removeCommandCallback (C++ function)</a>
+      <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor13removeBindingENSt6stringE12ModifierKeys">f3d::interactor::removeBinding (C++ function)</a>
 </li>
-      <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor25removeInteractionCommandsENSt6stringE12ModifierKeys">f3d::interactor::removeInteractionCommands (C++ function)</a>
+      <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor13removeCommandERKNSt6stringE">f3d::interactor::removeCommand (C++ function)</a>
 </li>
       <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor19removeTimerCallBackEm">f3d::interactor::removeTimerCallBack (C++ function)</a>
 </li>
