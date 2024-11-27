@@ -462,15 +462,15 @@ document.write(`
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine9createEGLEb">
-<span id="_CPPv3N3f3d6engine9createEGLEb"></span><span id="_CPPv2N3f3d6engine9createEGLEb"></span><span id="f3d::engine::createEGL__b"></span><span class="target" id="classf3d_1_1engine_1aa1c0b3bed6fc34546d4bb7aab67abcc8"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6engineE" title="f3d::engine"><span class="n"><span class="pre">engine</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createEGL</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">offscreen</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine9createEGLEb" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Create an engine with an EGL window. VTK &gt;= 9.4 required. If several GPU are available, the environment variable <code class="docutils literal notranslate"><span class="pre">VTK_DEFAULT_EGL_DEVICE_INDEX</span></code> allows its selection. Optionally, the window can be hidden by setting offscreen to true. Throws engine::loading_exception in case of failure. </p>
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine9createEGLEv">
+<span id="_CPPv3N3f3d6engine9createEGLEv"></span><span id="_CPPv2N3f3d6engine9createEGLEv"></span><span id="f3d::engine::createEGL"></span><span class="target" id="classf3d_1_1engine_1af2ad280d2be4c58a8f30eec351cd3bf4"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6engineE" title="f3d::engine"><span class="n"><span class="pre">engine</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createEGL</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine9createEGLEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Create an engine with an offscreen EGL window. VTK &gt;= 9.4 required. If several GPU are available, the environment variable <code class="docutils literal notranslate"><span class="pre">VTK_DEFAULT_EGL_DEVICE_INDEX</span></code> allows its selection. Throws engine::loading_exception in case of failure. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine12createOSMesaEv">
 <span id="_CPPv3N3f3d6engine12createOSMesaEv"></span><span id="_CPPv2N3f3d6engine12createOSMesaEv"></span><span id="f3d::engine::createOSMesa"></span><span class="target" id="classf3d_1_1engine_1a1ea3b63b10d5f826528545a562297cd1"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3f3d6engineE" title="f3d::engine"><span class="n"><span class="pre">engine</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createOSMesa</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine12createOSMesaEv" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Create an engine with an OSMesa window. VTK &gt;= 9.4 required. Throws engine::loading_exception in case of window creation failure. </p>
+<dd><p>Create an engine with an offscreen OSMesa window. VTK &gt;= 9.4 required. Throws engine::loading_exception in case of window creation failure. </p>
 </dd></dl>
 
 <dl class="cpp function">

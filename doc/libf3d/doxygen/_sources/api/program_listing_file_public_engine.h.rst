@@ -38,7 +38,7 @@ Program Listing for File engine.h
    
      static engine createWGL(bool offscreen = false);
    
-     static engine createEGL(bool offscreen = false);
+     static engine createEGL();
    
      static engine createOSMesa();
    
