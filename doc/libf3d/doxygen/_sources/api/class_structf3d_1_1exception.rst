@@ -28,6 +28,7 @@ Derived Types
 - ``public f3d::image::write_exception`` (:ref:`exhale_struct_structf3d_1_1image_1_1write__exception`)
 - ``public f3d::interactor::already_exists_exception`` (:ref:`exhale_struct_structf3d_1_1interactor_1_1already__exists__exception`)
 - ``public f3d::interactor::command_runtime_exception`` (:ref:`exhale_struct_structf3d_1_1interactor_1_1command__runtime__exception`)
+- ``public f3d::interactor::does_not_exists_exception`` (:ref:`exhale_struct_structf3d_1_1interactor_1_1does__not__exists__exception`)
 - ``public f3d::scene::load_failure_exception`` (:ref:`exhale_struct_structf3d_1_1scene_1_1load__failure__exception`)
 - ``public f3d::utils::tokenize_exception`` (:ref:`exhale_struct_structf3d_1_1utils_1_1tokenize__exception`)
 

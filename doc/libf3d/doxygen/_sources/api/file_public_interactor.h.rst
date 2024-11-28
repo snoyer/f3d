@@ -68,9 +68,13 @@ Classes
 -------
 
 
+- :ref:`exhale_struct_structf3d_1_1interaction__bind__t`
+
 - :ref:`exhale_struct_structf3d_1_1interactor_1_1already__exists__exception`
 
 - :ref:`exhale_struct_structf3d_1_1interactor_1_1command__runtime__exception`
+
+- :ref:`exhale_struct_structf3d_1_1interactor_1_1does__not__exists__exception`
 
 - :ref:`exhale_class_classf3d_1_1interactor`
 

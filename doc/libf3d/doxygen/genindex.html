@@ -139,8 +139,10 @@
 <li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1image_1_1metadata__exception.html">Struct image::metadata_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1image_1_1read__exception.html">Struct image::read_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1image_1_1write__exception.html">Struct image::write_exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1interaction__bind__t.html">Struct interaction_bind_t</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1interactor_1_1already__exists__exception.html">Struct interactor::already_exists_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1interactor_1_1command__runtime__exception.html">Struct interactor::command_runtime_exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1interactor_1_1does__not__exists__exception.html">Struct interactor::does_not_exists_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1mesh__t.html">Struct mesh_t</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1point3__t.html">Struct point3_t</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1scene_1_1load__failure__exception.html">Struct scene::load_failure_exception</a></li>
@@ -496,8 +498,6 @@ document.write(`
 </li>
       <li><a href="api/classf3d_1_1image.html#_CPPv4N3f3d5image18metadata_exception18metadata_exceptionERKNSt6stringE">f3d::image::metadata_exception::metadata_exception (C++ function)</a>, <a href="api/structf3d_1_1image_1_1metadata__exception.html#_CPPv4N3f3d5image18metadata_exception18metadata_exceptionERKNSt6stringE">[1]</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/classf3d_1_1image.html#_CPPv4NK3f3d5imageneERK5image">f3d::image::operator!= (C++ function)</a>
 </li>
       <li><a href="api/classf3d_1_1image.html#_CPPv4N3f3d5imageaSERK5image">f3d::image::operator= (C++ function)</a>, <a href="api/classf3d_1_1image.html#_CPPv4N3f3d5imageaSERR5image">[1]</a>
@@ -510,6 +510,8 @@ document.write(`
 </li>
       <li><a href="api/classf3d_1_1image.html#_CPPv4NK3f3d5image4saveERKNSt6stringE10SaveFormat">f3d::image::save (C++ function)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/classf3d_1_1image.html#_CPPv4NK3f3d5image10saveBufferE10SaveFormat">f3d::image::saveBuffer (C++ function)</a>
 </li>
       <li><a href="api/classf3d_1_1image.html#_CPPv4N3f3d5image10SaveFormatE">f3d::image::SaveFormat (C++ enum)</a>
@@ -534,9 +536,33 @@ document.write(`
 </li>
       <li><a href="api/classf3d_1_1image.html#_CPPv4N3f3d5imageD0Ev">f3d::image::~image (C++ function)</a>
 </li>
+      <li><a href="api/structf3d_1_1interaction__bind__t.html#_CPPv4N3f3d18interaction_bind_tE">f3d::interaction_bind_t (C++ struct)</a>
+</li>
+      <li><a href="api/structf3d_1_1interaction__bind__t.html#_CPPv4NK3f3d18interaction_bind_t6formatEv">f3d::interaction_bind_t::format (C++ function)</a>
+</li>
+      <li><a href="api/structf3d_1_1interaction__bind__t.html#_CPPv4N3f3d18interaction_bind_t5interE">f3d::interaction_bind_t::inter (C++ member)</a>
+</li>
+      <li><a href="api/structf3d_1_1interaction__bind__t.html#_CPPv4N3f3d18interaction_bind_t3modE">f3d::interaction_bind_t::mod (C++ member)</a>
+</li>
+      <li><a href="api/structf3d_1_1interaction__bind__t.html#_CPPv4N3f3d18interaction_bind_t12ModifierKeysE">f3d::interaction_bind_t::ModifierKeys (C++ enum)</a>
+</li>
+      <li><a href="api/structf3d_1_1interaction__bind__t.html#_CPPv4N3f3d18interaction_bind_t12ModifierKeys3ANYE">f3d::interaction_bind_t::ModifierKeys::ANY (C++ enumerator)</a>
+</li>
+      <li><a href="api/structf3d_1_1interaction__bind__t.html#_CPPv4N3f3d18interaction_bind_t12ModifierKeys4CTRLE">f3d::interaction_bind_t::ModifierKeys::CTRL (C++ enumerator)</a>
+</li>
+      <li><a href="api/structf3d_1_1interaction__bind__t.html#_CPPv4N3f3d18interaction_bind_t12ModifierKeys10CTRL_SHIFTE">f3d::interaction_bind_t::ModifierKeys::CTRL_SHIFT (C++ enumerator)</a>
+</li>
+      <li><a href="api/structf3d_1_1interaction__bind__t.html#_CPPv4N3f3d18interaction_bind_t12ModifierKeys4NONEE">f3d::interaction_bind_t::ModifierKeys::NONE (C++ enumerator)</a>
+</li>
+      <li><a href="api/structf3d_1_1interaction__bind__t.html#_CPPv4N3f3d18interaction_bind_t12ModifierKeys5SHIFTE">f3d::interaction_bind_t::ModifierKeys::SHIFT (C++ enumerator)</a>
+</li>
+      <li><a href="api/structf3d_1_1interaction__bind__t.html#_CPPv4NK3f3d18interaction_bind_tltERK18interaction_bind_t">f3d::interaction_bind_t::operator&lt; (C++ function)</a>
+</li>
+      <li><a href="api/structf3d_1_1interaction__bind__t.html#_CPPv4NK3f3d18interaction_bind_teqERK18interaction_bind_t">f3d::interaction_bind_t::operator== (C++ function)</a>
+</li>
       <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactorE">f3d::interactor (C++ class)</a>
 </li>
-      <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor10addBindingERKNSt6stringE12ModifierKeysNSt16initializer_listINSt6stringEEE">f3d::interactor::addBinding (C++ function)</a>, <a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor10addBindingERKNSt6stringE12ModifierKeysNSt6stringE">[1]</a>, <a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor10addBindingERKNSt6stringE12ModifierKeysNSt6vectorINSt6stringEEE">[2]</a>
+      <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor10addBindingERK18interaction_bind_tNSt16initializer_listINSt6stringEEENSt6stringE24documentation_callback_t">f3d::interactor::addBinding (C++ function)</a>, <a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor10addBindingERK18interaction_bind_tNSt6stringENSt6stringE24documentation_callback_t">[1]</a>, <a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor10addBindingERK18interaction_bind_tNSt6vectorINSt6stringEEENSt6stringE24documentation_callback_t">[2]</a>
 </li>
       <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor10addCommandERKNSt6stringENSt8functionIFvRKNSt6vectorINSt6stringEEEEEE">f3d::interactor::addCommand (C++ function)</a>
 </li>
@@ -552,13 +578,23 @@ document.write(`
 </li>
       <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor21disableCameraMovementEv">f3d::interactor::disableCameraMovement (C++ function)</a>
 </li>
+      <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor24documentation_callback_tE">f3d::interactor::documentation_callback_t (C++ type)</a>
+</li>
+      <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor25does_not_exists_exceptionE">f3d::interactor::does_not_exists_exception (C++ struct)</a>, <a href="api/structf3d_1_1interactor_1_1does__not__exists__exception.html#_CPPv4N3f3d10interactor25does_not_exists_exceptionE">[1]</a>
+</li>
+      <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor25does_not_exists_exception25does_not_exists_exceptionERKNSt6stringE">f3d::interactor::does_not_exists_exception::does_not_exists_exception (C++ function)</a>, <a href="api/structf3d_1_1interactor_1_1does__not__exists__exception.html#_CPPv4N3f3d10interactor25does_not_exists_exception25does_not_exists_exceptionERKNSt6stringE">[1]</a>
+</li>
       <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor20enableCameraMovementEv">f3d::interactor::enableCameraMovement (C++ function)</a>
 </li>
-      <li><a href="api/classf3d_1_1interactor.html#_CPPv4NK3f3d10interactor22getBindingInteractionsEv">f3d::interactor::getBindingInteractions (C++ function)</a>
+      <li><a href="api/classf3d_1_1interactor.html#_CPPv4NK3f3d10interactor13getBindGroupsEv">f3d::interactor::getBindGroups (C++ function)</a>
+</li>
+      <li><a href="api/classf3d_1_1interactor.html#_CPPv4NK3f3d10interactor23getBindingDocumentationERK18interaction_bind_t">f3d::interactor::getBindingDocumentation (C++ function)</a>
+</li>
+      <li><a href="api/classf3d_1_1interactor.html#_CPPv4NK3f3d10interactor8getBindsEv">f3d::interactor::getBinds (C++ function)</a>
+</li>
+      <li><a href="api/classf3d_1_1interactor.html#_CPPv4NK3f3d10interactor16getBindsForGroupENSt6stringE">f3d::interactor::getBindsForGroup (C++ function)</a>
 </li>
       <li><a href="api/classf3d_1_1interactor.html#_CPPv4NK3f3d10interactor17getCommandActionsEv">f3d::interactor::getCommandActions (C++ function)</a>
-</li>
-      <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor26getDefaultInteractionsInfoEv">f3d::interactor::getDefaultInteractionsInfo (C++ function)</a>
 </li>
       <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor12initBindingsEv">f3d::interactor::initBindings (C++ function)</a>
 </li>
@@ -566,23 +602,11 @@ document.write(`
 </li>
       <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor18isPlayingAnimationEv">f3d::interactor::isPlayingAnimation (C++ function)</a>
 </li>
-      <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor12ModifierKeysE">f3d::interactor::ModifierKeys (C++ enum)</a>
-</li>
-      <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor12ModifierKeys3ANYE">f3d::interactor::ModifierKeys::ANY (C++ enumerator)</a>
-</li>
-      <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor12ModifierKeys4CTRLE">f3d::interactor::ModifierKeys::CTRL (C++ enumerator)</a>
-</li>
-      <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor12ModifierKeys10CTRL_SHIFTE">f3d::interactor::ModifierKeys::CTRL_SHIFT (C++ enumerator)</a>
-</li>
-      <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor12ModifierKeys4NONEE">f3d::interactor::ModifierKeys::NONE (C++ enumerator)</a>
-</li>
-      <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor12ModifierKeys5SHIFTE">f3d::interactor::ModifierKeys::SHIFT (C++ enumerator)</a>
-</li>
       <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor15playInteractionERKNSt6stringE">f3d::interactor::playInteraction (C++ function)</a>
 </li>
       <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor17recordInteractionERKNSt6stringE">f3d::interactor::recordInteraction (C++ function)</a>
 </li>
-      <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor13removeBindingENSt6stringE12ModifierKeys">f3d::interactor::removeBinding (C++ function)</a>
+      <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor13removeBindingERK18interaction_bind_t">f3d::interactor::removeBinding (C++ function)</a>
 </li>
       <li><a href="api/classf3d_1_1interactor.html#_CPPv4N3f3d10interactor13removeCommandERKNSt6stringE">f3d::interactor::removeCommand (C++ function)</a>
 </li>
