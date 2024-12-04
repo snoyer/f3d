@@ -36,6 +36,8 @@ Includes
 
 - ``functional``
 
+- ``log.h`` (:ref:`file_public_log.h`)
+
 - ``options.h``
 
 - ``string``
