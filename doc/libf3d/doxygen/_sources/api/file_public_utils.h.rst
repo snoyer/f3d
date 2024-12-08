@@ -34,6 +34,12 @@ Includes
 
 - ``export.h``
 
+- ``map``
+
+- ``regex``
+
+- ``sstream``
+
 - ``string``
 
 - ``vector``
@@ -54,7 +60,11 @@ Classes
 -------
 
 
+- :ref:`exhale_struct_structf3d_1_1utils_1_1string__template_1_1lookup__error`
+
 - :ref:`exhale_struct_structf3d_1_1utils_1_1tokenize__exception`
 
 - :ref:`exhale_class_classf3d_1_1utils`
+
+- :ref:`exhale_class_classf3d_1_1utils_1_1string__template`
 
