@@ -71,7 +71,7 @@ set(classes
   )
 
 if (F3D_MODULE_UI)
-  set(classes ${classes} vtkF3DImguiObserver vtkF3DImguiActor)
+  set(classes ${classes} vtkF3DImguiActor vtkF3DImguiConsole vtkF3DImguiObserver)
 endif ()
 
 # Needs https://gitlab.kitware.com/vtk/vtk/-/merge_requests/10675
@@ -84,13 +84,17 @@ if(NOT VTK_VERSION VERSION_GREATER_EQUAL 9.2.20220907)
 endif()
 
 if(WIN32)
-  list(APPEND classes vtkF3DWin32OutputWindow vtkF3DWGLRenderWindow)
+  list(APPEND classes vtkF3DWGLRenderWindow)
 endif()
 
 # In theory the test should be `if (VTK_USE_X)` but this variable is
 # only exported starting from VTK 9.4
 if(UNIX AND NOT APPLE AND NOT EMSCRIPTEN AND NOT ANDROID)
   list(APPEND classes vtkF3DGLXRenderWindow)
+endif()
+
+if(VTK_OPENGL_HAS_EGL)
+  list(APPEND classes vtkF3DEGLRenderWindow)
 endif()
 
 if(ANDROID)
@@ -102,8 +106,13 @@ if(F3D_MODULE_EXR)
   list(APPEND classes vtkF3DEXRReader)
 endif()
 
-if(F3D_MODULE_UI)
-  find_package(imgui REQUIRED)
+if(F3D_MODULE_UI AND NOT F3D_USE_EXTERNAL_IMGUI)
+  list(APPEND sources
+    "${F3D_SOURCE_DIR}/external/imgui/imgui.cpp"
+    "${F3D_SOURCE_DIR}/external/imgui/imgui_demo.cpp"
+    "${F3D_SOURCE_DIR}/external/imgui/imgui_draw.cpp"
+    "${F3D_SOURCE_DIR}/external/imgui/imgui_tables.cpp"
+    "${F3D_SOURCE_DIR}/external/imgui/imgui_widgets.cpp")
 endif()
 
 set(_no_install "")
@@ -129,5 +138,11 @@ endif()
 
 # imgui
 if (F3D_MODULE_UI)
-  vtk_module_link(f3d::vtkextPrivate PRIVATE imgui::imgui)
+  if(F3D_USE_EXTERNAL_IMGUI)
+    vtk_module_link(f3d::vtkextPrivate PRIVATE imgui::imgui)
+  else()
+    vtk_module_include(f3d::vtkextPrivate
+      PRIVATE
+        "${F3D_SOURCE_DIR}/external/imgui")
+  endif ()
 endif ()

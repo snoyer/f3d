@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Class log &#8212; libf3d 2.5.0 documentation</title>
+    <title>Class log &#8212; libf3d 2.5.1 documentation</title>
   
   
   
@@ -122,7 +122,7 @@
   
   
   
-    <p class="title logo__title">libf3d 2.5.0 documentation</p>
+    <p class="title logo__title">libf3d 2.5.1 documentation</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -336,7 +336,7 @@ document.write(`
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d3logE">
 <span id="_CPPv3N3f3d3logE"></span><span id="_CPPv2N3f3d3logE"></span><span id="f3d::log"></span><span class="target" id="classf3d_1_1log"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">log</span></span></span><a class="headerlink" href="#_CPPv4N3f3d3logE" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Class used to show logs in F3D. </p>
-<p>A class to output logs to the standard output. It supports different levels, errors, warnings and info, with associated coloring. A few static methods exists to control the coloring and the verbosity level A waitForUser utility static method exist for windows. </p>
+<p>A class to output logs to the standard output. It supports different levels, errors, warnings and info, with associated coloring. A few static methods exists to control the coloring and the verbosity level </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
 <dl class="cpp enum-class">
@@ -417,12 +417,6 @@ document.write(`
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d3log15setVerboseLevelE12VerboseLevelb">
 <span id="_CPPv3N3f3d3log15setVerboseLevelE12VerboseLevelb"></span><span id="_CPPv2N3f3d3log15setVerboseLevelE12VerboseLevelb"></span><span id="f3d::log::setVerboseLevel__VerboseLevel.b"></span><span class="target" id="classf3d_1_1log_1a42acb3b11578123d01b58420ebff5d65"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setVerboseLevel</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N3f3d3log12VerboseLevelE" title="f3d::log::VerboseLevel"><span class="n"><span class="pre">VerboseLevel</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">level</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">forceStdErr</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d3log15setVerboseLevelE12VerboseLevelb" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Set the verbose level. By default, only warnings and errors are written to stderr, debug and info are written to stdout. If forceStdErr is true, all messages including debug and info are written to stderr. </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3f3d3log11waitForUserEv">
-<span id="_CPPv3N3f3d3log11waitForUserEv"></span><span id="_CPPv2N3f3d3log11waitForUserEv"></span><span id="f3d::log::waitForUser"></span><span class="target" id="classf3d_1_1log_1a826eac74b91921689f964f39df45dcac"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">waitForUser</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d3log11waitForUserEv" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Wait for user if applicable (eg: win32 output window). No effect otherwise. </p>
 </dd></dl>
 
 </div>

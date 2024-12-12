@@ -53,6 +53,10 @@ Program Listing for File scene.h
    
      virtual bool supports(const std::filesystem::path& filePath) = 0;
    
+     virtual scene& loadAnimationTime(double timeValue) = 0;
+   
+     virtual std::pair<double, double> animationTimeRange() = 0;
+   
    protected:
      scene() = default;
      virtual ~scene() = default;

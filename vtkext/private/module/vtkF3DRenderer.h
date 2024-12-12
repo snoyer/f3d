@@ -46,6 +46,7 @@ public:
   void ShowMetaData(bool show);
   void ShowFilename(bool show);
   void ShowCheatSheet(bool show);
+  void ShowConsole(bool show);
   void ShowDropZone(bool show);
   void ShowHDRISkybox(bool show);
   ///@}
@@ -494,6 +495,7 @@ private:
   bool FilenameVisible = false;
   bool MetaDataVisible = false;
   bool CheatSheetVisible = false;
+  bool ConsoleVisible = false;
   bool DropZoneVisible = false;
   bool HDRISkyboxVisible = false;
   bool UseRaytracing = false;
@@ -545,6 +547,7 @@ private:
 
   vtkF3DMetaImporter* Importer = nullptr;
   vtkMTimeType ImporterTimeStamp = 0;
+  vtkMTimeType ImporterUpdateTimeStamp = 0;
 
   vtkNew<vtkScalarBarActor> ScalarBarActor;
   bool ScalarBarActorConfigured = false;
@@ -567,6 +570,8 @@ private:
   std::optional<std::string> TextureNormal;
 
   vtkSmartPointer<vtkColorTransferFunction> ColorTransferFunction;
+  bool ExpandingRangeSet = false;
+  bool UsingExpandingRange = true;
   double ColorRange[2] = { 0.0, 1.0 };
   bool ColorTransferFunctionConfigured = false;
 
