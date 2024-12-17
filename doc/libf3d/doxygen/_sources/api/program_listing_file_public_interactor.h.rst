@@ -92,10 +92,6 @@ Program Listing for File interactor.h
      virtual std::pair<std::string, std::string> getBindingDocumentation(
        const interaction_bind_t& bind) const = 0;
    
-     virtual unsigned long createTimerCallBack(double time, std::function<void()> callBack) = 0;
-   
-     virtual void removeTimerCallBack(unsigned long id) = 0;
-   
    
      virtual void toggleAnimation() = 0;
      virtual void startAnimation() = 0;
@@ -106,13 +102,16 @@ Program Listing for File interactor.h
      virtual void enableCameraMovement() = 0;
      virtual void disableCameraMovement() = 0;
    
-     virtual bool playInteraction(const std::string& file) = 0;
+     virtual bool playInteraction(const std::string& file, double deltaTime = 1.0 / 30,
+       std::function<void()> userCallBack = nullptr) = 0;
    
      virtual bool recordInteraction(const std::string& file) = 0;
    
-     virtual void start() = 0;
+     virtual void start(double deltaTime = 1.0 / 30, std::function<void()> userCallBack = nullptr) = 0;
    
      virtual void stop() = 0;
+   
+     virtual void requestRender() = 0;
    
      struct already_exists_exception : public exception
      {
