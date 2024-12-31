@@ -19,9 +19,13 @@ Program Listing for File vtkF3DImporter.h
    #include <vtkImporter.h>
    #include <vtkVersion.h>
    
+   class vtkInformationIntegerKey;
+   
    class VTKEXT_EXPORT vtkF3DImporter : public vtkImporter
    {
    public:
+     static vtkInformationIntegerKey* ACTOR_IS_ARMATURE();
+   
    #if VTK_VERSION_NUMBER >= VTK_VERSION_CHECK(9, 3, 20240707)
      bool UpdateAtTimeValue(double timeValue) override;
    #else  

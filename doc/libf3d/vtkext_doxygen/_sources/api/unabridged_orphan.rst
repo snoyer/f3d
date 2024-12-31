@@ -50,6 +50,16 @@ Files
 .. toctree::
    :maxdepth: 5
 
+   file_module_vtkF3DGLTFImporter.cxx.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_module_vtkF3DGLTFImporter.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
    file_module_vtkF3DImporter.cxx.rst
 
 .. toctree::

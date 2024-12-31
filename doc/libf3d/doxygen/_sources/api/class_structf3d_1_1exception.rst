@@ -20,6 +20,7 @@ Derived Types
 
 - ``public f3d::context::loading_exception`` (:ref:`exhale_struct_structf3d_1_1context_1_1loading__exception`)
 - ``public f3d::context::symbol_exception`` (:ref:`exhale_struct_structf3d_1_1context_1_1symbol__exception`)
+- ``public f3d::engine::cache_exception`` (:ref:`exhale_struct_structf3d_1_1engine_1_1cache__exception`)
 - ``public f3d::engine::no_interactor_exception`` (:ref:`exhale_struct_structf3d_1_1engine_1_1no__interactor__exception`)
 - ``public f3d::engine::no_window_exception`` (:ref:`exhale_struct_structf3d_1_1engine_1_1no__window__exception`)
 - ``public f3d::engine::plugin_exception`` (:ref:`exhale_struct_structf3d_1_1engine_1_1plugin__exception`)

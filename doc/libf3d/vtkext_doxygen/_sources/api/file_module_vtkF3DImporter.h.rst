@@ -42,6 +42,8 @@ Included By
 -----------
 
 
+- :ref:`file_module_vtkF3DGLTFImporter.cxx`
+
 - :ref:`file_module_vtkF3DImporter.cxx`
 
 

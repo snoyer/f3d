@@ -131,6 +131,7 @@
 <li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1camera__state__t.html">Struct camera_state_t</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1context_1_1loading__exception.html">Struct context::loading_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1context_1_1symbol__exception.html">Struct context::symbol_exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1engine_1_1cache__exception.html">Struct engine::cache_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1engine_1_1libInformation.html">Struct engine::libInformation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1engine_1_1no__interactor__exception.html">Struct engine::no_interactor_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/structf3d_1_1engine_1_1no__window__exception.html">Struct engine::no_window_exception</a></li>
@@ -322,13 +323,13 @@ document.write(`
 </li>
       <li><a href="api/structf3d_1_1camera__state__t.html#_CPPv4N3f3d14camera_state_tE">f3d::camera_state_t (C++ struct)</a>
 </li>
-      <li><a href="api/structf3d_1_1camera__state__t.html#_CPPv4N3f3d14camera_state_t5angleE">f3d::camera_state_t::angle (C++ member)</a>
+      <li><a href="api/structf3d_1_1camera__state__t.html#_CPPv4N3f3d14camera_state_t10focalPointE">f3d::camera_state_t::focalPoint (C++ member)</a>
 </li>
-      <li><a href="api/structf3d_1_1camera__state__t.html#_CPPv4N3f3d14camera_state_t3focE">f3d::camera_state_t::foc (C++ member)</a>
+      <li><a href="api/structf3d_1_1camera__state__t.html#_CPPv4N3f3d14camera_state_t8positionE">f3d::camera_state_t::position (C++ member)</a>
 </li>
-      <li><a href="api/structf3d_1_1camera__state__t.html#_CPPv4N3f3d14camera_state_t3posE">f3d::camera_state_t::pos (C++ member)</a>
+      <li><a href="api/structf3d_1_1camera__state__t.html#_CPPv4N3f3d14camera_state_t9viewAngleE">f3d::camera_state_t::viewAngle (C++ member)</a>
 </li>
-      <li><a href="api/structf3d_1_1camera__state__t.html#_CPPv4N3f3d14camera_state_t2upE">f3d::camera_state_t::up (C++ member)</a>
+      <li><a href="api/structf3d_1_1camera__state__t.html#_CPPv4N3f3d14camera_state_t6viewUpE">f3d::camera_state_t::viewUp (C++ member)</a>
 </li>
       <li><a href="api/classf3d_1_1context.html#_CPPv4N3f3d7contextE">f3d::context (C++ class)</a>
 </li>
@@ -340,7 +341,7 @@ document.write(`
 </li>
       <li><a href="api/classf3d_1_1context.html#_CPPv4N3f3d7context8functionE">f3d::context::function (C++ type)</a>
 </li>
-      <li><a href="api/classf3d_1_1context.html#_CPPv4N3f3d7context9getSymbolERKNSt6stringERKNSt6stringE">f3d::context::getSymbol (C++ function)</a>
+      <li><a href="api/classf3d_1_1context.html#_CPPv4N3f3d7context9getSymbolENSt11string_viewENSt11string_viewE">f3d::context::getSymbol (C++ function)</a>
 </li>
       <li><a href="api/classf3d_1_1context.html#_CPPv4N3f3d7context3glxEv">f3d::context::glx (C++ function)</a>
 </li>
@@ -359,6 +360,10 @@ document.write(`
       <li><a href="api/classf3d_1_1engine.html#_CPPv4N3f3d6engineE">f3d::engine (C++ class)</a>
 </li>
       <li><a href="api/classf3d_1_1engine.html#_CPPv4N3f3d6engine15autoloadPluginsEv">f3d::engine::autoloadPlugins (C++ function)</a>
+</li>
+      <li><a href="api/classf3d_1_1engine.html#_CPPv4N3f3d6engine15cache_exceptionE">f3d::engine::cache_exception (C++ struct)</a>, <a href="api/structf3d_1_1engine_1_1cache__exception.html#_CPPv4N3f3d6engine15cache_exceptionE">[1]</a>
+</li>
+      <li><a href="api/classf3d_1_1engine.html#_CPPv4N3f3d6engine15cache_exception15cache_exceptionERKNSt6stringE">f3d::engine::cache_exception::cache_exception (C++ function)</a>, <a href="api/structf3d_1_1engine_1_1cache__exception.html#_CPPv4N3f3d6engine15cache_exception15cache_exceptionERKNSt6stringE">[1]</a>
 </li>
       <li><a href="api/classf3d_1_1engine.html#_CPPv4N3f3d6engine6createEb">f3d::engine::create (C++ function)</a>
 </li>
@@ -392,9 +397,11 @@ document.write(`
 </li>
       <li><a href="api/classf3d_1_1engine.html#_CPPv4N3f3d6engine10getOptionsEv">f3d::engine::getOptions (C++ function)</a>
 </li>
-      <li><a href="api/classf3d_1_1engine.html#_CPPv4N3f3d6engine14getPluginsListERKNSt6stringE">f3d::engine::getPluginsList (C++ function)</a>
+      <li><a href="api/classf3d_1_1engine.html#_CPPv4N3f3d6engine14getPluginsListERKNSt10filesystem4pathE">f3d::engine::getPluginsList (C++ function)</a>
 </li>
       <li><a href="api/classf3d_1_1engine.html#_CPPv4N3f3d6engine14getReadersInfoEv">f3d::engine::getReadersInfo (C++ function)</a>
+</li>
+      <li><a href="api/classf3d_1_1engine.html#_CPPv4N3f3d6engine23getRenderingBackendListEv">f3d::engine::getRenderingBackendList (C++ function)</a>
 </li>
       <li><a href="api/classf3d_1_1engine.html#_CPPv4N3f3d6engine8getSceneEv">f3d::engine::getScene (C++ function)</a>
 </li>
@@ -420,7 +427,7 @@ document.write(`
 </li>
       <li><a href="api/classf3d_1_1engine.html#_CPPv4N3f3d6engine14libInformation10VTKVersionE">f3d::engine::libInformation::VTKVersion (C++ member)</a>, <a href="api/structf3d_1_1engine_1_1libInformation.html#_CPPv4N3f3d6engine14libInformation10VTKVersionE">[1]</a>
 </li>
-      <li><a href="api/classf3d_1_1engine.html#_CPPv4N3f3d6engine10loadPluginERKNSt6stringERKNSt6vectorINSt6stringEEE">f3d::engine::loadPlugin (C++ function)</a>
+      <li><a href="api/classf3d_1_1engine.html#_CPPv4N3f3d6engine10loadPluginERKNSt6stringERKNSt6vectorINSt10filesystem4pathEEE">f3d::engine::loadPlugin (C++ function)</a>
 </li>
       <li><a href="api/classf3d_1_1engine.html#_CPPv4N3f3d6engine23no_interactor_exceptionE">f3d::engine::no_interactor_exception (C++ struct)</a>, <a href="api/structf3d_1_1engine_1_1no__interactor__exception.html#_CPPv4N3f3d6engine23no_interactor_exceptionE">[1]</a>
 </li>
@@ -452,7 +459,7 @@ document.write(`
 </li>
       <li><a href="api/classf3d_1_1engine.html#_CPPv4N3f3d6engine17readerInformation10PluginNameE">f3d::engine::readerInformation::PluginName (C++ member)</a>, <a href="api/structf3d_1_1engine_1_1readerInformation.html#_CPPv4N3f3d6engine17readerInformation10PluginNameE">[1]</a>
 </li>
-      <li><a href="api/classf3d_1_1engine.html#_CPPv4N3f3d6engine12setCachePathERKNSt6stringE">f3d::engine::setCachePath (C++ function)</a>
+      <li><a href="api/classf3d_1_1engine.html#_CPPv4N3f3d6engine12setCachePathERKNSt10filesystem4pathE">f3d::engine::setCachePath (C++ function)</a>
 </li>
       <li><a href="api/classf3d_1_1engine.html#_CPPv4N3f3d6engine10setOptionsERK7options">f3d::engine::setOptions (C++ function)</a>, <a href="api/classf3d_1_1engine.html#_CPPv4N3f3d6engine10setOptionsERR7options">[1]</a>
 </li>
@@ -516,12 +523,12 @@ document.write(`
 </li>
       <li><a href="api/classf3d_1_1image.html#_CPPv4N3f3d5image10SaveFormatE">f3d::image::SaveFormat (C++ enum)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/classf3d_1_1image.html#_CPPv4N3f3d5image10SaveFormat3BMPE">f3d::image::SaveFormat::BMP (C++ enumerator)</a>
 </li>
       <li><a href="api/classf3d_1_1image.html#_CPPv4N3f3d5image10SaveFormat3JPGE">f3d::image::SaveFormat::JPG (C++ enumerator)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/classf3d_1_1image.html#_CPPv4N3f3d5image10SaveFormat3PNGE">f3d::image::SaveFormat::PNG (C++ enumerator)</a>
 </li>
       <li><a href="api/classf3d_1_1image.html#_CPPv4N3f3d5image10SaveFormat3TIFE">f3d::image::SaveFormat::TIF (C++ enumerator)</a>

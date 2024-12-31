@@ -12,6 +12,10 @@ Program Listing for File vtkF3DImporter.cxx
 
    #include "vtkF3DImporter.h"
    
+   #include <vtkInformationIntegerKey.h>
+   
+   vtkInformationKeyMacro(vtkF3DImporter, ACTOR_IS_ARMATURE, Integer);
+   
    #if VTK_VERSION_NUMBER >= VTK_VERSION_CHECK(9, 3, 20240707)
    
    //----------------------------------------------------------------------------

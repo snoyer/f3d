@@ -30,29 +30,29 @@ Program Listing for File engine.h
    class F3D_EXPORT engine
    {
    public:
-     static engine create(bool offscreen = false);
+     [[nodiscard]] static engine create(bool offscreen = false);
    
-     static engine createNone();
+     [[nodiscard]] static engine createNone();
    
-     static engine createGLX(bool offscreen = false);
+     [[nodiscard]] static engine createGLX(bool offscreen = false);
    
-     static engine createWGL(bool offscreen = false);
+     [[nodiscard]] static engine createWGL(bool offscreen = false);
    
-     static engine createEGL();
+     [[nodiscard]] static engine createEGL();
    
-     static engine createOSMesa();
+     [[nodiscard]] static engine createOSMesa();
    
-     static engine createExternal(const context::function& getProcAddress);
+     [[nodiscard]] static engine createExternal(const context::function& getProcAddress);
    
-     static engine createExternalGLX();
+     [[nodiscard]] static engine createExternalGLX();
    
-     static engine createExternalWGL();
+     [[nodiscard]] static engine createExternalWGL();
    
-     static engine createExternalCOCOA();
+     [[nodiscard]] static engine createExternalCOCOA();
    
-     static engine createExternalEGL();
+     [[nodiscard]] static engine createExternalEGL();
    
-     static engine createExternalOSMesa();
+     [[nodiscard]] static engine createExternalOSMesa();
    
      ~engine();
    
@@ -62,26 +62,29 @@ Program Listing for File engine.h
      engine& operator=(const engine& other) = delete;
      engine& operator=(engine&& other) noexcept;
    
-     void setCachePath(const std::string& cachePath);
+     engine& setCachePath(const std::filesystem::path& cachePath);
    
      engine& setOptions(const options& opt);
    
      engine& setOptions(options&& opt);
    
-     options& getOptions();
+     [[nodiscard]] options& getOptions();
    
-     window& getWindow();
+     [[nodiscard]] window& getWindow();
    
-     scene& getScene();
+     [[nodiscard]] scene& getScene();
    
-     interactor& getInteractor();
+     [[nodiscard]] interactor& getInteractor();
    
-     static void loadPlugin(
-       const std::string& nameOrPath, const std::vector<std::string>& pluginSearchPaths = {});
+     static std::map<std::string, bool> getRenderingBackendList();
+   
+     static void loadPlugin(const std::string& pathOrName,
+       const std::vector<std::filesystem::path>& pluginSearchPaths = {});
    
      static void autoloadPlugins();
    
-     static std::vector<std::string> getPluginsList(const std::string& pluginPath);
+     [[nodiscard]] static std::vector<std::string> getPluginsList(
+       const std::filesystem::path& pluginPath);
    
      struct libInformation
      {
@@ -96,7 +99,7 @@ Program Listing for File engine.h
        std::string License;
      };
    
-     static libInformation getLibInfo();
+     [[nodiscard]] static libInformation getLibInfo();
    
      struct readerInformation
      {
@@ -109,7 +112,7 @@ Program Listing for File engine.h
        bool HasGeometryReader;
      };
    
-     static std::vector<readerInformation> getReadersInfo();
+     [[nodiscard]] static std::vector<readerInformation> getReadersInfo();
    
      struct no_window_exception : public exception
      {
@@ -124,6 +127,11 @@ Program Listing for File engine.h
      struct plugin_exception : public exception
      {
        explicit plugin_exception(const std::string& what = "");
+     };
+   
+     struct cache_exception : public exception
+     {
+       explicit cache_exception(const std::string& what = "");
      };
    
    private:

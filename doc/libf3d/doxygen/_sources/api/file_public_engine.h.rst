@@ -66,6 +66,8 @@ Classes
 -------
 
 
+- :ref:`exhale_struct_structf3d_1_1engine_1_1cache__exception`
+
 - :ref:`exhale_struct_structf3d_1_1engine_1_1libInformation`
 
 - :ref:`exhale_struct_structf3d_1_1engine_1_1no__interactor__exception`

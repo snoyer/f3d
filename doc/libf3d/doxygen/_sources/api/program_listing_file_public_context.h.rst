@@ -27,17 +27,17 @@ Program Listing for File context.h
      using fptr = void (*)();
      using function = std::function<fptr(const char*)>;
    
-     static function glx();
+     [[nodiscard]] static function glx();
    
-     static function wgl();
+     [[nodiscard]] static function wgl();
    
-     static function cocoa();
+     [[nodiscard]] static function cocoa();
    
-     static function egl();
+     [[nodiscard]] static function egl();
    
-     static function osmesa();
+     [[nodiscard]] static function osmesa();
    
-     static function getSymbol(const std::string& lib, const std::string& func);
+     [[nodiscard]] static function getSymbol(std::string_view lib, std::string_view func);
    
      struct loading_exception : public exception
      {

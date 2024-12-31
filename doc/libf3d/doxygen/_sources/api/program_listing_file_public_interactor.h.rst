@@ -40,13 +40,13 @@ Program Listing for File interactor.h
      ModifierKeys mod = ModifierKeys::NONE;
      std::string inter;
    
-     bool operator<(const interaction_bind_t& bind) const;
+     [[nodiscard]] bool operator<(const interaction_bind_t& bind) const;
    
-     bool operator==(const interaction_bind_t& bind) const;
+     [[nodiscard]] bool operator==(const interaction_bind_t& bind) const;
    
-     std::string format() const;
+     [[nodiscard]] std::string format() const;
    
-     static interaction_bind_t parse(const std::string& str);
+     [[nodiscard]] static interaction_bind_t parse(const std::string& str);
    };
    
    class F3D_EXPORT interactor
@@ -60,7 +60,7 @@ Program Listing for File interactor.h
    
      virtual interactor& removeCommand(const std::string& action) = 0;
    
-     virtual std::vector<std::string> getCommandActions() const = 0;
+     [[nodiscard]] virtual std::vector<std::string> getCommandActions() const = 0;
    
      virtual bool triggerCommand(std::string_view command) = 0;
    
@@ -83,35 +83,37 @@ Program Listing for File interactor.h
    
      virtual interactor& removeBinding(const interaction_bind_t& bind) = 0;
    
-     virtual std::vector<std::string> getBindGroups() const = 0;
+     [[nodiscard]] virtual std::vector<std::string> getBindGroups() const = 0;
    
-     virtual std::vector<interaction_bind_t> getBindsForGroup(std::string group) const = 0;
+     [[nodiscard]] virtual std::vector<interaction_bind_t> getBindsForGroup(
+       std::string group) const = 0;
    
-     virtual std::vector<interaction_bind_t> getBinds() const = 0;
+     [[nodiscard]] virtual std::vector<interaction_bind_t> getBinds() const = 0;
    
-     virtual std::pair<std::string, std::string> getBindingDocumentation(
+     [[nodiscard]] virtual std::pair<std::string, std::string> getBindingDocumentation(
        const interaction_bind_t& bind) const = 0;
    
    
-     virtual void toggleAnimation() = 0;
-     virtual void startAnimation() = 0;
-     virtual void stopAnimation() = 0;
-     virtual bool isPlayingAnimation() = 0;
+     virtual interactor& toggleAnimation() = 0;
+     virtual interactor& startAnimation() = 0;
+     virtual interactor& stopAnimation() = 0;
+     [[nodiscard]] virtual bool isPlayingAnimation() = 0;
    
    
-     virtual void enableCameraMovement() = 0;
-     virtual void disableCameraMovement() = 0;
+     virtual interactor& enableCameraMovement() = 0;
+     virtual interactor& disableCameraMovement() = 0;
    
      virtual bool playInteraction(const std::string& file, double deltaTime = 1.0 / 30,
        std::function<void()> userCallBack = nullptr) = 0;
    
      virtual bool recordInteraction(const std::string& file) = 0;
    
-     virtual void start(double deltaTime = 1.0 / 30, std::function<void()> userCallBack = nullptr) = 0;
+     virtual interactor& start(
+       double deltaTime = 1.0 / 30, std::function<void()> userCallBack = nullptr) = 0;
    
-     virtual void stop() = 0;
+     virtual interactor& stop() = 0;
    
-     virtual void requestRender() = 0;
+     virtual interactor& requestRender() = 0;
    
      struct already_exists_exception : public exception
      {

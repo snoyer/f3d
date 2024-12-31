@@ -37,21 +37,21 @@ Program Listing for File window.h
        UNKNOWN
      };
    
-     virtual Type getType() = 0;
+     [[nodiscard]] virtual Type getType() = 0;
    
-     virtual bool isOffscreen() = 0;
+     [[nodiscard]] virtual bool isOffscreen() = 0;
    
-     virtual camera& getCamera() = 0;
+     [[nodiscard]] virtual camera& getCamera() = 0;
    
      virtual bool render() = 0;
    
-     virtual image renderToImage(bool noBackground = false) = 0;
+     [[nodiscard]] virtual image renderToImage(bool noBackground = false) = 0;
    
      virtual window& setSize(int width, int height) = 0;
    
-     virtual int getWidth() const = 0;
+     [[nodiscard]] virtual int getWidth() const = 0;
    
-     virtual int getHeight() const = 0;
+     [[nodiscard]] virtual int getHeight() const = 0;
    
      virtual window& setPosition(int x, int y) = 0;
    
@@ -59,9 +59,9 @@ Program Listing for File window.h
    
      virtual window& setWindowName(const std::string& windowName) = 0;
    
-     virtual point3_t getWorldFromDisplay(const point3_t& displayPoint) const = 0;
+     [[nodiscard]] virtual point3_t getWorldFromDisplay(const point3_t& displayPoint) const = 0;
    
-     virtual point3_t getDisplayFromWorld(const point3_t& worldPoint) const = 0;
+     [[nodiscard]] virtual point3_t getDisplayFromWorld(const point3_t& worldPoint) const = 0;
    
    protected:
      window() = default;
