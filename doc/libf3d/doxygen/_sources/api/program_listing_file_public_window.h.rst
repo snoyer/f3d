@@ -57,7 +57,7 @@ Program Listing for File window.h
    
      virtual window& setIcon(const unsigned char* icon, size_t iconSize) = 0;
    
-     virtual window& setWindowName(const std::string& windowName) = 0;
+     virtual window& setWindowName(std::string_view windowName) = 0;
    
      [[nodiscard]] virtual point3_t getWorldFromDisplay(const point3_t& displayPoint) const = 0;
    

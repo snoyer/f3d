@@ -46,7 +46,7 @@ Program Listing for File interactor.h
    
      [[nodiscard]] std::string format() const;
    
-     [[nodiscard]] static interaction_bind_t parse(const std::string& str);
+     [[nodiscard]] static interaction_bind_t parse(std::string_view str);
    };
    
    class F3D_EXPORT interactor
@@ -56,7 +56,7 @@ Program Listing for File interactor.h
      virtual interactor& initCommands() = 0;
    
      virtual interactor& addCommand(
-       const std::string& action, std::function<void(const std::vector<std::string>&)> callback) = 0;
+       std::string action, std::function<void(const std::vector<std::string>&)> callback) = 0;
    
      virtual interactor& removeCommand(const std::string& action) = 0;
    
@@ -103,10 +103,10 @@ Program Listing for File interactor.h
      virtual interactor& enableCameraMovement() = 0;
      virtual interactor& disableCameraMovement() = 0;
    
-     virtual bool playInteraction(const std::string& file, double deltaTime = 1.0 / 30,
+     virtual bool playInteraction(const std::filesystem::path& file, double deltaTime = 1.0 / 30,
        std::function<void()> userCallBack = nullptr) = 0;
    
-     virtual bool recordInteraction(const std::string& file) = 0;
+     virtual bool recordInteraction(const std::filesystem::path& file) = 0;
    
      virtual interactor& start(
        double deltaTime = 1.0 / 30, std::function<void()> userCallBack = nullptr) = 0;
@@ -171,7 +171,7 @@ Program Listing for File interactor.h
    }
    
    //----------------------------------------------------------------------------
-   inline interaction_bind_t interaction_bind_t::parse(const std::string& str)
+   inline interaction_bind_t interaction_bind_t::parse(std::string_view str)
    {
      interaction_bind_t bind;
      auto plusIt = str.find_last_of('+');
@@ -183,7 +183,7 @@ Program Listing for File interactor.h
      {
        bind.inter = str.substr(plusIt + 1);
    
-       std::string modStr = str.substr(0, plusIt);
+       std::string_view modStr = str.substr(0, plusIt);
        if (modStr == "Ctrl+Shift")
        {
          bind.mod = ModifierKeys::CTRL_SHIFT;

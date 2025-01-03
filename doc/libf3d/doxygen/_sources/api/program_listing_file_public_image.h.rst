@@ -16,6 +16,7 @@ Program Listing for File image.h
    #include "exception.h"
    #include "export.h"
    
+   #include <filesystem>
    #include <string>
    #include <vector>
    
@@ -39,7 +40,7 @@ Program Listing for File image.h
        FLOAT
      };
    
-     explicit image(const std::string& path);
+     explicit image(const std::filesystem::path& filePath);
    
      image(unsigned int width, unsigned int height, unsigned int channelCount,
        ChannelType type = ChannelType::BYTE);
@@ -77,7 +78,8 @@ Program Listing for File image.h
    
      bool compare(const image& reference, double threshold, double& error) const;
    
-     const image& save(const std::string& path, SaveFormat format = SaveFormat::PNG) const;
+     const image& save(
+       const std::filesystem::path& filePath, SaveFormat format = SaveFormat::PNG) const;
    
      [[nodiscard]] std::vector<unsigned char> saveBuffer(SaveFormat format = SaveFormat::PNG) const;
    
@@ -85,7 +87,7 @@ Program Listing for File image.h
    
      [[nodiscard]] std::string toTerminalText() const;
    
-     f3d::image& setMetadata(const std::string& key, const std::string& value);
+     f3d::image& setMetadata(std::string key, std::string value);
    
      [[nodiscard]] std::string getMetadata(const std::string& key) const;
    

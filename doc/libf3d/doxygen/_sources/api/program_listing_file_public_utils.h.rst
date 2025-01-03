@@ -27,7 +27,7 @@ Program Listing for File utils.h
    class F3D_EXPORT utils
    {
    public:
-     [[nodiscard]] static unsigned int textDistance(const std::string& strA, const std::string& strB);
+     [[nodiscard]] static unsigned int textDistance(std::string_view strA, std::string_view strB);
    
      // clang-format off
      [[nodiscard]] static std::vector<std::string> tokenize(std::string_view str);
