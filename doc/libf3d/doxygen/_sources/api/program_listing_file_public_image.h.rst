@@ -76,7 +76,7 @@ Program Listing for File image.h
      image& setContent(void* buffer);
      [[nodiscard]] void* getContent() const;
    
-     bool compare(const image& reference, double threshold, double& error) const;
+     double compare(const image& reference) const;
    
      const image& save(
        const std::filesystem::path& filePath, SaveFormat format = SaveFormat::PNG) const;

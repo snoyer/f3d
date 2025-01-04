@@ -16,6 +16,7 @@ Program Listing for File utils.h
    #include "exception.h"
    #include "export.h"
    
+   #include <filesystem>
    #include <map>
    #include <regex>
    #include <sstream>
@@ -32,6 +33,9 @@ Program Listing for File utils.h
      // clang-format off
      [[nodiscard]] static std::vector<std::string> tokenize(std::string_view str);
      // clang-format on
+   
+     [[nodiscard]] static std::filesystem::path collapsePath(
+       const std::filesystem::path& path, const std::filesystem::path& baseDirectory = {});
    
      struct tokenize_exception : public exception
      {
