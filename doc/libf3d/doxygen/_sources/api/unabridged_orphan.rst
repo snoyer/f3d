@@ -71,12 +71,3 @@ Files
    :maxdepth: 5
 
    file_public_window.h.rst
-
-Pages
-*****
-
-
-.. toctree::
-   :maxdepth: 5
-
-   page_deprecated.rst

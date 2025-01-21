@@ -29,7 +29,7 @@ Program Listing for File scene.h
      struct load_failure_exception : public exception
      {
        explicit load_failure_exception(const std::string& what = "")
-         : exception(what){};
+         : exception(what) {};
      };
    
    
