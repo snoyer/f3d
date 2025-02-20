@@ -55,6 +55,10 @@ Classes
 
 - :ref:`exhale_struct_structf3d_1_1scene_1_1load__failure__exception`
 
+- :ref:`exhale_struct_structf3d_1_1type__access__exception`
+
+- :ref:`exhale_struct_structf3d_1_1type__construction__exception`
+
 - :ref:`exhale_struct_structf3d_1_1utils_1_1string__template_1_1lookup__error`
 
 - :ref:`exhale_struct_structf3d_1_1utils_1_1tokenize__exception`
@@ -62,6 +66,8 @@ Classes
 - :ref:`exhale_struct_structf3d_1_1vector3__t`
 
 - :ref:`exhale_class_classf3d_1_1camera`
+
+- :ref:`exhale_class_classf3d_1_1color__t`
 
 - :ref:`exhale_class_classf3d_1_1context`
 

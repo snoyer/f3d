@@ -30,9 +30,15 @@ Includes
 --------
 
 
+- ``algorithm``
+
 - ``array``
 
+- ``exception.h`` (:ref:`file_public_exception.h`)
+
 - ``export.h``
+
+- ``iostream``
 
 - ``string``
 
@@ -66,7 +72,13 @@ Classes
 
 - :ref:`exhale_struct_structf3d_1_1point3__t`
 
+- :ref:`exhale_struct_structf3d_1_1type__access__exception`
+
+- :ref:`exhale_struct_structf3d_1_1type__construction__exception`
+
 - :ref:`exhale_struct_structf3d_1_1vector3__t`
+
+- :ref:`exhale_class_classf3d_1_1color__t`
 
 - :ref:`exhale_class_classf3d_1_1ratio__t`
 
