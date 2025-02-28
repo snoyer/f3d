@@ -71,6 +71,10 @@ Classes
 
 - :ref:`exhale_class_classf3d_1_1context`
 
+- :ref:`exhale_class_classf3d_1_1direction__t`
+
+- :ref:`exhale_class_classf3d_1_1double__array__t`
+
 - :ref:`exhale_class_classf3d_1_1engine`
 
 - :ref:`exhale_class_structf3d_1_1exception`
