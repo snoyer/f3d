@@ -16,6 +16,8 @@ Subdirectories
 Files
 -----
 
+- :ref:`file_module_F3DUtils.cxx`
+- :ref:`file_module_F3DUtils.h`
 - :ref:`file_module_vtkF3DBitonicSort.cxx`
 - :ref:`file_module_vtkF3DBitonicSort.h`
 - :ref:`file_module_vtkF3DFaceVaryingPointDispatcher.cxx`

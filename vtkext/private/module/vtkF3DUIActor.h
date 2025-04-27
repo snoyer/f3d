@@ -31,6 +31,18 @@ public:
   }
 
   /**
+   * Set the dropzone visibility
+   * False by default
+   */
+  void SetDropZoneVisibility(bool show);
+
+  /**
+   * Set the dropzone string
+   * Empty by default
+   */
+  void SetDropText(const std::string& info);
+
+  /**
    * Set the filename visibility
    * False by default
    */
@@ -65,6 +77,13 @@ public:
    * False by default
    */
   void SetConsoleVisibility(bool show);
+
+  /**
+   * Set the minimal console visibility
+   * Console visibility has priority over minimal console visibility
+   * False by default
+   */
+  void SetMinimalConsoleVisibility(bool show);
 
   /**
    * Set the console badge enabled status
@@ -132,6 +151,13 @@ protected:
   }
 
   /**
+   * Render the dropzone UI widget
+   */
+  virtual void RenderDropZone()
+  {
+  }
+
+  /**
    * Render the filename UI widget
    */
   virtual void RenderFileName()
@@ -162,7 +188,7 @@ protected:
   /**
    * Render the console widget
    */
-  virtual void RenderConsole()
+  virtual void RenderConsole(bool)
   {
   }
 
@@ -172,6 +198,9 @@ protected:
   virtual void RenderConsoleBadge()
   {
   }
+
+  bool DropZoneVisible = false;
+  std::string DropText = "";
 
   bool FileNameVisible = false;
   std::string FileName = "";
@@ -183,6 +212,7 @@ protected:
   std::vector<CheatSheetGroup> CheatSheet;
 
   bool ConsoleVisible = false;
+  bool MinimalConsoleVisible = false;
   bool ConsoleBadgeEnabled = false;
 
   bool FpsCounterVisible = false;

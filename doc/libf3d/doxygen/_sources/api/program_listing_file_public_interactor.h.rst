@@ -130,6 +130,14 @@ Program Listing for File interactor.h
        explicit command_runtime_exception(const std::string& what = "");
      };
    
+     struct invalid_args_exception : public exception
+     {
+       explicit invalid_args_exception(const std::string& what = "")
+         : exception(what)
+       {
+       }
+     };
+   
    protected:
      interactor() = default;
      virtual ~interactor() = default;

@@ -5,6 +5,8 @@
 Simple interaction with the displayed data is possible directly within the window. It is as follows:
 
 - _Click and drag_ with the _left_ mouse button to rotate around the focal point of the camera.
+- Hold <kbd>Shift</kbd> then _Click and drag_ with the _left_ mouse button to translate the camera.
+- Hold <kbd>Ctrl</kbd> then _Click and drag_ with the _left_ mouse button to rotate around the axis of the camera.
 - Hold <kbd>Shift</kbd> then _Click and drag_ horizontally with the _right_ mouse button to rotate the HDRI.
 - _Click and drag_ vertically with the _right_ mouse button to zoom in/out.
 - _Move the mouse wheel_ to zoom in/out.
@@ -19,6 +21,7 @@ Simple interaction with the displayed data is possible directly within the windo
 
 The coloring can be controlled directly by pressing the following hotkeys:
 
+- <kbd>A</kbd>: cycle between anti-aliasing modes.
 - <kbd>C</kbd>: cycle between coloring with array from point data and from cell data.
 - <kbd>S</kbd>: cycle the array to color with.
 - <kbd>Y</kbd>: cycle the component of the array to color with.
@@ -34,7 +37,6 @@ Other options can be toggled directly by pressing the following hotkeys:
 - <kbd>O</kbd>: point sprites rendering.
 - <kbd>P</kbd>: translucency support.
 - <kbd>Q</kbd>: ambient occlusion.
-- <kbd>A</kbd>: anti-aliasing.
 - <kbd>T</kbd>: tone mapping.
 - <kbd>E</kbd>: the display of cell edges.
 - <kbd>X</kbd>: the trihedral axes display.
@@ -71,7 +73,8 @@ Other hotkeys and interactions are available:
 
 - <kbd>H</kbd>: key to toggle the display of a cheat sheet showing all these hotkeys and their statuses.
 - <kbd>CTRL</kbd> + <kbd>Q</kbd>: close the window and quit F3D.
-- <kbd>Esc</kbd>: display/hide the console.
+- <kbd>Esc</kbd>: display the console or hide console/minimal console.
+- <kbd>:</kbd>: display the minimal console
 - <kbd>Space</kbd>: play the animation if any.
 - <kbd>&larr;</kbd>: load the previous file if any and reset the camera.
 - <kbd>&rarr;</kbd>: load the next file if any and reset the camera.
@@ -83,7 +86,7 @@ Other hotkeys and interactions are available:
 - <kbd>Ctrl</kbd> + _Drop_ a file, directory and load it.
 - <kbd>Shift</kbd> + _Drop_ a HDRI and use it, no extensions checks performed.
 
-When loading another file or reloading, options that have been changed interactively are kept as is.
+When loading another file or reloading, options that have been changed interactively are kept as is, except when using [imperative options](CONFIGURATION_FILE.md#imperative-options) in configuration files.
 
 ## Cycling Coloring
 

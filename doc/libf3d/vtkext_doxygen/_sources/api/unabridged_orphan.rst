@@ -25,6 +25,16 @@ Files
 .. toctree::
    :maxdepth: 5
 
+   file_module_F3DUtils.cxx.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_module_F3DUtils.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
    file_module_Testing_TestF3DBitonicSort.cxx.rst
 
 .. toctree::

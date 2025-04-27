@@ -80,6 +80,8 @@ Classes
 
 - :ref:`exhale_class_classf3d_1_1color__t`
 
+- :ref:`exhale_class_classf3d_1_1colormap__t`
+
 - :ref:`exhale_class_classf3d_1_1direction__t`
 
 - :ref:`exhale_class_classf3d_1_1double__array__t`

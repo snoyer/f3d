@@ -30,16 +30,12 @@ multiple plugins in a single comma-separated list, like in the example below:
 
 ### Supported plugins
 
-F3D supports the following plugins and their file formats:
+F3D supports loading plugins and contains the following plugins:
+`native`, `alembic`, `assimp`, `draco`, `exodus`, `occt`, `usd`, `vdb`.
 
-- **alembic**: `.abc`
-- **assimp**: `.fbx`, `.dae`, `.off`, `.dxf`, `.x`, `.3mf`
-- **draco**: `.drc`
-- **exodus**: `.ex2`
-- **occt**: `.step/.stp`, `.iges/.igs`
-- **usd**: `.usd`, `.usda`, `.usdc`, `.usdz`
-- **vdb**: `.vdb` (experimental)
+see [SUPPORTED_FORMATS.md] for more details.
 
+> Note: Native plugin is always loaded automatically.
 > Note: If you downloaded the binaries from the release page, it's not necessary to specify manually the plugins above. F3D loads them automatically.
 
 Here is how the plugins are searched (in preceding order):

@@ -86,6 +86,10 @@ Program Listing for File engine.h
      [[nodiscard]] static std::vector<std::string> getPluginsList(
        const std::filesystem::path& pluginPath);
    
+     [[nodiscard]] static std::vector<std::string> getAllReaderOptionNames();
+   
+     static void setReaderOption(const std::string& name, const std::string& value);
+   
      struct libInformation
      {
        std::string Version;

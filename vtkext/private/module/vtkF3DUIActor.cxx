@@ -13,6 +13,18 @@ vtkF3DUIActor::vtkF3DUIActor() = default;
 vtkF3DUIActor::~vtkF3DUIActor() = default;
 
 //----------------------------------------------------------------------------
+void vtkF3DUIActor::SetDropZoneVisibility(bool show)
+{
+  this->DropZoneVisible = show;
+}
+
+//----------------------------------------------------------------------------
+void vtkF3DUIActor::SetDropText(const std::string& info)
+{
+  this->DropText = info;
+}
+
+//----------------------------------------------------------------------------
 void vtkF3DUIActor::SetFileNameVisibility(bool show)
 {
   this->FileNameVisible = show;
@@ -46,6 +58,12 @@ void vtkF3DUIActor::SetCheatSheetVisibility(bool show)
 void vtkF3DUIActor::SetConsoleVisibility(bool show)
 {
   this->ConsoleVisible = show;
+}
+
+//----------------------------------------------------------------------------
+void vtkF3DUIActor::SetMinimalConsoleVisibility(bool show)
+{
+  this->MinimalConsoleVisible = show;
 }
 
 //----------------------------------------------------------------------------
@@ -117,6 +135,11 @@ int vtkF3DUIActor::RenderOverlay(vtkViewport* vp)
 
   this->StartFrame(renWin);
 
+  if (this->DropZoneVisible)
+  {
+    this->RenderDropZone();
+  }
+
   if (this->FileNameVisible)
   {
     this->RenderFileName();
@@ -137,11 +160,17 @@ int vtkF3DUIActor::RenderOverlay(vtkViewport* vp)
     this->RenderFpsCounter();
   }
 
+  // Only one console can be visible at a time, console has priority over minimal console
   if (this->ConsoleVisible)
   {
-    this->RenderConsole();
+    this->RenderConsole(false);
   }
-  else if (this->ConsoleBadgeEnabled)
+  else if (this->MinimalConsoleVisible)
+  {
+    this->RenderConsole(true);
+  }
+
+  if (this->ConsoleBadgeEnabled)
   {
     this->RenderConsoleBadge();
   }

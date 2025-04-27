@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Library API &#8212; vtkext 3.0.0 documentation</title>
+    <title>Library API &#8212; vtkext 3.1.0 documentation</title>
   
   
   
@@ -49,7 +49,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'api/library_root';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Class vtkF3DBitonicSort" href="classvtkF3DBitonicSort.html" />
+    <link rel="next" title="Namespace F3DUtils" href="namespace_F3DUtils.html" />
     <link rel="prev" title="vtkext doxygen documentation" href="../index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -122,7 +122,7 @@
   
   
   
-    <p class="title logo__title">vtkext 3.0.0 documentation</p>
+    <p class="title logo__title">vtkext 3.1.0 documentation</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -130,10 +130,13 @@
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Library API</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="namespace_F3DUtils.html">Namespace F3DUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classF3DUtils.html">Class F3DUtils</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classvtkF3DBitonicSort.html">Class vtkF3DBitonicSort</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classvtkF3DFaceVaryingPointDispatcher.html">Class vtkF3DFaceVaryingPointDispatcher</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classvtkF3DGLTFImporter.html">Class vtkF3DGLTFImporter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classvtkF3DImporter.html">Class vtkF3DImporter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_F3DUtils_8h_1a1f3f6d785aab63015203d8a2deb62df5.html">Function F3DUtils::ParseToDouble</a></li>
 <li class="toctree-l2"><a class="reference internal" href="function_TestF3DBitonicSort_8cxx_1a9c35c31cc0fb7e40d93b302cddaee286.html">Function TestF3DBitonicSort</a></li>
 <li class="toctree-l2"><a class="reference internal" href="function_vtkF3DFaceVaryingPointDispatcher_8cxx_1ad9c00f705d93dae0625202d9bbf6b075.html">Function vtkInformationKeyMacro(vtkF3DFaceVaryingPointDispatcher, INTERPOLATION_TYPE, Integer)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="function_vtkF3DImporter_8cxx_1a52b7d3fa4dab2f3494644899827e711e.html">Function vtkInformationKeyMacro(vtkF3DImporter, ACTOR_IS_ARMATURE, Integer)</a></li>
@@ -291,6 +294,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-hierarchy">Class Hierarchy</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-hierarchy">File Hierarchy</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#full-api">Full API</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#namespaces">Namespaces</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classes-and-structs">Classes and Structs</a><ul class="nav section-nav flex-column">
 </ul>
 </li>
@@ -317,7 +321,7 @@ document.write(`
 <ul class="treeView" id="class-treeView">
   <li>
     <ul class="collapsibleList">
-      <li>Class <a href="classvtkF3DBitonicSort.html#exhale-class-classvtkF3DBitonicSort">vtkF3DBitonicSort</a></li><li>Class <a href="classvtkF3DFaceVaryingPointDispatcher.html#exhale-class-classvtkF3DFaceVaryingPointDispatcher">vtkF3DFaceVaryingPointDispatcher</a></li><li>Class <a href="classvtkF3DGLTFImporter.html#exhale-class-classvtkF3DGLTFImporter">vtkF3DGLTFImporter</a></li><li class="lastChild">Class <a href="classvtkF3DImporter.html#exhale-class-classvtkF3DImporter">vtkF3DImporter</a></li>
+      <li>Class <a href="classF3DUtils.html#exhale-class-classF3DUtils">F3DUtils</a></li><li>Class <a href="classvtkF3DBitonicSort.html#exhale-class-classvtkF3DBitonicSort">vtkF3DBitonicSort</a></li><li>Class <a href="classvtkF3DFaceVaryingPointDispatcher.html#exhale-class-classvtkF3DFaceVaryingPointDispatcher">vtkF3DFaceVaryingPointDispatcher</a></li><li>Class <a href="classvtkF3DGLTFImporter.html#exhale-class-classvtkF3DGLTFImporter">vtkF3DGLTFImporter</a></li><li class="lastChild">Class <a href="classvtkF3DImporter.html#exhale-class-classvtkF3DImporter">vtkF3DImporter</a></li>
     </ul>
   </li><!-- only tree view element -->
 </ul><!-- /treeView class-treeView --></section>
@@ -326,14 +330,33 @@ document.write(`
 <ul class="treeView" id="file-treeView">
   <li>
     <ul class="collapsibleList">
-      <li class="lastChild">Directory <a href="dir_module.html#dir-module">module</a><ul><li>Directory <a href="dir_module_Testing.html#dir-module-Testing">Testing</a><ul><li class="lastChild">File <a href="file_module_Testing_TestF3DBitonicSort.cxx.html#file-module-Testing-TestF3DBitonicSort.cxx">TestF3DBitonicSort.cxx</a></li></ul></li><li>File <a href="file_module_vtkF3DBitonicSort.cxx.html#file-module-vtkF3DBitonicSort.cxx">vtkF3DBitonicSort.cxx</a></li><li>File <a href="file_module_vtkF3DBitonicSort.h.html#file-module-vtkF3DBitonicSort.h">vtkF3DBitonicSort.h</a></li><li>File <a href="file_module_vtkF3DFaceVaryingPointDispatcher.cxx.html#file-module-vtkF3DFaceVaryingPointDispatcher.cxx">vtkF3DFaceVaryingPointDispatcher.cxx</a></li><li>File <a href="file_module_vtkF3DFaceVaryingPointDispatcher.h.html#file-module-vtkF3DFaceVaryingPointDispatcher.h">vtkF3DFaceVaryingPointDispatcher.h</a></li><li>File <a href="file_module_vtkF3DGLTFImporter.cxx.html#file-module-vtkF3DGLTFImporter.cxx">vtkF3DGLTFImporter.cxx</a></li><li>File <a href="file_module_vtkF3DGLTFImporter.h.html#file-module-vtkF3DGLTFImporter.h">vtkF3DGLTFImporter.h</a></li><li>File <a href="file_module_vtkF3DImporter.cxx.html#file-module-vtkF3DImporter.cxx">vtkF3DImporter.cxx</a></li><li class="lastChild">File <a href="file_module_vtkF3DImporter.h.html#file-module-vtkF3DImporter.h">vtkF3DImporter.h</a></li></ul></li>
+      <li class="lastChild">Directory <a href="dir_module.html#dir-module">module</a><ul><li>Directory <a href="dir_module_Testing.html#dir-module-Testing">Testing</a><ul><li class="lastChild">File <a href="file_module_Testing_TestF3DBitonicSort.cxx.html#file-module-Testing-TestF3DBitonicSort.cxx">TestF3DBitonicSort.cxx</a></li></ul></li><li>File <a href="file_module_F3DUtils.cxx.html#file-module-F3DUtils.cxx">F3DUtils.cxx</a></li><li>File <a href="file_module_F3DUtils.h.html#file-module-F3DUtils.h">F3DUtils.h</a></li><li>File <a href="file_module_vtkF3DBitonicSort.cxx.html#file-module-vtkF3DBitonicSort.cxx">vtkF3DBitonicSort.cxx</a></li><li>File <a href="file_module_vtkF3DBitonicSort.h.html#file-module-vtkF3DBitonicSort.h">vtkF3DBitonicSort.h</a></li><li>File <a href="file_module_vtkF3DFaceVaryingPointDispatcher.cxx.html#file-module-vtkF3DFaceVaryingPointDispatcher.cxx">vtkF3DFaceVaryingPointDispatcher.cxx</a></li><li>File <a href="file_module_vtkF3DFaceVaryingPointDispatcher.h.html#file-module-vtkF3DFaceVaryingPointDispatcher.h">vtkF3DFaceVaryingPointDispatcher.h</a></li><li>File <a href="file_module_vtkF3DGLTFImporter.cxx.html#file-module-vtkF3DGLTFImporter.cxx">vtkF3DGLTFImporter.cxx</a></li><li>File <a href="file_module_vtkF3DGLTFImporter.h.html#file-module-vtkF3DGLTFImporter.h">vtkF3DGLTFImporter.h</a></li><li>File <a href="file_module_vtkF3DImporter.cxx.html#file-module-vtkF3DImporter.cxx">vtkF3DImporter.cxx</a></li><li class="lastChild">File <a href="file_module_vtkF3DImporter.h.html#file-module-vtkF3DImporter.h">vtkF3DImporter.h</a></li></ul></li>
     </ul>
   </li><!-- only tree view element -->
 </ul><!-- /treeView file-treeView --></section>
 <section id="full-api">
 <h2>Full API<a class="headerlink" href="#full-api" title="Permalink to this heading">#</a></h2>
+<section id="namespaces">
+<h3>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this heading">#</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="namespace_F3DUtils.html">Namespace F3DUtils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="namespace_F3DUtils.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
 <section id="classes-and-structs">
 <h3>Classes and Structs<a class="headerlink" href="#classes-and-structs" title="Permalink to this heading">#</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classF3DUtils.html">Class F3DUtils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classF3DUtils.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="classvtkF3DBitonicSort.html">Class vtkF3DBitonicSort</a><ul>
@@ -385,6 +408,14 @@ document.write(`
 </section>
 <section id="functions">
 <h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">#</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_F3DUtils_8h_1a1f3f6d785aab63015203d8a2deb62df5.html">Function F3DUtils::ParseToDouble</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_F3DUtils_8h_1a1f3f6d785aab63015203d8a2deb62df5.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="function_TestF3DBitonicSort_8cxx_1a9c35c31cc0fb7e40d93b302cddaee286.html">Function TestF3DBitonicSort</a><ul>
@@ -456,11 +487,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="classvtkF3DBitonicSort.html"
+       href="namespace_F3DUtils.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Class vtkF3DBitonicSort</p>
+        <p class="prev-next-title">Namespace F3DUtils</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -482,6 +513,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-hierarchy">Class Hierarchy</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-hierarchy">File Hierarchy</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#full-api">Full API</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#namespaces">Namespaces</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classes-and-structs">Classes and Structs</a><ul class="nav section-nav flex-column">
 </ul>
 </li>

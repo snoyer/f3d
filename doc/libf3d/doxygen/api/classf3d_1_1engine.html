@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Class engine &#8212; libf3d 3.0.0 documentation</title>
+    <title>Class engine &#8212; libf3d 3.1.0 documentation</title>
   
   
   
@@ -122,7 +122,7 @@
   
   
   
-    <p class="title logo__title">libf3d 3.0.0 documentation</p>
+    <p class="title logo__title">libf3d 3.1.0 documentation</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -147,6 +147,7 @@
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1interactor_1_1already__exists__exception.html">Struct interactor::already_exists_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1interactor_1_1command__runtime__exception.html">Struct interactor::command_runtime_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1interactor_1_1does__not__exists__exception.html">Struct interactor::does_not_exists_exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1interactor_1_1invalid__args__exception.html">Struct interactor::invalid_args_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1mesh__t.html">Struct mesh_t</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1point3__t.html">Struct point3_t</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1scene_1_1load__failure__exception.html">Struct scene::load_failure_exception</a></li>
@@ -157,6 +158,7 @@
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1vector3__t.html">Struct vector3_t</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1camera.html">Class camera</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1color__t.html">Class color_t</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classf3d_1_1colormap__t.html">Class colormap_t</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1context.html">Class context</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1direction__t.html">Class direction_t</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1double__array__t.html">Template Class double_array_t</a></li>
@@ -404,7 +406,7 @@ document.write(`
 <dd><p>Set the cache path. The provided path is used as is. Currently, it’s only used to store HDRI baked textures. By default, the cache path is:<ul class="simple">
 <li><p>Windows: LOCALAPPDATA%\f3d</p></li>
 <li><p>Linux: ~/.cache/f3d</p></li>
-<li><p>macOS: ~/Library/Caches/f3d Throw a <a class="reference internal" href="structf3d_1_1engine_1_1cache__exception.html#structf3d_1_1engine_1_1cache__exception"><span class="std std-ref">cache_exception</span></a> if the provided cachePath cannot be used. </p></li>
+<li><p>macOS: ~/Library/Caches/f3d Throws a <a class="reference internal" href="structf3d_1_1engine_1_1cache__exception.html#structf3d_1_1engine_1_1cache__exception"><span class="std std-ref">engine::cache_exception</span></a> if the provided cachePath cannot be used. </p></li>
 </ul>
 </p>
 </dd></dl>
@@ -532,7 +534,7 @@ document.write(`
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine10loadPluginERKNSt6stringERKNSt6vectorINSt10filesystem4pathEEE">
 <span id="_CPPv3N3f3d6engine10loadPluginERKNSt6stringERKNSt6vectorINSt10filesystem4pathEEE"></span><span id="_CPPv2N3f3d6engine10loadPluginERKNSt6stringERKNSt6vectorINSt10filesystem4pathEEE"></span><span id="f3d::engine::loadPlugin__ssCR.std::vector:std::filesystem::path:CR"></span><span class="target" id="classf3d_1_1engine_1a820b4a59f829b77f669f267cfde09186"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">loadPlugin</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pathOrName</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">filesystem</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pluginSearchPaths</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine10loadPluginERKNSt6stringERKNSt6vectorINSt10filesystem4pathEEE" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Load a plugin. The provided pathOrName can be a full path, relative path, or plugin name. First try to load the plugin by name from the static plugins. Then try to load the path provided as if it is a full path to a plugin. Then try to load a plugin by its name looking into the provided plugin search paths (used as is). Then try to load a plugin by its name relying on internal system (eg: LD_LIBRARY_PATH). The plugin “native” is always available and includes native VTK readers. If built and available in your build, F3D is providing 5 additional plugins: “alembic”, “assimp”, “draco”, “exodus”, “occt”, “usd”. Custom plugins can also be available that F3D is not supporting officially. Throw a <a class="reference internal" href="structf3d_1_1engine_1_1plugin__exception.html#structf3d_1_1engine_1_1plugin__exception"><span class="std std-ref">plugin_exception</span></a> if the plugin can’t be loaded for some reason. </p>
+<dd><p>Load a plugin. The provided pathOrName can be a full path, relative path, or plugin name. First try to load the plugin by name from the static plugins. Then try to load the path provided as if it is a full path to a plugin. Then try to load a plugin by its name looking into the provided plugin search paths (used as is). Then try to load a plugin by its name relying on internal system (eg: LD_LIBRARY_PATH). The plugin “native” is always available and includes native VTK readers. If built and available in your build, F3D is providing 5 additional plugins: “alembic”, “assimp”, “draco”, “exodus”, “occt”, “usd”. Custom plugins can also be available that F3D is not supporting officially. Throws a <a class="reference internal" href="structf3d_1_1engine_1_1plugin__exception.html#structf3d_1_1engine_1_1plugin__exception"><span class="std std-ref">engine::plugin_exception</span></a> if the plugin can’t be loaded for some reason. </p>
 </dd></dl>
 
 <dl class="cpp function">
@@ -545,6 +547,18 @@ document.write(`
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine14getPluginsListERKNSt10filesystem4pathE">
 <span id="_CPPv3N3f3d6engine14getPluginsListERKNSt10filesystem4pathE"></span><span id="_CPPv2N3f3d6engine14getPluginsListERKNSt10filesystem4pathE"></span><span id="f3d::engine::getPluginsList__std::filesystem::pathCR"></span><span class="target" id="classf3d_1_1engine_1ab72eb52263a39accd6f296f893808b5a"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPluginsList</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">filesystem</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">path</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pluginPath</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine14getPluginsListERKNSt10filesystem4pathE" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>List plugins based on associated json files located in the given directory, used as is. Listed plugins can be loaded using <a class="reference internal" href="#classf3d_1_1engine_1a820b4a59f829b77f669f267cfde09186"><span class="std std-ref">engine::loadPlugin</span></a> function. Note that the listed plugins may fail to load if the library is not found or incompatible. Return available plugins if any, or an empty vector if there are none or the provided path does not exist. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine23getAllReaderOptionNamesEv">
+<span id="_CPPv3N3f3d6engine23getAllReaderOptionNamesEv"></span><span id="_CPPv2N3f3d6engine23getAllReaderOptionNamesEv"></span><span id="f3d::engine::getAllReaderOptionNames"></span><span class="target" id="classf3d_1_1engine_1ae1f1d77bb0ec0b5df9997eb77c1b42fd"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAllReaderOptionNames</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine23getAllReaderOptionNamesEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Get all plugin option names that can be set using <code class="docutils literal notranslate"><span class="pre">setReaderOption</span></code> This vector can be expanded when loading plugin using <code class="docutils literal notranslate"><span class="pre">loadPlugin</span></code></p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d6engine15setReaderOptionERKNSt6stringERKNSt6stringE">
+<span id="_CPPv3N3f3d6engine15setReaderOptionERKNSt6stringERKNSt6stringE"></span><span id="_CPPv2N3f3d6engine15setReaderOptionERKNSt6stringERKNSt6stringE"></span><span id="f3d::engine::setReaderOption__ssCR.ssCR"></span><span class="target" id="classf3d_1_1engine_1a95e7c2840b75b4f56f6a48ce25a4bc45"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setReaderOption</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d6engine15setReaderOptionERKNSt6stringERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Set a specific reader option from a plugin to provided value if it exists. Throws a options::inexistent_exception if the option does not exists in any reader of any plugin. </p>
 </dd></dl>
 
 <dl class="cpp function">

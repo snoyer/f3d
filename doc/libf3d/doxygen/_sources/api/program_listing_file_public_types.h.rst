@@ -38,20 +38,10 @@ Program Listing for File types.h
    
    struct F3D_EXPORT point3_t : std::array<double, 3>
    {
-     template<typename... Args>
-     point3_t(Args&&... args)
-       : array({ double(std::forward<Args>(args))... })
-     {
-     }
    };
    
    struct F3D_EXPORT vector3_t : std::array<double, 3>
    {
-     template<typename... Args>
-     vector3_t(Args&&... args)
-       : array({ double(std::forward<Args>(args))... })
-     {
-     }
    };
    
    using angle_deg_t = double;
@@ -127,7 +117,7 @@ Program Listing for File types.h
        return this->Array.data();
      }
    
-   private:
+   protected:
      std::array<double, N> Array{ 0 };
    };
    
@@ -193,6 +183,43 @@ Program Listing for File types.h
      {
        return (*this)[2];
      }
+     [[nodiscard]] operator f3d::vector3_t() const
+     {
+       return f3d::vector3_t{ this->Array };
+     }
+   };
+   
+   class colormap_t
+   {
+   public:
+     colormap_t() = default;
+     explicit colormap_t(const std::vector<double>& vec)
+       : Vector(vec)
+     {
+     }
+     colormap_t(const std::initializer_list<double>& list)
+       : Vector(list)
+     {
+     }
+     [[nodiscard]] operator std::vector<double>() const
+     {
+       return this->Vector;
+     }
+     [[nodiscard]] bool operator==(const colormap_t& other) const
+     {
+       return this->Vector == other.Vector;
+     }
+     [[nodiscard]] bool operator!=(const colormap_t& other) const
+     {
+       return this->Vector != other.Vector;
+     }
+     [[nodiscard]] const double* data() const
+     {
+       return this->Vector.data();
+     }
+   
+   protected:
+     std::vector<double> Vector;
    };
    
    struct mesh_t

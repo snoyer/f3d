@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Class interactor &#8212; libf3d 3.0.0 documentation</title>
+    <title>Class interactor &#8212; libf3d 3.1.0 documentation</title>
   
   
   
@@ -122,7 +122,7 @@
   
   
   
-    <p class="title logo__title">libf3d 3.0.0 documentation</p>
+    <p class="title logo__title">libf3d 3.1.0 documentation</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -147,6 +147,7 @@
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1interactor_1_1already__exists__exception.html">Struct interactor::already_exists_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1interactor_1_1command__runtime__exception.html">Struct interactor::command_runtime_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1interactor_1_1does__not__exists__exception.html">Struct interactor::does_not_exists_exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1interactor_1_1invalid__args__exception.html">Struct interactor::invalid_args_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1mesh__t.html">Struct mesh_t</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1point3__t.html">Struct point3_t</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1scene_1_1load__failure__exception.html">Struct scene::load_failure_exception</a></li>
@@ -157,6 +158,7 @@
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1vector3__t.html">Struct vector3_t</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1camera.html">Class camera</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1color__t.html">Class color_t</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classf3d_1_1colormap__t.html">Class colormap_t</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1context.html">Class context</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1direction__t.html">Class direction_t</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classf3d_1_1double__array__t.html">Template Class double_array_t</a></li>
@@ -348,6 +350,7 @@ document.write(`
 <li><p><a class="reference internal" href="structf3d_1_1interactor_1_1already__exists__exception.html#exhale-struct-structf3d-1-1interactor-1-1already-exists-exception"><span class="std std-ref">Struct interactor::already_exists_exception</span></a></p></li>
 <li><p><a class="reference internal" href="structf3d_1_1interactor_1_1command__runtime__exception.html#exhale-struct-structf3d-1-1interactor-1-1command-runtime-exception"><span class="std std-ref">Struct interactor::command_runtime_exception</span></a></p></li>
 <li><p><a class="reference internal" href="structf3d_1_1interactor_1_1does__not__exists__exception.html#exhale-struct-structf3d-1-1interactor-1-1does-not-exists-exception"><span class="std std-ref">Struct interactor::does_not_exists_exception</span></a></p></li>
+<li><p><a class="reference internal" href="structf3d_1_1interactor_1_1invalid__args__exception.html#exhale-struct-structf3d-1-1interactor-1-1invalid-args-exception"><span class="std std-ref">Struct interactor::invalid_args_exception</span></a></p></li>
 </ul>
 </section>
 </section>
@@ -461,7 +464,7 @@ document.write(`
 <span id="_CPPv3N3f3d10interactor14triggerCommandENSt11string_viewE"></span><span id="_CPPv2N3f3d10interactor14triggerCommandENSt11string_viewE"></span><span id="f3d::interactor::triggerCommand__std::string_view"></span><span class="target" id="classf3d_1_1interactor_1a67df6532e93887fbb5e50ef10d1bc90a"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">triggerCommand</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string_view</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">command</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3f3d10interactor14triggerCommandENSt11string_viewE" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Trigger provided command, see COMMANDS.md for details about supported commands and syntax.</p>
 <p>If the command fails, it prints a debug log explaining why.</p>
-<p>Return true if the command succeeded, false otherwise. Throw an <a class="reference internal" href="structf3d_1_1interactor_1_1command__runtime__exception.html#structf3d_1_1interactor_1_1command__runtime__exception"><span class="std std-ref">interactor::command_runtime_exception</span></a> if the command callback throw an unrecognized exception. Note that default commands cannot throw such an exception. </p>
+<p>Return true if the command succeeded, false otherwise. Throw an <a class="reference internal" href="structf3d_1_1interactor_1_1command__runtime__exception.html#structf3d_1_1interactor_1_1command__runtime__exception"><span class="std std-ref">interactor::command_runtime_exception</span></a> if the command callback throw an unrecognized exception. Note that default commands will never throw this exception, but adding commands without exception catching may trigger this behavior. </p>
 </dd></dl>
 
 </div>
@@ -577,6 +580,20 @@ document.write(`
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3f3d10interactor25does_not_exists_exception25does_not_exists_exceptionERKNSt6stringE">
 <span id="_CPPv3N3f3d10interactor25does_not_exists_exception25does_not_exists_exceptionERKNSt6stringE"></span><span id="_CPPv2N3f3d10interactor25does_not_exists_exception25does_not_exists_exceptionERKNSt6stringE"></span><span id="f3d::interactor::does_not_exists_exception::does_not_exists_exception__ssCR"></span><span class="target" id="structf3d_1_1interactor_1_1does__not__exists__exception_1a8f83956aa6132858e28d94ca1f8b7685"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">does_not_exists_exception</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">what</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d10interactor25does_not_exists_exception25does_not_exists_exceptionERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d10interactor22invalid_args_exceptionE">
+<span id="_CPPv3N3f3d10interactor22invalid_args_exceptionE"></span><span id="_CPPv2N3f3d10interactor22invalid_args_exceptionE"></span><span id="f3d::interactor::invalid_args_exception"></span><span class="target" id="structf3d_1_1interactor_1_1invalid__args__exception"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">invalid_args_exception</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">f3d</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="class_structf3d_1_1exception.html#_CPPv4N3f3d9exceptionE" title="f3d::exception"><span class="n"><span class="pre">exception</span></span></a><a class="headerlink" href="#_CPPv4N3f3d10interactor22invalid_args_exceptionE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>An exception that can be thrown by command callbacks when the arguments of the callback are incorrect. This exception is caught by triggerCommand and logged. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3f3d10interactor22invalid_args_exception22invalid_args_exceptionERKNSt6stringE">
+<span id="_CPPv3N3f3d10interactor22invalid_args_exception22invalid_args_exceptionERKNSt6stringE"></span><span id="_CPPv2N3f3d10interactor22invalid_args_exception22invalid_args_exceptionERKNSt6stringE"></span><span id="f3d::interactor::invalid_args_exception::invalid_args_exception__ssCR"></span><span class="target" id="structf3d_1_1interactor_1_1invalid__args__exception_1ac50a14b6ce17534752862bf4d9f562a8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">invalid_args_exception</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">what</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3f3d10interactor22invalid_args_exception22invalid_args_exceptionERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 </div>

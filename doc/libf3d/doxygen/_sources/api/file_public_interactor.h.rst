@@ -78,5 +78,7 @@ Classes
 
 - :ref:`exhale_struct_structf3d_1_1interactor_1_1does__not__exists__exception`
 
+- :ref:`exhale_struct_structf3d_1_1interactor_1_1invalid__args__exception`
+
 - :ref:`exhale_class_classf3d_1_1interactor`
 
