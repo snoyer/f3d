@@ -22,6 +22,8 @@ Contributors with a single contribution or that may not want to are not listed h
 | jrushlow                        | 19jrushlow     | Yes        |
 | ssmncrf                         | samoncrief     | Yes        |
 | Evgenii Startcev (PhilHellmuth) | exbluesbreaker | Yes        |
+| Louis Gombert                   | lgt2x          | Yes        |
+| Artem                           | 0xfedcafe      | Yes        |
 
 ---
 
