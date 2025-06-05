@@ -16,9 +16,9 @@
 #include <vtkBoundingBox.h>
 #include <vtkCamera.h>
 #include <vtkCellData.h>
-#include <vtkColorTransferFunction.h>
 #include <vtkCornerAnnotation.h>
 #include <vtkCullerCollection.h>
+#include <vtkDiscretizableColorTransferFunction.h>
 #include <vtkFloatArray.h>
 #include <vtkImageData.h>
 #include <vtkImageReader2.h>
@@ -2318,6 +2318,23 @@ void vtkF3DRenderer::SetColormap(const std::vector<double>& colormap)
 }
 
 //----------------------------------------------------------------------------
+void vtkF3DRenderer::SetColormapDiscretization(std::optional<int> discretization)
+{
+  if (this->ColormapDiscretization != discretization)
+  {
+    this->ColormapDiscretization = discretization;
+
+    this->ColorTransferFunctionConfigured = false;
+    this->ColoringMappersConfigured = false;
+    this->PointSpritesMappersConfigured = false;
+    this->VolumePropsAndMappersConfigured = false;
+
+    this->ScalarBarActorConfigured = false;
+    this->ColoringConfigured = false;
+  }
+}
+
+//----------------------------------------------------------------------------
 void vtkF3DRenderer::SetEnableColoring(bool enable)
 {
   if (enable != this->EnableColoring)
@@ -2714,7 +2731,8 @@ void vtkF3DRenderer::ConfigureRangeAndCTFForColoring(
   }
 
   // Create lookup table
-  this->ColorTransferFunction = vtkSmartPointer<vtkColorTransferFunction>::New();
+  this->ColorTransferFunction = vtkSmartPointer<vtkDiscretizableColorTransferFunction>::New();
+
   if (this->Colormap.size() > 0)
   {
     if (this->Colormap.size() % 4 == 0)
@@ -2727,6 +2745,15 @@ void vtkF3DRenderer::ConfigureRangeAndCTFForColoring(
         double b = this->Colormap[i + 3];
         this->ColorTransferFunction->AddRGBPoint(
           this->ColorRange[0] + val * (this->ColorRange[1] - this->ColorRange[0]), r, g, b);
+      }
+      if (this->ColormapDiscretization.has_value() && this->ColormapDiscretization.value() > 0)
+      {
+        this->ColorTransferFunction->DiscretizeOn();
+        this->ColorTransferFunction->SetNumberOfValues(this->ColormapDiscretization.value());
+      }
+      else
+      {
+        this->ColorTransferFunction->DiscretizeOff();
       }
     }
     else

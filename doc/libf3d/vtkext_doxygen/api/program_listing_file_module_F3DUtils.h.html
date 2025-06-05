@@ -135,6 +135,7 @@
 <li class="toctree-l2"><a class="reference internal" href="classvtkF3DGLTFImporter.html">Class vtkF3DGLTFImporter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classvtkF3DImporter.html">Class vtkF3DImporter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="function_F3DUtils_8h_1a1f3f6d785aab63015203d8a2deb62df5.html">Function F3DUtils::ParseToDouble</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_F3DUtils_8h_1aa80ae10ed644843e29f6929be254c33b.html">Function F3DUtils::ParseToInt</a></li>
 <li class="toctree-l2"><a class="reference internal" href="function_TestF3DBitonicSort_8cxx_1a9c35c31cc0fb7e40d93b302cddaee286.html">Function TestF3DBitonicSort</a></li>
 <li class="toctree-l2"><a class="reference internal" href="function_vtkF3DFaceVaryingPointDispatcher_8cxx_1ad9c00f705d93dae0625202d9bbf6b075.html">Function vtkInformationKeyMacro(vtkF3DFaceVaryingPointDispatcher, INTERPOLATION_TYPE, Integer)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="function_vtkF3DImporter_8cxx_1a52b7d3fa4dab2f3494644899827e711e.html">Function vtkInformationKeyMacro(vtkF3DImporter, ACTOR_IS_ARMATURE, Integer)</a></li>
@@ -310,6 +311,13 @@ document.write(`
 <span class="cm"> */</span>
 <span class="n">VTKEXT_EXPORT</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">ParseToDouble</span><span class="p">(</span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">def</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">nameError</span><span class="p">);</span>
+
+<span class="cm">/*</span>
+<span class="cm"> * Convert provided std into an int and returns it.</span>
+<span class="cm"> * Catch conversion error, log them if any and returns the provided def value.</span>
+<span class="cm"> * Use nameError in the log for easier debugging.</span>
+<span class="cm"> */</span>
+<span class="n">VTKEXT_EXPORT</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ParseToInt</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">def</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">nameError</span><span class="p">);</span>
 <span class="p">};</span>
 
 <span class="cp">#endif</span>
