@@ -151,6 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1scene_1_1load__failure__exception.html">Struct scene::load_failure_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1type__access__exception.html">Struct type_access_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1type__construction__exception.html">Struct type_construction_exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structf3d_1_1utils_1_1glob__exception.html">Struct utils::glob_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1utils_1_1string__template_1_1lookup__error.html">Struct string_template::lookup_error</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1utils_1_1tokenize__exception.html">Struct utils::tokenize_exception</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structf3d_1_1vector3__t.html">Struct vector3_t</a></li>
@@ -332,6 +333,7 @@ document.write(`
 
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;filesystem&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;map&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;optional&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;regex&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sstream&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
@@ -351,9 +353,27 @@ document.write(`
 <span class="w">  </span><span class="p">[[</span><span class="n">nodiscard</span><span class="p">]]</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">filesystem</span><span class="o">::</span><span class="n">path</span><span class="w"> </span><span class="n">collapsePath</span><span class="p">(</span>
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">filesystem</span><span class="o">::</span><span class="n">path</span><span class="o">&amp;</span><span class="w"> </span><span class="n">path</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">filesystem</span><span class="o">::</span><span class="n">path</span><span class="o">&amp;</span><span class="w"> </span><span class="n">baseDirectory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{});</span>
 
+<span class="w">  </span><span class="p">[[</span><span class="n">nodiscard</span><span class="p">]]</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">globToRegex</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">glob</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">pathSeparator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;/&#39;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="p">[[</span><span class="n">nodiscard</span><span class="p">]]</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">getEnv</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">env</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">KnownFolder</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">ROAMINGAPPDATA</span><span class="p">,</span><span class="w"> </span><span class="c1">// %APPDATA% (%USERPROFILE%\AppData\Roaming)</span>
+<span class="w">    </span><span class="n">LOCALAPPDATA</span><span class="p">,</span><span class="w">   </span><span class="c1">// %LOCALAPPDATA% (%USERPROFILE%\AppData\Local)</span>
+<span class="w">    </span><span class="n">PICTURES</span><span class="w">        </span><span class="c1">// %USERPROFILE%\Pictures</span>
+<span class="w">  </span><span class="p">};</span>
+
+<span class="w">  </span><span class="p">[[</span><span class="n">nodiscard</span><span class="p">]]</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">getKnownFolder</span><span class="p">(</span><span class="n">KnownFolder</span><span class="w"> </span><span class="n">knownFolder</span><span class="p">);</span>
+
 <span class="w">  </span><span class="k">struct</span><span class="w"> </span><span class="nc">tokenize_exception</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">exception</span>
 <span class="w">  </span><span class="p">{</span>
 <span class="w">    </span><span class="k">explicit</span><span class="w"> </span><span class="n">tokenize_exception</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">what</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">};</span>
+
+<span class="w">  </span><span class="k">struct</span><span class="w"> </span><span class="nc">glob_exception</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">exception</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="k">explicit</span><span class="w"> </span><span class="n">glob_exception</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">what</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span>
 <span class="w">  </span><span class="p">};</span>
 
 <span class="w">  </span><span class="k">class</span><span class="w"> </span><span class="nc">string_template</span>

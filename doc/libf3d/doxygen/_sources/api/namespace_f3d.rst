@@ -61,6 +61,8 @@ Classes
 
 - :ref:`exhale_struct_structf3d_1_1type__construction__exception`
 
+- :ref:`exhale_struct_structf3d_1_1utils_1_1glob__exception`
+
 - :ref:`exhale_struct_structf3d_1_1utils_1_1string__template_1_1lookup__error`
 
 - :ref:`exhale_struct_structf3d_1_1utils_1_1tokenize__exception`

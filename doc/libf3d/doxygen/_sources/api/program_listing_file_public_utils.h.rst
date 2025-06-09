@@ -18,6 +18,7 @@ Program Listing for File utils.h
    
    #include <filesystem>
    #include <map>
+   #include <optional>
    #include <regex>
    #include <sstream>
    #include <string>
@@ -37,9 +38,27 @@ Program Listing for File utils.h
      [[nodiscard]] static std::filesystem::path collapsePath(
        const std::filesystem::path& path, const std::filesystem::path& baseDirectory = {});
    
+     [[nodiscard]] static std::string globToRegex(std::string_view glob, char pathSeparator = '/');
+   
+     [[nodiscard]] static std::optional<std::string> getEnv(const std::string& env);
+   
+     enum class KnownFolder : unsigned char
+     {
+       ROAMINGAPPDATA, // %APPDATA% (%USERPROFILE%\AppData\Roaming)
+       LOCALAPPDATA,   // %LOCALAPPDATA% (%USERPROFILE%\AppData\Local)
+       PICTURES        // %USERPROFILE%\Pictures
+     };
+   
+     [[nodiscard]] static std::optional<std::string> getKnownFolder(KnownFolder knownFolder);
+   
      struct tokenize_exception : public exception
      {
        explicit tokenize_exception(const std::string& what = "");
+     };
+   
+     struct glob_exception : public exception
+     {
+       explicit glob_exception(const std::string& what = "");
      };
    
      class string_template

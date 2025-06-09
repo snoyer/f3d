@@ -34,6 +34,7 @@ Derived Types
 - ``public f3d::scene::load_failure_exception`` (:ref:`exhale_struct_structf3d_1_1scene_1_1load__failure__exception`)
 - ``public f3d::type_access_exception`` (:ref:`exhale_struct_structf3d_1_1type__access__exception`)
 - ``public f3d::type_construction_exception`` (:ref:`exhale_struct_structf3d_1_1type__construction__exception`)
+- ``public f3d::utils::glob_exception`` (:ref:`exhale_struct_structf3d_1_1utils_1_1glob__exception`)
 - ``public f3d::utils::tokenize_exception`` (:ref:`exhale_struct_structf3d_1_1utils_1_1tokenize__exception`)
 
 
