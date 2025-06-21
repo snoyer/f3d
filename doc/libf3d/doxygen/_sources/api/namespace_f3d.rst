@@ -95,6 +95,8 @@ Classes
 
 - :ref:`exhale_class_classf3d_1_1scene`
 
+- :ref:`exhale_class_classf3d_1_1transform2d__t`
+
 - :ref:`exhale_class_classf3d_1_1utils`
 
 - :ref:`exhale_class_classf3d_1_1utils_1_1string__template`

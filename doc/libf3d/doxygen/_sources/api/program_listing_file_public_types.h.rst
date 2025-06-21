@@ -189,6 +189,36 @@ Program Listing for File types.h
      }
    };
    
+   class transform2d_t : public double_array_t<9>
+   {
+   public:
+     inline transform2d_t() = default;
+     inline explicit transform2d_t(const std::vector<double>& vec)
+       : double_array_t(vec)
+     {
+     }
+     inline transform2d_t(const std::initializer_list<double>& list)
+       : double_array_t(list)
+     {
+     }
+   
+     // clang-format off
+     // clang-format on
+     inline transform2d_t(double M1_1, double M1_2, double M1_3, double M2_1, double M2_2, double M2_3,
+       double M3_1, double M3_2, double M3_3)
+     {
+       (*this)[0] = M1_1;
+       (*this)[1] = M1_2;
+       (*this)[2] = M1_3;
+       (*this)[3] = M2_1;
+       (*this)[4] = M2_2;
+       (*this)[5] = M2_3;
+       (*this)[6] = M3_1;
+       (*this)[7] = M3_2;
+       (*this)[8] = M3_3;
+     }
+   };
+   
    class colormap_t
    {
    public:

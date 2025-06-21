@@ -88,6 +88,8 @@ Classes
 
 - :ref:`exhale_class_classf3d_1_1ratio__t`
 
+- :ref:`exhale_class_classf3d_1_1transform2d__t`
+
 
 Typedefs
 --------
