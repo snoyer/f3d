@@ -57,6 +57,8 @@ Program Listing for File scene.h
    
      [[nodiscard]] virtual std::pair<double, double> animationTimeRange() = 0;
    
+     [[nodiscard]] virtual unsigned int availableAnimations() const = 0;
+   
    protected:
      scene() = default;
      virtual ~scene() = default;

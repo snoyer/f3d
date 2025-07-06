@@ -76,6 +76,8 @@ Program Listing for File log.h
    
      static void setVerboseLevel(VerboseLevel level, bool forceStdErr = false);
    
+     static VerboseLevel getVerboseLevel();
+   
    protected:
      static void appendArg(std::stringstream&)
      {

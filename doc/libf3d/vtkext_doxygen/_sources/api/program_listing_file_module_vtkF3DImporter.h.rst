@@ -33,6 +33,15 @@ Program Listing for File vtkF3DImporter.h
      void UpdateTimeStep(double timeValue) override;
    #endif
    
+   #if VTK_VERSION_NUMBER < VTK_VERSION_CHECK(9, 4, 20250507)
+     enum class AnimationSupportLevel : unsigned char{ NONE, UNIQUE, SINGLE, MULTI };
+   
+     virtual AnimationSupportLevel GetAnimationSupportLevel()
+     {
+       return AnimationSupportLevel::MULTI;
+     }
+   #endif
+   
      void SetFailureStatus();
    };
    

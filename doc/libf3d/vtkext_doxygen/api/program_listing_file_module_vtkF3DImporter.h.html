@@ -317,6 +317,15 @@ document.write(`
 <span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">UpdateTimeStep</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">timeValue</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
 <span class="cp">#endif</span>
 
+<span class="cp">#if VTK_VERSION_NUMBER &lt; VTK_VERSION_CHECK(9, 4, 20250507)</span>
+<span class="w">  </span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">AnimationSupportLevel</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="p">{</span><span class="w"> </span><span class="n">NONE</span><span class="p">,</span><span class="w"> </span><span class="n">UNIQUE</span><span class="p">,</span><span class="w"> </span><span class="n">SINGLE</span><span class="p">,</span><span class="w"> </span><span class="n">MULTI</span><span class="w"> </span><span class="p">};</span>
+
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="n">AnimationSupportLevel</span><span class="w"> </span><span class="nf">GetAnimationSupportLevel</span><span class="p">()</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">AnimationSupportLevel</span><span class="o">::</span><span class="n">MULTI</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="cp">#endif</span>
+
 <span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">SetFailureStatus</span><span class="p">();</span>
 <span class="p">};</span>
 
