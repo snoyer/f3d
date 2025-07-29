@@ -1638,6 +1638,16 @@ void vtkF3DRenderer::ShowDropZone(bool show)
 }
 
 //----------------------------------------------------------------------------
+void vtkF3DRenderer::ShowDropZoneLogo(bool show)
+{
+  if (this->DropZoneLogoVisible != show)
+  {
+    this->DropZoneLogoVisible = show;
+    this->UIActor->SetDropZoneLogoVisibility(show);
+  }
+}
+
+//----------------------------------------------------------------------------
 void vtkF3DRenderer::ShowHDRISkybox(bool show)
 {
   if (this->HDRISkyboxVisible != show)
@@ -2757,6 +2767,7 @@ void vtkF3DRenderer::ConfigureScalarBarActorForColoring(
   scalarBar->SetWidth(0.8);
   scalarBar->SetHeight(0.07);
   scalarBar->SetPosition(0.1, 0.01);
+  scalarBar->SetMaximumNumberOfColors(512);
 }
 
 //----------------------------------------------------------------------------
